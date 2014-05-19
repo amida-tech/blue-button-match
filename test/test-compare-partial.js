@@ -28,30 +28,58 @@ before(function(done) {
 });
 
 
-describe('Matching library (compare-partial.js) tests', function () {
+describe('Matching library (compare-partial.js) tests', function() {
 
-    describe('Exceptions test', function () {
-        it('testing exceptions', function () {
-            var fn = function(){ compare("none", "none")({"a":1},{"a":1}); };
-            expect(fn).to.throw('one argument is required for compare function');
-            fn = function(){ compare()({"a":1},{"a":1}); };
-            expect(fn).to.throw('one argument is required for compare function');
+    describe('Exceptions test', function() {
+        it('testing exceptions', function() {
+            var fn = function() {
+                compare("none", "none")({
+                    "a": 1
+                }, {
+                    "a": 1
+                });
+            };
+            expect(fn).to.
+            throw ('one argument is required for compare function');
+            fn = function() {
+                compare()({
+                    "a": 1
+                }, {
+                    "a": 1
+                });
+            };
+            expect(fn).to.
+            throw ('one argument is required for compare function');
 
         });
     });
 
-    describe('Entries level tests', function () {
-        it('testing compare method', function () {
+    describe('Entries level tests', function() {
+        it('testing compare method', function() {
 
-            expect(compare("none")({"a":1},{"a":1})).to.have.property("match", "duplicate");
-            expect(compare("none")({"a":1},{"a":2})).to.have.property("match", "new");
+            expect(compare("none")({
+                "a": 1
+            }, {
+                "a": 1
+            })).to.have.property("match", "duplicate");
+            expect(compare("none")({
+                "a": 1
+            }, {
+                "a": 2
+            })).to.have.property("match", "new");
 
             //check that order doesnt matter
-            expect(compare("none")({"a":1, "b": 2},{"b":2, "a":1})).to.have.property("match", "duplicate");
+            expect(compare("none")({
+                "a": 1,
+                "b": 2
+            }, {
+                "b": 2,
+                "a": 1
+            })).to.have.property("match", "duplicate");
 
         });
 
-        it('testing compare method with BB.js data', function () {
+        it('testing compare method with BB.js data', function() {
             //expect(true).to.equal(true);
 
             for (var section in lookups.sections) {
@@ -59,7 +87,7 @@ describe('Matching library (compare-partial.js) tests', function () {
                 //console.log(">>> "+name);
 
                 if (bb.hasOwnProperty(name)) {
-                    for (var entry in bb[name]){
+                    for (var entry in bb[name]) {
                         //console.log(bb.data[name][entry]);
 
                         expect(compare(name)(bb[name][entry], bb[name][entry])).to.have.property("match", "duplicate");
@@ -68,7 +96,7 @@ describe('Matching library (compare-partial.js) tests', function () {
             }
 
         });
-        it('testing compare method with BB.js data', function () {
+        it('testing compare method with BB.js data', function() {
             //expect(true).to.equal(true);
 
             for (var section in lookups.sections) {
@@ -76,7 +104,7 @@ describe('Matching library (compare-partial.js) tests', function () {
                 //console.log(">>> "+name);
 
                 if (bb.hasOwnProperty(name)) {
-                    for (var entry in bb2[name]){
+                    for (var entry in bb2[name]) {
                         //console.log(bb.data[name][entry]);
 
                         expect(compare(name)(bb2[name][entry], bb2[name][entry])).to.have.property("match", "duplicate");
@@ -85,7 +113,7 @@ describe('Matching library (compare-partial.js) tests', function () {
             }
 
         });
-        it('testing compare method with BB.js data', function () {
+        it('testing compare method with BB.js data', function() {
             //expect(true).to.equal(true);
 
             for (var section in lookups.sections) {
@@ -93,7 +121,7 @@ describe('Matching library (compare-partial.js) tests', function () {
                 //console.log(">>> "+name);
 
                 if (bb.hasOwnProperty(name)) {
-                    for (var entry in bb3[name]){
+                    for (var entry in bb3[name]) {
                         //console.log(bb.data[name][entry]);
 
                         expect(compare(name)(bb3[name][entry], bb3[name][entry])).to.have.property("match", "duplicate");
@@ -103,7 +131,7 @@ describe('Matching library (compare-partial.js) tests', function () {
 
         });
 
-        xit('testing compare method with BB.js data (Kinsights)', function () {
+        xit('testing compare method with BB.js data (Kinsights)', function() {
             //expect(true).to.equal(true);
 
             for (var section in lookups.sections) {
@@ -111,7 +139,7 @@ describe('Matching library (compare-partial.js) tests', function () {
                 //console.log(">>> "+name);
 
                 if (bb2.hasOwnProperty(name)) {
-                    for (var entry in bb2[name]){
+                    for (var entry in bb2[name]) {
                         //console.log(bb2.data[name][entry]);
 
                         expect(compare(name)(bb2[name][entry], bb2[name][entry])).to.have.property("match", "duplicate");

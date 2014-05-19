@@ -47,7 +47,7 @@ describe('Matching library (match-sections.js) tests', function() {
                 var name = lookups.sections[section];
                 //console.log(">>> "+name);
                 //TODO: need CCD4 to be completely different from CCD1
-                name="allergies";
+                name = "allergies";
 
                 if (bb.hasOwnProperty(name) && bb4.hasOwnProperty(name)) {
 

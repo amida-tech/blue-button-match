@@ -32,21 +32,21 @@ before(function(done) {
 });
 
 
-describe('Matching library (match.js) tests', function () {
+describe('Matching library (match.js) tests', function() {
 
 
 
 
-    describe('Header level tests', function () {
+    describe('Header level tests', function() {
 
         xit('some sophisticated header tests will be added there later', function() {});
     });
 
-    describe('Document level tests', function () {
+    describe('Document level tests', function() {
 
-        it('full record comparison of same document', function () {
+        it('full record comparison of same document', function() {
 
-            var m = match.match(bb,bb);
+            var m = match.match(bb, bb);
 
             //console.log(JSON.stringify(m,null,4));
 
@@ -61,19 +61,19 @@ describe('Matching library (match.js) tests', function () {
 
                     expect(m["match"]).to.have.property(name);
 
-                        for (var item in m["match"][name]) {
-                            expect(m["match"][name][item].match).to.equal("duplicate");
-                            expect(m["match"][name][item]).to.have.property('src_id');
-                            expect(m["match"][name][item]).to.have.property('dest_id');
-                        }
+                    for (var item in m["match"][name]) {
+                        expect(m["match"][name][item].match).to.equal("duplicate");
+                        expect(m["match"][name][item]).to.have.property('src_id');
+                        expect(m["match"][name][item]).to.have.property('dest_id');
+                    }
                 }
             }
 
         });
 
 
-        it('full record comparison of two different documents', function () {
-            var m = match.match(bb,bb3);
+        it('full record comparison of two different documents', function() {
+            var m = match.match(bb, bb3);
 
 
             //console.log(JSON.stringify(m,null,4));
@@ -96,11 +96,11 @@ describe('Matching library (match.js) tests', function () {
 
                     expect(m["match"]).to.have.property(name);
 
-                        for (var item in m["match"][name]) {
-                            expect(m["match"][name][item].match).to.equal("new");
-                            expect(m["match"][name][item]).to.have.property('src_id');
-                            expect(m["match"][name][item]).to.have.not.property('dest_id');
-                        }
+                    for (var item in m["match"][name]) {
+                        expect(m["match"][name][item].match).to.equal("new");
+                        expect(m["match"][name][item]).to.have.property('src_id');
+                        expect(m["match"][name][item]).to.have.not.property('dest_id');
+                    }
                 }
             }
         });

@@ -29,34 +29,65 @@ before(function(done) {
 });
 
 
-describe('Matching library (compare.js) tests', function () {
+describe('Matching library (compare.js) tests', function() {
 
-    describe('Exceptions test', function () {
-        it('testing exceptions', function () {
-            var fn = function(){ compare({"a":1},{"a":1},{"a":1}); };
-            expect(fn).to.throw('two arguments are required for compare function');
+    describe('Exceptions test', function() {
+        it('testing exceptions', function() {
+            var fn = function() {
+                compare({
+                    "a": 1
+                }, {
+                    "a": 1
+                }, {
+                    "a": 1
+                });
+            };
+            expect(fn).to.
+            throw ('two arguments are required for compare function');
 
-            fn = function(){ compare({"a":1}); };
-            expect(fn).to.throw('two arguments are required for compare function');
+            fn = function() {
+                compare({
+                    "a": 1
+                });
+            };
+            expect(fn).to.
+            throw ('two arguments are required for compare function');
 
-            fn = function(){ compare(); };
-            expect(fn).to.throw('two arguments are required for compare function');
+            fn = function() {
+                compare();
+            };
+            expect(fn).to.
+            throw ('two arguments are required for compare function');
 
         });
     });
 
-    describe('Entries level tests', function () {
-        it('testing compare method', function () {
+    describe('Entries level tests', function() {
+        it('testing compare method', function() {
             //expect(true).to.equal(true);
-            expect(compare({"a":1},{"a":1})).to.have.property("match", "duplicate");
-            expect(compare({"a":1},{"a":2})).to.have.property("match", "new");
+            expect(compare({
+                "a": 1
+            }, {
+                "a": 1
+            })).to.have.property("match", "duplicate");
+            expect(compare({
+                "a": 1
+            }, {
+                "a": 2
+            })).to.have.property("match", "new");
 
             //check that order doesnt matter
-            expect(compare({"a":1, "b": 2},{"b":2, "a":1})).to.have.property("match", "duplicate");
+            expect(compare({
+                "a": 1,
+                "b": 2
+            }, {
+                "b": 2,
+                "a": 1
+            })).to.have.property("match", "duplicate");
 
         });
 
-        it('testing compare method with BB.js data', function () {
+        it('testing compare method with BB.js data', function() {
             //expect(true).to.equal(true);
 
             for (var section in lookups.sections) {
@@ -64,7 +95,7 @@ describe('Matching library (compare.js) tests', function () {
                 //console.log(">>> "+name);
 
                 if (bb.hasOwnProperty(name)) {
-                    for (var entry in bb.data[name]){
+                    for (var entry in bb.data[name]) {
                         //console.log(bb.data[name][entry]);
 
                         expect(compare(bb.data[name][entry], bb.data[name][entry])).to.have.property("match", "duplicate");
@@ -74,7 +105,7 @@ describe('Matching library (compare.js) tests', function () {
 
         });
 
-        xit('testing compare method with BB.js data (Kinsights)', function () {
+        xit('testing compare method with BB.js data (Kinsights)', function() {
             //expect(true).to.equal(true);
 
             for (var section in lookups.sections) {
@@ -82,7 +113,7 @@ describe('Matching library (compare.js) tests', function () {
                 //console.log(">>> "+name);
 
                 if (bb2.hasOwnProperty(name)) {
-                    for (var entry in bb2.data[name]){
+                    for (var entry in bb2.data[name]) {
                         //console.log(bb2.data[name][entry]);
 
                         expect(compare(bb2.data[name][entry], bb2.data[name][entry])).to.have.property("match", "duplicate");
