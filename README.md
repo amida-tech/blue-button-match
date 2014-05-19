@@ -3,6 +3,59 @@ blue-button-match
 
 Automatic matching of Blue Button JSON data (detection of new, duplicate and partial match entries)
 
+[![NPM](https://nodei.co/npm/blue-button-match.png)](https://nodei.co/npm/blue-button-match/)
+
+[![Build Status](https://travis-ci.org/amida-tech/blue-button-match.svg)](https://travis-ci.org/amida-tech/blue-button-match)
+[![Coverage Status](https://coveralls.io/repos/amida-tech/blue-button-match/badge.png)](https://coveralls.io/r/amida-tech/blue-button-match)
+
+## Library interfaces/APIs
+
+This library exposes methods for matching entire health records as well as lower level methods for matching sections of health records.
+This library provides following functionality
+
+- Match two health records in blue-button JSON format
+- Match individual sections of above
+
+### Usage example
+
+Require blue-button-match module
+
+``` javascript
+var match = require("./index.js") 
+var bb = require("blue-button");
+
+var recordA = bb.parseString("record A");
+var recordB = bb.parseString("record B");
+
+var result = match.match(recordA, recordB);
+
+console.log(result);
+
+```
+
+This will produce following match object:
+```javascript
+{
+    "match":
+    {
+        "allergies" : [
+            { "src_id" : 0, "dest_id" : 0, "match":"duplicate" },
+            { "src_id" : 1, "dest_id" : 1, "match":"duplicate" },
+            { "src_id" : 2, "dest_id" : 2, "match":"duplicate" },
+            ...
+            }
+        ],
+        "medications" : [...],
+        "demographics" : [...]
+        ...
+    },
+    "meta":
+    {
+    	"version" : "0.0.1"
+	},
+	"errors": []
+}
+```
 
 Matching Library
 ----------------
