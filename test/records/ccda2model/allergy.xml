@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<?xml-stylesheet type="text/xsl" href="CDA.xsl"?>
+<!-- Parser looks for first 5 character to identify an xml file. -->
+
+<ClinicalDocument>
+    <templateId root="2.16.840.1.113883.10.20.22.1.2"/>
+    <!-- This templateId can be anywhere to identify the document as CCD. -->
+    
+    <section>
+        <templateId root="2.16.840.1.113883.10.20.22.2.6.1"/>
+        <!-- Allergies section is found as the parent of the teplateId tag with the root value.-->
+        
+        <!-- Individual allergies are described by the entry tags. -->
+        <!-- Participant tag is used to identify the allergen. -->
+
+        <!-- 0: Raccoon/test/records/ccda/CCD_demo1.xml -->
+        <!-- Raccoon uses code tag to read name and code of the allergy so this tag is fundamental. -->
+        <entry> 
+            <participant>
+                <code   code="314422", 
+                        displayName="ALLERGENIC EXTRACT, PENICILLIN",
+                        codeSystem="2.16.840.1.113883.6.88", 
+                        codeSystemName="RxNorm" />
+                </code>
+            </participant>
+        </entry>
+        
+        <!-- 1: sample_ccdas/Greenway Samples/26775_ClinicalVisitSummary_CCDA.xml -->
+        <!-- Code field can sometimes be nullFlavor with info in other tags. -->
+        <!-- Raccoon assigns null to the name and code for this case. -->
+        <entry> 
+            <participant>
+                <code nullFlavor="NA">
+                    <originalText>
+                        <reference value="#ref_ef4d3ea7efd044d08ad9c21ab0d2cdef_allergy_name_3"/>
+                    </originalText>
+                </code>
+                <name>codeine sulfate</name>
+            </participant>
+        </entry>
+
+        <!-- 2:  http://motorcycleguy.blogspot.com/2012/08/i-know-not-vs-i-dont-know.html -->
+        <!-- According to CCDA specification CCD documents must allergies section. --> 
+        <!-- Each allergy section must have at least one entry for a valid CCD file. -->
+        <!-- So there will always be at least one allergy documented. -->    
+        <!-- If patient has no allergies there may be cases where there is no allergen (participant).-->
+        <!-- Raccoon set the name and code to null for this case. -->
+        <entry>
+        </entry>
+    </section>
+</ClinicalDocument>

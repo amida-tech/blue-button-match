@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?><?xml-stylesheet type="text/xsl" href="CDA.xsl"?>
+
+<ClinicalDocument>
+    <templateId root="2.16.840.1.113883.10.20.22.1.2"/>
+    
+    <section>
+        <templateId root="2.16.840.1.113883.10.20.22.2.6.1"/>
+
+        <!-- severity for allergies is read from the value tag of elements with templateId 2.16.840.1.113883.10.20.22.4.8. -->
+        <!-- For each allergy this template can appear in the main allergy observation body or in reaction observation body/bodies. -->
+        <!-- Any of the tags that severity appears are optional. -->
+        <!-- Only value tag is considered and all other tags such as interpretationCode is ignored. -->
+
+        <!-- 0: Raccoon/test/records/ccda/CCD_demo1.xml -->
+        <!-- Often severity appears both in allergy main and reaction and they are different.--> 
+        <!-- Raccoon reads the first one that appears in the xml which is typically reaction.-->
+        <!-- Raccoon ignores all the tags except value including the interpretationCode. -->
+        <entry>
+            <observation classCode="OBS" moodCode="EVN">
+                <!-- ** Reaction observation ** -->
+                <templateId root="2.16.840.1.113883.10.20.22.4.9"/>
+                <observation classCode="OBS" moodCode="EVN">
+                    <templateId root="2.16.840.1.113883.10.20.22.4.8"/>
+                    <!-- ** Severity observation ** -->
+                    <value code="255604002" displayName="Mild" codeSystem="2.16.840.1.113883.6.96" codeSystemName="SNOMED CT"/>
+                    <interpretationCode code="S" displayName="Suceptible" codeSystem="2.16.840.1.113883.1.11.78" codeSystemName="Observation Interpretation"/>
+                </observation>
+            </observation>
+            <observation classCode="OBS" moodCode="EVN">
+                <templateId root="2.16.840.1.113883.10.20.22.4.8"/>
+                <!-- ** Severity observation ** -->
+                <value code="371924009" displayName="Moderate to severe" codeSystem="2.16.840.1.113883.6.96" codeSystemName="SNOMED CT"/>
+                <interpretationCode code="N" displayName="Normal" codeSystem="2.16.840.1.113883.1.11.78" codeSystemName="Observation Interpretation"/>
+             </observation>
+        </entry>
+        
+        <!-- 1: sample_ccdas/Vitera/Vitera_CCDA_SMART_Sample.xml -->
+        <!-- Sometimes no severity is specified in reaction or main body.--> 
+        <!-- Raccoon sets severity to null. -->
+        <entry>
+        </entry>
+
+        <!-- 2: sample_ccdas/NIST Samples/CCDA_CCD_b1_Ambulatory_v2.xml -->
+        <!-- Reaction may not contain a severity but the main body can.--> 
+        <!-- Raccoon falls back to the main body and reads it from there. -->
+        <entry>
+            <observation classCode="OBS" moodCode="EVN">
+                <!-- ** Reaction observation ** -->
+                <templateId root="2.16.840.1.113883.10.20.22.4.9"/>
+            </observation>
+            <observation classCode="OBS" moodCode="EVN">
+                <templateId root="2.16.840.1.113883.10.20.22.4.8"/>
+                <!-- ** Severity observation ** -->
+                <value code="371924009" displayName="Moderate to severe" codeSystem="2.16.840.1.113883.6.96" codeSystemName="SNOMED CT"/>
+             </observation>
+        </entry>
+        
+    </section>
+</ClinicalDocument>

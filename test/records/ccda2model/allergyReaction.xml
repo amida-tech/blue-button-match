@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?><?xml-stylesheet type="text/xsl" href="CDA.xsl"?>
+
+<ClinicalDocument>
+    <templateId root="2.16.840.1.113883.10.20.22.1.2"/>
+    
+    <section>
+        <templateId root="2.16.840.1.113883.10.20.22.2.6.1"/>
+
+        <!-- reaction for allergies is read from the value tag of elements with templateId 2.16.840.1.113883.10.20.22.4.9. -->
+        <!-- When exists severity of reaction also read as the allergy severity. Other tags are ignored.-->
+
+        <!-- 0: Raccoon/test/records/ccda/CCD_demo1.xml -->
+        <!-- Raccoon reads reaction from reaction observation. -->
+        <!-- Raccoon when exists read allergy severity from reaction (see allergySeverity). --> 
+        <entry>
+            <observation classCode="OBS" moodCode="EVN">
+                <!-- ** Reaction observation ** -->
+                <templateId root="2.16.840.1.113883.10.20.22.4.9"/>
+                <value code="422587007" codeSystem="2.16.840.1.113883.6.96" displayName="Nausea"/>
+                
+                <observation classCode="OBS" moodCode="EVN">
+                    <templateId root="2.16.840.1.113883.10.20.22.4.8"/>
+                    <!-- ** Severity observation ** -->
+                    <value code="255604002" displayName="Mild" codeSystem="2.16.840.1.113883.6.96" codeSystemName="SNOMED CT"/>
+                </observation>
+            </observation>
+        </entry>
+        
+        <!-- 1: sample_ccdas/Greenway Samples/26562_ExportSummary_CCDA.xml -->
+        <!-- Sometimes reaction value is nullFlavor.--> 
+        <!-- Raccoon sets reaction fields to null for this case and ignores other fields. -->
+        <entry>
+            <observation classCode="OBS" moodCode="EVN">
+                <!-- ** Reaction observation ** -->
+                <templateId root="2.16.840.1.113883.10.20.22.4.9"/>
+                <text> Anaphaylaxis
+                    <reference value="#ref_ff1d6b9def7b47d598024672c632cb9e_allergy_reaction_3" />
+                </text>
+                <value nullFlavor="OTH"/>
+            </observation>
+        </entry>
+        
+        <!-- 2: sample_ccdas/EMERGE/Patient-110.xml -->
+        <!-- Sometimes reaction does not exists.--> 
+        <!-- Raccoon sets reaction fields to null for this case. -->
+        <entry>
+        </entry>
+        
+        <!-- 3: sample_ccdas/Vitera/Vitera_CCDA_SMART_Sample.xml -->
+        <!-- Sometimes multiple reactions exists.--> 
+        <!-- Raccoon considers only the first reaction and ignore rest. -->
+        <entry>
+            <observation classCode="OBS" moodCode="EVN">
+                <templateId root="2.16.840.1.113883.10.20.22.4.9" assigningAuthorityName="CCDA Allergy Reaction Observation" />
+                <value code="64144002" displayName="Skin Rashes/Hives" codeSystem="2.16.840.1.113883.6.96" codeSystemName="SNOMED CT" xsi:type="CD" />
+            </observation>
+           <observation classCode="OBS" moodCode="EVN">
+                <templateId root="2.16.840.1.113883.10.20.22.4.9" assigningAuthorityName="CCDA Allergy Reaction Observation" />
+                <value code="2919008" displayName="Nausea/Vomiting/Diarrhea" codeSystem="2.16.840.1.113883.6.96" codeSystemName="SNOMED CT" xsi:type="CD" />
+           </observation>
+        </entry>
+    </section>
+</ClinicalDocument>

@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?><?xml-stylesheet type="text/xsl" href="CDA.xsl"?>
+
+<ClinicalDocument>
+    <templateId root="2.16.840.1.113883.10.20.22.1.2"/>
+    
+    <section>
+        <templateId root="2.16.840.1.113883.10.20.22.2.6.1"/>
+
+        <!-- status is read from allergy status observation. -->
+        <!-- There are other statusCode tags indicate status (from different value set) but these are ignored. -->
+        <!-- Some others prefer to use Problem Act statusCode see http://motorcycleguy.blogspot.com/2012/08/is-that-active-problem.html -->
+
+        <!-- 0: Raccoon/test/records/ccda/CCD_demo1.xml -->
+        <!-- In addition to allergy status observation statusCode also appears in multiple places such as Problem Act and status observation itself. --> 
+        <!-- Raccoon always reads the status observation value tag and ignores other status codes. -->
+        <entry>
+            <statusCode code="completed"/>
+            <observation classCode="OBS" moodCode="EVN">
+                <!-- ** Allergy status observation ** -->
+                <templateId root="2.16.840.1.113883.10.20.22.4.28"/>
+                <statusCode code="completed"/>
+                <value code="73425007" codeSystem="2.16.840.1.113883.6.96" displayName="Inactive"/>
+            </observation>
+        </entry>
+        
+        <!-- 1: sample_ccdas/Transitions of Care Samples/ToC_CCDA_CCD_CompGuideSample_FullXML.xml -->
+        <!-- Sometimes status observation is not present.  Problem Act and its status must be present by specification. -->
+        <!-- Raccoon assigns null to status for this case even though problem act might have a status code. -->
+        <entry>
+            <statusCode code="active"/>
+        </entry>
+    </section>
+</ClinicalDocument>

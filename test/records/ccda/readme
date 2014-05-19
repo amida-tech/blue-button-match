@@ -1,0 +1,9 @@
+CCD_demo1.xml: 
+Comes from HL7 CCDA package (CDAR2_IG_IHE_CONSOL_DSTU_R1dot1_2012JUL (1).zip")
+
+CCD_demo2.xml:
+Is CCD_demo1 + Eggs added from sample_ccdas/EMERGE/Patient-429.xml + Neomycin Sulfate 500 MG added from sample_ccdas/EMERGE/Patient-139.xml
+Also added reactions from ALLERGENIC EXTRACT, PENICILLIN (CCD_demo1.xml) since they were missing in Patient-429.xml.
+
+CCD_demo3.xml
+Is CCD_demo2 + Eggs severity changed from 'Mild' to 'Mild to moderate', 'Neomycin Sulfate 500 MG' start Aug 26 to Aug 29

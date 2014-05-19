@@ -1,0 +1,26 @@
+<?xml-stylesheet type="text/xsl" href="CDA.xsl"?>
+<!-- bluebutton.js looks for first 5 character to identify an xml file. -->
+<!-- jsdom expects the first line of xml to be <?xml version="1.0" ... ?> -->
+<!-- Some sample CCDAs starts with <?xml-stylesheet convincing bluebutton.js to be a an xml. -->
+<!-- Ex: sample_ccdas/Allscripts Samples/Internal Test with MU 2 data/170.314(b)(2)InPt_Discharge Summary CED Type.xml -->
+<!-- But jsdom just drops case sensitivity for tags and attributes for that case. -->
+<!-- Result is invalid record.-->
+
+<ClinicalDocument>
+    <templateId root="2.16.840.1.113883.10.20.22.1.2"/>
+    <!-- this templateId can be anywhere to identify the document as CCD-->
+    
+    <section>
+        <templateId root="2.16.840.1.113883.10.20.22.2.6.1"/>
+
+        <entry> 
+            <participant>
+                <code   code="314422", 
+                        displayName="ALLERGENIC EXTRACT, PENICILLIN",
+                        codeSystem="2.16.840.1.113883.6.88", 
+                        codeSystemName="RxNorm" />
+                </code>
+            </participant>
+        </entry>
+    </section>
+</ClinicalDocument>

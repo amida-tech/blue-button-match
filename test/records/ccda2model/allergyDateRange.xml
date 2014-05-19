@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?><?xml-stylesheet type="text/xsl" href="CDA.xsl"?>
+
+<ClinicalDocument>
+    <templateId root="2.16.840.1.113883.10.20.22.1.2"/>
+    
+    <section>
+        <templateId root="2.16.840.1.113883.10.20.22.2.6.1"/>
+ 
+        <!-- date_range for allergies is read from the effectiveTime tags. -->
+        <!-- For top level Problem Act tag effectiveTime is required. -->
+        <!-- So for a valid CCDA file an allergy will always have a date_range. -->
+        <!-- For invalid files where Problem Act effective time might be missing Raccoon will look to other tags. -->
+        <!-- These include allergy observation, medication, procedures, etc. -->
+        <!-- The invalid case is not considered here.-->
+        
+        <!-- According or the standard effectiveDate can be either of type time stamp (TS) or time interval (IVL<TS>). -->
+        <!-- Exact definition of types could not be found but http://www.healthintersections.com.au/?p=578 suggests one. -->
+        <!-- TS should be in the form <effectiveTime value="20001204"/>.
+        <!-- IVL<TS> should be in the form <effectiveTime> <low value="..."/> <high value="..."/> </effectiveTime>-->
+        <!-- Raccoon stores both cases as intervals (data_range{start: ..., end: ...})-->    
+
+        <!-- 0: sample_ccdas/NIST Samples/CCDA_CCD_b1_Ambulatory_v2.xml -->
+        <!-- Sometime CCDAs combine both TS and IVL<TS> forms --> 
+        <!-- Raccoon just ignores TS form (effectiveTime value attribute) for this case.-->
+        <entry>
+            <effectiveTime value="20080501">
+                <low value="20080501"/>
+                <high value="20120806"/>
+            </effectiveTime>
+        </entry>
+           
+        <!-- 1: sample_ccdas/HL7 Samples/CCD.sample.xml -->
+        <!-- There is at least one sample where TS is actually different than the IVL<TS> low value. -->
+        <!-- That sample is an older HL7 example which later is changed. -->  
+        <!-- In any case Raccoon ignores TS when there is IVL<TS> values. --> 
+        <entry>
+            <effectiveTime value="20090909">
+                <low value="20090902"/>
+                <high value="20100103"/>
+            </effectiveTime>
+        </entry>
+ 
+        <!-- 2: Raccoon/test/records/ccda/CCD_demo1.xml -->
+        <!-- TS only form is common. -->
+        <!-- Raccoon assigns both start and end to time stamp value. -->
+        <entry>
+            <effectiveTime value="20070501"/>
+        </entry>
+        
+        <!-- 3: sample_ccdas/Vitera/Vitera_CCDA_SMART_Sample.xml -->
+        <!-- 4: sample_ccdas/Allscripts Samples/Internal Test with MU 2 data/170.314(b)(7)InPt_Patient2_CCDCED Type.xml -->
+        <!-- For IVL<TS> form high sometimes goes missing or assigned a null flavor. -->
+        <!-- Raccoon assigns null to date_range.end for both cases. -->
+        <entry>
+            <effectiveTime>
+                <low value="20090108" />
+            </effectiveTime>
+        </entry>
+        <entry>
+            <effectiveTime>
+                <low value="19980110"/>
+                <high nullFlavor="UNK"/>
+             </effectiveTime>
+        </entry>
+
+        <!-- 5: sample_ccdas/Greenway Samples/26775_ClinicalVisitSummary_CCDA.xml -->
+        <!-- 6: sample_ccdas/Cerner Samples/Transition_of_Care_Referral_Summary.xml -->
+        <!-- 7: sample_ccdas/Allscripts Samples/Sunrise Clinical Manager/C-CDA_101693_20130617120344_Kidd_Kari CCDA_TOCAMB.xml -->
+        <!-- For IVL<TS> low values can also be assigned to nullFlavor.-->
+        <!-- Raccoon assigns null to date_range.start for these cases. -->
+        <!-- Actual null flavor is ignored. -->
+        <entry>
+            <effectiveTime>
+                <low nullFlavor="UNK"/>
+            </effectiveTime>
+        </entry>
+        <entry>
+            <effectiveTime>
+                <low nullFlavor="NI"/>
+            </effectiveTime>
+        </entry>
+        <entry>
+            <effectiveTime>
+                <low nullFlavor="UNK" />
+                <high nullFlavor="UNK" />
+            </effectiveTime>
+        </entry>
+        
+    </section>
+</ClinicalDocument>
