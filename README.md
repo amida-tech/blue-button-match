@@ -85,7 +85,7 @@ Match element can be `{"match" : "duplicate"}`, `{"match" : "new"}` or `{"match"
 
 #### Flat
 
-Applied to : Vital Signs, Medications, Problems, Immunizations, Procedures
+_Applied to : Vital Signs, Medications, Problems, Immunizations, Procedures_
 
 
 ``` javascript
@@ -100,7 +100,7 @@ Applied to : Vital Signs, Medications, Problems, Immunizations, Procedures
 
 #### Containing subarrays
 
-Applied to: Results, Allergies, Encounters
+_Applied to: Results, Allergies, Encounters_
 
 ``` javascript
 [
@@ -134,17 +134,18 @@ Applied to: Results, Allergies, Encounters
 
 #### Single facts
 
-Applied to: Demographics, Social History
+_Applied to: Demographics, Social History_
 
-//only one match element present
 
 ``` javascript
+//only one match element present
 [
     { "match" : "duplicate"}, //record is complete duplicate
 ]
 ```
 
 ``` javascript
+//only one match element present
 [
     { "match" : "diff", 
         "diff": {
