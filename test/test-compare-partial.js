@@ -20,8 +20,8 @@ before(function(done) {
     var xml3 = fs.readFileSync('test/records/ccda/CCD_demo3.xml', 'utf-8');
     bb3 = bbjs.parseString(xml3).data;
 
-    //var xml4 = fs.readFileSync('test/records/ccda/kinsights-sample-timmy.xml', 'utf-8');
-    //bb4 = bbjs.parseString(xml4).data;
+    var xml4 = fs.readFileSync('test/records/ccda/kinsights-sample-timmy.xml', 'utf-8');
+    bb4 = bbjs.parseString(xml4).data;
 
     //console.log(bb.data);
     done();
@@ -131,18 +131,18 @@ describe('Matching library (compare-partial.js) tests', function() {
 
         });
 
-        xit('testing compare method with BB.js data (Kinsights)', function() {
+        it('testing compare method with BB.js data (Kinsights)', function() {
             //expect(true).to.equal(true);
 
             for (var section in lookups.sections) {
                 var name = lookups.sections[section];
                 //console.log(">>> "+name);
 
-                if (bb2.hasOwnProperty(name)) {
-                    for (var entry in bb2[name]) {
+                if (bb4.hasOwnProperty(name)) {
+                    for (var entry in bb4[name]) {
                         //console.log(bb2.data[name][entry]);
 
-                        expect(compare(name)(bb2[name][entry], bb2[name][entry])).to.have.property("match", "duplicate");
+                        expect(compare(name)(bb4[name][entry], bb4[name][entry])).to.have.property("match", "duplicate");
                     }
                 }
             }

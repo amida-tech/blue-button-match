@@ -105,18 +105,18 @@ describe('Matching library (compare.js) tests', function() {
 
         });
 
-        xit('testing compare method with BB.js data (Kinsights)', function() {
+        it('testing compare method with BB.js data (Kinsights)', function() {
             //expect(true).to.equal(true);
 
             for (var section in lookups.sections) {
                 var name = lookups.sections[section];
                 //console.log(">>> "+name);
 
-                if (bb2.hasOwnProperty(name)) {
-                    for (var entry in bb4.data[name]) {
+                if (bb4.hasOwnProperty(name)) {
+                    for (var entry in bb4[name]) {
                         //console.log(bb2.data[name][entry]);
 
-                        expect(compare(bb4.data[name][entry], bb4.data[name][entry])).to.have.property("match", "duplicate");
+                        expect(compare(bb4[name][entry], bb4[name][entry])).to.have.property("match", "duplicate");
                     }
                 }
             }
