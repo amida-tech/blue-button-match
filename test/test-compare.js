@@ -21,8 +21,8 @@ before(function(done) {
     //var xml3 = fs.readFileSync('test/records/ccda/CCD_demo3.xml', 'utf-8');
     //bb3 = bbjs.parseString(xml3);
 
-    //var xml4 = fs.readFileSync('test/records/ccda/kinsights-sample-timmy.xml', 'utf-8');
-    //bb4 = bbjs.parseString(xml4).data;
+    var xml4 = fs.readFileSync('test/records/ccda/kinsights-sample-timmy.xml', 'utf-8');
+    bb4 = bbjs.parseString(xml4).data;
 
     //console.log(bb);
     done();
@@ -113,10 +113,10 @@ describe('Matching library (compare.js) tests', function() {
                 //console.log(">>> "+name);
 
                 if (bb2.hasOwnProperty(name)) {
-                    for (var entry in bb2.data[name]) {
+                    for (var entry in bb4.data[name]) {
                         //console.log(bb2.data[name][entry]);
 
-                        expect(compare(bb2.data[name][entry], bb2.data[name][entry])).to.have.property("match", "duplicate");
+                        expect(compare(bb4.data[name][entry], bb4.data[name][entry])).to.have.property("match", "duplicate");
                     }
                 }
             }
