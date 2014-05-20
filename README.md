@@ -81,9 +81,78 @@ Match element can be `{"match" : "duplicate"}`, `{"match" : "new"}` or `{"match"
 }
 ```
 
+### Matching results JSON structures (by record type)
+
+#### Flat
+
+Applied to : Vital Signs, Medications, Problems, Immunizations, Procedures
 
 
+``` javascript
+[
+    { "match" : "duplicate", "src_id" : 0, "dest_id": 2 },
+    { "match" : "new", "src_id" :1 },
+    { "match" : "partial", "percent" : 50, "src_id" : 2, "dest_id" : 5},
+    ...
+    }
+]
+```
 
+#### Containing subarrays
+
+Applied to: Results, Allergies, Encounters
+
+``` javascript
+[
+    { "match" : "new", "src_id" :1 }, //completely new element
+    { "match" : "duplicate", "src_id" : 0, "dest_id": 2 }, //completely duplicate element
+
+    { "match" : "duplicate_new_subelements", "src_id" : 0, "dest_id": 2 
+        "subelements": [
+            { "match" : "duplicate", "src_id" : 0, "dest_id": 2 },
+            { "match" : "new", "src_id" :1 },
+            { "match" : "partial", "percent" : 50, "src_id" : 2, "dest_id" : 5},
+            ...
+            }
+        ]
+
+    }, //completely duplicate element but difference in subelements exists
+
+    { "match" : "partial", "percent" : 50, "src_id" : 2, "dest_id" : 5
+        "subelements": [
+            { "match" : "duplicate", "src_id" : 0, "dest_id": 2 },
+            { "match" : "new", "src_id" :1 },
+            { "match" : "partial", "percent" : 50, "src_id" : 2, "dest_id" : 5},
+            ...
+            }
+        ]
+    }, 
+    ...
+    } //partial match
+]
+````
+
+#### Single facts
+
+Applied to: Demographics, Social History
+
+//only one match element present
+
+``` javascript
+[
+    { "match" : "duplicate"}, //record is complete duplicate
+]
+```
+
+``` javascript
+[
+    { "match" : "diff", 
+        "diff": {
+            "element_name_1":"duplicate", //element is the same
+            "element_name_2":"new", //element has new value
+        }},
+]
+```
 
 ## Contributing
 
