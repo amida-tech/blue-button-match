@@ -1,0 +1,69 @@
+[
+        {
+            "identifiers": [
+                {
+                    "identifier": "2.16.840.1.113883.19",
+                    "identifier_type": "123456789"
+                }
+            ],
+            "status": "Completed",
+            "date": [
+                {
+                    "date": "2012-08-06T00:00:00.000Z",
+                    "precision": "day"
+                }
+            ],
+            "bodysite": [
+                {
+                    "name": "Lower Respiratory Tract Structure",
+                    "code": "82094008",
+                    "code_system_name": "SNOMED CT"
+                }
+            ],
+            "providers": [
+                {
+                    "address": {
+                        "streetLines": [
+                            "1002 Healthcare Dr"
+                        ],
+                        "city": "Portland",
+                        "state": "OR",
+                        "zip": "97266",
+                        "country": "US"
+                    },
+                    "telecom": {
+                        "value": "(555)555-555-1234",
+                        "use": "work place"
+                    },
+                    "organization": {
+                        "name": "Get Well Radiology"
+                    }
+                }
+            ],
+            "locations": [
+                {
+                    "name": "Get Well Clinic",
+                    "type": {
+                        "name": "Urgent Care Center",
+                        "code": "1160-1",
+                        "code_system_name": "HealthcareServiceLocation"
+                    },
+                    "addresses": [
+                        {
+                            "streetLines": [
+                                "1002 Healthcare Dr"
+                            ],
+                            "city": "Portland",
+                            "state": "OR",
+                            "zip": "97266",
+                            "country": "US"
+                        }
+                    ]
+                }
+            ],
+            "type": "procedure",
+            "name": "Chest X-Ray",
+            "code": "168731009",
+            "code_system_name": "SNOMED CT"
+        }
+    ]
