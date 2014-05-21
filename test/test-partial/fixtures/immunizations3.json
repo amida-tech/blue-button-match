@@ -1,0 +1,78 @@
+[
+        {
+            "date": [
+                {
+                    "date": "2012-05-10T00:00:00.000Z",
+                    "precision": "day"
+                }
+            ],
+            "identifiers": [
+                {
+                    "identifier": "e6f1ba43-c0ed-4b9b-9f12-f435d8ad8f92"
+                }
+            ],
+            "status": "complete",
+            "product": {
+                "manufacturer": "Health LS - Immuno Inc.",
+                "name": "Influenza virus vaccine",
+                "code": "88",
+                "code_system_name": "CVX Vaccine",
+                "translations": [
+                    {
+                        "name": "influenza, live, intranasal",
+                        "code": "111",
+                        "code_system_name": "CVX Vaccine"
+                    }
+                ]
+            },
+            "administration": {
+                "route": {
+                    "name": "Intramuscular injection",
+                    "code": "C28161",
+                    "code_system_name": "Medication Route FDA"
+                },
+                "quantity": {
+                    "value": 50,
+                    "unit": "mcg"
+                }
+            }
+        },
+        {
+            "date": [
+                {
+                    "date": "2012-04-01T00:00:00.000Z",
+                    "precision": "day"
+                }
+            ],
+            "identifiers": [
+                {
+                    "identifier": "e6f1ba43-c0ed-4b9b-9f12-f435d8ad8f92"
+                }
+            ],
+            "status": "complete",
+            "product": {
+                "manufacturer": "Health LS - Immuno Inc.",
+                "name": "Tetanus and diphtheria toxoids - preservative free",
+                "code": "103",
+                "code_system_name": "CVX Vaccine",
+                "translations": [
+                    {
+                        "name": "Tetanus and diphtheria toxoids - preservative free",
+                        "code": "09",
+                        "code_system_name": "CVX Vaccine"
+                    }
+                ]
+            },
+            "administration": {
+                "route": {
+                    "name": "Intramuscular injection",
+                    "code": "C28161",
+                    "code_system_name": "Medication Route FDA"
+                },
+                "quantity": {
+                    "value": 50,
+                    "unit": "mcg"
+                }
+            }
+        }
+    ]
