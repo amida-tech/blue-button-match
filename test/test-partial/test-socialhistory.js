@@ -50,7 +50,7 @@ describe('Social History partial matching library (socialhistory.js) tests', fun
 
             expect(m[0].match).to.equal("diff");
 
-            console.log(m);
+            //console.log(m);
 
         });
 
