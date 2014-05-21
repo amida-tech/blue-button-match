@@ -8,35 +8,35 @@ var expect = require('chai').expect;
 var fs = require('fs');
 //var bbjs = require('blue-button');
 
-var comparePartial = require('../../lib/sections/flat/procedures.js').compare;
+var comparePartial = require('../../lib/sections/subarray/encounters.js').compare;
 var matchSections = require("../../lib/match-sections.js").matchSections;
 
 var js, js2, js3, js4;
 
 before(function(done) {
-    // 3 sample procedures
-    js = JSON.parse(fs.readFileSync('test/test-partial/fixtures/procedures.json', 'utf-8').toString());
+    // 1 sample encounter
+    js = JSON.parse(fs.readFileSync('test/test-partial/fixtures/encounters.json', 'utf-8').toString());
 
     //same as above but rearranged to be partial match
-    js2 = JSON.parse(fs.readFileSync('test/test-partial/fixtures/procedures2.json', 'utf-8').toString());
+    js2 = JSON.parse(fs.readFileSync('test/test-partial/fixtures/encounters2.json', 'utf-8').toString());
 
-    // has 1 different procedure from all of the above
-    js3 = JSON.parse(fs.readFileSync('test/test-partial/fixtures/procedures3.json', 'utf-8').toString());
+    // has another encounter different from all of the above
+    js3 = JSON.parse(fs.readFileSync('test/test-partial/fixtures/encounters3.json', 'utf-8').toString());
 
     //console.log(bb);
     done();
 });
 
 
-describe('Procedures partial matching library (problems.js) tests', function() {
+describe('Encounter partial matching library (encounters.js) tests', function() {
 
 
 
-        it('compare two different procedures sections', function() {
+        it('compare two different encounters sections', function() {
             var m = matchSections(js, js3, comparePartial);
 
-            //console.log(js.length);
-            //console.log(js2.length);
+            //console.log(js);
+            //console.log(js2);
 
             //console.log(m);
 
@@ -50,7 +50,7 @@ describe('Procedures partial matching library (problems.js) tests', function() {
         });
 
 
-        it('compare procedures sections with itself', function() {
+        it('compare encounters sections with itself', function() {
             var m = matchSections(js, js, comparePartial);
 
             //console.log(m);
@@ -76,11 +76,10 @@ describe('Procedures partial matching library (problems.js) tests', function() {
         });
 
 
-        it('compare two different procedures sections that will have all partial match', function() {
+        it('compare two different encounters sections that will have all partial match', function() {
             var m = matchSections(js, js2, comparePartial);
 
-            //console.log(JSON.stringify(m,null,4));            
-            //console.log(m);
+            //console.log(JSON.stringify(m,null,4));
 
             for (var item in m) {
                 //console.log(m[item].match);
@@ -90,9 +89,9 @@ describe('Procedures partial matching library (problems.js) tests', function() {
             }
 
             //and now do the same but backwards
-            var m = matchSections(js, js2.slice().reverse(), comparePartial);
+            //var m = matchSections(js2, js, comparePartial);
 
-            //console.log(m);
+            //console.log(JSON.stringify(m,null,4));
 
             for (var item in m) {
                 //console.log(m[item].match);
@@ -104,7 +103,7 @@ describe('Procedures partial matching library (problems.js) tests', function() {
         });
 
 
-        xit('compare two different procedures sections that will have some partial match, some dups and some new', function() {
+        xit('compare two different encounters sections that will have some partial match, some dups and some new', function() {
             var result = ["partial", "new", "duplicate"].sort();
 
             var m = matchSections(js4, js4, comparePartial);
