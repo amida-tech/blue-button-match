@@ -28,7 +28,7 @@ var bb = require("blue-button");
 var recordA = bb.parseString("record A");
 var recordB = bb.parseString("record B");
 
-var result = match.match(recordA, recordB);
+var result = match.match(recordA.data, recordB.data);
 
 console.log(result);
 

@@ -10,6 +10,6 @@ var dataB = fs.readFileSync("CCD_2.sample.xml").toString();
 var recordA = bb.parseString(dataA);
 var recordB = bb.parseString(dataB);
 
-var result = match.match(recordA, recordB);
+var result = match.match(recordA.data, recordB.data);
 
 console.log(result);
