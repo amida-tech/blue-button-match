@@ -19,7 +19,7 @@ before(function(done) {
     //same demographics with some attributes changed (e.g. name, family status, languages)
     js2 = JSON.parse(fs.readFileSync('test/test-partial/fixtures/demographics2.json', 'utf-8').toString());
 
-    console.log(js);
+    //console.log(js);
     done();
 });
 
@@ -29,7 +29,7 @@ describe('Demographics partial matching library (demographics.js) tests', functi
         it('compare demographics sections with itself', function() {
             var m = [comparePartial(js, js)];
 
-            console.log(m);
+            //console.log(m);
 
             expect(m.length).to.equal(1);
 
@@ -41,13 +41,13 @@ describe('Demographics partial matching library (demographics.js) tests', functi
         it('compare two different vitals sections that will have all partial match', function() {
             var m = [comparePartial(js, js2)];
 
-            console.log(m);
+            //console.log(m);
 
             expect(m.length).to.equal(1);
 
             expect(m[0].match).to.equal("diff");
 
-            console.log(m);
+            //console.log(m);
 
         });
 
