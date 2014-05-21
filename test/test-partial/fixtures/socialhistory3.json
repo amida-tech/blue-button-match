@@ -1,0 +1,15 @@
+[
+        {
+            "value": "Current every day smoker",
+            "dateRange": [
+                {
+                    "date": "1900-01-01T00:00:00.000Z",
+                    "precision": "year"
+                },
+                {
+                    "date": "1999-09-25T10:00:51.000Z",
+                    "precision": "second"
+                }
+            ]
+        }
+    ]
