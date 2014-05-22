@@ -29,6 +29,23 @@ before(function(done) {
 
 describe('Social History partial matching library (socialhistory.js) tests', function() {
 
+        it('compare social history sections in edge cases', function() {
+            var m = [comparePartial({}, {})];
+            expect(m.length).to.equal(1);
+            expect(m[0].match).to.equal("duplicate");
+
+
+            var m = [comparePartial({}, js)];
+            expect(m.length).to.equal(1);
+            expect(m[0].match).to.equal("diff");
+
+
+            var m = [comparePartial(js, {})];
+            expect(m.length).to.equal(1);
+            expect(m[0].match).to.equal("new");
+
+        });
+
         it('compare Social History sections with itself', function() {
             var m = [comparePartial(js, js)];
 

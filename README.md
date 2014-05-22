@@ -155,21 +155,21 @@ _Applied to: Demographics, Social History_
 ]
 ```
 
-Edge cases for Demographics:
+Edge cases for single facts:
 
-Both demographics objects are empty e.g. comparePartial({}, {})
+Both objects are empty e.g. comparePartial({}, {})
 
 ```javascript
 [ { match: 'duplicate' } ]
 ```
 
-Both comparing empty demographics object e.g. {} with non-empty (master record)
+Comparing empty object e.g. {} with non-empty (master record)
 
 ```javascript
 [ { match: 'diff', diff: {} } ]
 ```
 
-Comparing non empty demographics object with empty master record {}
+Comparing non empty object with empty master record {}
 ```javascript
 [ { match: 'new' } ]
 ```
