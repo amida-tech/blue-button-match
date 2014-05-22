@@ -155,6 +155,25 @@ _Applied to: Demographics, Social History_
 ]
 ```
 
+Edge cases for Demographics:
+
+Both demographics objects are empty e.g. comparePartial({}, {})
+
+```javascript
+[ { match: 'duplicate' } ]
+```
+
+Both comparing empty demographics object e.g. {} with non-empty (master record)
+
+```javascript
+[ { match: 'diff', diff: {} } ]
+```
+
+Comparing non empty demographics object with empty master record {}
+```javascript
+[ { match: 'new' } ]
+```
+
 ## Contributing
 
 Contributors are welcome. See issues https://github.com/amida-tech/blue-button-match/issues

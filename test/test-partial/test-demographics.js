@@ -26,6 +26,33 @@ before(function(done) {
 
 describe('Demographics partial matching library (demographics.js) tests', function() {
 
+
+        it('compare demographics sections in edge cases', function() {
+            var m = [comparePartial({}, {})];
+
+            expect(m.length).to.equal(1);
+
+            expect(m[0].match).to.equal("duplicate");
+
+            //console.log(m);
+
+            var m = [comparePartial({}, js)];
+
+            expect(m.length).to.equal(1);
+
+            expect(m[0].match).to.equal("diff");
+
+            //console.log(m);
+
+            var m = [comparePartial(js, {})];
+
+            expect(m.length).to.equal(1);
+
+            expect(m[0].match).to.equal("new");
+            //console.log(m);
+
+        });
+
         it('compare demographics sections with itself', function() {
             var m = [comparePartial(js, js)];
 
