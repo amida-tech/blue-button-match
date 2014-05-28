@@ -28,7 +28,7 @@ before(function(done) {
 });
 
 
-describe('Immunizations partial matching library (problems.js) tests', function() {
+describe('Immunizations partial matching library (immunizations.js) tests', function() {
 
 
 

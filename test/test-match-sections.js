@@ -60,7 +60,6 @@ describe('Matching library (match-sections.js) tests', function() {
                     //console.log(m);
 
                     for (var item in m) {
-                        //console.log(m[item].match);
                         expect(m[item].match).to.equal("new");
                         expect(m[item]).to.have.property('src_id');
                         expect(m[item]).to.not.have.property('dest_id');

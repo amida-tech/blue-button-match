@@ -54,7 +54,75 @@ describe('utils.js test', function () {
     });
 
 
-    xit('test codeMatchWithTranslation (TODO)', function () {
+    it('test diff', function () {
+        var a={"a":"a","b":"b", "c":"c"};
+        var b={"a":"not a","b":"not b", "c":"not c"};
+        var c={"d":"d"};
+        var d={"a":"not a", "b":"b"};
+
+        var el;
+        var diff;
+
+        diff=utils.diff(a,a);
+        for (el in diff){
+            expect(diff[el]).to.equal("duplicate");            
+        }
+
+        diff=utils.diff(a,b);
+        for (el in diff){
+            expect(diff[el]).to.equal("new");            
+        }
+
+        diff=utils.diff(a,c);
+        for (el in diff){
+            expect(diff[el]).to.equal("new");            
+        }
+
+        diff=utils.diff(a,d);
+        expect(diff["a"]).to.equal("new");            
+        expect(diff["b"]).to.equal("duplicate");            
+        
+
+    });
+
+
+    it('test codeMatchWithTranslation', function () {
+        var a={
+            "code": "Code A",
+            "code_system_name": "System"
+        };
+        var a2={
+            "code": "Code A with Description",
+            "code_system_name": "System"
+        };
+
+        var b={
+            "code": "Code B",
+            "code_system_name": "System"
+        };
+        var b2={
+            "code": "Code B with Description",
+            "code_system_name": "System"
+        };
+
+        var match;
+
+        match = utils.codeMatchWithTranslation(a.code, a.code_system_name, [], a.code, a.code_system_name, [a]);
+        expect(match).to.equal(true);
+        match = utils.codeMatchWithTranslation(a.code, a.code_system_name, [], a2.code, a2.code_system_name, [a]);
+        expect(match).to.equal(true);
+        match = utils.codeMatchWithTranslation(a2.code, a2.code_system_name, [a],a.code, a.code_system_name, []);
+        expect(match).to.equal(true);
+
+
+        match = utils.codeMatchWithTranslation(a.code, a.code_system_name, [a2], a2.code, a2.code_system_name, [a]);
+        expect(match).to.equal(true);
+
+        match = utils.codeMatchWithTranslation(a.code, a.code_system_name, [a2], a2.code, a2.code_system_name, [b,b2]);
+        expect(match).to.equal(true);
+
+        match = utils.codeMatchWithTranslation(a.code, a.code_system_name, [a2], b.code, b.code_system_name, [b,b2]);
+        expect(match).to.equal(false);
 
     });
 
