@@ -339,7 +339,8 @@
             {
                 "match": "diff",
                 "diff": {
-                    "0": "new"
+                    "value": "new",
+                    "dateRange": "duplicate"
                 }
             }
         ]

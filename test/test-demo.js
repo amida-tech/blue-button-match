@@ -110,7 +110,7 @@ describe('Verifying demo R1.0 sample xml files', function() {
         //console.log(js);
         var m0 = match.match(js, {});
 
-        //console.log(JSON.stringify(m,null,4));
+        //console.log(JSON.stringify(m0,null,4));
 
         for (var section in lookup) {
             for (var el in m0.match[lookup[section]]) {
