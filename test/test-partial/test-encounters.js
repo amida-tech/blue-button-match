@@ -12,6 +12,7 @@ var comparePartial = require('../../lib/sections/subarray/encounters.js').compar
 var matchSections = require("../../lib/match-sections.js").matchSections;
 
 var js, js2, js3, js4;
+var js_f, js2_f;
 
 before(function(done) {
     // 1 sample encounter
@@ -22,6 +23,13 @@ before(function(done) {
 
     // has another encounter different from all of the above
     js3 = JSON.parse(fs.readFileSync('test/test-partial/fixtures/encounters3.json', 'utf-8').toString());
+
+
+    // 1 sample encounter but no findings
+    js_f = JSON.parse(fs.readFileSync('test/test-partial/fixtures/encounters_f.json', 'utf-8').toString());
+
+    //same as above but rearranged to be partial match and no findings
+    js2_f = JSON.parse(fs.readFileSync('test/test-partial/fixtures/encounters2_f.json', 'utf-8').toString());
 
     //console.log(bb);
     done();
@@ -98,6 +106,20 @@ describe('Encounter partial matching library (encounters.js) tests', function() 
                 expect(m[item].match).to.equal("partial");
                 //expect(m[item]).to.have.property('src_id');
                 //expect(m[item]).to.not.have.property('dest_id');
+            }
+
+        });
+
+        it('compare two different encounters sections that will have all partial match (and empty findings)', function() {
+            var m = matchSections(js_f, js2_f, comparePartial);
+            console.log(JSON.stringify(m,null,4));
+
+            for (var item in m) {
+                expect(m[item].match).to.equal("partial");
+            }
+
+            for (var item in m) {
+                expect(m[item].match).to.equal("partial");
             }
 
         });
