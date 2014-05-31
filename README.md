@@ -174,6 +174,82 @@ Comparing non empty object with empty master record {}
 [ { match: 'new' } ]
 ```
 
+## Matching Rules
+
+#### Common matching rules
+
+Fuzzy date match - dates match with margin of errors; in case of date ranges, checked for overlap; margin of error is 24 hrs.
+
+Code (Code System match) - code and code_system_name must match.
+
+Code match with translations - codes (and code_system_names) between two entries should have at least one match.
+
+###Allergies
+
+Code match on Allergen is required.
+
+Date and Fuzzy date match.
+
+###Medications
+
+Code match with translation on Medication.
+
+Status match.
+
+Date and Fuzzy date match.
+
+###Problems
+
+Code match with translation on Medication is required.
+
+Status match.
+
+Negation indicator match.
+
+Date and Fuzzy date match.
+
+###Results
+
+Code match on Result is required.
+
+Since Result doesn't have a date. Dates from sub results are collected for both entries. Fuzzy date match is used.
+
+###Demographics
+
+All subelements are compared.
+
+###Procedures
+
+Code match with translation on Procedure is required.
+
+Status dismatch results in 0% match.
+
+Date and Fuzzy date match.
+
+###Encounters
+
+Code match with translation on Encounter is required.
+
+Date and Fuzzy date match.
+
+###Immunizations
+
+Code match with translation on Immunization is required.
+
+Status dismatch results in 0% match.
+
+Date and Fuzzy date match.
+
+###Vitals model
+
+Code match with translation on Vital Sign is required.
+
+Date and Fuzzy date match.
+
+###Social History
+
+All subelements are compared.
+
 ## Contributing
 
 Contributors are welcome. See issues https://github.com/amida-tech/blue-button-match/issues
