@@ -254,6 +254,10 @@ All subelements are compared.
 
 Contributors are welcome. See issues https://github.com/amida-tech/blue-button-match/issues
 
+## Release Notes
+
+See release notes [here] (./RELEASENOTES.md)
+
 ## License
 
 Licensed under [Apache 2.0](./LICENSE)
