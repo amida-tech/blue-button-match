@@ -1,6 +1,6 @@
 {
     "name": "blue-button-match",
-    "version": "0.9.0",
+    "version": "1.0.0",
     "description": "Automatic matching of Blue Button JSON data (detection of new, duplicate and partial match entries).",
     "main": "/index.js",
     "directories": {
@@ -31,7 +31,7 @@
         "xdate": "*"
     },
     "devDependencies": {
-        "blue-button": ">=0.9.0",
+        "blue-button": ">=1.0.0",
         "should": "3.1.x",
         "assert": "1.1.x",
         "mocha": "1.17.x",
