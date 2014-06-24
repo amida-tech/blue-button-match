@@ -111,8 +111,13 @@ describe('Encounter partial matching library (encounters.js) tests', function() 
         });
 
         it('compare two different encounters sections that will have all partial match (and empty findings)', function() {
+            //console.log(JSON.stringify(js_f, null, 10));
+            //console.log(JSON.stringify(js2_f, null, 10));
+
+
+
             var m = matchSections(js_f, js2_f, comparePartial);
-            console.log(JSON.stringify(m,null,4));
+            //console.log(JSON.stringify(m,null,4));
 
             for (var item in m) {
                 expect(m[item].match).to.equal("partial");

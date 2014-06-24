@@ -1,5 +1,17 @@
 [
         {
+            "encounter": {
+                "name": "Office consultation - 15 minutes",
+                "code": "99241",
+                "code_system_name": "CPT",
+                "translations": [
+                    {
+                        "name": "Ambulatory",
+                        "code": "AMB",
+                        "code_system_name": "HL7ActCode"
+                    }
+                ]
+            },
             "identifiers": [
                 {
                     "identifier": "2a620155-9d11-439e-92b3-5d9815ff4de8"
@@ -37,16 +49,6 @@
                     "name": "Bronchitis",
                     "code": "32398004",
                     "code_system_name": "SNOMED CT"
-                }
-            ],
-            "name": "Office consultation - 15 minutes",
-            "code": "99241",
-            "code_system_name": "CPT",
-            "translations": [
-                {
-                    "name": "Ambulatory",
-                    "code": "AMB",
-                    "code_system_name": "HL7ActCode"
                 }
             ]
         }
