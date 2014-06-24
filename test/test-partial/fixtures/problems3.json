@@ -17,9 +17,11 @@
                     "identifier": "71232707-11DB-4166-864B-CED1F91C15E1"
                 }
             ],
-            "name": "Angina (disorder)",
-            "code": "194828000",
-            "code_system_name": "SNOMED CT"
+            "problem": {
+                "name": "Angina (disorder)",
+                "code": "194828000",
+                "code_system_name": "SNOMED CT"
+            }
         },
         {
             "date": [
@@ -39,8 +41,10 @@
                     "identifier": "5E14E708-C7C8-477B-B28B-5A38B4B6FE3C"
                 }
             ],
-            "name": "Diabetes mellitus type 2 (disorder)",
-            "code": "44054006",
-            "code_system_name": "SNOMED CT"
+            "problem": {
+                "name": "Diabetes mellitus type 2 (disorder)",
+                "code": "44054006",
+                "code_system_name": "SNOMED CT"
+            }
         }
 ]

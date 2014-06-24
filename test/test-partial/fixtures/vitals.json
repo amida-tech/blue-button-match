@@ -16,9 +16,11 @@
                 "interpretations": [
                     "Normal"
                 ],
-                "name": "Height",
-                "code": "8302-2",
-                "code_system_name": "LOINC",
+                "vital": {
+                    "name": "Height",
+                    "code": "8302-2",
+                    "code_system_name": "LOINC"
+                },
                 "value": 177,
                 "unit": "cm"
             },
@@ -39,9 +41,11 @@
                 "interpretations": [
                     "Normal"
                 ],
-                "name": "Patient Body Weight - Measured",
-                "code": "3141-9",
-                "code_system_name": "LOINC",
+                "vital": {
+                    "name": "Patient Body Weight - Measured",
+                    "code": "3141-9",
+                    "code_system_name": "LOINC"
+                },
                 "value": 86,
                 "unit": "kg"
             },
@@ -62,9 +66,11 @@
                 "interpretations": [
                     "Normal"
                 ],
-                "name": "Intravascular Systolic",
-                "code": "8480-6",
-                "code_system_name": "LOINC",
+                "vital": {
+                    "name": "Intravascular Systolic",
+                    "code": "8480-6",
+                    "code_system_name": "LOINC"
+                },
                 "value": 132,
                 "unit": "mm[Hg]"
             },
@@ -85,9 +91,11 @@
                 "interpretations": [
                     "Normal"
                 ],
-                "name": "Height",
-                "code": "8302-2",
-                "code_system_name": "LOINC",
+                "vital": {
+                    "name": "Height",
+                    "code": "8302-2",
+                    "code_system_name": "LOINC"
+                },
                 "value": 177,
                 "unit": "cm"
             },
@@ -108,9 +116,11 @@
                 "interpretations": [
                     "Normal"
                 ],
-                "name": "Patient Body Weight - Measured",
-                "code": "3141-9",
-                "code_system_name": "LOINC",
+                "vital": {
+                    "name": "Patient Body Weight - Measured",
+                    "code": "3141-9",
+                    "code_system_name": "LOINC"
+                },
                 "value": 88,
                 "unit": "kg"
             },
@@ -131,9 +141,11 @@
                 "interpretations": [
                     "Normal"
                 ],
-                "name": "Intravascular Systolic",
-                "code": "8480-6",
-                "code_system_name": "LOINC",
+                "vital": {
+                    "name": "Intravascular Systolic",
+                    "code": "8480-6",
+                    "code_system_name": "LOINC"
+                },
                 "value": 145,
                 "unit": "mm[Hg]"
             }

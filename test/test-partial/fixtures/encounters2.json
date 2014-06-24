@@ -1,5 +1,17 @@
 [
         {
+            "encounter": {
+                "name": "Ambulatory",
+                "code": "AMB",
+                "code_system_name": "HL7ActCode",
+                "translations": [
+                    {
+                        "name": "Office outpatient visit 15 minutes",
+                        "code": "99213",
+                        "code_system_name": "CPT"
+                    }
+                ]
+            },
             "identifiers": [
                 {
                     "identifier": "2a620155-9d11-439e-92b3-5d9815ff4de8"
@@ -42,16 +54,6 @@
                     "name": "Bronchitis",
                     "code": "32398004",
                     "code_system_name": "SNOMED CT"
-                }
-            ],
-                    "name": "Ambulatory",
-                    "code": "AMB",
-                    "code_system_name": "HL7ActCode",
-            "translations": [
-                {
-                    "name": "Office outpatient visit 15 minutes",
-                    "code": "99213",
-                    "code_system_name": "CPT"
                 }
             ]
         }

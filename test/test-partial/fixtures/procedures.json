@@ -12,7 +12,7 @@
                     "precision": "day"
                 }
             ],
-            "bodysite": [
+            "body_sites": [
                 {
                     "name": "colon",
                     "code": "appropriate_code",
@@ -52,10 +52,12 @@
                     }
                 }
             ],
-            "type": "procedure",
-            "name": "Colonoscopy",
-            "code": "73761001",
-            "code_system_name": "SNOMED CT"
+            "procedure_type": "procedure",
+            "procedure": {
+                "name": "Colonoscopy",
+                "code": "73761001",
+                "code_system_name": "SNOMED CT"
+            }
         },
         {
             "identifiers": [
@@ -71,7 +73,7 @@
                     "precision": "day"
                 }
             ],
-            "bodysite": [
+            "body_sites": [
                 {
                     "name": "Abdomen and pelvis",
                     "code": "416949008",
@@ -119,10 +121,12 @@
                     ]
                 }
             ],
-            "type": "observation",
-            "name": "Colonic polypectomy",
-            "code": "274025005",
-            "code_system_name": "SNOMED CT"
+            "procedure_type": "observation",
+            "procedure": {
+                "name": "Colonic polypectomy",
+                "code": "274025005",
+                "code_system_name": "SNOMED CT"
+            }
         },
         {
             "identifiers": [
@@ -179,9 +183,11 @@
                     ]
                 }
             ],
-            "type": "act",
-            "name": "Colonic polypectomy",
-            "code": "274025005",
-            "code_system_name": "SNOMED CT"
+            "procedure_type": "act",
+            "procedure": {
+                "name": "Colonic polypectomy",
+                "code": "274025005",
+                "code_system_name": "SNOMED CT"
+            }
         }
     ]

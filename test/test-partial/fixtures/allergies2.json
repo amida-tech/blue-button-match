@@ -1,5 +1,10 @@
 [
         {
+            "allergen": {
+                "name": "ALLERGENIC EXTRACT, PENICILLIN",
+                "code": "314422",
+                "code_system_name": "RXNORM"
+            },
             "date": [
                 {
                     "date": "2007-05-01T10:00:00.000Z",
@@ -20,12 +25,14 @@
                     "code": "422587007",
                     "code_system_name": "SNOMED CT"
                 }
-            ],
-            "name": "ALLERGENIC EXTRACT, PENICILLIN",
-            "code": "314422",
-            "code_system_name": "RXNORM"
+            ]
         },
         {
+            "allergen": {
+                    "name": "Codeine",
+                    "code": "2670",
+                    "code_system_name": "RXNORM"
+                },
             "date": [
                 {
                     "date": "2006-05-01T05:00:00.000Z",
@@ -46,12 +53,14 @@
                     "code": "56018004",
                     "code_system_name": "SNOMED CT"
                 }
-            ],
-            "name": "Codeine",
-            "code": "2670",
-            "code_system_name": "RXNORM"
+            ]
         },
         {
+            "allergen": {
+                "name": "Aspirin",
+                "code": "1191",
+                "code_system_name": "RXNORM"
+            },
             "date": [
                 {
                     "date": "2008-05-01T00:00:00.000Z",
@@ -78,9 +87,6 @@
                     "code": "56018004",
                     "code_system_name": "SNOMED CT"
                 }
-            ],
-            "name": "Aspirin",
-            "code": "1191",
-            "code_system_name": "RXNORM"
+            ]
         }
     ]

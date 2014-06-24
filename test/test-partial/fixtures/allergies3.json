@@ -1,6 +1,18 @@
 [
         
         {
+            "allergen": {
+                "name": "Penicillin G",
+                "code": "7980",
+                "code_system_name": "RXNORM",
+                "translations": [
+                    {
+                        "name": "penicillin G benzathine",
+                        "code": "d07727",
+                        "code_system_name": "multum-drug-id"
+                    }
+                ]
+            },
             "identifiers": [
                 {
                     "identifier": "F5EB70F0-FBFB-4614-8592-61EFC7972364"
@@ -13,16 +25,6 @@
                     "name": "Weal (disorder)",
                     "code": "247472004",
                     "code_system_name": "SNOMED CT"
-                }
-            ],
-            "name": "Penicillin G",
-            "code": "7980",
-            "code_system_name": "RXNORM",
-            "translations": [
-                {
-                    "name": "penicillin G benzathine",
-                    "code": "d07727",
-                    "code_system_name": "multum-drug-id"
                 }
             ]
         }
