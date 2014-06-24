@@ -159,17 +159,17 @@
         "medications": [
             {
                 "match": "partial",
-                "percent": 90,
+                "percent": 50,
                 "diff": {
-                    "date": "duplicate",
-                    "identifiers": "duplicate",
-                    "status": "duplicate",
-                    "sig": "duplicate",
-                    "product": "duplicate",
-                    "administration": "duplicate"
+                    "date": "new",
+                    "identifiers": "new",
+                    "status": "new",
+                    "sig": "new",
+                    "product": "new",
+                    "administration": "new"
                 },
                 "src_id": "0",
-                "dest_id": "2"
+                "dest_id": "0"
             }
         ],
         "problems": [
