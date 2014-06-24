@@ -91,25 +91,17 @@
         ],
         "medications": [
             {
-                "match": "partial",
-                "percent": 50,
-                "diff": {
-                    "date": "new",
-                    "identifiers": "new",
-                    "status": "new",
-                    "product": "new",
-                    "administration": "new"
-                },
-                "src_id": "0",
+                "match": "duplicate",
+                "src_id": "2",
                 "dest_id": "0"
             },
             {
                 "match": "new",
-                "src_id": "1"
+                "src_id": "0"
             },
             {
                 "match": "new",
-                "src_id": "2"
+                "src_id": "1"
             }
         ],
         "problems": [
