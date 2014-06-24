@@ -13,7 +13,7 @@
                     "precision": "day"
                 }
             ],
-            "bodysite": [
+            "body_sites": [
                 {
                     "name": "Lower Respiratory Tract Structure",
                     "code": "82094008",
@@ -61,9 +61,11 @@
                     ]
                 }
             ],
-            "type": "procedure",
-            "name": "Chest X-Ray",
-            "code": "168731009",
-            "code_system_name": "SNOMED CT"
+            "procedure_type": "procedure",
+            "procedure": {
+                "name": "Chest X-Ray",
+                "code": "168731009",
+                "code_system_name": "SNOMED CT"
+            }
         }
     ]
