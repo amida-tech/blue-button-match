@@ -1,5 +1,8 @@
 # blue-button-match.js Release Notes
 
+# v1.0.1 - June 25,2014
+- Uses blue-button.js v1.0.2 JSON data model
+
 # v1.0.0 - May 31, 2014
 
 This is the initial release of blue-button-match.js library.
