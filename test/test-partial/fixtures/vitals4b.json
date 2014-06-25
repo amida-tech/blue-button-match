@@ -16,9 +16,11 @@
                 "interpretations": [
                     "Normal"
                 ],
-                "name": "Height",
-                "code": "8302-2",
-                "code_system_name": "LOINC",
+                "vital": {
+                    "name": "Height",
+                    "code": "8302-2",
+                    "code_system_name": "LOINC"
+                },
                 "value": 177,
                 "unit": "cm"
             },
@@ -39,9 +41,11 @@
                 "interpretations": [
                     "Normal"
                 ],
-                "name": "Patient Body Weight - Measured",
-                "code": "3141-9",
-                "code_system_name": "LOINC",
+                "vital": {
+                    "name": "Patient Body Weight - Measured",
+                    "code": "3141-9",
+                    "code_system_name": "LOINC"
+                },
                 "value": 86,
                 "unit": "kg"
             }

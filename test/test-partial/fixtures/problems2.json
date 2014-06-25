@@ -25,9 +25,11 @@
                     "identifier": "ec8a6ff8-ed4b-4f7e-82c3-e98e58b45de7"
                 }
             ],
-            "name": "Asthma",
-            "code": "195967001",
-            "code_system_name": "SNOMED CT"
+            "problem": {
+                "name": "Asthma",
+                "code": "195967001",
+                "code_system_name": "SNOMED CT"
+            }
         },
         {
             "date": [
@@ -55,9 +57,11 @@
                     "identifier": "ec8a6ff8-ed4b-4f7e-82c3-e98e58b45de7"
                 }
             ],
-            "name": "Pneumonia",
-            "code": "233604007",
-            "code_system_name": "SNOMED CT"
+            "problem": {
+                "name": "Pneumonia",
+                "code": "233604007",
+                "code_system_name": "SNOMED CT"
+            }
         }
 
     ]
