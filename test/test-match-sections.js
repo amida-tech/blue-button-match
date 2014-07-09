@@ -18,6 +18,8 @@ var matchSections = require("../lib/match-sections.js").matchSections;
 
 var bb;
 var bb2, bb3, bb4;
+var bbCms1;
+var bbCms2;
 
 before(function(done) {
     var xml = fs.readFileSync('test/records/ccda/CCD_demo1.xml', 'utf-8');
@@ -26,10 +28,13 @@ before(function(done) {
     bb2 = bbjs.parseString(xml2).data;
     var xml3 = fs.readFileSync('test/records/ccda/CCD_demo3.xml', 'utf-8');
     bb3 = bbjs.parseString(xml3).data;
-
     var xml4 = fs.readFileSync('test/records/ccda/CCD_demo4.xml', 'utf-8');
     bb4 = bbjs.parseString(xml4).data;
 
+    var txt1 = fs.readFileSync('test/records/cms/cms_same.txt', 'utf-8');
+    bbCms1 = bbjs.parseText(txt1).data;
+    var txt2 = fs.readFileSync('test/records/cms/cms_same.txt', 'utf-8');
+    bbCms2 = bbjs.parseText(txt2).data;
     //console.log(bb);
     done();
 });
@@ -183,6 +188,58 @@ describe('Matching library (match-sections.js) tests', function() {
             expect(m.sort(src_sort)).to.deep.equal(mr.sort(src_sort));
             expect(m2.sort(src_sort)).to.deep.equal(mr2.sort(src_sort));
         });
+
+    });
+
+    describe('insurance sections comparison', function() {
+        var bbCmsTest1;
+        var bbCmsTest2;
+        beforeEach(function(){
+            bbCmsTest1 = JSON.parse(JSON.stringify(bbCms1));
+            bbCmsTest2 = JSON.parse(JSON.stringify(bbCms2));
+        });
+
+
+        it('testing matchSections method on two equal insurance sections', function() {
+            var m = matchSections(bbCmsTest1["insurance"], bbCmsTest2["insurance"], comparePartial("insurance"));
+            for (var item in m) {
+                expect(m[item].match).to.equal("duplicate");
+                expect(m[item]).to.have.property('src_id');
+                expect(m[item]).to.have.property('dest_id');
+            }
+        });
+
+        it('testing matchSections method on two different insurance sections', function() {
+            var number = 0;
+            for(var key in bbCmsTest1["insurance"]){
+                var insuranceObj = bbCmsTest1["insurance"][key];
+                for(var fieldKey in insuranceObj){
+                    insuranceObj[fieldKey]= number;
+                    number++;
+                }
+            }
+            var m = matchSections(bbCmsTest1["insurance"], bbCmsTest2["insurance"], comparePartial("insurance"));
+
+            for (var item in m) {
+                expect(m[item].match).to.equal("new");
+                expect(m[item]).to.have.property('src_id');
+            }
+        });
+
+        it('testing matchSections method on two insurance sections with some same fields', function() {
+            var number = 0;
+            for(var key in bbCmsTest1["insurance"]){
+                var insuranceObj = bbCmsTest1["insurance"][key];
+                insuranceObj['addresses'] = number++;
+                insuranceObj['date'] = number++;
+            }
+            var m = matchSections(bbCmsTest1["insurance"], bbCmsTest2["insurance"], comparePartial("insurance"));
+            console.log(m);
+            for (var item in m) {
+                expect(m[item].match).to.equal("partial");
+            }
+        });
+
 
     });
 
