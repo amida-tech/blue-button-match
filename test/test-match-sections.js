@@ -234,7 +234,6 @@ describe('Matching library (match-sections.js) tests', function() {
                 insuranceObj['date'] = number++;
             }
             var m = matchSections(bbCmsTest1["insurance"], bbCmsTest2["insurance"], comparePartial("insurance"));
-            console.log(m);
             for (var item in m) {
                 expect(m[item].match).to.equal("partial");
             }
@@ -242,6 +241,59 @@ describe('Matching library (match-sections.js) tests', function() {
 
 
     });
+
+    describe('claims sections comparison', function() {
+            var bbCmsTest1;
+            var bbCmsTest2;
+            beforeEach(function(){
+                bbCmsTest1 = JSON.parse(JSON.stringify(bbCms1));
+                bbCmsTest2 = JSON.parse(JSON.stringify(bbCms2));
+            });
+
+
+            it(', testing matchSections method on two equal claims sections', function() {
+                var m = matchSections(bbCmsTest1["claims"], bbCmsTest2["claims"], comparePartial("claims"));
+                for (var item in m) {
+                    expect(m[item].match).to.equal("duplicate");
+                    expect(m[item]).to.have.property('src_id');
+                    expect(m[item]).to.have.property('dest_id');
+                }
+            });
+
+            it(', testing matchSections method on two different claims sections', function() {
+                var number = 0;
+                for(var key in bbCmsTest1["claims"]){
+                    var claimsObj = bbCmsTest1["claims"][key];
+                    for(var fieldKey in claimsObj){
+                        claimsObj[fieldKey]= number;
+                        number++;
+                    }
+                }
+
+                var m = matchSections(bbCmsTest1["claims"], bbCmsTest2["claims"], comparePartial("claims"));
+                for (var item in m) {
+                    expect(m[item].match).to.equal("new");
+                    expect(m[item]).to.have.property('src_id');
+                }
+            });
+            /*
+            it(', testing matchSections method on two claims sections with some same fields', function() {
+                var number = 0;
+                for(var key in bbCmsTest1["claims"]){
+                    var insuranceObj = bbCmsTest1["claims"][key];
+                    insuranceObj['addresses'] = number++;
+                    insuranceObj['date'] = number++;
+                }
+                var m = matchSections(bbCmsTest1["claims"], bbCmsTest2["claims"], comparePartial("claims"));
+                console.log(m);
+                for (var item in m) {
+                    expect(m[item].match).to.equal("partial");
+                }
+            });
+        */
+
+        });
+
 
 
 
