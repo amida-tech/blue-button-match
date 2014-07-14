@@ -276,7 +276,7 @@ describe('Matching library (match-sections.js) tests', function() {
                     expect(m[item]).to.have.property('src_id');
                 }
             });
-            /*
+
             it(', testing matchSections method on two claims sections with some same fields', function() {
                 var number = 0;
                 for(var key in bbCmsTest1["claims"]){
@@ -285,12 +285,11 @@ describe('Matching library (match-sections.js) tests', function() {
                     insuranceObj['date'] = number++;
                 }
                 var m = matchSections(bbCmsTest1["claims"], bbCmsTest2["claims"], comparePartial("claims"));
-                console.log(m);
                 for (var item in m) {
                     expect(m[item].match).to.equal("partial");
                 }
             });
-        */
+
 
         });
 
