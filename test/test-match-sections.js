@@ -73,24 +73,7 @@ describe('Matching library (match-sections.js) tests', function() {
         });
 
 
-        it('testing matchSections method with two same BB.js data files', function() {
 
-
-            var name = "allergies";
-
-            if (bb3.hasOwnProperty(name) && bb3.hasOwnProperty(name)) {
-
-                var m = matchSections(bbCms1[name], bbCms2[name], comparePartial(name));
-                //console.log(m);
-                for (var item in m) {
-                    expect(m[item].match).to.equal("duplicate");
-                    expect(m[item]).to.have.property('src_id');
-                    expect(m[item]).to.have.property('dest_id');
-                }
-            }
-
-
-        });
 
 
         describe('allergy sections comparison', function() {
@@ -115,6 +98,21 @@ describe('Matching library (match-sections.js) tests', function() {
                     expect(m[item]).to.have.property('src_id');
                     expect(m[item]).to.have.property('dest_id');
                 }
+            });
+
+            it('testing matchSections method on allergies with two same bb.jss data files', function() {
+                    var name = "allergies";
+
+                    if (bb3.hasOwnProperty(name) && bb3.hasOwnProperty(name)) {
+
+                        var m = matchSections(bbCms1[name], bbCms2[name], comparePartial(name));
+                        //console.log(m);
+                        for (var item in m) {
+                            expect(m[item].match).to.equal("duplicate");
+                            expect(m[item]).to.have.property('src_id');
+                            expect(m[item]).to.have.property('dest_id');
+                        }
+                    }
             });
         });
 

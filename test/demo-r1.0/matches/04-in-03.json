@@ -6,14 +6,13 @@
                 "percent": 95,
                 "subelements": [
                     {
-                        "match": "partial",
-                        "percent": 75,
-                        "src_id": "0",
+                        "match": "duplicate",
+                        "src_id": "1",
                         "dest_id": "0"
                     },
                     {
                         "match": "new",
-                        "src_id": "1"
+                        "src_id": "0"
                     }
                 ],
                 "diff": {
@@ -47,14 +46,13 @@
                 "percent": 95,
                 "subelements": [
                     {
-                        "match": "partial",
-                        "percent": 50,
-                        "src_id": "0",
+                        "match": "duplicate",
+                        "src_id": "1",
                         "dest_id": "0"
                     },
                     {
                         "match": "new",
-                        "src_id": "1"
+                        "src_id": "0"
                     }
                 ],
                 "diff": {
@@ -324,7 +322,7 @@
         ]
     },
     "meta": {
-        "version": "1.0.0"
+        "version": "1.0.1"
     },
     "errors": []
 }
