@@ -42,8 +42,6 @@ before(function(done) {
 
 describe('Matching library (match-sections.js) tests', function() {
 
-
-
     describe('Sections level tests', function() {
 
         it('testing matchSections method with two different BB.js data files', function() {
@@ -77,26 +75,38 @@ describe('Matching library (match-sections.js) tests', function() {
 
         it('testing matchSections method with two same BB.js data files', function() {
 
-            for (var section in lookups.sections) {
-                var name = lookups.sections[section];
 
-                if (bb3.hasOwnProperty(name) && bb3.hasOwnProperty(name)) {
+            var name = "allergies";
 
-                    var m = matchSections(bb3[name], bb3[name], comparePartial(name));
+            if (bb3.hasOwnProperty(name) && bb3.hasOwnProperty(name)) {
 
-                    for (var item in m) {
-                        expect(m[item].match).to.equal("duplicate");
-                        expect(m[item]).to.have.property('src_id');
-                        expect(m[item]).to.have.property('dest_id');
-                    }
+                var m = matchSections(bbCms1[name], bbCms2[name], comparePartial(name));
+                //console.log(m);
+                for (var item in m) {
+                    expect(m[item].match).to.equal("duplicate");
+                    expect(m[item]).to.have.property('src_id');
+                    expect(m[item]).to.have.property('dest_id');
                 }
             }
+
 
         });
 
 
         describe('allergy sections comparison', function() {
             it('testing matchSections method on two equal allergy sections', function() {
+                //console.log(match.matchSections(bb.data["allergies"],bb.data["allergies"]));
+                var m = matchSections(bb["allergies"], bb["allergies"], comparePartial("allergies"));
+
+                for (var item in m) {
+                    expect(m[item].match).to.equal("duplicate");
+                    expect(m[item]).to.have.property('src_id');
+                    expect(m[item]).to.have.property('dest_id');
+                }
+            });
+
+
+            it('testing allergy sections with undefineds', function() {
                 //console.log(match.matchSections(bb.data["allergies"],bb.data["allergies"]));
                 var m = matchSections(bb["allergies"], bb["allergies"], comparePartial("allergies"));
 
@@ -292,9 +302,5 @@ describe('Matching library (match-sections.js) tests', function() {
 
 
         });
-
-
-
-
 
 });
