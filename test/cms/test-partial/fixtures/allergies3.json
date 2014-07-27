@@ -1,0 +1,59 @@
+[
+    {
+        "allergen": {
+            "name": "ALLERGENIC EXTRACT"
+        },
+        "date": [
+            {
+                "date": "2010-05-01T00:00:00.000Z",
+                "precision": "day"
+            }
+        ],
+        "reaction": [
+            {
+                "reaction": {
+                    "name": "Nausea"
+                },
+                "severity": "Severe"
+            }
+        ]
+    },
+    {
+        "allergen": {
+            "name": "Cod"
+        },
+        "date": [
+            {
+                "date": "2006-05-01T00:00:00.000Z",
+                "precision": "day"
+            }
+        ],
+        "reaction": [
+            {
+                "reaction": {
+                    "name": "Wheezing"
+                },
+                "severity": "Mild"
+            }
+        ]
+    },
+    {
+        "allergen": {
+            "name": "Aspirin"
+        },
+        "date": [
+            {
+                "date": "2008-05-01T00:00:00.000Z",
+                "precision": "day"
+            }
+        ],
+        "reaction": [
+            {
+                "reaction": {
+                    "name": "Hives"
+                },
+                "severity": "Mild to moderate"
+            }
+        ]
+    }
+]

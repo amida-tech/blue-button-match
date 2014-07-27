@@ -1,0 +1,59 @@
+[
+    {
+        "allergen": {
+            "name": "ALLERGENIC EXTRACT, PENICILLIN"
+        },
+        "date": [
+            {
+                "date": "2010-08-07T00:00:00.000Z",
+                "precision": "day"
+            }
+        ],
+        "reaction": [
+            {
+                "reaction": {
+                    "name": "Nausea"
+                },
+                "severity": "Mild"
+            }
+        ]
+    },
+    {
+        "allergen": {
+            "name": "Codeine"
+        },
+        "date": [
+            {
+                "date": "2010-05-01T00:00:00.000Z",
+                "precision": "month"
+            }
+        ],
+        "reaction": [
+            {
+                "reaction": {
+                    "name": "Wheezing"
+                },
+                "severity": "Mild"
+            }
+        ]
+    },
+    {
+        "allergen": {
+            "name": "Aspirin"
+        },
+        "date": [
+            {
+                "date": "2012-05-01T00:00:00.000Z",
+                "precision": "day"
+            }
+        ],
+        "reaction": [
+            {
+                "reaction": {
+                    "name": "Hives"
+                },
+                "severity": "Mild to moderate"
+            }
+        ]
+    }
+]

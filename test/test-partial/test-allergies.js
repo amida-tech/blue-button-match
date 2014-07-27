@@ -27,8 +27,8 @@ before(function(done) {
     done();
 });
 
-
-describe('Allergies partial matching library (allergies.js) tests', function() {
+//CCDA ONLY
+describe('CCDA: Allergies partial matching library (allergies.js) tests', function() {
 
 
 
@@ -125,3 +125,4 @@ describe('Allergies partial matching library (allergies.js) tests', function() {
         });
 
 });
+
