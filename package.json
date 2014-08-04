@@ -19,16 +19,17 @@
         "name": "Afsin Ustundag",
         "email": "afsin.ustundag@us.pwc.com"
     }],
-    "license": "MIT",
+    "license": "Apache-2.0",
     "engines": {
         "node": ">= 0.10.0"
     },
     "dependencies": {
-        "libxmljs": "*",
-        "deep-equal": "*",
+        "libxmljs": "0.11.x",
+        "deep-equal": "0.2.x",
         "underscore": "1.6.x",
-        "node-uuid": "*",
-        "xdate": "*"
+        "node-uuid": "1.4.x",
+        "xdate": "0.8.x",
+        "winston": "0.7.x"
     },
     "devDependencies": {
         "blue-button": "git://github.com/amida-tech/blue-button.git",

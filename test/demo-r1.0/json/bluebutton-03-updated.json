@@ -7,12 +7,12 @@
             "last": "Jones",
             "first": "Isabella"
         },
-        "dob": [
-            {
-                "date": "1975-05-01T00:00:00.000Z",
+        "dob": {
+            "point": {
+                "date": "1975-05-01T00:00:00Z",
                 "precision": "day"
             }
-        ],
+        },
         "gender": "Female",
         "identifiers": [
             {
@@ -107,12 +107,12 @@
                 "code_system_name": "LOINC"
             },
             "status": "completed",
-            "date": [
-                {
-                    "date": "2012-10-02T00:00:00.000Z",
+            "date_time": {
+                "point": {
+                    "date": "2012-10-02T00:00:00Z",
                     "precision": "day"
                 }
-            ],
+            },
             "value": 64,
             "unit": "[in_us]"
         },
@@ -133,12 +133,12 @@
                 "code_system_name": "LOINC"
             },
             "status": "completed",
-            "date": [
-                {
-                    "date": "2012-10-02T00:00:00.000Z",
+            "date_time": {
+                "point": {
+                    "date": "2012-10-02T00:00:00Z",
                     "precision": "day"
                 }
-            ],
+            },
             "value": 160,
             "unit": "[lb_av]"
         },
@@ -159,12 +159,12 @@
                 "code_system_name": "LOINC"
             },
             "status": "completed",
-            "date": [
-                {
-                    "date": "2012-10-02T00:00:00.000Z",
+            "date_time": {
+                "point": {
+                    "date": "2012-10-02T00:00:00Z",
                     "precision": "day"
                 }
-            ],
+            },
             "value": 120,
             "unit": "mm[Hg]"
         },
@@ -185,12 +185,12 @@
                 "code_system_name": "LOINC"
             },
             "status": "completed",
-            "date": [
-                {
-                    "date": "2012-10-02T00:00:00.000Z",
+            "date_time": {
+                "point": {
+                    "date": "2012-10-02T00:00:00Z",
                     "precision": "day"
                 }
-            ],
+            },
             "value": 78,
             "unit": "mm[Hg]"
         },
@@ -211,12 +211,12 @@
                 "code_system_name": "LOINC"
             },
             "status": "completed",
-            "date": [
-                {
-                    "date": "2012-10-02T00:00:00.000Z",
+            "date_time": {
+                "point": {
+                    "date": "2012-10-02T00:00:00Z",
                     "precision": "day"
                 }
-            ],
+            },
             "value": 27.5,
             "unit": "1"
         },
@@ -232,12 +232,12 @@
                 "code_system_name": "LOINC"
             },
             "status": "completed",
-            "date": [
-                {
-                    "date": "1999-11-14T00:00:00.000Z",
+            "date_time": {
+                "point": {
+                    "date": "1999-11-14T00:00:00Z",
                     "precision": "day"
                 }
-            ],
+            },
             "interpretations": [
                 "Normal"
             ],
@@ -256,12 +256,12 @@
                 "code_system_name": "LOINC"
             },
             "status": "completed",
-            "date": [
-                {
-                    "date": "1999-11-14T00:00:00.000Z",
+            "date_time": {
+                "point": {
+                    "date": "1999-11-14T00:00:00Z",
                     "precision": "day"
                 }
-            ],
+            },
             "interpretations": [
                 "Normal"
             ],
@@ -280,12 +280,12 @@
                 "code_system_name": "LOINC"
             },
             "status": "completed",
-            "date": [
-                {
-                    "date": "1999-11-14T00:00:00.000Z",
+            "date_time": {
+                "point": {
+                    "date": "1999-11-14T00:00:00Z",
                     "precision": "day"
                 }
-            ],
+            },
             "interpretations": [
                 "Normal"
             ],
@@ -304,12 +304,12 @@
                 "code_system_name": "LOINC"
             },
             "status": "completed",
-            "date": [
-                {
-                    "date": "2000-04-07T00:00:00.000Z",
+            "date_time": {
+                "point": {
+                    "date": "2000-04-07T00:00:00Z",
                     "precision": "day"
                 }
-            ],
+            },
             "interpretations": [
                 "Normal"
             ],
@@ -328,12 +328,12 @@
                 "code_system_name": "LOINC"
             },
             "status": "completed",
-            "date": [
-                {
-                    "date": "2000-04-07T00:00:00.000Z",
+            "date_time": {
+                "point": {
+                    "date": "2000-04-07T00:00:00Z",
                     "precision": "day"
                 }
-            ],
+            },
             "interpretations": [
                 "Normal"
             ],
@@ -352,12 +352,12 @@
                 "code_system_name": "LOINC"
             },
             "status": "completed",
-            "date": [
-                {
-                    "date": "2000-04-07T00:00:00.000Z",
+            "date_time": {
+                "point": {
+                    "date": "2000-04-07T00:00:00Z",
                     "precision": "day"
                 }
-            ],
+            },
             "interpretations": [
                 "Normal"
             ],
@@ -389,12 +389,12 @@
                         "code": "3016-3",
                         "code_system_name": "LOINC"
                     },
-                    "date": [
-                        {
-                            "date": "2012-11-26T00:00:00.000Z",
+                    "date_time": {
+                        "point": {
+                            "date": "2012-11-26T00:00:00Z",
                             "precision": "day"
                         }
-                    ],
+                    },
                     "status": "completed",
                     "interpretations": [
                         "abnormal",
@@ -428,12 +428,12 @@
                         "code": "4548-4",
                         "code_system_name": "LOINC"
                     },
-                    "date": [
-                        {
-                            "date": "2012-11-26T00:00:00.000Z",
+                    "date_time": {
+                        "point": {
+                            "date": "2012-11-26T00:00:00Z",
                             "precision": "day"
                         }
-                    ],
+                    },
                     "status": "completed",
                     "interpretations": [
                         "abnormal",
@@ -467,12 +467,12 @@
                         "code": "2160-0",
                         "code_system_name": "LOINC"
                     },
-                    "date": [
-                        {
-                            "date": "2012-11-26T00:00:00.000Z",
+                    "date_time": {
+                        "point": {
+                            "date": "2012-11-26T00:00:00Z",
                             "precision": "day"
                         }
-                    ],
+                    },
                     "status": "completed",
                     "interpretations": [
                         "abnormal"
@@ -505,12 +505,12 @@
                         "code": "6301-6",
                         "code_system_name": "LOINC"
                     },
-                    "date": [
-                        {
-                            "date": "2012-11-26T00:00:00.000Z",
+                    "date_time": {
+                        "point": {
+                            "date": "2012-11-26T00:00:00Z",
                             "precision": "day"
                         }
-                    ],
+                    },
                     "status": "completed",
                     "interpretations": [
                         "abnormal",
@@ -544,12 +544,12 @@
                         "code": "18041-4",
                         "code_system_name": "LOINC"
                     },
-                    "date": [
-                        {
-                            "date": "2012-11-26T00:00:00.000Z",
+                    "date_time": {
+                        "point": {
+                            "date": "2012-11-26T00:00:00Z",
                             "precision": "day"
                         }
-                    ],
+                    },
                     "status": "completed",
                     "interpretations": [
                         "normal"
@@ -568,12 +568,12 @@
                         "code": "18089-3",
                         "code_system_name": "LOINC"
                     },
-                    "date": [
-                        {
-                            "date": "2012-11-26T00:00:00.000Z",
+                    "date_time": {
+                        "point": {
+                            "date": "2012-11-26T00:00:00Z",
                             "precision": "day"
                         }
-                    ],
+                    },
                     "status": "completed",
                     "interpretations": [
                         "abnormal"
@@ -606,12 +606,12 @@
                         "code": "18844-1",
                         "code_system_name": "LOINC"
                     },
-                    "date": [
-                        {
-                            "date": "2012-11-26T00:00:00.000Z",
+                    "date_time": {
+                        "point": {
+                            "date": "2012-11-26T00:00:00Z",
                             "precision": "day"
                         }
-                    ],
+                    },
                     "status": "completed"
                 }
             ]
@@ -639,12 +639,12 @@
                         "code": "30313-1",
                         "code_system_name": "LOINC"
                     },
-                    "date": [
-                        {
-                            "date": "2000-03-23T14:30:00.000Z",
+                    "date_time": {
+                        "point": {
+                            "date": "2000-03-23T14:30:00Z",
                             "precision": "minute"
                         }
-                    ],
+                    },
                     "status": "completed",
                     "interpretations": [
                         "Normal"
@@ -663,12 +663,12 @@
                         "code": "33765-9",
                         "code_system_name": "LOINC"
                     },
-                    "date": [
-                        {
-                            "date": "2000-03-23T14:30:00.000Z",
+                    "date_time": {
+                        "point": {
+                            "date": "2000-03-23T14:30:00Z",
                             "precision": "minute"
                         }
-                    ],
+                    },
                     "status": "completed",
                     "interpretations": [
                         "Normal"
@@ -687,12 +687,12 @@
                         "code": "26515-7",
                         "code_system_name": "LOINC"
                     },
-                    "date": [
-                        {
-                            "date": "2000-03-23T14:30:00.000Z",
+                    "date_time": {
+                        "point": {
+                            "date": "2000-03-23T14:30:00Z",
                             "precision": "minute"
                         }
-                    ],
+                    },
                     "status": "completed",
                     "interpretations": [
                         "Low"
@@ -705,12 +705,12 @@
     ],
     "medications": [
         {
-            "date": [
-                {
-                    "date": "2012-10-02T00:00:00.000Z",
+            "date_time": {
+                "low": {
+                    "date": "2012-10-02T00:00:00Z",
                     "precision": "day"
                 }
-            ],
+            },
             "identifiers": [
                 {
                     "identifier": "1.3.6.1.4.1.22812.3.99930.3.4.9",
@@ -734,16 +734,23 @@
                     "name": "SOLUTION",
                     "code": "C42986",
                     "code_system_name": "Medication Route FDA"
+                },
+                "interval": {
+                    "period": {
+                        "value": 12,
+                        "unit": "h"
+                    },
+                    "frequency": false
                 }
             }
         },
         {
-            "date": [
-                {
-                    "date": "2012-09-20T00:00:00.000Z",
+            "date_time": {
+                "low": {
+                    "date": "2012-09-20T00:00:00Z",
                     "precision": "day"
                 }
-            ],
+            },
             "identifiers": [
                 {
                     "identifier": "1.3.6.1.4.1.22812.3.99930.3.4.9",
@@ -770,20 +777,27 @@
                 },
                 "dose": {
                     "value": 1
+                },
+                "interval": {
+                    "period": {
+                        "value": 6,
+                        "unit": "h"
+                    },
+                    "frequency": true
                 }
             }
         },
         {
-            "date": [
-                {
-                    "date": "2007-01-03T00:00:00.000Z",
+            "date_time": {
+                "low": {
+                    "date": "2007-01-03T00:00:00Z",
                     "precision": "day"
                 },
-                {
-                    "date": "2012-05-15T00:00:00.000Z",
+                "high": {
+                    "date": "2012-05-15T00:00:00Z",
                     "precision": "day"
                 }
-            ],
+            },
             "identifiers": [
                 {
                     "identifier": "cdbd33f0-6cde-11db-9fe1-0800200c9a66"
@@ -827,6 +841,13 @@
                 "rate": {
                     "value": 90,
                     "unit": "ml/min"
+                },
+                "interval": {
+                    "period": {
+                        "value": 6,
+                        "unit": "h"
+                    },
+                    "frequency": true
                 }
             },
             "precondition": {
@@ -855,25 +876,25 @@
                     "identifier_type": "5283815"
                 }
             ],
-            "date": [
-                {
-                    "date": "2012-10-02T00:00:00.000Z",
+            "date_time": {
+                "low": {
+                    "date": "2012-10-02T00:00:00Z",
                     "precision": "day"
                 },
-                {
-                    "date": "2012-10-05T00:00:00.000Z",
+                "high": {
+                    "date": "2012-10-05T00:00:00Z",
                     "precision": "day"
                 }
-            ],
+            },
             "locations": [
                 {
                     "name": "Local Community Hospital",
-                    "loc_type": {
+                    "location_type": {
                         "name": "Inpatient Medical/Surgical Ward",
                         "code": "1061-1",
                         "code_system_name": "HealthcareServiceLocation"
                     },
-                    "addresses": [
+                    "address": [
                         {
                             "streetLines": [
                                 "1000 Hospital Way"
@@ -882,6 +903,11 @@
                             "state": "OR",
                             "zip": "97005",
                             "country": "US"
+                        }
+                    ],
+                    "phone": [
+                        {
+                            "number": "+1-(555)555-1122"
                         }
                     ]
                 }
@@ -905,21 +931,21 @@
                     "identifier": "2a620155-9d11-439e-92b3-5d9815ff4de8"
                 }
             ],
-            "date": [
-                {
-                    "date": "2009-02-27T13:00:00.000Z",
+            "date_time": {
+                "point": {
+                    "date": "2009-02-27T13:00:00Z",
                     "precision": "subsecond"
                 }
-            ],
+            },
             "locations": [
                 {
                     "name": "Community Urgent Care Center",
-                    "loc_type": {
+                    "location_type": {
                         "name": "Urgent Care Center",
                         "code": "1160-1",
                         "code_system_name": "HealthcareServiceLocation"
                     },
-                    "addresses": [
+                    "address": [
                         {
                             "streetLines": [
                                 "17 Daws Rd."
@@ -943,12 +969,12 @@
     ],
     "allergies": [
         {
-            "date": [
-                {
-                    "date": "2007-05-01T00:00:00.000Z",
+            "date_time": {
+                "point": {
+                    "date": "2007-05-01T00:00:00Z",
                     "precision": "day"
                 }
-            ],
+            },
             "identifiers": [
                 {
                     "identifier": "4adc1020-7b14-11db-9fe1-0800200c9a66"
@@ -973,12 +999,12 @@
             ]
         },
         {
-            "date": [
-                {
-                    "date": "2006-05-01T00:00:00.000Z",
+            "date_time": {
+                "point": {
+                    "date": "2006-05-01T00:00:00Z",
                     "precision": "day"
                 }
-            ],
+            },
             "identifiers": [
                 {
                     "identifier": "4adc1020-7b14-11db-9fe1-0800200c9a66"
@@ -1003,12 +1029,12 @@
             ]
         },
         {
-            "date": [
-                {
-                    "date": "1984-06-05T10:00:00.000Z",
+            "date_time": {
+                "low": {
+                    "date": "1984-06-05T10:00:00Z",
                     "precision": "second"
                 }
-            ],
+            },
             "identifiers": [
                 {
                     "identifier": "4adc1020-7b14-11db-9fe1-0800200c9a66"
@@ -1017,7 +1043,7 @@
             "allergen": {
                 "name": "Eggs",
                 "code": "291P45F896",
-                "code_system_name": "OID 2.16.840.1.113883.4.9",
+                "code_system_name": "UNII",
                 "translations": [
                     {
                         "name": "Allergy to eggs",
@@ -1039,12 +1065,12 @@
             ]
         },
         {
-            "date": [
-                {
-                    "date": "2008-05-01T00:00:00.000Z",
+            "date_time": {
+                "point": {
+                    "date": "2008-05-01T00:00:00Z",
                     "precision": "day"
                 }
-            ],
+            },
             "identifiers": [
                 {
                     "identifier": "4adc1020-7b14-11db-9fe1-0800200c9a66"
@@ -1069,12 +1095,12 @@
             ]
         },
         {
-            "date": [
-                {
-                    "date": "2009-08-26T10:00:00.000Z",
+            "date_time": {
+                "low": {
+                    "date": "2009-08-26T10:00:00Z",
                     "precision": "second"
                 }
-            ],
+            },
             "identifiers": [
                 {
                     "identifier": "4adc1020-7b14-11db-9fe1-0800200c9a66"
@@ -1100,12 +1126,12 @@
     ],
     "immunizations": [
         {
-            "date": [
-                {
-                    "date": "1999-11-01T00:00:00.000Z",
+            "date_time": {
+                "point": {
+                    "date": "1999-11-01T00:00:00Z",
                     "precision": "month"
                 }
-            ],
+            },
             "identifiers": [
                 {
                     "identifier": "e6f1ba43-c0ed-4b9b-9f12-f435d8ad8f92"
@@ -1178,12 +1204,12 @@
             }
         },
         {
-            "date": [
-                {
-                    "date": "1998-12-15T00:00:00.000Z",
+            "date_time": {
+                "point": {
+                    "date": "1998-12-15T00:00:00Z",
                     "precision": "day"
                 }
-            ],
+            },
             "identifiers": [
                 {
                     "identifier": "e6f1ba43-c0ed-4b9b-9f12-f435d8ad8f92"
@@ -1256,12 +1282,12 @@
             }
         },
         {
-            "date": [
-                {
-                    "date": "1998-12-15T00:00:00.000Z",
+            "date_time": {
+                "point": {
+                    "date": "1998-12-15T00:00:00Z",
                     "precision": "day"
                 }
-            ],
+            },
             "identifiers": [
                 {
                     "identifier": "e6f1ba43-c0ed-4b9b-9f12-f435d8ad8f92"
@@ -1334,12 +1360,12 @@
             }
         },
         {
-            "date": [
-                {
-                    "date": "1998-12-15T00:00:00.000Z",
+            "date_time": {
+                "point": {
+                    "date": "1998-12-15T00:00:00Z",
                     "precision": "day"
                 }
-            ],
+            },
             "identifiers": [
                 {
                     "identifier": "e6f1ba43-c0ed-4b9b-9f12-f435d8ad8f92"
@@ -1417,27 +1443,27 @@
         "smoking_statuses": [
             {
                 "value": "Former smoker",
-                "date": [
-                    {
-                        "date": "2005-05-01T00:00:00.000Z",
+                "date_time": {
+                    "low": {
+                        "date": "2005-05-01T00:00:00Z",
                         "precision": "day"
                     },
-                    {
-                        "date": "2009-02-27T13:00:00.000Z",
+                    "high": {
+                        "date": "2009-02-27T13:00:00Z",
                         "precision": "subsecond"
                     }
-                ]
+                }
             }
         ]
     },
     "problems": [
         {
-            "date": [
-                {
-                    "date": "2012-09-20T00:00:00.000Z",
+            "date_time": {
+                "low": {
+                    "date": "2012-09-20T00:00:00Z",
                     "precision": "day"
                 }
-            ],
+            },
             "identifiers": [
                 {
                     "identifier": "1.3.6.1.4.1.22812.3.99930.3.4.1.2.1",
@@ -1467,16 +1493,16 @@
             ]
         },
         {
-            "date": [
-                {
-                    "date": "2008-01-03T00:00:00.000Z",
+            "date_time": {
+                "low": {
+                    "date": "2008-01-03T00:00:00Z",
                     "precision": "day"
                 },
-                {
-                    "date": "2008-01-03T00:00:00.000Z",
+                "high": {
+                    "date": "2008-01-03T00:00:00Z",
                     "precision": "day"
                 }
-            ],
+            },
             "identifiers": [
                 {
                     "identifier": "ab1791b0-5c71-11db-b0de-0800200c9a66"
@@ -1499,16 +1525,16 @@
             ]
         },
         {
-            "date": [
-                {
-                    "date": "2007-01-03T00:00:00.000Z",
+            "date_time": {
+                "low": {
+                    "date": "2007-01-03T00:00:00Z",
                     "precision": "day"
                 },
-                {
-                    "date": "2008-01-03T00:00:00.000Z",
+                "high": {
+                    "date": "2008-01-03T00:00:00Z",
                     "precision": "day"
                 }
-            ],
+            },
             "identifiers": [
                 {
                     "identifier": "ab1791b0-5c71-11db-b0de-0800200c9a66"
@@ -1545,12 +1571,12 @@
                 }
             ],
             "status": "Active",
-            "date": [
-                {
-                    "date": "2012-10-02T00:00:00.000Z",
+            "date_time": {
+                "low": {
+                    "date": "2012-10-02T00:00:00Z",
                     "precision": "day"
                 }
-            ],
+            },
             "body_sites": [
                 {
                     "name": "Lower Respiratory Tract Structure",
@@ -1596,12 +1622,12 @@
                 }
             ],
             "status": "Completed",
-            "date": [
-                {
-                    "date": "2012-05-12T00:00:00.000Z",
+            "date_time": {
+                "point": {
+                    "date": "2012-05-12T00:00:00Z",
                     "precision": "day"
                 }
-            ],
+            },
             "body_sites": [
                 {
                     "name": "colon",
@@ -1672,12 +1698,12 @@
                 }
             ],
             "status": "Aborted",
-            "date": [
-                {
-                    "date": "2011-02-03T00:00:00.000Z",
+            "date_time": {
+                "point": {
+                    "date": "2011-02-03T00:00:00Z",
                     "precision": "day"
                 }
-            ],
+            },
             "body_sites": [
                 {
                     "name": "Abdomen and pelvis",
@@ -1721,12 +1747,12 @@
             "locations": [
                 {
                     "name": "Community Gastroenterology Clinic",
-                    "loc_type": {
+                    "location_type": {
                         "name": "Gastroenterology Clinic",
                         "code": "1118-9",
                         "code_system_name": "HealthcareServiceLocation"
                     },
-                    "addresses": [
+                    "address": [
                         {
                             "streetLines": [
                                 "17 Daws Rd."
@@ -1754,12 +1780,12 @@
                 }
             ],
             "status": "Completed",
-            "date": [
-                {
-                    "date": "2011-02-03T00:00:00.000Z",
+            "date_time": {
+                "point": {
+                    "date": "2011-02-03T00:00:00Z",
                     "precision": "day"
                 }
-            ],
+            },
             "providers": [
                 {
                     "address": {
@@ -1796,12 +1822,12 @@
             "locations": [
                 {
                     "name": "Community Gastroenterology Clinic",
-                    "loc_type": {
+                    "location_type": {
                         "name": "Gastroenterology Clinic",
                         "code": "1118-9",
                         "code_system_name": "HealthcareServiceLocation"
                     },
-                    "addresses": [
+                    "address": [
                         {
                             "streetLines": [
                                 "17 Daws Rd."
@@ -1815,6 +1841,273 @@
                 }
             ],
             "procedure_type": "act"
+        }
+    ],
+    "plan_of_care": [
+        {
+            "plan": {
+                "name": "Colonoscopy",
+                "code": "73761001",
+                "code_system_name": "SNOMED CT"
+            },
+            "identifiers": [
+                {
+                    "identifier": "9a6d1bac-17d3-4195-89a4-1121bc809b4a"
+                }
+            ],
+            "date_time": {
+                "point": {
+                    "date": "2012-05-12T00:00:00Z",
+                    "precision": "day"
+                }
+            },
+            "type": "observation"
+        },
+        {
+            "plan": {
+                "name": "Colonoscopy",
+                "code": "73761001",
+                "code_system_name": "SNOMED CT"
+            },
+            "identifiers": [
+                {
+                    "identifier": "9a6d1bac-17d3-4195-89a4-1121bc809a5c"
+                }
+            ],
+            "date_time": {
+                "point": {
+                    "date": "2012-05-12T00:00:00Z",
+                    "precision": "day"
+                }
+            },
+            "type": "act"
+        },
+        {
+            "plan": {
+                "name": "Colonoscopy",
+                "code": "73761001",
+                "code_system_name": "SNOMED CT"
+            },
+            "identifiers": [
+                {
+                    "identifier": "9a6d1bac-17d3-4195-89a4-1121bc809b4d"
+                }
+            ],
+            "date_time": {
+                "point": {
+                    "date": "2012-05-12T00:00:00Z",
+                    "precision": "day"
+                }
+            },
+            "type": "encounter"
+        },
+        {
+            "plan": {
+                "name": "Colonoscopy",
+                "code": "73761001",
+                "code_system_name": "SNOMED CT"
+            },
+            "identifiers": [
+                {
+                    "identifier": "9a6d1bac-17d3-4195-89c4-1121bc809b5a"
+                }
+            ],
+            "date_time": {
+                "point": {
+                    "date": "2012-05-12T00:00:00Z",
+                    "precision": "day"
+                }
+            },
+            "type": "procedure"
+        }
+    ],
+    "payers": [
+        {
+            "identifiers": [
+                {
+                    "identifier": "1fe2cdd0-7aad-11db-9fe1-0800200c9a66"
+                }
+            ],
+            "policy": {
+                "identifiers": [
+                    {
+                        "identifier": "3e676a50-7aac-11db-9fe1-0800200c9a66"
+                    }
+                ],
+                "code": {
+                    "code": "SELF",
+                    "code_system_name": "HL7 RoleCode"
+                },
+                "insurance": {
+                    "code": {
+                        "code": "PAYOR",
+                        "code_system_name": "HL7 RoleCode"
+                    },
+                    "performer": {
+                        "identifiers": [
+                            {
+                                "identifier": "2.16.840.1.113883.19"
+                            }
+                        ],
+                        "address": [
+                            {
+                                "streetLines": [
+                                    "123 Insurance Road"
+                                ],
+                                "city": "Blue Bell",
+                                "state": "MA",
+                                "zip": "02368",
+                                "country": "US",
+                                "use": "work place"
+                            }
+                        ],
+                        "phone": [
+                            {
+                                "number": "(781)555-1515",
+                                "type": "work place"
+                            }
+                        ],
+                        "organization": [
+                            {
+                                "name": [
+                                    "Good Health Insurance"
+                                ],
+                                "address": [
+                                    {
+                                        "streetLines": [
+                                            "123 Insurance Road"
+                                        ],
+                                        "city": "Blue Bell",
+                                        "state": "MA",
+                                        "zip": "02368",
+                                        "country": "US",
+                                        "use": "work place"
+                                    }
+                                ],
+                                "phone": [
+                                    {
+                                        "number": "(781)555-1515",
+                                        "type": "work place"
+                                    }
+                                ]
+                            }
+                        ]
+                    }
+                }
+            },
+            "guarantor": {
+                "code": {
+                    "code": "GUAR",
+                    "code_system_name": "HL7 Role"
+                },
+                "identifiers": [
+                    {
+                        "identifier": "329fcdf0-7ab3-11db-9fe1-0800200c9a66"
+                    }
+                ],
+                "name": [
+                    {
+                        "prefix": "Mr.",
+                        "middle": [
+                            "Frankie"
+                        ],
+                        "last": "Everyman",
+                        "first": "Adam"
+                    }
+                ],
+                "address": [
+                    {
+                        "streetLines": [
+                            "17 Daws Rd."
+                        ],
+                        "city": "Blue Bell",
+                        "state": "MA",
+                        "zip": "02368",
+                        "country": "US",
+                        "use": "primary home"
+                    }
+                ],
+                "phone": [
+                    {
+                        "number": "(781)555-1212",
+                        "type": "primary home"
+                    }
+                ]
+            },
+            "participant": {
+                "date_time": {},
+                "code": {
+                    "name": "Self",
+                    "code": "SELF",
+                    "code_system_name": "HL7 Role"
+                },
+                "performer": {
+                    "identifiers": [
+                        {
+                            "identifier": "14d4a520-7aae-11db-9fe1-0800200c9a66",
+                            "identifier_type": "1138345"
+                        }
+                    ],
+                    "address": [
+                        {
+                            "streetLines": [
+                                "17 Daws Rd."
+                            ],
+                            "city": "Blue Bell",
+                            "state": "MA",
+                            "zip": "02368",
+                            "country": "US",
+                            "use": "primary home"
+                        }
+                    ]
+                },
+                "name": [
+                    {
+                        "prefix": "Mr.",
+                        "middle": [
+                            "A."
+                        ],
+                        "last": "Everyman",
+                        "first": "Frank"
+                    }
+                ]
+            },
+            "policy_holder": {
+                "performer": {
+                    "identifiers": [
+                        {
+                            "identifier": "2.16.840.1.113883.19",
+                            "identifier_type": "1138345"
+                        }
+                    ],
+                    "address": [
+                        {
+                            "streetLines": [
+                                "17 Daws Rd."
+                            ],
+                            "city": "Blue Bell",
+                            "state": "MA",
+                            "zip": "02368",
+                            "country": "US",
+                            "use": "primary home"
+                        }
+                    ]
+                }
+            },
+            "authorization": {
+                "identifiers": [
+                    {
+                        "identifier": "f4dce790-8328-11db-9fe1-0800200c9a66"
+                    }
+                ],
+                "procedure": {
+                    "code": {
+                        "name": "Colonoscopy",
+                        "code": "73761001",
+                        "code_system_name": "SNOMED CT"
+                    }
+                }
+            }
         }
     ]
 }

@@ -143,46 +143,91 @@
         ],
         "vitals": [
             {
-                "match": "duplicate",
-                "src_id": "5",
+                "match": "partial",
+                "percent": 95,
+                "diff": {
+                    "identifiers": "new",
+                    "vital": "duplicate",
+                    "status": "duplicate",
+                    "date_time": "new",
+                    "value": "new",
+                    "unit": "new"
+                },
+                "src_id": "0",
                 "dest_id": "0"
             },
             {
-                "match": "duplicate",
-                "src_id": "6",
+                "match": "partial",
+                "percent": 95,
+                "diff": {
+                    "identifiers": "new",
+                    "vital": "new",
+                    "status": "duplicate",
+                    "date_time": "new",
+                    "value": "new",
+                    "unit": "new"
+                },
+                "src_id": "1",
                 "dest_id": "1"
             },
             {
-                "match": "duplicate",
-                "src_id": "7",
+                "match": "partial",
+                "percent": 95,
+                "diff": {
+                    "identifiers": "new",
+                    "vital": "new",
+                    "status": "duplicate",
+                    "date_time": "new",
+                    "value": "new",
+                    "unit": "duplicate"
+                },
+                "src_id": "2",
                 "dest_id": "2"
             },
             {
-                "match": "duplicate",
-                "src_id": "8",
+                "match": "partial",
+                "percent": 95,
+                "diff": {
+                    "identifiers": "duplicate",
+                    "vital": "duplicate",
+                    "status": "duplicate",
+                    "date_time": "new",
+                    "interpretations": "duplicate",
+                    "value": "duplicate",
+                    "unit": "duplicate"
+                },
+                "src_id": "5",
                 "dest_id": "3"
             },
             {
-                "match": "duplicate",
-                "src_id": "9",
+                "match": "partial",
+                "percent": 95,
+                "diff": {
+                    "identifiers": "duplicate",
+                    "vital": "duplicate",
+                    "status": "duplicate",
+                    "date_time": "new",
+                    "interpretations": "duplicate",
+                    "value": "new",
+                    "unit": "duplicate"
+                },
+                "src_id": "6",
                 "dest_id": "4"
             },
             {
-                "match": "duplicate",
-                "src_id": "10",
+                "match": "partial",
+                "percent": 95,
+                "diff": {
+                    "identifiers": "duplicate",
+                    "vital": "duplicate",
+                    "status": "duplicate",
+                    "date_time": "new",
+                    "interpretations": "duplicate",
+                    "value": "new",
+                    "unit": "duplicate"
+                },
+                "src_id": "7",
                 "dest_id": "5"
-            },
-            {
-                "match": "new",
-                "src_id": "0"
-            },
-            {
-                "match": "new",
-                "src_id": "1"
-            },
-            {
-                "match": "new",
-                "src_id": "2"
             },
             {
                 "match": "new",
@@ -191,6 +236,18 @@
             {
                 "match": "new",
                 "src_id": "4"
+            },
+            {
+                "match": "new",
+                "src_id": "8"
+            },
+            {
+                "match": "new",
+                "src_id": "9"
+            },
+            {
+                "match": "new",
+                "src_id": "10"
             }
         ],
         "demographics": [
