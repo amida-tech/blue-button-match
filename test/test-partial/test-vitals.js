@@ -19,7 +19,7 @@ before(function(done) {
     js = JSON.parse(fs.readFileSync('test/test-partial/fixtures/vitals.json', 'utf-8').toString());
     js2 = JSON.parse(fs.readFileSync('test/test-partial/fixtures/vitals2.json', 'utf-8').toString());
 
-    // vitals3a and vitals3b are the same, except 3b has hours added to date 
+    // vitals3a and vitals3b are the same, except 3b has hours added to date
     // (so it's partial match on fuzzy date)
     // each has 3 results
     js3a = JSON.parse(fs.readFileSync('test/test-partial/fixtures/vitals3a.json', 'utf-8').toString());
@@ -127,6 +127,11 @@ describe('Vitals partial matching library (vitals.js) tests', function() {
             var result = ["partial", "new", "duplicate"].sort();
 
             var m = matchSections(js4a, js4b, comparePartial);
+            //console.log('obj1');
+            //console.log(js4a);
+            //console.log('obj2');
+            //console.log(js4b);
+            //console.log('end');
             //console.log(m);
 
             expect(m.length).to.equal(3);
