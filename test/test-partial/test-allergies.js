@@ -132,7 +132,7 @@ describe('CCDA: Allergies partial matching library (allergies.js) tests', functi
 
                 for (var i in partial_array) {
                     //console.log(partial_array[i]);
-                    expect(partial_array[i].percent).to.equal(75);
+                    expect(partial_array[i].percent).to.equal(50);
                     expect(partial_array[i].diff).to.exist;
                     expect(partial_array[i].subelements).to.exist;
                     expect(partial_array[i].subelements.reaction).to.exist;
@@ -178,7 +178,7 @@ describe('CCDA: Allergies partial matching library (allergies.js) tests', functi
 
                 for (var i in partial_array) {
                     //console.log(partial_array[i]);
-                    expect(partial_array[i].percent).to.equal(75);
+                    expect(partial_array[i].percent).to.equal(50);
                     expect(partial_array[i].diff).to.exist;
                     expect(partial_array[i].subelements).to.exist;
                     expect(partial_array[i].subelements.reaction).to.exist;
@@ -189,7 +189,7 @@ describe('CCDA: Allergies partial matching library (allergies.js) tests', functi
         });
 
 
-        xit('compare two different allergies sections that will have a partial match, a dupe and a new', function() {
+        it('compare two different allergies sections that will have a partial match, a dupe and a new', function() {
 
             var m = matchSections(js, js4, 'allergies');
             //console.log(m);
