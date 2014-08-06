@@ -4,8 +4,8 @@
 "use strict";
 
 var expect = require('chai').expect;
-
 var fs = require('fs');
+var _ = require('underscore');
 //var bbjs = require('blue-button');
 
 var comparePartial = require('../../lib/sections/subarray/allergies.js').compare;
@@ -23,28 +23,27 @@ before(function(done) {
     // has a bunch of allergies different from all of the above
     js3 = JSON.parse(fs.readFileSync('test/test-partial/fixtures/allergies3.json', 'utf-8').toString());
 
-    //console.log(bb);
     done();
 });
 
 //CCDA ONLY
 describe('CCDA: Allergies partial matching library (allergies.js) tests', function() {
 
-
-
-        it('compare two different allergies sections', function() {
+        it('compare two completely different allergies sections', function() {
             var m = matchSections(js, js3, comparePartial);
 
-            //console.log(js);
-            //console.log(js2);
-
+            //console.log(JSON.stringify(js2, null, 10));
+            //console.log(JSON.stringify(js, null, 10));
             //console.log(m);
 
+            expect(m.length).to.equal(9);
+            expect(_.where(m, {dest: 'dest'}).length).to.equal(3);
+            expect(_.where(m, {dest: 'src'}).length).to.equal(6);
+
             for (var item in m) {
-                //console.log(m[item].match);
-                expect(m[item].match).to.equal("new");
-                expect(m[item]).to.have.property('src_id');
-                expect(m[item]).to.not.have.property('dest_id');
+                    expect(m[item].match).to.equal("new");
+                    expect(m[item]).to.have.property('src_id');
+                    expect(m[item]).to.have.property('dest_id');
             }
 
         });
@@ -55,22 +54,36 @@ describe('CCDA: Allergies partial matching library (allergies.js) tests', functi
 
             //console.log(m);
 
+            //Group arrays by source.
+            var src_array = [];
             for (var item in m) {
-                //console.log(m[item].match);
-                expect(m[item].match).to.equal("duplicate");
-                expect(m[item]).to.have.property('src_id');
-                expect(m[item]).to.have.property('dest_id');
+                src_array.push(m[item].src_id);
             }
 
-            var m = matchSections(js3, js3, comparePartial);
+            src_array = _.uniq(src_array);
+            var src_obj_array = [];
 
-            //console.log(m);
+            for (var i in src_array) {
+                src_obj_array.push([]);
+            }
 
             for (var item in m) {
-                //console.log(m[item].match);
-                expect(m[item].match).to.equal("duplicate");
-                expect(m[item]).to.have.property('src_id');
-                expect(m[item]).to.have.property('dest_id');
+                for (var iter in src_array) {
+                    if (m[item].src_id === src_array[iter]) {
+                        src_obj_array[src_array[iter]].push(m[item]);
+                    }
+
+                }
+            }
+
+            for (var objArray in src_obj_array) {
+                //console.log(src_obj_array[objArray]);
+                expect(_.where(src_obj_array[objArray], {dest: 'dest'}).length).to.equal(3);
+                expect(_.where(src_obj_array[objArray], {dest: 'src'}).length).to.equal(2);
+                expect(_.where(src_obj_array[objArray], {dest: 'dest', match: 'duplicate'}).length).to.equal(1);
+                expect(_.where(src_obj_array[objArray], {dest: 'dest', match: 'new'}).length).to.equal(2);
+                expect(_.where(src_obj_array[objArray], {dest: 'src', match: 'duplicate'}).length).to.equal(0);
+                expect(_.where(src_obj_array[objArray], {dest: 'src', match: 'new'}).length).to.equal(2);
             }
 
         });
@@ -79,11 +92,11 @@ describe('CCDA: Allergies partial matching library (allergies.js) tests', functi
         it('compare two different allergies sections that will have all partial match', function() {
             var m = matchSections(js, js2, comparePartial);
 
-            //console.log(JSON.stringify(m,null,4));
+            console.log(JSON.stringify(m,null,4));
 
             for (var item in m) {
                 //console.log(m[item].match);
-                expect(m[item].match).to.equal("partial");
+                //expect(m[item].match).to.equal("partial");
                 //expect(m[item]).to.have.property('src_id');
                 //expect(m[item]).to.not.have.property('dest_id');
             }
@@ -95,7 +108,7 @@ describe('CCDA: Allergies partial matching library (allergies.js) tests', functi
 
             for (var item in m) {
                 //console.log(m[item].match);
-                expect(m[item].match).to.equal("partial");
+                //expect(m[item].match).to.equal("partial");
                 //expect(m[item]).to.have.property('src_id');
                 //expect(m[item]).to.not.have.property('dest_id');
             }

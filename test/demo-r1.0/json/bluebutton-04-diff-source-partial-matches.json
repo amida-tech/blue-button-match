@@ -357,6 +357,16 @@
                     "code_system_name": "RXNORM"
                 }
             },
+            "supply": {
+                "date_time": {
+                    "low": {
+                        "date": "2007-01-03T00:00:00Z",
+                        "precision": "day"
+                    }
+                },
+                "repeatNumber": "1",
+                "quantity": "75"
+            },
             "administration": {
                 "route": {
                     "name": "RESPIRATORY (INHALATION)",
@@ -411,6 +421,13 @@
                     "precision": "subsecond"
                 }
             },
+            "performers": [
+                {
+                    "name": "General Physician",
+                    "code": "59058001",
+                    "code_system_name": "SNOMED CT"
+                }
+            ],
             "locations": [
                 {
                     "name": "Community Urgent Care Center",
@@ -934,23 +951,52 @@
             "refusal_reason": "Patient objection"
         }
     ],
-    "social_history": {
-        "smoking_statuses": [
-            {
-                "value": "Current every day smoker",
-                "date_time": {
-                    "low": {
-                        "date": "2005-05-01T00:00:00Z",
-                        "precision": "day"
-                    },
-                    "high": {
-                        "date": "2009-02-27T13:00:00Z",
-                        "precision": "subsecond"
-                    }
+    "social_history": [
+        {
+            "value": "Current every day smoker",
+            "date_time": {
+                "low": {
+                    "date": "2005-05-01T00:00:00Z",
+                    "precision": "day"
+                },
+                "high": {
+                    "date": "2009-02-27T13:00:00Z",
+                    "precision": "subsecond"
                 }
             }
-        ]
-    },
+        },
+        {
+            "value": "Tobacco use and exposure",
+            "date_time": {
+                "low": {
+                    "date": "2009-02-27T13:00:00Z",
+                    "precision": "subsecond"
+                }
+            }
+        },
+        {
+            "value": "Tobacco use and exposure",
+            "date_time": {
+                "low": {
+                    "date": "2005-05-01T00:00:00Z",
+                    "precision": "day"
+                },
+                "high": {
+                    "date": "2009-02-27T13:00:00Z",
+                    "precision": "subsecond"
+                }
+            }
+        },
+        {
+            "value": "Alcohol intake",
+            "date_time": {
+                "low": {
+                    "date": "2005-05-01T00:00:00Z",
+                    "precision": "day"
+                }
+            }
+        }
+    ],
     "problems": [
         {
             "date_time": {
