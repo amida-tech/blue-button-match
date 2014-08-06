@@ -8,7 +8,7 @@ var fs = require('fs');
 var _ = require('underscore');
 //var bbjs = require('blue-button');
 
-var comparePartial = require('../../lib/sections/subarray/allergies.js').compare;
+var comparePartial = require('../../lib/router.js').compare;
 var matchSections = require("../../lib/match-sections.js").matchSections;
 
 var js, js2, js3, js4;
@@ -33,7 +33,7 @@ before(function(done) {
 describe('CCDA: Allergies partial matching library (allergies.js) tests', function() {
 
         it('compare two completely different allergies sections', function() {
-            var m = matchSections(js, js3, comparePartial);
+            var m = matchSections(js, js3, 'allergies');
 
             //console.log(JSON.stringify(js2, null, 10));
             //console.log(JSON.stringify(js, null, 10));
@@ -53,7 +53,7 @@ describe('CCDA: Allergies partial matching library (allergies.js) tests', functi
 
 
         it('compare allergies sections with itself', function() {
-            var m = matchSections(js, js, comparePartial);
+            var m = matchSections(js, js, 'allergies');
 
             //console.log(m);
 
@@ -93,7 +93,7 @@ describe('CCDA: Allergies partial matching library (allergies.js) tests', functi
 
 
         it('compare two different allergies sections that will have all partial match', function() {
-            var m = matchSections(js, js2, comparePartial);
+            var m = matchSections(js, js2, 'allergies');
 
             //console.log(JSON.stringify(m,null,4));
 
@@ -141,7 +141,7 @@ describe('CCDA: Allergies partial matching library (allergies.js) tests', functi
             }
 
             //and now do the same but backwards
-            var m = matchSections(js, js2.slice().reverse(), comparePartial);
+            var m = matchSections(js, js2.slice().reverse(), 'allergies');
 
                         //Group arrays by source.
             var src_array = [];
@@ -191,7 +191,7 @@ describe('CCDA: Allergies partial matching library (allergies.js) tests', functi
 
         it('compare two different allergies sections that will have a partial match, a dupe and a new', function() {
 
-            var m = matchSections(js, js4, comparePartial);
+            var m = matchSections(js, js4, 'allergies');
             //console.log(m);
 
             //Group arrays by source.
@@ -240,7 +240,6 @@ describe('CCDA: Allergies partial matching library (allergies.js) tests', functi
             expect(_.where(src_obj_array[2], {dest: 'dest', match: 'partial'}).length).to.equal(1);
             expect(_.where(src_obj_array[2], {dest: 'dest', match: 'duplicate'}).length).to.equal(0);
 
-            }
 
         });
 
