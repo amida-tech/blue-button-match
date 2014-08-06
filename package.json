@@ -30,7 +30,8 @@
         "node-uuid": "1.4.x",
         "xdate": "0.8.x",
         "winston": "0.7.x",
-        "underscore": "1.6.x"
+        "underscore": "1.6.x",
+        "moment": "2.8.x"
     },
     "devDependencies": {
         "blue-button": "git://github.com/amida-tech/blue-button.git",

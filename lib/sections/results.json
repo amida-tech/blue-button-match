@@ -1,0 +1,26 @@
+{
+    "primary": [{
+            "path": "result_set",
+            "type": "codedEntry",
+            "percent": 50 
+        }, {
+            "type": "resultTime",
+            "percent": 25
+        }
+    ],
+    "secondary": [],
+    "subArrays": [{
+        "results": {
+            "primary": [{
+                "path": "result",
+                "type": "codedEntry",
+                "percent": 50
+            }],
+            "secondary": [{
+                "path": "date_time",
+                "type": "dateTime",
+                "percent": 25
+            }]
+        }
+    }]
+}
