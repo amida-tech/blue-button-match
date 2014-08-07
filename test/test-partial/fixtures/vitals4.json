@@ -1,0 +1,74 @@
+[
+        {
+            "identifiers": [
+                {
+                    "identifier": "c6f88321-67ad-11db-bd13-0800200c9a66"
+                }
+            ],
+            "vital": {
+                "name": "Height",
+                "code": "8302-2",
+                "code_system_name": "LOINC"
+            },
+            "status": "completed",
+            "date_time": {
+                "point": {
+                    "date": "1999-11-14T00:00:00Z",
+                    "precision": "day"
+                }
+            },
+            "interpretations": [
+                "Normal"
+            ],
+            "value": 177,
+            "unit": "cm"
+        },
+        {
+            "identifiers": [
+                {
+                    "identifier": "c6f88321-67ad-11db-bd13-0800200c9a66"
+                }
+            ],
+            "vital": {
+                "name": "Patient Body Height",
+                "code": "3141-9a",
+                "code_system_name": "LOINC"
+            },
+            "status": "completed",
+            "date_time": {
+                "point": {
+                    "date": "1999-11-14T00:00:00Z",
+                    "precision": "day"
+                }
+            },
+            "interpretations": [
+                "Normal"
+            ],
+            "value": 86,
+            "unit": "kg"
+        },
+        {
+            "identifiers": [
+                {
+                    "identifier": "c6f88321-67ad-11db-bd13-0800200c9a66"
+                }
+            ],
+            "vital": {
+                "name": "Intravascular Systolic",
+                "code": "8480-6",
+                "code_system_name": "LOINC"
+            },
+            "status": "completed",
+            "date_time": {
+                "point": {
+                    "date": "1999-11-14T00:00:00Z",
+                    "precision": "day"
+                }
+            },
+            "interpretations": [
+                "Normal"
+            ],
+            "value": 60,
+            "unit": "mm[Hg]"
+        }
+    ]
