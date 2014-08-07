@@ -1,0 +1,372 @@
+[{
+    "identifiers": [{
+        "identifier": "2.16.840.1.113883.3.140.1.0.6.10.8",
+        "identifier_type": "9801090"
+    }],
+    "status": "Prescribed",
+    "sig": "2 Puffs q6hrs prn",
+    "product": {
+        "unencoded_name": "12 Hour Decongestant 120 MG CP12",
+        "product": {
+            "name": "Unknown",
+            "code": "Unknown",
+            "code_system_name": "RXNORM",
+            "translations": [{
+                "name": "12 Hour Decongestant 120 MG CP12",
+                "code": "86679",
+                "code_system_name": "OID 2.16.840.1.113883.6.253"
+            }]
+        }
+    }
+}, {
+    "identifiers": [{
+        "identifier": "2.16.840.1.113883.3.140.1.0.6.10.8",
+        "identifier_type": "9801291"
+    }],
+    "status": "Prescribed",
+    "sig": "4 once a day",
+    "product": {
+        "unencoded_name": "2nd Skin Blister Kit MISC",
+        "product": {
+            "name": "Unknown",
+            "code": "Unknown",
+            "code_system_name": "RXNORM",
+            "translations": [{
+                "name": "2nd Skin Blister Kit MISC",
+                "code": "138796",
+                "code_system_name": "OID 2.16.840.1.113883.6.253"
+            }]
+        }
+    }
+}, {
+    "identifiers": [{
+        "identifier": "2.16.840.1.113883.3.140.1.0.6.10.8",
+        "identifier_type": "9801290"
+    }],
+    "status": "Prescribed",
+    "sig": "3 three times a day",
+    "product": {
+        "unencoded_name": "12 Hour Nasal Relief Spray 0.05 % SOLN",
+        "product": {
+            "name": "Unknown",
+            "code": "Unknown",
+            "code_system_name": "RXNORM",
+            "translations": [{
+                "name": "12 Hour Nasal Relief Spray 0.05 % SOLN",
+                "code": "31935",
+                "code_system_name": "OID 2.16.840.1.113883.6.253"
+            }]
+        }
+    }
+}, {
+    "identifiers": [{
+        "identifier": "2.16.840.1.113883.3.140.1.0.6.10.8",
+        "identifier_type": "9801078"
+    }],
+    "status": "Prescribed",
+    "sig": "2 twice a day",
+    "product": {
+        "unencoded_name": "Prasad Schedule 4 Drug TBDR",
+        "product": {
+            "name": "Unknown",
+            "code": "Unknown",
+            "code_system_name": "RXNORM",
+            "translations": [{
+                "name": "Prasad Schedule 4 Drug TBDR",
+                "code": "M00006",
+                "code_system_name": "OID 2.16.840.1.113883.6.253"
+            }]
+        }
+    }
+}, {
+    "identifiers": [{
+        "identifier": "2.16.840.1.113883.3.140.1.0.6.10.8",
+        "identifier_type": "9801026"
+    }],
+    "status": "Prescribed",
+    "sig": "twice a day",
+    "product": {
+        "unencoded_name": "5-Hydroxy-L-Tryptophan POWD",
+        "product": {
+            "name": "Unknown",
+            "code": "Unknown",
+            "code_system_name": "RXNORM",
+            "translations": [{
+                "name": "5-Hydroxy-L-Tryptophan POWD",
+                "code": "55385",
+                "code_system_name": "OID 2.16.840.1.113883.6.253"
+            }]
+
+        }
+    }
+}, {
+    "identifiers": [{
+        "identifier": "2.16.840.1.113883.3.140.1.0.6.10.8",
+        "identifier_type": "9800586"
+    }],
+    "status": "Prescribed",
+    "sig": "twice a day",
+    "product": {
+        "unencoded_name": "Ginko Biloba 1 Gram CPSP",
+        "product": {
+            "name": "Unknown",
+            "code": "Unknown",
+            "code_system_name": "RXNORM",
+            "translations": [{
+                "name": "Ginko Biloba 1 Gram CPSP",
+                "code": "M00001",
+                "code_system_name": "OID 2.16.840.1.113883.6.253"
+            }]
+        }
+    }
+}, {
+    "identifiers": [{
+        "identifier": "2.16.840.1.113883.3.140.1.0.6.10.8",
+        "identifier_type": "9800585"
+    }],
+    "status": "Prescribed",
+    "sig": "1 every 4 to 6 hours",
+    "product": {
+        "unencoded_name": "Promethazine HCl 25 MG TABS",
+        "product": {
+            "name": "Promethazine Hydrochloride 25 MG Oral Tablet",
+            "code": "992447",
+            "code_system_name": "RXNORM",
+            "translations": [{
+                "name": "Promethazine HCl 25 MG TABS",
+                "code": "17891",
+                "code_system_name": "OID 2.16.840.1.113883.6.253"
+            }]
+        }
+    }
+}, {
+    "identifiers": [{
+        "identifier": "2.16.840.1.113883.3.140.1.0.6.10.8",
+        "identifier_type": "9800584"
+    }],
+    "status": "Prescribed",
+    "sig": "1 every 6 hours",
+    "product": {
+        "unencoded_name": "Naproxen Sodium 550 MG TABS",
+        "product": {
+            "name": "Naproxen sodium 550 MG Oral Tablet",
+            "code": "849431",
+            "code_system_name": "RXNORM",
+            "translations": [{
+                "name": "Naproxen Sodium 550 MG TABS",
+                "code": "14434",
+                "code_system_name": "OID 2.16.840.1.113883.6.253"
+            }]
+
+        }
+
+    }
+}, {
+    "identifiers": [{
+        "identifier": "2.16.840.1.113883.3.140.1.0.6.10.8",
+        "identifier_type": "9800579"
+    }],
+    "status": "Prescribed",
+    "sig": "as needed",
+    "product": {
+        "unencoded_name": "Imitrex 25 MG TABS",
+        "product": {
+            "name": "Sumatriptan 25 MG Oral Tablet",
+            "code": "315223",
+            "code_system_name": "RXNORM",
+            "translations": [{
+                "name": "Imitrex",
+                "code": "217713",
+                "code_system_name": "RXNORM"
+            }, {
+                "name": "Imitrex 25 MG TABS",
+                "code": "40964",
+                "code_system_name": "OID 2.16.840.1.113883.6.253"
+            }]
+        }
+    }
+}, {
+    "identifiers": [{
+        "identifier": "2.16.840.1.113883.3.140.1.0.6.10.8",
+        "identifier_type": "1093905"
+    }],
+    "status": "Prescribed",
+    "sig": "1 every evening",
+    "product": {
+        "unencoded_name": "Valium 5 MG TABS",
+        "product": {
+            "name": "Diazepam 5 MG Oral Tablet",
+            "code": "197591",
+            "code_system_name": "RXNORM",
+            "translations": [{
+                "name": "Valium",
+                "code": "202472",
+                "code_system_name": "RXNORM"
+            }, {
+                "name": "Valium 5 MG TABS",
+                "code": "23060",
+                "code_system_name": "OID 2.16.840.1.113883.6.253"
+            }]
+
+        }
+    }
+}, {
+    "identifiers": [{
+        "identifier": "2.16.840.1.113883.3.140.1.0.6.10.8",
+        "identifier_type": "1093904"
+    }],
+    "status": "Prescribed",
+    "sig": "as needed",
+    "product": {
+        "unencoded_name": "Imitrex 25 MG TABS",
+        "product": {
+            "name": "Sumatriptan 25 MG Oral Tablet",
+            "code": "315223",
+            "code_system_name": "RXNORM",
+            "translations": [{
+                "name": "Imitrex",
+                "code": "217713",
+                "code_system_name": "RXNORM"
+            }, {
+                "name": "Imitrex 25 MG TABS",
+                "code": "40964",
+                "code_system_name": "OID 2.16.840.1.113883.6.253"
+            }]
+
+        }
+    }
+}, {
+    "identifiers": [{
+        "identifier": "2.16.840.1.113883.3.140.1.0.6.10.8",
+        "identifier_type": "1093902"
+    }],
+    "status": "Prescribed",
+    "sig": "as needed",
+    "product": {
+        "unencoded_name": "Imitrex 25 MG TABS",
+        "product": {
+            "name": "Sumatriptan 25 MG Oral Tablet",
+            "code": "315223",
+            "code_system_name": "RXNORM",
+            "translations": [{
+                "name": "Imitrex",
+                "code": "217713",
+                "code_system_name": "RXNORM"
+            }, {
+                "name": "Imitrex 25 MG TABS",
+                "code": "40964",
+                "code_system_name": "OID 2.16.840.1.113883.6.253"
+            }]
+        }
+    }
+}, {
+    "identifiers": [{
+        "identifier": "2.16.840.1.113883.3.140.1.0.6.10.8",
+        "identifier_type": "1093903"
+    }],
+    "status": "Prescribed",
+    "sig": "once a day",
+    "product": {
+        "unencoded_name": "Stress Formula Plus Iron TABS",
+        "product": {
+            "name": "Unknown",
+            "code": "Unknown",
+            "code_system_name": "RXNORM",
+            "translations": [{
+                "name": "Stress Formula Plus Iron TABS",
+                "code": "45480",
+                "code_system_name": "OID 2.16.840.1.113883.6.253"
+            }]
+        }
+
+    }
+}, {
+    "identifiers": [{
+        "identifier": "2.16.840.1.113883.3.140.1.0.6.10.8",
+        "identifier_type": "1093901"
+    }],
+    "status": "Prescribed",
+    "sig": "as needed",
+    "product": {
+        "unencoded_name": "Imitrex 25 MG TABS",
+        "product": {
+            "name": "Sumatriptan 25 MG Oral Tablet",
+            "code": "315223",
+            "code_system_name": "RXNORM",
+            "translations": [{
+                "name": "Imitrex",
+                "code": "217713",
+                "code_system_name": "RXNORM"
+            }, {
+                "name": "Imitrex 25 MG TABS",
+                "code": "40964",
+                "code_system_name": "OID 2.16.840.1.113883.6.253"
+            }]
+
+        }
+
+    }
+}, {
+    "identifiers": [{
+        "identifier": "2.16.840.1.113883.3.140.1.0.6.10.8",
+        "identifier_type": "9800706"
+    }],
+    "status": "Prescribed",
+    "sig": "as needed",
+    "product": {
+        "unencoded_name": "Fiorinal/Codeine #3 50-325-40-30 MG CAPS",
+        "product": {
+            "name": "Aspirin 325 MG / butalbital 50 MG / Caffeine 40 MG / Codeine 30 MG Oral Capsule",
+            "code": "309471",
+            "code_system_name": "RXNORM",
+            "translations": [{
+                "name": "Fiorinal with Codeine",
+                "code": "217127",
+                "code_system_name": "RXNORM"
+            }, {
+                "name": "Fiorinal/Codeine #3 50-325-40-30 MG CAPS",
+                "code": "8430",
+                "code_system_name": "OID 2.16.840.1.113883.6.253"
+            }]
+        }
+    }
+}, {
+    "identifiers": [{
+        "identifier": "2.16.840.1.113883.3.140.1.0.6.10.8",
+        "identifier_type": "9800814"
+    }],
+    "status": "Prescribed",
+    "sig": "1 every evening",
+    "product": {
+        "unencoded_name": "Valium 5 MG TABS",
+        "product": {
+            "name": "Diazepam 5 MG Oral Tablet",
+            "code": "197591",
+            "code_system_name": "RXNORM",
+            "translations": [{
+                "name": "Valium",
+                "code": "202472",
+                "code_system_name": "RXNORM"
+            }, {
+                "name": "Valium 5 MG TABS",
+                "code": "23060",
+                "code_system_name": "OID 2.16.840.1.113883.6.253"
+            }]
+        }
+    }
+}, {
+    "identifiers": [{
+        "identifier": "41303b5b-957d-45d1-868d-61896889218a"
+    }],
+    "status": "Prescribed",
+    "sig": "No Administered Medications Recorded",
+    "product": {
+        "unencoded_name": "No Administered Medications Recorded",
+        "product": {
+            "name": "No Medications Administered",
+            "code": "None",
+            "code_system_name": "RXNORM"
+
+        }
+    }
+}]
