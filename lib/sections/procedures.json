@@ -5,8 +5,8 @@
         "percent": 25
     }],
     "secondary": [{
-        "path": "date",
-        "type": "date_time",
+        "path": "date_time",
+        "type": "dateTime",
         "percent": 25
     }]
 }
