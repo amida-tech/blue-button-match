@@ -1,4 +1,5 @@
 {
+    "demographics": {
         "name": {
             "middle": [
                 "Isa"
@@ -6,12 +7,12 @@
             "last": "Jones",
             "first": "Isabella"
         },
-        "dob": [
-            {
-                "date": "1975-05-01T00:00:00.000Z",
+        "dob": {
+            "point": {
+                "date": "1975-05-01T00:00:00Z",
                 "precision": "day"
             }
-        ],
+        },
         "gender": "Female",
         "identifiers": [
             {
@@ -88,3 +89,4 @@
             }
         ]
     }
+}
