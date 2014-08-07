@@ -1,7 +1,7 @@
 [{
     "date_time": {
         "point": {
-            "date": "1996-11-01T00:00:00Z",
+            "date": "1999-11-01T00:00:00Z",
             "precision": "month"
         }
     },
@@ -22,74 +22,6 @@
         },
         "lot_number": "1",
         "manufacturer": "Health LS - Immuno Inc."
-    },
-    "administration": {
-        "route": {
-            "name": "Intramuscular injection",
-            "code": "C28161",
-            "code_system_name": "Medication Route FDA"
-        },
-        "dose": {
-            "value": 50,
-            "unit": "mcg"
-        }
-    },
-    "performer": {
-        "identifiers": [{
-            "identifier": "2.16.840.1.113883.19.5.9999.456",
-            "identifier_type": "2981824"
-        }],
-        "name": [{
-            "last": "Assigned",
-            "first": "Amanda"
-        }],
-        "address": [{
-            "streetLines": [
-                "1021 Health Drive"
-            ],
-            "city": "Ann Arbor",
-            "state": "MI",
-            "zip": "99099",
-            "country": "US"
-        }],
-        "organization": [{
-            "identifiers": [{
-                "identifier": "2.16.840.1.113883.19.5.9999.1394"
-            }],
-            "name": [
-                "Good Health Clinic"
-            ]
-        }]
-    }
-}, {
-    "identifiers": [{
-        "identifier": "e6f1ba43-c0ed-4b9b-9f12-f435d8ad8f92"
-    }],
-    "status": "refused",
-    "product": {
-        "product": {
-            "name": "Influenza virus vacciness",
-            "code": "8833",
-            "code_system_name": "CVX",
-            "translations": [{
-                "name": "Influenza, seasonal: injectable",
-                "code": "14133",
-                "code_system_name": "CVX"
-            }]
-        },
-        "lot_number": "1",
-        "manufacturer": "Health LS - Immuno Inc."
-    },
-    "administration": {
-        "route": {
-            "name": "Intramuscular injection",
-            "code": "C28161",
-            "code_system_name": "Medication Route FDA"
-        },
-        "dose": {
-            "value": 50,
-            "unit": "mcg"
-        }
     },
     "performer": {
         "identifiers": [{
@@ -128,15 +60,15 @@
     "identifiers": [{
         "identifier": "e6f1ba43-c0ed-4b9b-9f12-f435d8ad8f92"
     }],
-    "status": "complete",
+    "status": "refused",
     "product": {
         "product": {
-            "name": "Pneumococcal polysaccharide vaccine",
-            "code": "33",
+            "name": "Influenza virus vax",
+            "code": "88331",
             "code_system_name": "CVX",
             "translations": [{
-                "name": "Pneumococcal NOS",
-                "code": "109",
+                "name": "Influenza: seasonal: injectable",
+                "code": "141332",
                 "code_system_name": "CVX"
             }]
         },
@@ -150,7 +82,7 @@
             "code_system_name": "Medication Route FDA"
         },
         "dose": {
-            "value": 80,
+            "value": 50,
             "unit": "mcg"
         }
     },
@@ -216,5 +148,33 @@
             "value": 50,
             "unit": "mcg"
         }
-    }
+    },
+    "performer": {
+        "identifiers": [{
+            "identifier": "2.16.840.1.113883.19.5.9999.456",
+            "identifier_type": "2981824"
+        }],
+        "name": [{
+            "last": "Assigned",
+            "first": "Amanda"
+        }],
+        "address": [{
+            "streetLines": [
+                "1021 Health Drive"
+            ],
+            "city": "Ann Arbor",
+            "state": "MI",
+            "zip": "99099",
+            "country": "US"
+        }],
+        "organization": [{
+            "identifiers": [{
+                "identifier": "2.16.840.1.113883.19.5.9999.1394"
+            }],
+            "name": [
+                "Good Health Clinic"
+            ]
+        }]
+    },
+    "refusal_reason": "Patient objection"
 }]
