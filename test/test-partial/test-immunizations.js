@@ -9,7 +9,7 @@ var _ = require('underscore');
 var fs = require('fs');
 //var bbjs = require('blue-button');
 
-var comparePartial = require('../../lib/sections/flat/immunizations.js').compare;
+//var comparePartial = require('../../lib/sections/flat/immunizations.js').compare;
 var matchSections = require("../../lib/match-sections.js").matchSections;
 
 var js, js2, js3, js4;
@@ -135,7 +135,7 @@ describe('Immunizations partial matching library (immunizations.js) tests', func
 
                 for (var i in partial_array) {
                     //console.log(partial_array[i]);
-                    expect(partial_array[i].percent).to.equal(50);
+                    expect(partial_array[i].percent).to.equal(25);
                     expect(partial_array[i].diff).to.exist;
                 }
 
@@ -179,7 +179,7 @@ describe('Immunizations partial matching library (immunizations.js) tests', func
 
                 for (var i in partial_array) {
                     //console.log(partial_array[i]);
-                    expect(partial_array[i].percent).to.equal(50);
+                    expect(partial_array[i].percent).to.equal(25);
                     expect(partial_array[i].diff).to.exist;
                 }
 
