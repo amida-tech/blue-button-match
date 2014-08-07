@@ -8,7 +8,6 @@ var expect = require('chai').expect;
 var fs = require('fs');
 //var bbjs = require('blue-button');
 
-var comparePartial = require('../../lib/sections/single/demographics.js').compare;
 var matchSingles = require("../../lib/match-single.js").compare;
 
 var js, js2, js3a, js3b, js4a,js4b;
