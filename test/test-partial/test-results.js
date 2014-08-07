@@ -10,7 +10,6 @@ var fs = require('fs');
 
 var _ = require('underscore');
 
-var comparePartial = require('../../lib/sections/subarray/results.js').compare;
 var matchSections = require("../../lib/match-sections.js").matchSections;
 
 var js, js2, js3, js4;
