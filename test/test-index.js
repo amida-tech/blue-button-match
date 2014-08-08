@@ -1,8 +1,6 @@
 var expect = require('chai').expect;
 var assert = require('chai').assert;
 
-var lookups = require('../lib/lookups.js');
-
 var match= require('../index.js').match;
 
 describe('index.js test', function () {
