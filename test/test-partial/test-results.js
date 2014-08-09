@@ -42,6 +42,8 @@ describe('Results partial matching library (results.js) tests', function() {
             expect(_.where(m, {dest: 'dest'}).length).to.equal(1);
             expect(_.where(m, {dest: 'src'}).length).to.equal(0);
 
+            //console.log(JSON.stringify(m, null, 10));
+
             for (var item in m) {
                     expect(m[item].match).to.equal("new");
                     expect(m[item]).to.have.property('src_id');

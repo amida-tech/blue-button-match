@@ -140,7 +140,7 @@ describe('Encounter partial matching library (encounters.js) tests', function() 
 
                 for (var i in partial_array) {
                     //console.log(partial_array[i]);
-                    expect(partial_array[i].percent).to.equal(50);
+                    expect(partial_array[i].percent).to.equal(55);
                     expect(partial_array[i].diff).to.exist;
                     expect(partial_array[i].subelements).to.exist;
                     expect(partial_array[i].subelements.findings).to.exist;
@@ -186,7 +186,7 @@ describe('Encounter partial matching library (encounters.js) tests', function() 
 
                 for (var i in partial_array) {
                     //console.log(partial_array[i]);
-                    expect(partial_array[i].percent).to.equal(50);
+                    expect(partial_array[i].percent).to.equal(55);
                     expect(partial_array[i].diff).to.exist;
                     expect(partial_array[i].subelements).to.exist;
                     expect(partial_array[i].subelements.findings).to.exist;
