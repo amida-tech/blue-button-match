@@ -1,0 +1,17 @@
+{
+    "primary": [{
+        "path": "plan_id.identifier",
+        "type": "string",
+        "percent": 30
+    },
+    {
+        "path": "policy_number",
+        "type": "string",
+        "percent": 30
+    },{
+        "path": "payer_name",
+        "type": "string",
+        "percent": 30
+    }],
+    "secondary": []
+}
