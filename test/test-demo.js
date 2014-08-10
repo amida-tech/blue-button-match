@@ -114,13 +114,15 @@ describe('Verifying demo R1.0 sample xml files', function() {
 
         fs.writeFileSync('test/demo-r1.0/matches/02-in-01.json', JSON.stringify(m_match, null, 4));
 
+        var src_obj_array;
+
         //Should just result in one duplicate per each entry.
         for (var section in lookup) {
             //console.log(lookup[section]);
 
             if (lookup[section] === 'demographics') {
-                var m = m_match.match[lookup[section]];
-                expect(m.match).to.equal('duplicate');
+                var m1 = m_match.match[lookup[section]];
+                expect(m1.match).to.equal('duplicate');
             }
 
             if (lookup[section] !== 'demographics') {
@@ -134,17 +136,17 @@ describe('Verifying demo R1.0 sample xml files', function() {
             }
 
             src_array = _.uniq(src_array);
-            var src_obj_array = [];
+            src_obj_array = [];
 
             for (var i in src_array) {
                 src_obj_array.push([]);
             }
 
-            for (var item in m) {
+            for (var itemd in m) {
                 for (var iter in src_array) {
-                    if (m[item].src_id === src_array[iter]) {
+                    if (m[itemd].src_id === src_array[iter]) {
 
-                            src_obj_array[src_array[iter]].push(m[item]);
+                            src_obj_array[src_array[iter]].push(m[itemd]);
                  
                     }
 
@@ -153,9 +155,9 @@ describe('Verifying demo R1.0 sample xml files', function() {
 
         }
 
-            for (var objArray in src_obj_array) {
+            for (var objArrayd in src_obj_array) {
                 //console.log(_.where(src_obj_array[objArray], {dest: 'dest', match: 'duplicate'}));
-                expect(_.where(src_obj_array[objArray], {dest: 'dest', match: 'duplicate'}).length).to.equal(1);
+                expect(_.where(src_obj_array[objArrayd], {dest: 'dest', match: 'duplicate'}).length).to.equal(1);
             }
             
         }
@@ -170,36 +172,38 @@ describe('Verifying demo R1.0 sample xml files', function() {
 
         fs.writeFileSync('test/demo-r1.0/matches/03-in-01.json', JSON.stringify(m2, null, 4));
 
+        var src_obj_array;
+
         for (var section in lookup) {
             //console.log(lookup[section]);
 
             if (lookup[section] === 'demographics') {
-                var m = m2.match[lookup[section]];
-                expect(m.match).to.equal('duplicate');
+                var mndd = m2.match[lookup[section]];
+                expect(mndd.match).to.equal('duplicate');
             }
 
             if (lookup[section] !== 'demographics') {
-            var m = m2.match[lookup[section]];
+            var mnd = m2.match[lookup[section]];
 
             //console.log(m);
             //Group arrays by source.
             var src_array = [];
-            for (var item in m) {
-                src_array.push(m[item].src_id);
+            for (var item in mnd) {
+                src_array.push(mnd[item].src_id);
             }
 
             src_array = _.uniq(src_array);
-            var src_obj_array = [];
+            src_obj_array = [];
 
             for (var i in src_array) {
                 src_obj_array.push([]);
             }
 
-            for (var item in m) {
+            for (var itemnd in mnd) {
                 for (var iter in src_array) {
-                    if (m[item].src_id === src_array[iter]) {
+                    if (mnd[itemnd].src_id === src_array[iter]) {
 
-                            src_obj_array[src_array[iter]].push(m[item]);
+                            src_obj_array[src_array[iter]].push(mnd[itemnd]);
                  
                     }
 
@@ -221,6 +225,8 @@ describe('Verifying demo R1.0 sample xml files', function() {
     it('checking that matches between JSON #4 and #3 has partial or diff entries', function() {
         var m3 = match.match(js4, js3);
 
+        var src_obj_array;
+
         for (var section in lookup) {
             //console.log(lookup[section]);
 
@@ -230,27 +236,27 @@ describe('Verifying demo R1.0 sample xml files', function() {
             }
 
             if (lookup[section] !== 'demographics') {
-            var m = m3.match[lookup[section]];
+            var mpar = m3.match[lookup[section]];
 
             //console.log(m);
             //Group arrays by source.
             var src_array = [];
-            for (var item in m) {
-                src_array.push(m[item].src_id);
+            for (var item in mpar) {
+                src_array.push(mpar[item].src_id);
             }
 
             src_array = _.uniq(src_array);
-            var src_obj_array = [];
+            src_obj_array = [];
 
             for (var i in src_array) {
                 src_obj_array.push([]);
             }
 
-            for (var item in m) {
+            for (var itempar in mpar) {
                 for (var iter in src_array) {
-                    if (m[item].src_id === src_array[iter]) {
+                    if (mpar[itempar].src_id === src_array[iter]) {
 
-                            src_obj_array[src_array[iter]].push(m[item]);
+                            src_obj_array[src_array[iter]].push(mpar[itempar]);
                  
                     }
 
