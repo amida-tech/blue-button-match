@@ -7,7 +7,6 @@ var fs = require('fs');
 var bbjs = require('blue-button');
 
 var match = require('../lib/match.js');
-var compare = require('../lib/compare-partial.js').compare;
 var lookups = require('../lib/lookups.js');
 var equal = require('deep-equal');
 
