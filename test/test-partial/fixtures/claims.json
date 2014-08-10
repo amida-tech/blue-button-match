@@ -1,0 +1,76 @@
+[{
+    "payer": [
+        "medicare"
+    ],
+    "number": "1234567890000",
+    "date_time": {
+        "low": {
+            "date": "2012-10-18T00:00:00.000Z",
+            "precision": "day"
+        },
+        "high": {
+            "date": "2012-10-18T00:00:00.000Z",
+            "precision": "day"
+        }
+    },
+    "lines": [{
+        "line": "1",
+        "date_time": {
+            "low": {
+                "date": "2012-10-18T00:00:00.000Z",
+                "precision": "day"
+            },
+            "high": {
+                "date": "2012-10-18T00:00:00.000Z",
+                "precision": "day"
+            }
+        },
+        "procedure": {
+            "code": "98941",
+            "description": "Chiropractic Manipulative Treatment (Cmt); Spinal, Three To Four Regions"
+        },
+        "quantity": {
+            "value": 1,
+            "unit": "line"
+        },
+        "modifier": [{
+            "code": "AT",
+            "description": "Acute Treatment (This Modifier Should Be Used When Reporting Service 98940, 98941, 98942)"
+        }],
+        "charges": {
+            "price_billed": "$60.00",
+            "insurance_paid": "$34.00",
+            "patient_responsibility": "$26.00"
+        },
+        "place_of_service": {
+            "code": "11",
+            "name": "Office"
+        },
+        "type": {
+            "code": "1",
+            "name": "Medical Care"
+        },
+        "rendering_provider": {
+            "number": "0000001",
+            "npi": "123456789"
+        }
+    }],
+    "charges": {
+        "price_billed": "$60.00",
+        "insurance_paid": "$34.00",
+        "provider_paid": "$27.20",
+        "patient_responsibility": "$6.80"
+    },
+    "type": [
+        "medicare PartB"
+    ],
+    "diagnosis": [{
+        "code": "3534"
+    }, {
+        "code": "7393"
+    }, {
+        "code": "7392"
+    }, {
+        "code": "3533"
+    }]
+}]
