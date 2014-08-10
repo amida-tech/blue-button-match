@@ -81,40 +81,52 @@ describe('Verifying demo R1.0 sample xml files', function() {
     });
 
 
-    it('checking that JSON #1 against empty master record', function() {
+    it('checking that JSON #1 against empty master record', function () {
         //console.log(js);
         var m0 = match.match(js, {});
 
         //console.log(JSON.stringify(m0,null,4));
 
+        //console.log(JSON.stringify(m0, null, 10));
+
         //All files matched against dest should be 'new'
         for (var section in lookup) {
             for (var el in m0.match[lookup[section]]) {
                 //console.log(m0.match[lookup[section]][el])
-                if (m0.match[lookup[section]][el].match.dest === 'dest') {
-                    expect(m0.match[lookup[section]][el].match).to.equal("new");    
+                if (lookup[section] !== 'demographics') {
+                    if (m0.match[lookup[section]][el].match.dest === 'dest') {
+                        expect(m0.match[lookup[section]][el].match).to.equal("new");
+                    }
                 }
-                
+                if (lookup[section] === 'demographics') {
+                    expect(m0.match[lookup[section]].match).to.equal('new');
+                }
             }
         }
 
     });
 
 
-    xit('checking that JSON #1 and #2 are duplicates', function() {
+    it('checking that JSON #1 and #2 are duplicates', function() {
         //console.log(js);
         var m_match = match.match(js, js2);
-        //console.log(m);
+        //console.log(m_match);
 
-        fs.writeFileSync('test/demo-r1.0/matches/02-in-01.json', JSON.stringify(m, null, 4));
-
-        //console.log(JSON.stringify(m,null,4));
+        fs.writeFileSync('test/demo-r1.0/matches/02-in-01.json', JSON.stringify(m_match, null, 4));
 
         //Should just result in one duplicate per each entry.
         for (var section in lookup) {
-            console.log(lookup[section]);
+            //console.log(lookup[section]);
+
+            if (lookup[section] === 'demographics') {
+                var m = m_match.match[lookup[section]];
+                expect(m.match).to.equal('duplicate');
+            }
+
+            if (lookup[section] !== 'demographics') {
             var m = m_match.match[lookup[section]];
-            console.log(m);
+
+            //console.log(m);
             //Group arrays by source.
             var src_array = [];
             for (var item in m) {
@@ -131,65 +143,129 @@ describe('Verifying demo R1.0 sample xml files', function() {
             for (var item in m) {
                 for (var iter in src_array) {
                     if (m[item].src_id === src_array[iter]) {
-                        console.log(src_obj_array);
-                        src_obj_array[src_array[iter]].push(m[item]);
+
+                            src_obj_array[src_array[iter]].push(m[item]);
+                 
                     }
 
                 }
             }
 
+        }
+
             for (var objArray in src_obj_array) {
+                //console.log(_.where(src_obj_array[objArray], {dest: 'dest', match: 'duplicate'}));
                 expect(_.where(src_obj_array[objArray], {dest: 'dest', match: 'duplicate'}).length).to.equal(1);
             }
-
             
         }
 
     });
 
 
-    xit('checking that matches between JSON #3 and #1 are just new or duplicates entries', function() {
+    it('checking that matches between JSON #3 and #1 are just new or duplicates entries', function() {
         var m2 = match.match(js3, js);
+
+        //console.log(JSON.stringify(m2, null, 10));
 
         fs.writeFileSync('test/demo-r1.0/matches/03-in-01.json', JSON.stringify(m2, null, 4));
 
-        //console.log(JSON.stringify(m2,null,4));
-
-        //console.log("js3 >>>>>>");
-        //console.log(JSON.stringify(js3.immunizations[0],null,4));
-        //console.log("js >>>>>>");
-        //console.log(JSON.stringify(js.immunizations[2],null,4));
-
         for (var section in lookup) {
             //console.log(lookup[section]);
-            //console.log(m2.match[lookup[section]]);
-            for (var el in m2.match[lookup[section]]) {
-                expect(m2.match[lookup[section]][el].match).to.not.equal("partial");
-                assert.include(["duplicate", "new"], m2.match[lookup[section]][el].match);
+
+            if (lookup[section] === 'demographics') {
+                var m = m2.match[lookup[section]];
+                expect(m.match).to.equal('duplicate');
             }
+
+            if (lookup[section] !== 'demographics') {
+            var m = m2.match[lookup[section]];
+
+            //console.log(m);
+            //Group arrays by source.
+            var src_array = [];
+            for (var item in m) {
+                src_array.push(m[item].src_id);
+            }
+
+            src_array = _.uniq(src_array);
+            var src_obj_array = [];
+
+            for (var i in src_array) {
+                src_obj_array.push([]);
+            }
+
+            for (var item in m) {
+                for (var iter in src_array) {
+                    if (m[item].src_id === src_array[iter]) {
+
+                            src_obj_array[src_array[iter]].push(m[item]);
+                 
+                    }
+
+                }
+            }
+
+        }
+
+            for (var objArray in src_obj_array) {
+                //console.log(_.where(src_obj_array[objArray], {dest: 'dest', match: 'duplicate'}));
+                expect(_.where(src_obj_array[objArray], {dest: 'dest', match: 'duplicate'})).to.exist;
+                expect(_.where(src_obj_array[objArray], {dest: 'dest', match: 'new'})).to.exist;
+            }
+            
         }
 
     });
 
-    xit('checking that matches between JSON #4 and #3 has partial or diff entries', function() {
+    it('checking that matches between JSON #4 and #3 has partial or diff entries', function() {
         var m3 = match.match(js4, js3);
-
-        fs.writeFileSync('test/demo-r1.0/matches/04-in-03.json', JSON.stringify(m3, null, 4));
-        //console.log(JSON.stringify(m3,null,4));
 
         for (var section in lookup) {
             //console.log(lookup[section]);
-            //console.log(m3.match[lookup[section]]);
-            var count = 0;
-            for (var el in m3.match[lookup[section]]) {
-                var mmm = m3.match[lookup[section]][el].match;
 
-                if (mmm === "partial" || mmm === "diff") {
-                    count = count + 1;
-                }
-                //assert.include(["duplicate", "new", "diff", "partial"],m3.match[lookup[section]][el].match);
-                expect(count > 0).to.be.true;
+            if (lookup[section] === 'demographics') {
+                var m = m3.match[lookup[section]];
+                expect(m.match).to.equal('diff');
             }
+
+            if (lookup[section] !== 'demographics') {
+            var m = m3.match[lookup[section]];
+
+            //console.log(m);
+            //Group arrays by source.
+            var src_array = [];
+            for (var item in m) {
+                src_array.push(m[item].src_id);
+            }
+
+            src_array = _.uniq(src_array);
+            var src_obj_array = [];
+
+            for (var i in src_array) {
+                src_obj_array.push([]);
+            }
+
+            for (var item in m) {
+                for (var iter in src_array) {
+                    if (m[item].src_id === src_array[iter]) {
+
+                            src_obj_array[src_array[iter]].push(m[item]);
+                 
+                    }
+
+                }
+            }
+
+        }
+
+            for (var objArray in src_obj_array) {
+                //console.log(_.where(src_obj_array[objArray], {dest: 'dest', match: 'duplicate'}));
+                expect(_.where(src_obj_array[objArray], {dest: 'dest', match: 'duplicate'})).to.exist;
+                expect(_.where(src_obj_array[objArray], {dest: 'dest', match: 'new'})).to.exist;
+                expect(_.where(src_obj_array[objArray], {dest: 'dest', match: 'partial'})).to.exist;
+            }
+            
         }
 
     });

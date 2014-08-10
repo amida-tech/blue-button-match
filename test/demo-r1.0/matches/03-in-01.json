@@ -1430,496 +1430,43 @@
                 "dest": "src"
             },
             {
-                "match": "partial",
-                "percent": 25,
-                "subelements": {
-                    "results": [
-                        {
-                            "match": "new",
-                            "percent": 0,
-                            "src_id": "0",
-                            "dest_id": "0",
-                            "dest": "dest"
-                        },
-                        {
-                            "match": "new",
-                            "percent": 0,
-                            "src_id": "0",
-                            "dest_id": "1",
-                            "dest": "src"
-                        },
-                        {
-                            "match": "new",
-                            "percent": 0,
-                            "src_id": "0",
-                            "dest_id": "2",
-                            "dest": "src"
-                        },
-                        {
-                            "match": "new",
-                            "percent": 0,
-                            "src_id": "1",
-                            "dest_id": "0",
-                            "dest": "dest"
-                        },
-                        {
-                            "match": "new",
-                            "percent": 0,
-                            "src_id": "1",
-                            "dest_id": "0",
-                            "dest": "src"
-                        },
-                        {
-                            "match": "new",
-                            "percent": 0,
-                            "src_id": "1",
-                            "dest_id": "2",
-                            "dest": "src"
-                        },
-                        {
-                            "match": "new",
-                            "percent": 0,
-                            "src_id": "2",
-                            "dest_id": "0",
-                            "dest": "dest"
-                        },
-                        {
-                            "match": "new",
-                            "percent": 0,
-                            "src_id": "2",
-                            "dest_id": "0",
-                            "dest": "src"
-                        },
-                        {
-                            "match": "new",
-                            "percent": 0,
-                            "src_id": "2",
-                            "dest_id": "1",
-                            "dest": "src"
-                        }
-                    ]
-                },
-                "diff": {
-                    "identifiers": "new",
-                    "result_set": "new",
-                    "results": "new"
-                },
+                "match": "new",
+                "percent": 0,
                 "src_id": "6",
                 "dest_id": "0",
                 "dest": "src"
             },
             {
-                "match": "partial",
-                "percent": 25,
-                "subelements": {
-                    "results": [
-                        {
-                            "match": "new",
-                            "percent": 0,
-                            "src_id": "0",
-                            "dest_id": "0",
-                            "dest": "dest"
-                        },
-                        {
-                            "match": "new",
-                            "percent": 0,
-                            "src_id": "0",
-                            "dest_id": "1",
-                            "dest": "src"
-                        },
-                        {
-                            "match": "new",
-                            "percent": 0,
-                            "src_id": "0",
-                            "dest_id": "2",
-                            "dest": "src"
-                        },
-                        {
-                            "match": "new",
-                            "percent": 0,
-                            "src_id": "1",
-                            "dest_id": "0",
-                            "dest": "dest"
-                        },
-                        {
-                            "match": "new",
-                            "percent": 0,
-                            "src_id": "1",
-                            "dest_id": "0",
-                            "dest": "src"
-                        },
-                        {
-                            "match": "new",
-                            "percent": 0,
-                            "src_id": "1",
-                            "dest_id": "2",
-                            "dest": "src"
-                        },
-                        {
-                            "match": "new",
-                            "percent": 0,
-                            "src_id": "2",
-                            "dest_id": "0",
-                            "dest": "dest"
-                        },
-                        {
-                            "match": "new",
-                            "percent": 0,
-                            "src_id": "2",
-                            "dest_id": "0",
-                            "dest": "src"
-                        },
-                        {
-                            "match": "new",
-                            "percent": 0,
-                            "src_id": "2",
-                            "dest_id": "1",
-                            "dest": "src"
-                        }
-                    ]
-                },
-                "diff": {
-                    "identifiers": "new",
-                    "result_set": "new",
-                    "results": "new"
-                },
+                "match": "new",
+                "percent": 0,
                 "src_id": "6",
                 "dest_id": "1",
                 "dest": "src"
             },
             {
-                "match": "partial",
-                "percent": 25,
-                "subelements": {
-                    "results": [
-                        {
-                            "match": "new",
-                            "percent": 0,
-                            "src_id": "0",
-                            "dest_id": "0",
-                            "dest": "dest"
-                        },
-                        {
-                            "match": "new",
-                            "percent": 0,
-                            "src_id": "0",
-                            "dest_id": "1",
-                            "dest": "src"
-                        },
-                        {
-                            "match": "new",
-                            "percent": 0,
-                            "src_id": "0",
-                            "dest_id": "2",
-                            "dest": "src"
-                        },
-                        {
-                            "match": "new",
-                            "percent": 0,
-                            "src_id": "1",
-                            "dest_id": "0",
-                            "dest": "dest"
-                        },
-                        {
-                            "match": "new",
-                            "percent": 0,
-                            "src_id": "1",
-                            "dest_id": "0",
-                            "dest": "src"
-                        },
-                        {
-                            "match": "new",
-                            "percent": 0,
-                            "src_id": "1",
-                            "dest_id": "2",
-                            "dest": "src"
-                        },
-                        {
-                            "match": "new",
-                            "percent": 0,
-                            "src_id": "2",
-                            "dest_id": "0",
-                            "dest": "dest"
-                        },
-                        {
-                            "match": "new",
-                            "percent": 0,
-                            "src_id": "2",
-                            "dest_id": "0",
-                            "dest": "src"
-                        },
-                        {
-                            "match": "new",
-                            "percent": 0,
-                            "src_id": "2",
-                            "dest_id": "1",
-                            "dest": "src"
-                        }
-                    ]
-                },
-                "diff": {
-                    "identifiers": "new",
-                    "result_set": "new",
-                    "results": "new"
-                },
+                "match": "new",
+                "percent": 0,
                 "src_id": "6",
                 "dest_id": "2",
                 "dest": "src"
             },
             {
-                "match": "partial",
-                "percent": 25,
-                "subelements": {
-                    "results": [
-                        {
-                            "match": "new",
-                            "percent": 0,
-                            "src_id": "0",
-                            "dest_id": "0",
-                            "dest": "dest"
-                        },
-                        {
-                            "match": "new",
-                            "percent": 0,
-                            "src_id": "0",
-                            "dest_id": "1",
-                            "dest": "src"
-                        },
-                        {
-                            "match": "new",
-                            "percent": 0,
-                            "src_id": "0",
-                            "dest_id": "2",
-                            "dest": "src"
-                        },
-                        {
-                            "match": "new",
-                            "percent": 0,
-                            "src_id": "1",
-                            "dest_id": "0",
-                            "dest": "dest"
-                        },
-                        {
-                            "match": "new",
-                            "percent": 0,
-                            "src_id": "1",
-                            "dest_id": "0",
-                            "dest": "src"
-                        },
-                        {
-                            "match": "new",
-                            "percent": 0,
-                            "src_id": "1",
-                            "dest_id": "2",
-                            "dest": "src"
-                        },
-                        {
-                            "match": "new",
-                            "percent": 0,
-                            "src_id": "2",
-                            "dest_id": "0",
-                            "dest": "dest"
-                        },
-                        {
-                            "match": "new",
-                            "percent": 0,
-                            "src_id": "2",
-                            "dest_id": "0",
-                            "dest": "src"
-                        },
-                        {
-                            "match": "new",
-                            "percent": 0,
-                            "src_id": "2",
-                            "dest_id": "1",
-                            "dest": "src"
-                        }
-                    ]
-                },
-                "diff": {
-                    "identifiers": "new",
-                    "result_set": "new",
-                    "results": "new"
-                },
+                "match": "new",
+                "percent": 0,
                 "src_id": "6",
                 "dest_id": "3",
                 "dest": "src"
             },
             {
-                "match": "partial",
-                "percent": 25,
-                "subelements": {
-                    "results": [
-                        {
-                            "match": "new",
-                            "percent": 0,
-                            "src_id": "0",
-                            "dest_id": "0",
-                            "dest": "dest"
-                        },
-                        {
-                            "match": "new",
-                            "percent": 0,
-                            "src_id": "0",
-                            "dest_id": "1",
-                            "dest": "dest"
-                        },
-                        {
-                            "match": "new",
-                            "percent": 0,
-                            "src_id": "0",
-                            "dest_id": "1",
-                            "dest": "src"
-                        },
-                        {
-                            "match": "new",
-                            "percent": 0,
-                            "src_id": "0",
-                            "dest_id": "2",
-                            "dest": "src"
-                        },
-                        {
-                            "match": "new",
-                            "percent": 0,
-                            "src_id": "1",
-                            "dest_id": "0",
-                            "dest": "dest"
-                        },
-                        {
-                            "match": "new",
-                            "percent": 0,
-                            "src_id": "1",
-                            "dest_id": "1",
-                            "dest": "dest"
-                        },
-                        {
-                            "match": "new",
-                            "percent": 0,
-                            "src_id": "1",
-                            "dest_id": "0",
-                            "dest": "src"
-                        },
-                        {
-                            "match": "new",
-                            "percent": 0,
-                            "src_id": "1",
-                            "dest_id": "2",
-                            "dest": "src"
-                        },
-                        {
-                            "match": "new",
-                            "percent": 0,
-                            "src_id": "2",
-                            "dest_id": "0",
-                            "dest": "dest"
-                        },
-                        {
-                            "match": "new",
-                            "percent": 0,
-                            "src_id": "2",
-                            "dest_id": "1",
-                            "dest": "dest"
-                        },
-                        {
-                            "match": "new",
-                            "percent": 0,
-                            "src_id": "2",
-                            "dest_id": "0",
-                            "dest": "src"
-                        },
-                        {
-                            "match": "new",
-                            "percent": 0,
-                            "src_id": "2",
-                            "dest_id": "1",
-                            "dest": "src"
-                        }
-                    ]
-                },
-                "diff": {
-                    "identifiers": "new",
-                    "result_set": "new",
-                    "results": "new"
-                },
+                "match": "new",
+                "percent": 0,
                 "src_id": "6",
                 "dest_id": "4",
                 "dest": "src"
             },
             {
-                "match": "partial",
-                "percent": 25,
-                "subelements": {
-                    "results": [
-                        {
-                            "match": "new",
-                            "percent": 0,
-                            "src_id": "0",
-                            "dest_id": "0",
-                            "dest": "dest"
-                        },
-                        {
-                            "match": "new",
-                            "percent": 0,
-                            "src_id": "0",
-                            "dest_id": "1",
-                            "dest": "src"
-                        },
-                        {
-                            "match": "new",
-                            "percent": 0,
-                            "src_id": "0",
-                            "dest_id": "2",
-                            "dest": "src"
-                        },
-                        {
-                            "match": "new",
-                            "percent": 0,
-                            "src_id": "1",
-                            "dest_id": "0",
-                            "dest": "dest"
-                        },
-                        {
-                            "match": "new",
-                            "percent": 0,
-                            "src_id": "1",
-                            "dest_id": "0",
-                            "dest": "src"
-                        },
-                        {
-                            "match": "new",
-                            "percent": 0,
-                            "src_id": "1",
-                            "dest_id": "2",
-                            "dest": "src"
-                        },
-                        {
-                            "match": "new",
-                            "percent": 0,
-                            "src_id": "2",
-                            "dest_id": "0",
-                            "dest": "dest"
-                        },
-                        {
-                            "match": "new",
-                            "percent": 0,
-                            "src_id": "2",
-                            "dest_id": "0",
-                            "dest": "src"
-                        },
-                        {
-                            "match": "new",
-                            "percent": 0,
-                            "src_id": "2",
-                            "dest_id": "1",
-                            "dest": "src"
-                        }
-                    ]
-                },
-                "diff": {
-                    "identifiers": "new",
-                    "result_set": "new",
-                    "results": "new"
-                },
+                "match": "new",
+                "percent": 0,
                 "src_id": "6",
                 "dest_id": "5",
                 "dest": "src"
@@ -3777,7 +3324,9 @@
             }
         ],
         "demographics": {
-            "match": "duplicate"
+            "match": "duplicate",
+            "src_id": 0,
+            "dest_id": 0
         },
         "social_history": [
             {
@@ -3824,7 +3373,7 @@
             },
             {
                 "match": "partial",
-                "percent": 25,
+                "percent": 30,
                 "diff": {
                     "value": "duplicate",
                     "date_time": "new"
@@ -3849,7 +3398,7 @@
             },
             {
                 "match": "partial",
-                "percent": 25,
+                "percent": 30,
                 "diff": {
                     "value": "duplicate",
                     "date_time": "new"
@@ -3930,7 +3479,7 @@
             },
             {
                 "match": "partial",
-                "percent": 25,
+                "percent": 30,
                 "diff": {
                     "value": "duplicate",
                     "date_time": "new"
@@ -3955,7 +3504,7 @@
             },
             {
                 "match": "partial",
-                "percent": 25,
+                "percent": 30,
                 "diff": {
                     "value": "duplicate",
                     "date_time": "new"
