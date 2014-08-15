@@ -3,7 +3,6 @@ var assert = require('chai').assert;
 
 var utils = require('../lib/utils.js');
 
-
 //--------Test Data -----------//
 
 //Base point date.
@@ -129,7 +128,6 @@ var date_two_fuzzy_high_low = {
 //booleanMatch, codedMatch,
 //codematch and codematchwithTranslation should be dead.
 
-
 describe('utils.js test', function () {
 
     it('test dateMatch', function () {
@@ -141,10 +139,10 @@ describe('utils.js test', function () {
 
     it('test dateFuzzyMatch 1-1', function () {
         expect(utils.dateFuzzyMatch(date_one, date_one)).to.equal(true);
-        expect(utils.dateFuzzyMatch(date_one,date_one_fuzzy)).to.equal(true);
-        expect(utils.dateFuzzyMatch(date_one,date_one_fuzzy_negative)).to.equal(true);
-        expect(utils.dateFuzzyMatch(date_one,date_one_diff_negative)).to.equal(false);
-        expect(utils.dateFuzzyMatch(date_one,date_one_diff)).to.equal(false);
+        expect(utils.dateFuzzyMatch(date_one, date_one_fuzzy)).to.equal(true);
+        expect(utils.dateFuzzyMatch(date_one, date_one_fuzzy_negative)).to.equal(true);
+        expect(utils.dateFuzzyMatch(date_one, date_one_diff_negative)).to.equal(false);
+        expect(utils.dateFuzzyMatch(date_one, date_one_diff)).to.equal(false);
     });
 
     it('test dateFuzzyMatch 2-2', function () {
@@ -156,7 +154,6 @@ describe('utils.js test', function () {
         expect(utils.dateFuzzyMatch(date_two, date_two_fuzzy_high_low)).to.equal(true);
     });
 
-
     it('test dateFuzzyMatch 1-2 and 2-1', function () {
         expect(utils.dateFuzzyMatch(date_one, date_two)).to.equal(true);
         expect(utils.dateFuzzyMatch(date_two, date_one)).to.equal(true);
@@ -167,54 +164,64 @@ describe('utils.js test', function () {
         expect(utils.dateFuzzyMatch(date_one_diff, date_two)).to.equal(false);
     });
 
-
     it('test diff', function () {
-        var a={"a":"a","b":"b", "c":"c"};
-        var b={"a":"not a","b":"not b", "c":"not c"};
-        var c={"d":"d"};
-        var d={"a":"not a", "b":"b"};
+        var a = {
+            "a": "a",
+            "b": "b",
+            "c": "c"
+        };
+        var b = {
+            "a": "not a",
+            "b": "not b",
+            "c": "not c"
+        };
+        var c = {
+            "d": "d"
+        };
+        var d = {
+            "a": "not a",
+            "b": "b"
+        };
 
         var el;
         var diff;
 
-        diff=utils.diff(a,a);
-        for (el in diff){
-            expect(diff[el]).to.equal("duplicate");            
+        diff = utils.diff(a, a);
+        for (el in diff) {
+            expect(diff[el]).to.equal("duplicate");
         }
 
-        diff=utils.diff(a,b);
-        for (el in diff){
-            expect(diff[el]).to.equal("new");            
+        diff = utils.diff(a, b);
+        for (el in diff) {
+            expect(diff[el]).to.equal("new");
         }
 
-        diff=utils.diff(a,c);
-        for (el in diff){
-            expect(diff[el]).to.equal("new");            
+        diff = utils.diff(a, c);
+        for (el in diff) {
+            expect(diff[el]).to.equal("new");
         }
 
-        diff=utils.diff(a,d);
-        expect(diff["a"]).to.equal("new");            
-        expect(diff["b"]).to.equal("duplicate");            
-        
+        diff = utils.diff(a, d);
+        expect(diff["a"]).to.equal("new");
+        expect(diff["b"]).to.equal("duplicate");
 
     });
 
-
     it('test codeMatchWithTranslation', function () {
-        var a={
+        var a = {
             "code": "Code A",
             "code_system_name": "System"
         };
-        var a2={
+        var a2 = {
             "code": "Code A with Description",
             "code_system_name": "System"
         };
 
-        var b={
+        var b = {
             "code": "Code B",
             "code_system_name": "System"
         };
-        var b2={
+        var b2 = {
             "code": "Code B with Description",
             "code_system_name": "System"
         };
@@ -225,22 +232,18 @@ describe('utils.js test', function () {
         expect(match).to.equal(true);
         match = utils.codeMatchWithTranslation(a.code, a.code_system_name, [], a2.code, a2.code_system_name, [a]);
         expect(match).to.equal(true);
-        match = utils.codeMatchWithTranslation(a2.code, a2.code_system_name, [a],a.code, a.code_system_name, []);
+        match = utils.codeMatchWithTranslation(a2.code, a2.code_system_name, [a], a.code, a.code_system_name, []);
         expect(match).to.equal(true);
-
 
         match = utils.codeMatchWithTranslation(a.code, a.code_system_name, [a2], a2.code, a2.code_system_name, [a]);
         expect(match).to.equal(true);
 
-        match = utils.codeMatchWithTranslation(a.code, a.code_system_name, [a2], a2.code, a2.code_system_name, [b,b2]);
+        match = utils.codeMatchWithTranslation(a.code, a.code_system_name, [a2], a2.code, a2.code_system_name, [b, b2]);
         expect(match).to.equal(true);
 
-        match = utils.codeMatchWithTranslation(a.code, a.code_system_name, [a2], b.code, b.code_system_name, [b,b2]);
+        match = utils.codeMatchWithTranslation(a.code, a.code_system_name, [a2], b.code, b.code_system_name, [b, b2]);
         expect(match).to.equal(false);
 
     });
 
-
 });
-
-

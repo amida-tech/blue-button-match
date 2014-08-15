@@ -1689,7 +1689,7 @@
                     "status": "new",
                     "date_time": "duplicate",
                     "body_sites": "new",
-                    "providers": "new",
+                    "performer": "new",
                     "locations": "duplicate",
                     "procedure_type": "new"
                 },
@@ -1712,7 +1712,7 @@
                     "identifiers": "new",
                     "status": "new",
                     "date_time": "duplicate",
-                    "providers": "new",
+                    "performer": "new",
                     "locations": "duplicate",
                     "procedure_type": "new"
                 },
@@ -1792,7 +1792,7 @@
                     "status": "new",
                     "date_time": "duplicate",
                     "body_sites": "new",
-                    "providers": "new",
+                    "performer": "new",
                     "locations": "duplicate",
                     "procedure_type": "new"
                 },
@@ -1822,7 +1822,7 @@
                     "identifiers": "new",
                     "status": "new",
                     "date_time": "duplicate",
-                    "providers": "new",
+                    "performer": "new",
                     "locations": "duplicate",
                     "procedure_type": "new"
                 },
@@ -3376,7 +3376,10 @@
                 "percent": 30,
                 "diff": {
                     "value": "duplicate",
-                    "date_time": "new"
+                    "date_time": "new",
+                    "identifiers": "new",
+                    "code": "duplicate",
+                    "observation_value": "new"
                 },
                 "src_id": "1",
                 "dest_id": "2",
@@ -3401,7 +3404,10 @@
                 "percent": 30,
                 "diff": {
                     "value": "duplicate",
-                    "date_time": "new"
+                    "date_time": "new",
+                    "identifiers": "new",
+                    "code": "duplicate",
+                    "observation_value": "new"
                 },
                 "src_id": "2",
                 "dest_id": "1",
@@ -3482,7 +3488,10 @@
                 "percent": 30,
                 "diff": {
                     "value": "duplicate",
-                    "date_time": "new"
+                    "date_time": "new",
+                    "identifiers": "new",
+                    "code": "duplicate",
+                    "observation_value": "new"
                 },
                 "src_id": "1",
                 "dest_id": "2",
@@ -3507,7 +3516,10 @@
                 "percent": 30,
                 "diff": {
                     "value": "duplicate",
-                    "date_time": "new"
+                    "date_time": "new",
+                    "identifiers": "new",
+                    "code": "duplicate",
+                    "observation_value": "new"
                 },
                 "src_id": "2",
                 "dest_id": "1",

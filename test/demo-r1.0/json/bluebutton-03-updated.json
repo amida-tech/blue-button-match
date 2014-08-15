@@ -17,17 +17,17 @@
         "identifiers": [
             {
                 "identifier": "2.16.840.1.113883.19.5.99999.2",
-                "identifier_type": "998991"
+                "extension": "998991"
             },
             {
                 "identifier": "2.16.840.1.113883.4.1",
-                "identifier_type": "111-00-2330"
+                "extension": "111-00-2330"
             }
         ],
         "marital_status": "Married",
         "addresses": [
             {
-                "streetLines": [
+                "street_lines": [
                     "1357 Amber Drive"
                 ],
                 "city": "Beaverton",
@@ -64,7 +64,7 @@
                 "relation": "Parent",
                 "addresses": [
                     {
-                        "streetLines": [
+                        "street_lines": [
                             "1357 Amber Drive"
                         ],
                         "city": "Beaverton",
@@ -94,11 +94,11 @@
             "identifiers": [
                 {
                     "identifier": "1.3.6.1.4.1.22812.3.99930.3.4.6",
-                    "identifier_type": "6660219000296"
+                    "extension": "6660219000296"
                 },
                 {
                     "identifier": "1.3.6.1.4.1.22812.3.99930.3.4.6",
-                    "identifier_type": "6660219000356"
+                    "extension": "6660219000356"
                 }
             ],
             "vital": {
@@ -120,11 +120,11 @@
             "identifiers": [
                 {
                     "identifier": "1.3.6.1.4.1.22812.3.99930.3.4.6",
-                    "identifier_type": "1166602190002918"
+                    "extension": "1166602190002918"
                 },
                 {
                     "identifier": "1.3.6.1.4.1.22812.3.99930.3.4.6",
-                    "identifier_type": "1166602190003518"
+                    "extension": "1166602190003518"
                 }
             ],
             "vital": {
@@ -146,11 +146,11 @@
             "identifiers": [
                 {
                     "identifier": "1.3.6.1.4.1.22812.3.99930.3.4.6",
-                    "identifier_type": "11666021900029181"
+                    "extension": "11666021900029181"
                 },
                 {
                     "identifier": "1.3.6.1.4.1.22812.3.99930.3.4.6",
-                    "identifier_type": "11666021900035181"
+                    "extension": "11666021900035181"
                 }
             ],
             "vital": {
@@ -172,11 +172,11 @@
             "identifiers": [
                 {
                     "identifier": "1.3.6.1.4.1.22812.3.99930.3.4.6",
-                    "identifier_type": "1166602190002928"
+                    "extension": "1166602190002928"
                 },
                 {
                     "identifier": "1.3.6.1.4.1.22812.3.99930.3.4.6",
-                    "identifier_type": "1166602190003528"
+                    "extension": "1166602190003528"
                 }
             ],
             "vital": {
@@ -198,11 +198,11 @@
             "identifiers": [
                 {
                     "identifier": "1.3.6.1.4.1.22812.3.99930.3.4.6",
-                    "identifier_type": "1166602190002939"
+                    "extension": "1166602190002939"
                 },
                 {
                     "identifier": "1.3.6.1.4.1.22812.3.99930.3.4.6",
-                    "identifier_type": "1166602190003539"
+                    "extension": "1166602190003539"
                 }
             ],
             "vital": {
@@ -396,6 +396,9 @@
                         }
                     },
                     "status": "completed",
+                    "reference_range": {
+                        "range": "normal: 0.29–5.11 IU/ml"
+                    },
                     "interpretations": [
                         "abnormal",
                         "high alert"
@@ -435,6 +438,9 @@
                         }
                     },
                     "status": "completed",
+                    "reference_range": {
+                        "range": "normal: 4.0-5.6%"
+                    },
                     "interpretations": [
                         "abnormal",
                         "high alert"
@@ -474,6 +480,9 @@
                         }
                     },
                     "status": "completed",
+                    "reference_range": {
+                        "range": "normal: below 1.5 mg/dL"
+                    },
                     "interpretations": [
                         "abnormal"
                     ],
@@ -512,6 +521,9 @@
                         }
                     },
                     "status": "completed",
+                    "reference_range": {
+                        "range": "Normal reference range 1.0-1.5; Targeted INR 2.0-3.0"
+                    },
                     "interpretations": [
                         "abnormal",
                         "high alert"
@@ -551,6 +563,9 @@
                         }
                     },
                     "status": "completed",
+                    "reference_range": {
+                        "range": "Normal: 50-75%"
+                    },
                     "interpretations": [
                         "normal"
                     ],
@@ -575,6 +590,9 @@
                         }
                     },
                     "status": "completed",
+                    "reference_range": {
+                        "range": "Normal (3.0-4.0 cm2), mild (1.5–2.0 cm2), moderate (1.0–1.5 cm2), severe (less than 1.0 cm2)"
+                    },
                     "interpretations": [
                         "abnormal"
                     ],
@@ -646,6 +664,9 @@
                         }
                     },
                     "status": "completed",
+                    "reference_range": {
+                        "range": "M 13-18 g/dl; F 12-16 g/dl"
+                    },
                     "interpretations": [
                         "Normal"
                     ],
@@ -670,6 +691,11 @@
                         }
                     },
                     "status": "completed",
+                    "reference_range": {
+                        "low": "4.3",
+                        "high": "10.8",
+                        "unit": "10+3/ul"
+                    },
                     "interpretations": [
                         "Normal"
                     ],
@@ -694,6 +720,11 @@
                         }
                     },
                     "status": "completed",
+                    "reference_range": {
+                        "low": "150",
+                        "high": "350",
+                        "unit": "10+3/ul"
+                    },
                     "interpretations": [
                         "Low"
                     ],
@@ -714,11 +745,11 @@
             "identifiers": [
                 {
                     "identifier": "1.3.6.1.4.1.22812.3.99930.3.4.9",
-                    "identifier_type": "6591225000051"
+                    "extension": "6591225000051"
                 },
                 {
                     "identifier": "1.3.6.1.4.1.22812.3.99930.3.4.9",
-                    "identifier_type": "6591225000071"
+                    "extension": "6591225000071"
                 }
             ],
             "status": "Prescribed",
@@ -754,11 +785,11 @@
             "identifiers": [
                 {
                     "identifier": "1.3.6.1.4.1.22812.3.99930.3.4.9",
-                    "identifier_type": "659122500005"
+                    "extension": "659122500005"
                 },
                 {
                     "identifier": "1.3.6.1.4.1.22812.3.99930.3.4.9",
-                    "identifier_type": "659122500007"
+                    "extension": "659122500007"
                 }
             ],
             "status": "Prescribed",
@@ -768,6 +799,9 @@
                     "code": "309114",
                     "code_system_name": "RXNORM"
                 }
+            },
+            "supply": {
+                "instructions": ""
             },
             "administration": {
                 "form": {
@@ -784,6 +818,13 @@
                         "unit": "h"
                     },
                     "frequency": true
+                }
+            },
+            "instructions": {
+                "code": {
+                    "name": "Provider instructions for treatment",
+                    "code": "423564006",
+                    "code_system_name": "SNOMED CT"
                 }
             }
         },
@@ -804,12 +845,14 @@
                 }
             ],
             "status": "Completed",
-            "sig": "Proventil HFA ",
+            "sig": "Proventil HFA",
             "product": {
-                "identifiers": {
-                    "identifier": "2a620155-9d11-439e-92b3-5d9815ff4ee8"
-                },
-                "unencoded_name": "Proventil HFA ",
+                "identifiers": [
+                    {
+                        "identifier": "2a620155-9d11-439e-92b3-5d9815ff4ee8"
+                    }
+                ],
+                "unencoded_name": "Proventil HFA",
                 "product": {
                     "name": "Proventil HFA",
                     "code": "219483",
@@ -821,7 +864,8 @@
                         }
                     ],
                     "code_system_name": "RXNORM"
-                }
+                },
+                "manufacturer": "Medication Factory Inc."
             },
             "supply": {
                 "date_time": {
@@ -831,7 +875,21 @@
                     }
                 },
                 "repeatNumber": "1",
-                "quantity": "75"
+                "quantity": "75",
+                "author": {
+                    "date_time": {},
+                    "identifiers": [
+                        {
+                            "identifier": "2a620155-9d11-439e-92b3-5d9815fe4de8"
+                        }
+                    ],
+                    "name": {
+                        "prefix": "Dr.",
+                        "last": "Seven",
+                        "first": "Henry"
+                    }
+                },
+                "instructions": "label in spanish"
             },
             "administration": {
                 "route": {
@@ -860,6 +918,25 @@
                     "frequency": true
                 }
             },
+            "performer": {
+                "organization": {
+                    "identifiers": [
+                        {
+                            "identifier": "2.16.840.1.113883.19.5.9999.1393"
+                        }
+                    ],
+                    "name": [
+                        "Community Health and Hospitals"
+                    ]
+                }
+            },
+            "drug_vehicle": {
+                "playingEntity": {
+                    "name": "Aerosol",
+                    "code": "324049",
+                    "code_system_name": "RXNORM"
+                }
+            },
             "precondition": {
                 "code": {
                     "code": "ASSERTION",
@@ -869,6 +946,69 @@
                     "name": "Wheezing",
                     "code": "56018004",
                     "code_system_name": "SNOMED CT"
+                }
+            },
+            "indication": {
+                "identifiers": [
+                    {
+                        "identifier": "db734647-fc99-424c-a864-7e3cda82e703",
+                        "extension": "45665"
+                    }
+                ],
+                "code": "404684003",
+                "date_time": {
+                    "low": {
+                        "date": "2007-01-03T00:00:00Z",
+                        "precision": "day"
+                    }
+                },
+                "value": {
+                    "name": "Pneumonia",
+                    "code": "233604007",
+                    "code_system_name": "SNOMED CT"
+                }
+            },
+            "instructions": {
+                "code": {
+                    "name": "instruction",
+                    "code": "409073007",
+                    "code_system_name": "SNOMED CT"
+                },
+                "freeText": "Proventil HFA"
+            },
+            "dispense": {
+                "identifiers": [
+                    {
+                        "identifier": "1.2.3.4.56789.1",
+                        "extension": "cb734647-fc99-424c-a864-7e3cda82e704"
+                    }
+                ],
+                "performer": {
+                    "identifiers": [
+                        {
+                            "identifier": "2.16.840.1.113883.19.5.9999.456",
+                            "extension": "2981823"
+                        }
+                    ],
+                    "address": {
+                        "street_lines": [
+                            "1001 Village Avenue"
+                        ],
+                        "city": "Portland",
+                        "state": "OR",
+                        "zip": "99123",
+                        "country": "US"
+                    },
+                    "organization": {
+                        "identifiers": [
+                            {
+                                "identifier": "2.16.840.1.113883.19.5.9999.1393"
+                            }
+                        ],
+                        "name": [
+                            "Community Health and Hospitals"
+                        ]
+                    }
                 }
             }
         }
@@ -883,7 +1023,7 @@
             "identifiers": [
                 {
                     "identifier": "1.3.6.1.4.1.22812.3.99930.3.3.4",
-                    "identifier_type": "5283815"
+                    "extension": "5283815"
                 }
             ],
             "date_time": {
@@ -896,6 +1036,39 @@
                     "precision": "day"
                 }
             },
+            "performers": [
+                {
+                    "identifiers": [
+                        {
+                            "identifier": "2.16.840.1.113883.4.6",
+                            "extension": "1111111111"
+                        }
+                    ],
+                    "name": [
+                        {
+                            "prefix": "Dr",
+                            "last": "Rodriguez",
+                            "first": "Martin"
+                        }
+                    ],
+                    "address": [
+                        {
+                            "street_lines": [
+                                "1002 Healthcare Dr."
+                            ],
+                            "city": "Portland",
+                            "state": "OR",
+                            "zip": "97005",
+                            "country": "US"
+                        }
+                    ],
+                    "phone": [
+                        {
+                            "number": "+1-(555)555-1122"
+                        }
+                    ]
+                }
+            ],
             "locations": [
                 {
                     "name": "Local Community Hospital",
@@ -906,7 +1079,7 @@
                     },
                     "address": [
                         {
-                            "streetLines": [
+                            "street_lines": [
                                 "1000 Hospital Way"
                             ],
                             "city": "Portland",
@@ -920,6 +1093,17 @@
                             "number": "+1-(555)555-1122"
                         }
                     ]
+                }
+            ],
+            "findings": [
+                {
+                    "identifiers": [
+                        {
+                            "identifier": "1.3.6.1.4.1.22812.3.99930.3.4.1.3",
+                            "extension": "147852"
+                        }
+                    ],
+                    "date_time": {}
                 }
             ]
         },
@@ -949,9 +1133,18 @@
             },
             "performers": [
                 {
-                    "name": "General Physician",
-                    "code": "59058001",
-                    "code_system_name": "SNOMED CT"
+                    "identifiers": [
+                        {
+                            "identifier": "PseduoMD-3"
+                        }
+                    ],
+                    "code": [
+                        {
+                            "name": "General Physician",
+                            "code": "59058001",
+                            "code_system_name": "SNOMED CT"
+                        }
+                    ]
                 }
             ],
             "locations": [
@@ -964,7 +1157,7 @@
                     },
                     "address": [
                         {
-                            "streetLines": [
+                            "street_lines": [
                                 "17 Daws Rd."
                             ],
                             "city": "Blue Bell",
@@ -977,6 +1170,18 @@
             ],
             "findings": [
                 {
+                    "identifiers": [
+                        {
+                            "identifier": "db734647-fc99-424c-a864-7e3cda82e703",
+                            "extension": "45665"
+                        }
+                    ],
+                    "date_time": {
+                        "low": {
+                            "date": "2007-01-03T00:00:00Z",
+                            "precision": "day"
+                        }
+                    },
                     "name": "Pneumonia",
                     "code": "233604007",
                     "code_system_name": "SNOMED CT"
@@ -1002,16 +1207,46 @@
                 "code": "314422",
                 "code_system_name": "RXNORM"
             },
-            "severity": "Moderate to severe",
-            "status": "Inactive",
+            "intolerance": {
+                "date_time": {
+                    "low": {
+                        "date": "2007-05-01T00:00:00Z",
+                        "precision": "day"
+                    }
+                },
+                "code": "419511003",
+                "name": "Propensity to adverse reactions to drug",
+                "code_system_name": "SNOMED CT",
+                "severity": {
+                    "code": "371924009",
+                    "name": "Moderate to severe"
+                }
+            },
+            "status": {
+                "code": "73425007",
+                "status": "Inactive"
+            },
             "reaction": [
                 {
+                    "date_time": {
+                        "low": {
+                            "date": "2007-05-01T00:00:00Z",
+                            "precision": "day"
+                        },
+                        "high": {
+                            "date": "2009-02-27T13:00:00Z",
+                            "precision": "subsecond"
+                        }
+                    },
                     "reaction": {
                         "name": "Nausea",
                         "code": "422587007",
                         "code_system_name": "SNOMED CT"
                     },
-                    "severity": "Mild"
+                    "severity": {
+                        "code": "255604002",
+                        "name": "Mild"
+                    }
                 }
             ]
         },
@@ -1032,16 +1267,46 @@
                 "code": "2670",
                 "code_system_name": "RXNORM"
             },
-            "severity": "Moderate",
-            "status": "Active",
+            "intolerance": {
+                "date_time": {
+                    "low": {
+                        "date": "2006-05-01T00:00:00Z",
+                        "precision": "day"
+                    }
+                },
+                "code": "419511003",
+                "name": "Propensity to adverse reactions to drug",
+                "code_system_name": "SNOMED CT",
+                "severity": {
+                    "code": "6736007",
+                    "name": "Moderate"
+                }
+            },
+            "status": {
+                "code": "55561003",
+                "status": "Active"
+            },
             "reaction": [
                 {
+                    "date_time": {
+                        "low": {
+                            "date": "2006-05-01T00:00:00Z",
+                            "precision": "day"
+                        },
+                        "high": {
+                            "date": "2009-02-27T13:00:00Z",
+                            "precision": "subsecond"
+                        }
+                    },
                     "reaction": {
                         "name": "Wheezing",
                         "code": "56018004",
                         "code_system_name": "SNOMED CT"
                     },
-                    "severity": "Mild"
+                    "severity": {
+                        "code": "255604002",
+                        "name": "Mild"
+                    }
                 }
             ]
         },
@@ -1069,15 +1334,37 @@
                     }
                 ]
             },
-            "status": "Inactive",
+            "intolerance": {
+                "date_time": {},
+                "code": "414285001",
+                "name": "Food allergy (disorder)",
+                "code_system_name": "SNOMED-CT"
+            },
+            "status": {
+                "code": "73425007",
+                "status": "Inactive"
+            },
             "reaction": [
                 {
+                    "date_time": {
+                        "low": {
+                            "date": "2007-05-01T00:00:00Z",
+                            "precision": "day"
+                        },
+                        "high": {
+                            "date": "2009-02-27T13:00:00Z",
+                            "precision": "subsecond"
+                        }
+                    },
                     "reaction": {
                         "name": "Nausea",
                         "code": "422587007",
                         "code_system_name": "SNOMED CT"
                     },
-                    "severity": "Mild"
+                    "severity": {
+                        "code": "255604002",
+                        "name": "Mild"
+                    }
                 }
             ]
         },
@@ -1098,16 +1385,46 @@
                 "code": "1191",
                 "code_system_name": "RXNORM"
             },
-            "severity": "Mild to moderate",
-            "status": "Active",
+            "intolerance": {
+                "date_time": {
+                    "low": {
+                        "date": "2008-05-01T00:00:00Z",
+                        "precision": "day"
+                    }
+                },
+                "code": "59037007",
+                "name": "Drug intolerance",
+                "code_system_name": "SNOMED CT",
+                "severity": {
+                    "code": "371923003",
+                    "name": "Mild to moderate"
+                }
+            },
+            "status": {
+                "code": "55561003",
+                "status": "Active"
+            },
             "reaction": [
                 {
+                    "date_time": {
+                        "low": {
+                            "date": "2008-05-01T00:00:00Z",
+                            "precision": "day"
+                        },
+                        "high": {
+                            "date": "2009-02-27T13:00:00Z",
+                            "precision": "subsecond"
+                        }
+                    },
                     "reaction": {
                         "name": "Hives",
                         "code": "247472004",
                         "code_system_name": "SNOMED CT"
                     },
-                    "severity": "Mild to moderate"
+                    "severity": {
+                        "code": "371923003",
+                        "name": "Mild to moderate"
+                    }
                 }
             ]
         },
@@ -1128,15 +1445,37 @@
                 "code": "866041",
                 "code_system_name": "RXNORM"
             },
-            "status": "Inactive",
+            "intolerance": {
+                "date_time": {},
+                "code": "416098002",
+                "name": "Drug allergy (disorder)",
+                "code_system_name": "SNOMED-CT"
+            },
+            "status": {
+                "code": "73425007",
+                "status": "Inactive"
+            },
             "reaction": [
                 {
+                    "date_time": {
+                        "low": {
+                            "date": "2007-05-01T00:00:00Z",
+                            "precision": "day"
+                        },
+                        "high": {
+                            "date": "2009-02-27T13:00:00Z",
+                            "precision": "subsecond"
+                        }
+                    },
                     "reaction": {
                         "name": "Nausea",
                         "code": "422587007",
                         "code_system_name": "SNOMED CT"
                     },
-                    "severity": "Mild"
+                    "severity": {
+                        "code": "255604002",
+                        "name": "Mild"
+                    }
                 }
             ]
         }
@@ -1186,7 +1525,7 @@
                 "identifiers": [
                     {
                         "identifier": "2.16.840.1.113883.19.5.9999.456",
-                        "identifier_type": "2981824"
+                        "extension": "2981824"
                     }
                 ],
                 "name": [
@@ -1197,7 +1536,7 @@
                 ],
                 "address": [
                     {
-                        "streetLines": [
+                        "street_lines": [
                             "1021 Health Drive"
                         ],
                         "city": "Ann Arbor",
@@ -1218,6 +1557,14 @@
                         ]
                     }
                 ]
+            },
+            "instructions": {
+                "code": {
+                    "name": "immunization education",
+                    "code": "171044003",
+                    "code_system_name": "SNOMED CT"
+                },
+                "freeText": "Possible flu-like symptoms for three days."
             }
         },
         {
@@ -1264,7 +1611,7 @@
                 "identifiers": [
                     {
                         "identifier": "2.16.840.1.113883.19.5.9999.456",
-                        "identifier_type": "2981824"
+                        "extension": "2981824"
                     }
                 ],
                 "name": [
@@ -1275,7 +1622,7 @@
                 ],
                 "address": [
                     {
-                        "streetLines": [
+                        "street_lines": [
                             "1021 Health Drive"
                         ],
                         "city": "Ann Arbor",
@@ -1296,6 +1643,14 @@
                         ]
                     }
                 ]
+            },
+            "instructions": {
+                "code": {
+                    "name": "immunization education",
+                    "code": "171044003",
+                    "code_system_name": "SNOMED CT"
+                },
+                "freeText": "Possible flu-like symptoms for three days."
             }
         },
         {
@@ -1342,7 +1697,7 @@
                 "identifiers": [
                     {
                         "identifier": "2.16.840.1.113883.19.5.9999.456",
-                        "identifier_type": "2981824"
+                        "extension": "2981824"
                     }
                 ],
                 "name": [
@@ -1353,7 +1708,7 @@
                 ],
                 "address": [
                     {
-                        "streetLines": [
+                        "street_lines": [
                             "1021 Health Drive"
                         ],
                         "city": "Ann Arbor",
@@ -1420,7 +1775,7 @@
                 "identifiers": [
                     {
                         "identifier": "2.16.840.1.113883.19.5.9999.456",
-                        "identifier_type": "2981824"
+                        "extension": "2981824"
                     }
                 ],
                 "name": [
@@ -1431,7 +1786,7 @@
                 ],
                 "address": [
                     {
-                        "streetLines": [
+                        "street_lines": [
                             "1021 Health Drive"
                         ],
                         "city": "Ann Arbor",
@@ -1468,6 +1823,16 @@
                     "date": "2009-02-27T13:00:00Z",
                     "precision": "subsecond"
                 }
+            },
+            "identifiers": [
+                {
+                    "identifier": "2.16.840.1.113883.19",
+                    "extension": "123456789"
+                }
+            ],
+            "code": {
+                "code": "ASSERTION",
+                "code_system_name": "HL7ActCode"
             }
         },
         {
@@ -1481,7 +1846,18 @@
                     "date": "2009-02-27T13:00:00Z",
                     "precision": "subsecond"
                 }
-            }
+            },
+            "identifiers": [
+                {
+                    "identifier": "9b56c25d-9104-45ee-9fa4-e0f3afaa01c1"
+                }
+            ],
+            "code": {
+                "name": "Tobacco use and exposure",
+                "code": "229819007",
+                "code_system_name": "SNOMED CT"
+            },
+            "observation_value": "1 pack per day"
         },
         {
             "value": "Tobacco use and exposure",
@@ -1490,7 +1866,18 @@
                     "date": "2009-02-27T13:00:00Z",
                     "precision": "subsecond"
                 }
-            }
+            },
+            "identifiers": [
+                {
+                    "identifier": "45efb604-7049-4a2e-ad33-d38556c9636c"
+                }
+            ],
+            "code": {
+                "name": "Tobacco use and exposure",
+                "code": "229819007",
+                "code_system_name": "SNOMED CT"
+            },
+            "observation_value": "None"
         },
         {
             "value": "Alcohol intake",
@@ -1499,42 +1886,56 @@
                     "date": "2005-05-01T00:00:00Z",
                     "precision": "day"
                 }
-            }
+            },
+            "identifiers": [
+                {
+                    "identifier": "37f76c51-6411-4e1d-8a37-957fd49d2cef"
+                }
+            ],
+            "code": {
+                "name": "Alcohol consumption",
+                "code": "160573003",
+                "code_system_name": "SNOMED CT"
+            },
+            "observation_value": "None"
         }
     ],
     "problems": [
         {
-            "date_time": {
-                "low": {
-                    "date": "2012-09-20T00:00:00Z",
-                    "precision": "day"
-                }
-            },
+            "date_time": {},
             "identifiers": [
                 {
                     "identifier": "1.3.6.1.4.1.22812.3.99930.3.4.1.2.1",
-                    "identifier_type": "615028800003"
+                    "extension": "615028800003"
                 },
                 {
                     "identifier": "1.3.6.1.4.1.22812.3.99930.3.4.1.2.1",
-                    "identifier_type": "659935200001"
+                    "extension": "659935200001"
                 }
             ],
             "negation_indicator": false,
             "problem": {
                 "name": "Sinusitis",
                 "code": "36971009",
-                "code_system_name": "SNOMED CT"
+                "code_system_name": "SNOMED CT",
+                "date_time": {
+                    "low": {
+                        "date": "2012-09-20T00:00:00Z",
+                        "precision": "day"
+                    }
+                }
             },
-            "status": "Active",
+            "status": {
+                "name": "Active"
+            },
             "source_list_identifiers": [
                 {
                     "identifier": "1.3.6.1.4.1.22812.3.99930.3.4.1",
-                    "identifier_type": "615028800003"
+                    "extension": "615028800003"
                 },
                 {
                     "identifier": "1.3.6.1.4.1.22812.3.99930.3.4.1",
-                    "identifier_type": "659935200001"
+                    "extension": "659935200001"
                 }
             ]
         },
@@ -1558,11 +1959,33 @@
             "problem": {
                 "name": "Pneumonia",
                 "code": "233604007",
+                "date_time": {
+                    "low": {
+                        "date": "2008-01-03T00:00:00Z",
+                        "precision": "day"
+                    },
+                    "high": {
+                        "date": "2008-01-03T00:00:00Z",
+                        "precision": "day"
+                    }
+                },
                 "code_system_name": "SNOMED CT"
             },
             "onset_age": "57",
             "onset_age_unit": "Year",
-            "status": "Resolved",
+            "status": {
+                "name": "Resolved",
+                "date_time": {
+                    "low": {
+                        "date": "2008-01-03T00:00:00Z",
+                        "precision": "day"
+                    },
+                    "high": {
+                        "date": "2009-02-27T13:00:00Z",
+                        "precision": "subsecond"
+                    }
+                }
+            },
             "patient_status": "Alive and well",
             "source_list_identifiers": [
                 {
@@ -1577,7 +2000,7 @@
                     "precision": "day"
                 },
                 "high": {
-                    "date": "2008-01-03T00:00:00Z",
+                    "date": "2007-01-03T00:00:00Z",
                     "precision": "day"
                 }
             },
@@ -1590,11 +2013,33 @@
             "problem": {
                 "name": "Asthma",
                 "code": "195967001",
+                "date_time": {
+                    "low": {
+                        "date": "2007-01-03T00:00:00Z",
+                        "precision": "day"
+                    },
+                    "high": {
+                        "date": "2008-01-03T00:00:00Z",
+                        "precision": "day"
+                    }
+                },
                 "code_system_name": "SNOMED CT"
             },
             "onset_age": "57",
             "onset_age_unit": "Year",
-            "status": "Active",
+            "status": {
+                "name": "Active",
+                "date_time": {
+                    "low": {
+                        "date": "2008-01-03T00:00:00Z",
+                        "precision": "day"
+                    },
+                    "high": {
+                        "date": "2009-02-27T13:00:00Z",
+                        "precision": "subsecond"
+                    }
+                }
+            },
             "patient_status": "Alive and well",
             "source_list_identifiers": [
                 {
@@ -1613,7 +2058,7 @@
             "identifiers": [
                 {
                     "identifier": "1.3.6.1.4.1.22812.3.99930.3.4.7",
-                    "identifier_type": "11144556"
+                    "extension": "11144556"
                 }
             ],
             "status": "Active",
@@ -1630,21 +2075,30 @@
                     "code_system_name": "SNOMED CT"
                 }
             ],
-            "providers": [
+            "performer": [
                 {
-                    "address": {
-                        "streetLines": [
-                            "1002 Healthcare Dr."
-                        ],
-                        "city": "Portland",
-                        "state": "OR",
-                        "zip": "97005",
-                        "country": "US"
-                    },
                     "identifiers": [
                         {
                             "identifier": "2.16.840.1.113883.4.6",
-                            "identifier_type": "1111111111"
+                            "extension": "1111111111"
+                        }
+                    ],
+                    "name": [
+                        {
+                            "prefix": "Dr",
+                            "last": "Rodriguez",
+                            "first": "Martin"
+                        }
+                    ],
+                    "address": [
+                        {
+                            "street_lines": [
+                                "1002 Healthcare Dr."
+                            ],
+                            "city": "Portland",
+                            "state": "OR",
+                            "zip": "97005",
+                            "country": "US"
                         }
                     ],
                     "phone": [
@@ -1681,21 +2135,35 @@
                     "code_system_name": "OID 2.16.840.1.113883.3.88.12.3221.8.9"
                 }
             ],
-            "providers": [
+            "specimen": {
+                "identifiers": [
+                    {
+                        "identifier": "c2ee9ee9-ae31-4628-a919-fec1cbb58683"
+                    }
+                ],
+                "code": {
+                    "name": "colonic polyp sample",
+                    "code": "309226005",
+                    "code_system_name": "SNOMED CT"
+                }
+            },
+            "performer": [
                 {
-                    "address": {
-                        "streetLines": [
-                            "1001 Village Avenue"
-                        ],
-                        "city": "Portland",
-                        "state": "OR",
-                        "zip": "99123",
-                        "country": "US"
-                    },
                     "identifiers": [
                         {
                             "identifier": "2.16.840.1.113883.19.5.9999.456",
-                            "identifier_type": "2981823"
+                            "extension": "2981823"
+                        }
+                    ],
+                    "address": [
+                        {
+                            "street_lines": [
+                                "1001 Village Avenue"
+                            ],
+                            "city": "Portland",
+                            "state": "OR",
+                            "zip": "99123",
+                            "country": "US"
                         }
                     ],
                     "phone": [
@@ -1704,29 +2172,35 @@
                             "type": "work place"
                         }
                     ],
-                    "organization": {
-                        "name": "Community Health and Hospitals",
-                        "address": {
-                            "streetLines": [
-                                "1001 Village Avenue"
+                    "organization": [
+                        {
+                            "identifiers": [
+                                {
+                                    "identifier": "2.16.840.1.113883.19.5.9999.1393"
+                                }
                             ],
-                            "city": "Portland",
-                            "state": "OR",
-                            "zip": "99123",
-                            "country": "US"
-                        },
-                        "identifiers": [
-                            {
-                                "identifier": "2.16.840.1.113883.19.5.9999.1393"
-                            }
-                        ],
-                        "phone": [
-                            {
-                                "number": "555-555-5000",
-                                "type": "work place"
-                            }
-                        ]
-                    }
+                            "name": [
+                                "Community Health and Hospitals"
+                            ],
+                            "address": [
+                                {
+                                    "street_lines": [
+                                        "1001 Village Avenue"
+                                    ],
+                                    "city": "Portland",
+                                    "state": "OR",
+                                    "zip": "99123",
+                                    "country": "US"
+                                }
+                            ],
+                            "phone": [
+                                {
+                                    "number": "555-555-5000",
+                                    "type": "work place"
+                                }
+                            ]
+                        }
+                    ]
                 }
             ],
             "procedure_type": "procedure"
@@ -1740,7 +2214,7 @@
             "identifiers": [
                 {
                     "identifier": "2.16.840.1.113883.19",
-                    "identifier_type": "123456789"
+                    "extension": "123456789"
                 }
             ],
             "status": "Aborted",
@@ -1757,21 +2231,28 @@
                     "code_system_name": "SNOMED CT"
                 }
             ],
-            "providers": [
+            "priority": {
+                "name": "Callback results",
+                "code": "CR",
+                "code_system_name": "OID 2.16.840.1.113883.5.7"
+            },
+            "performer": [
                 {
-                    "address": {
-                        "streetLines": [
-                            "17 Daws Rd."
-                        ],
-                        "city": "Blue Bell",
-                        "state": "MA",
-                        "zip": "02368",
-                        "country": "US"
-                    },
                     "identifiers": [
                         {
                             "identifier": "2.16.840.1.113883.19.5",
-                            "identifier_type": "1234"
+                            "extension": "1234"
+                        }
+                    ],
+                    "address": [
+                        {
+                            "street_lines": [
+                                "17 Daws Rd."
+                            ],
+                            "city": "Blue Bell",
+                            "state": "MA",
+                            "zip": "02368",
+                            "country": "US"
                         }
                     ],
                     "phone": [
@@ -1780,14 +2261,18 @@
                             "type": "work place"
                         }
                     ],
-                    "organization": {
-                        "name": "Community Health and Hospitals",
-                        "identifiers": [
-                            {
-                                "identifier": "2.16.840.1.113883.19.5"
-                            }
-                        ]
-                    }
+                    "organization": [
+                        {
+                            "identifiers": [
+                                {
+                                    "identifier": "2.16.840.1.113883.19.5"
+                                }
+                            ],
+                            "name": [
+                                "Community Health and Hospitals"
+                            ]
+                        }
+                    ]
                 }
             ],
             "locations": [
@@ -1800,7 +2285,7 @@
                     },
                     "address": [
                         {
-                            "streetLines": [
+                            "street_lines": [
                                 "17 Daws Rd."
                             ],
                             "city": "Blue Bell",
@@ -1822,7 +2307,7 @@
             "identifiers": [
                 {
                     "identifier": "1.2.3.4.5.6.7.8",
-                    "identifier_type": "1234567"
+                    "extension": "1234567"
                 }
             ],
             "status": "Completed",
@@ -1832,21 +2317,28 @@
                     "precision": "day"
                 }
             },
-            "providers": [
+            "priority": {
+                "name": "Callback results",
+                "code": "CR",
+                "code_system_name": "OID 2.16.840.1.113883.5.7"
+            },
+            "performer": [
                 {
-                    "address": {
-                        "streetLines": [
-                            "17 Daws Rd."
-                        ],
-                        "city": "Blue Bell",
-                        "state": "MA",
-                        "zip": "02368",
-                        "country": "US"
-                    },
                     "identifiers": [
                         {
                             "identifier": "2.16.840.1.113883.19",
-                            "identifier_type": "1234"
+                            "extension": "1234"
+                        }
+                    ],
+                    "address": [
+                        {
+                            "street_lines": [
+                                "17 Daws Rd."
+                            ],
+                            "city": "Blue Bell",
+                            "state": "MA",
+                            "zip": "02368",
+                            "country": "US"
                         }
                     ],
                     "phone": [
@@ -1855,14 +2347,18 @@
                             "type": "work place"
                         }
                     ],
-                    "organization": {
-                        "name": "Community Health and Hospitals",
-                        "identifiers": [
-                            {
-                                "identifier": "2.16.840.1.113883.19.5"
-                            }
-                        ]
-                    }
+                    "organization": [
+                        {
+                            "identifiers": [
+                                {
+                                    "identifier": "2.16.840.1.113883.19.5"
+                                }
+                            ],
+                            "name": [
+                                "Community Health and Hospitals"
+                            ]
+                        }
+                    ]
                 }
             ],
             "locations": [
@@ -1875,7 +2371,7 @@
                     },
                     "address": [
                         {
-                            "streetLines": [
+                            "street_lines": [
                                 "17 Daws Rd."
                             ],
                             "city": "Blue Bell",
@@ -1902,7 +2398,7 @@
                 }
             ],
             "date_time": {
-                "point": {
+                "center": {
                     "date": "2012-05-12T00:00:00Z",
                     "precision": "day"
                 }
@@ -1921,7 +2417,7 @@
                 }
             ],
             "date_time": {
-                "point": {
+                "center": {
                     "date": "2012-05-12T00:00:00Z",
                     "precision": "day"
                 }
@@ -1940,7 +2436,7 @@
                 }
             ],
             "date_time": {
-                "point": {
+                "center": {
                     "date": "2012-05-12T00:00:00Z",
                     "precision": "day"
                 }
@@ -1959,7 +2455,7 @@
                 }
             ],
             "date_time": {
-                "point": {
+                "center": {
                     "date": "2012-05-12T00:00:00Z",
                     "precision": "day"
                 }
@@ -1997,7 +2493,7 @@
                         ],
                         "address": [
                             {
-                                "streetLines": [
+                                "street_lines": [
                                     "123 Insurance Road"
                                 ],
                                 "city": "Blue Bell",
@@ -2020,7 +2516,7 @@
                                 ],
                                 "address": [
                                     {
-                                        "streetLines": [
+                                        "street_lines": [
                                             "123 Insurance Road"
                                         ],
                                         "city": "Blue Bell",
@@ -2036,6 +2532,12 @@
                                         "type": "work place"
                                     }
                                 ]
+                            }
+                        ],
+                        "code": [
+                            {
+                                "code": "PAYOR",
+                                "code_system_name": "HL7 RoleCode"
                             }
                         ]
                     }
@@ -2063,7 +2565,7 @@
                 ],
                 "address": [
                     {
-                        "streetLines": [
+                        "street_lines": [
                             "17 Daws Rd."
                         ],
                         "city": "Blue Bell",
@@ -2091,12 +2593,12 @@
                     "identifiers": [
                         {
                             "identifier": "14d4a520-7aae-11db-9fe1-0800200c9a66",
-                            "identifier_type": "1138345"
+                            "extension": "1138345"
                         }
                     ],
                     "address": [
                         {
-                            "streetLines": [
+                            "street_lines": [
                                 "17 Daws Rd."
                             ],
                             "city": "Blue Bell",
@@ -2104,6 +2606,13 @@
                             "zip": "02368",
                             "country": "US",
                             "use": "primary home"
+                        }
+                    ],
+                    "code": [
+                        {
+                            "name": "Self",
+                            "code": "SELF",
+                            "code_system_name": "HL7 Role"
                         }
                     ]
                 },
@@ -2123,12 +2632,12 @@
                     "identifiers": [
                         {
                             "identifier": "2.16.840.1.113883.19",
-                            "identifier_type": "1138345"
+                            "extension": "1138345"
                         }
                     ],
                     "address": [
                         {
-                            "streetLines": [
+                            "street_lines": [
                                 "17 Daws Rd."
                             ],
                             "city": "Blue Bell",

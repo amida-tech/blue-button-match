@@ -19,7 +19,4 @@ describe('lookups.js test', function () {
         assert.lengthOf(lookups.sections, 12, "sections lookup has 12 elements");
     });
 
-
 });
-
-
