@@ -53,13 +53,13 @@ module.exports = function (grunt) {
         },
         jsbeautifier: {
             beautify: {
-                src: ['Gruntfile.js', 'lib/*.js', 'lib/**/*.js', 'test/*.js', 'test/**/*.js'],
+                src: ['Gruntfile.js', 'lib/*.js', 'lib/**/*.js', 'test/*.js', 'test/**/*.js', 'index.js'],
                 options: {
                     config: '.jsbeautifyrc'
                 }
             },
             check: {
-                src: ['Gruntfile.js', 'lib/*.js', 'lib/**/*.js', 'test/*.js', 'test/**/*.js'],
+                src: ['Gruntfile.js', 'lib/*.js', 'lib/**/*.js', 'test/*.js', 'test/**/*.js', 'index.js'],
                 options: {
                     mode: 'VERIFY_ONLY',
                     config: '.jsbeautifyrc'
