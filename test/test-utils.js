@@ -207,43 +207,4 @@ describe('utils.js test', function () {
 
     });
 
-    it('test codeMatchWithTranslation', function () {
-        var a = {
-            "code": "Code A",
-            "code_system_name": "System"
-        };
-        var a2 = {
-            "code": "Code A with Description",
-            "code_system_name": "System"
-        };
-
-        var b = {
-            "code": "Code B",
-            "code_system_name": "System"
-        };
-        var b2 = {
-            "code": "Code B with Description",
-            "code_system_name": "System"
-        };
-
-        var match;
-
-        match = utils.codeMatchWithTranslation(a.code, a.code_system_name, [], a.code, a.code_system_name, [a]);
-        expect(match).to.equal(true);
-        match = utils.codeMatchWithTranslation(a.code, a.code_system_name, [], a2.code, a2.code_system_name, [a]);
-        expect(match).to.equal(true);
-        match = utils.codeMatchWithTranslation(a2.code, a2.code_system_name, [a], a.code, a.code_system_name, []);
-        expect(match).to.equal(true);
-
-        match = utils.codeMatchWithTranslation(a.code, a.code_system_name, [a2], a2.code, a2.code_system_name, [a]);
-        expect(match).to.equal(true);
-
-        match = utils.codeMatchWithTranslation(a.code, a.code_system_name, [a2], a2.code, a2.code_system_name, [b, b2]);
-        expect(match).to.equal(true);
-
-        match = utils.codeMatchWithTranslation(a.code, a.code_system_name, [a2], b.code, b.code_system_name, [b, b2]);
-        expect(match).to.equal(false);
-
-    });
-
 });
