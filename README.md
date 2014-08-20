@@ -21,7 +21,7 @@ This library provides following functionality
 
 Require blue-button-match module
 
-``` javascript
+```
 var match = require("./index.js") 
 var bb = require("blue-button");
 
@@ -32,20 +32,45 @@ var result = match.match(recordA.data, recordB.data);
 
 console.log(result);
 
-```
+````
 
 This will produce match object looking like this:
 
-```javascript
+```
 {
     "match":
     {
         "allergies" : [
-            { "src_id" : 0, "dest_id" : 0, "match":"duplicate" },
-            { "src_id" : 1, "dest_id" : 1, "match":"duplicate" },
-            { "src_id" : 2, "dest_id" : 2, "match":"duplicate" },
+          {
+                    "match": "new",
+                    "percent": 0,
+                    "src_id": "0",
+                    "dest_id": "0",
+                    "dest": "dest"
+          },
+          {
+                    "match": "new",
+                    "percent": 0,
+                    "src_id": "1",
+                    "dest_id": "0",
+                    "dest": "dest"
+          },
+          {
+                    "match": "new",
+                    "percent": 0,
+                    "src_id": "2",
+                    "dest_id": "0",
+                    "dest": "dest"
+          },
+          {
+                    "match": "new",
+                    "percent": 0,
+                    "src_id": "0",
+                    "dest_id": "1",
+                    "dest": "src"
+          },
             ...
-            }
+          }
         ],
         "medications" : [...],
         "demographics" : [...]
@@ -61,9 +86,14 @@ This will produce match object looking like this:
 
 #### Matching record explanation
 
-Match element can be `{"match" : "duplicate"}`, `{"match" : "new"}` or `{"match" : "partial", "percent": 50}`, partial match is expressed in percents and can range from `1` to `99`. Element attribute `dest_id` refers to element position (index) in related section's array of master health record. Element attribute `src_id` refers to element position (index) in related array of document being merged (new record).
+Match element can be `{"match" : "duplicate", "percent": 100}`, `{"match" : "new", "percent: 0"}` or `{"match" : "partial", "percent": 50}`.
 
-```javascript
+Partial match is expressed in percents and can range from `1` to `99`.  Percent is included in the duplicate and new objects as well for range based calculations, but will always equal `100` or `0` respectively.
+
+
+Element attribute `dest_id` refers to element position (index) in related section's array of master health record. Element attribute `src_id` refers to element position (index) in related array of document being merged (new record).  This is modulated by the 'dest' field. when `{dest:'dest'}` is present the `dest_id` references the index of the record matched against.  When `{dest: 'src'}` is present, the `dest_id` references the index of the record contained within the same record as the `src_id`.
+
+```
 {
     "match":
     {
@@ -83,94 +113,116 @@ Match element can be `{"match" : "duplicate"}`, `{"match" : "new"}` or `{"match"
 
 ### Matching results JSON structures (by record type)
 
-#### Flat
-
-_Applied to : Vital Signs, Medications, Problems, Immunizations, Procedures_
 
 
-``` javascript
-[
-    { "match" : "duplicate", "src_id" : 0, "dest_id": 2 },
-    { "match" : "new", "src_id" :1 },
-    { "match" : "partial", "percent" : 50, "src_id" : 2, "dest_id" : 5},
-    ...
-    }
-]
+#### Multiple facts
+
+_Applied to: All sections excluding Demographics_
+
+
+New match entry (dest):
+
 ```
+{
+   "match": "new",
+   "percent": 0,
+   "src_id": "1",
+   "dest_id": "2",
+   "dest": "dest"
+}
 
-#### Containing subarrays
 
-_Applied to: Results, Allergies, Encounters_
-
-``` javascript
-[
-    { "match" : "new", "src_id" :1 }, //completely new element
-    { "match" : "duplicate", "src_id" : 0, "dest_id": 2 }, //completely duplicate element
-
-    { "match" : "duplicate_new_subelements", "src_id" : 0, "dest_id": 2 
-        "subelements": [
-            { "match" : "duplicate", "src_id" : 0, "dest_id": 2 },
-            { "match" : "new", "src_id" :1 },
-            { "match" : "partial", "percent" : 50, "src_id" : 2, "dest_id" : 5},
-            ...
-            }
-        ]
-
-    }, //completely duplicate element but difference in subelements exists
-
-    { "match" : "partial", "percent" : 50, "src_id" : 2, "dest_id" : 5
-        "subelements": [
-            { "match" : "duplicate", "src_id" : 0, "dest_id": 2 },
-            { "match" : "new", "src_id" :1 },
-            { "match" : "partial", "percent" : 50, "src_id" : 2, "dest_id" : 5},
-            ...
-            }
-        ]
-    }, 
-    ...
-    } //partial match
-]
 ````
+Duplicate match entry (dest):
+
+```
+ {
+     "match": "duplicate",
+     "percent": "100",
+     "src_id": "1",
+     "dest_id": "1",
+     "dest": "dest"
+ }
+````
+
+Partial match entry (dest):
+
+```
+{
+    "match": "partial",
+    "percent": 50,
+    "subelements": {
+        "reaction": [{
+            "match": "new",
+            "percent": 0,
+            "src_id": "0",
+            "dest_id": "0",
+            "dest": "dest"
+        }]
+    },
+    "diff": {
+        "date_time": "duplicate",
+        "identifiers": "duplicate",
+        "allergen": "duplicate",
+        "severity": "duplicate",
+        "status": "duplicate",
+        "reaction": "new"
+    },
+    "src_id": "2",
+    "dest_id": "2",
+    "dest": "dest"
+}
+````
+
 
 #### Single facts
 
-_Applied to: Demographics, Social History_
+_Applied to: Demographics_
 
 
-``` javascript
-//only one match element present
-[
-    { "match" : "duplicate"}, //record is complete duplicate
-]
+Record is a duplicate:
+
 ```
+[ { match: 'duplicate', src_id: 0, dest_id: 0 } ]
+````
 
-``` javascript
-//only one match element present
-[
-    { "match" : "diff", 
-        "diff": {
-            "element_name_1":"duplicate", //element is the same
-            "element_name_2":"new", //element has new value
-        }},
-]
+Record is a partial match:
+
 ```
+[ { match: 'diff',
+    diff: 
+     { name: 'duplicate',
+       dob: 'new',
+       gender: 'duplicate',
+       identifiers: 'duplicate',
+       marital_status: 'duplicate',
+       addresses: 'new',
+       phone: 'duplicate',
+       race_ethnicity: 'duplicate',
+       languages: 'duplicate',
+       religion: 'duplicate',
+       birthplace: 'duplicate',
+       guardians: 'new' },
+    src_id: 0,
+    dest_id: 0 } ]
+````
 
 Edge cases for single facts:
 
 Both objects are empty e.g. comparePartial({}, {})
 
-```javascript
+```
 [ { match: 'duplicate' } ]
 ```
 
 Comparing empty object e.g. {} with non-empty (master record)
 
-```javascript
+```
 [ { match: 'diff', diff: {} } ]
 ```
 
 Comparing non empty object with empty master record {}
-```javascript
+```
 [ { match: 'new' } ]
 ```
 
@@ -178,77 +230,88 @@ Comparing non empty object with empty master record {}
 
 #### Common matching rules
 
-Fuzzy date match - dates match with margin of errors; in case of date ranges, checked for overlap; margin of error is 24 hrs.
+_Date/time match_ - Hard match on dates, After initial date mismatch, fuzzy date match performed.  Will check for overlap of dates if they don't hard match.
 
-Code (Code System match) - code and code_system_name must match.
+_Code match (Code System match)_ - Either names must match, or code/code system must match.  Translations are supported:  Translated objects may be matched against an object and follow the same rules.
 
-Code match with translations - codes (and code_system_names) between two entries should have at least one match.
+_String match_ - Case insensitive/trimmed match of string values.
+
+_String array match_ - Case insensitive/trimmed match of arrays for equality.
+
+_Boolean match_ - Simple true/false equality comparison.
+
+Each sections logic is contained in a .json file corresponding to the section name.  It is divided into primary and secondary logic.  Secondary logic only executes only if primary logic resulted in a successful match, and can bolster match percentages.   Each section contains an array of match data.
+
+Each element of match data has 3 components, a path, the location of the element, the type, or what common utility should handle it, and the percentage, which is a resulting increase if a match is made successfully.
+
+Additionally, elements may have 'subarrays', which is used to populate sub-arrays from the match and provides corresponding diffs.  Their structure is the same as match entries.
+
+Note:  Currently, the logic is designed so a match over 50% is considered actionable.
 
 ###Allergies
 
-Code match on Allergen is required.
+Primary:  Allergen Coded Match.
 
-Date and Fuzzy date match.
+Secondary:  Date/time.
 
-###Medications
+###Claims
 
-Code match with translation on Medication.
-
-Status match.
-
-Date and Fuzzy date match.
-
-###Problems
-
-Code match with translation on Medication is required.
-
-Status match.
-
-Negation indicator match.
-
-Date and Fuzzy date match.
-
-###Results
-
-Code match on Result is required.
-
-Since Result doesn't have a date. Dates from sub results are collected for both entries. Fuzzy date match is used.
+Primary:  Payer String Match, Number String Match, and type String Array match.
 
 ###Demographics
 
 All subelements are compared.
 
-###Procedures
-
-Code match with translation on Procedure is required.
-
-Status dismatch results in 0% match.
-
-Date and Fuzzy date match.
-
 ###Encounters
 
-Code match with translation on Encounter is required.
-
-Date and Fuzzy date match.
+Primary:  Encounter Coded Match, Date/time.
 
 ###Immunizations
 
-Code match with translation on Immunization is required.
+Primary:  Product Coded Match, Date/time.
 
-Status dismatch results in 0% match.
+###Insurance
 
-Date and Fuzzy date match.
+Primary:  Plan Identifier String Match, Policy Number String Match, and Payer Name String match.
 
-###Vitals model
+Note:  Any combination of two matches will be over 50%.
 
-Code match with translation on Vital Sign is required.
+###Medications
 
-Date and Fuzzy date match.
+Primary:  Product Coded Entry.
+
+Secondary:  Date/time.
+
+###Problems
+
+Primary:  Problem Coded Entry.
+
+Secondary:  Date/time, Status string match, Negation Indicator boolean match.
+
+###Procedures
+
+Primary:  Procedure Coded Entry Match.
+
+Secondary:  Date/time.
+
+###Results
+
+Primary:  Result set Coded Entry, and Result set Date/time.
+
+Note:  Date/time calculated as most recent value from results array.
 
 ###Social History
 
-All subelements are compared.
+Primary:  Value String entry.
+
+Secondary:  Date/time.
+
+###Vitals model
+
+Primary:  Vital Coded entry.
+
+Secondary:  Date/time.
+
 
 ## Contributing
 

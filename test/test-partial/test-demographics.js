@@ -10,9 +10,9 @@ var fs = require('fs');
 
 var matchSingles = require("../../lib/match-single.js").compare;
 
-var js, js2, js3a, js3b, js4a,js4b;
+var js, js2, js3a, js3b, js4a, js4b;
 
-before(function(done) {
+before(function (done) {
     js = JSON.parse(fs.readFileSync('test/test-partial/fixtures/demographics.json', 'utf-8').toString());
 
     //same demographics with some attributes changed (e.g. name, family status, languages)
@@ -22,55 +22,52 @@ before(function(done) {
     done();
 });
 
+describe('Demographics partial matching library (demographics.js) tests', function () {
 
-describe('Demographics partial matching library (demographics.js) tests', function() {
+    it('compare demographics sections in edge cases', function () {
+        var m = [matchSingles({}, {}, 'demographics')];
 
+        expect(m.length).to.equal(1);
 
-        it('compare demographics sections in edge cases', function() {
-            var m = [matchSingles({}, {},'demographics')];
+        expect(m[0].match).to.equal("duplicate");
+        //console.log(m);
 
-            expect(m.length).to.equal(1);
+        var m = [matchSingles({}, js, 'demographics')];
 
-            expect(m[0].match).to.equal("duplicate");
-            //console.log(m);
+        expect(m.length).to.equal(1);
 
-            var m = [matchSingles({}, js,'demographics')];
+        expect(m[0].match).to.equal("diff");
+        //console.log(m);
 
-            expect(m.length).to.equal(1);
+        var m = [matchSingles(js, {}, 'demographics')];
 
-            expect(m[0].match).to.equal("diff");
-            //console.log(m);
+        expect(m.length).to.equal(1);
 
-            var m = [matchSingles(js, {},'demographics')];
+        expect(m[0].match).to.equal("new");
+        //console.log(m);
 
-            expect(m.length).to.equal(1);
+    });
 
-            expect(m[0].match).to.equal("new");
-            //console.log(m);
+    it('compare demographics sections with itself', function () {
+        var m = [matchSingles(js, js, 'demographics')];
 
-        });
+        //console.log(m);
 
-        it('compare demographics sections with itself', function() {
-            var m = [matchSingles(js, js,'demographics')];
+        expect(m.length).to.equal(1);
 
-            //console.log(m);
+        expect(m[0].match).to.equal("duplicate");
 
-            expect(m.length).to.equal(1);
+    });
 
-            expect(m[0].match).to.equal("duplicate");
+    it('compare two different demographics sections that will have all partial match', function () {
+        var m = [matchSingles(js, js2, 'demographics')];
 
-        });
+        //console.log(m);
 
+        expect(m.length).to.equal(1);
 
-        it('compare two different demographics sections that will have all partial match', function() {
-            var m = [matchSingles(js, js2, 'demographics')];
+        expect(m[0].match).to.equal("diff");
 
-            //console.log(m);
-
-            expect(m.length).to.equal(1);
-
-            expect(m[0].match).to.equal("diff");
-
-        });
+    });
 
 });

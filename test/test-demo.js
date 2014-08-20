@@ -30,8 +30,7 @@ var lookup = [
     'social_history',
 ];
 
-
-before(function(done) {
+before(function (done) {
     /*
         01 - original record (with all sections populated)
         02 - duplicate
@@ -60,11 +59,9 @@ before(function(done) {
     done();
 });
 
+xdescribe('Verifying demo R1.0 sample xml files', function () {
 
-describe('Verifying demo R1.0 sample xml files', function() {
-
-
-    it('checking for all sections present in each demo file', function() {
+    it('checking for all sections present in each demo file', function () {
 
         for (var section in lookup) {
             //console.log(lookup[section]);
@@ -79,7 +76,6 @@ describe('Verifying demo R1.0 sample xml files', function() {
         }
 
     });
-
 
     it('checking that JSON #1 against empty master record', function () {
         //console.log(js);
@@ -106,8 +102,7 @@ describe('Verifying demo R1.0 sample xml files', function() {
 
     });
 
-
-    it('checking that JSON #1 and #2 are duplicates', function() {
+    it('checking that JSON #1 and #2 are duplicates', function () {
         //console.log(js);
         var m_match = match.match(js, js2);
         //console.log(m_match);
@@ -126,46 +121,48 @@ describe('Verifying demo R1.0 sample xml files', function() {
             }
 
             if (lookup[section] !== 'demographics') {
-            var m = m_match.match[lookup[section]];
+                var m = m_match.match[lookup[section]];
 
-            //console.log(m);
-            //Group arrays by source.
-            var src_array = [];
-            for (var item in m) {
-                src_array.push(m[item].src_id);
-            }
+                //console.log(m);
+                //Group arrays by source.
+                var src_array = [];
+                for (var item in m) {
+                    src_array.push(m[item].src_id);
+                }
 
-            src_array = _.uniq(src_array);
-            src_obj_array = [];
+                src_array = _.uniq(src_array);
+                src_obj_array = [];
 
-            for (var i in src_array) {
-                src_obj_array.push([]);
-            }
+                for (var i in src_array) {
+                    src_obj_array.push([]);
+                }
 
-            for (var itemd in m) {
-                for (var iter in src_array) {
-                    if (m[itemd].src_id === src_array[iter]) {
+                for (var itemd in m) {
+                    for (var iter in src_array) {
+                        if (m[itemd].src_id === src_array[iter]) {
 
                             src_obj_array[src_array[iter]].push(m[itemd]);
-                 
+
+                        }
+
                     }
-
                 }
-            }
 
-        }
+            }
 
             for (var objArrayd in src_obj_array) {
                 //console.log(_.where(src_obj_array[objArray], {dest: 'dest', match: 'duplicate'}));
-                expect(_.where(src_obj_array[objArrayd], {dest: 'dest', match: 'duplicate'}).length).to.equal(1);
+                expect(_.where(src_obj_array[objArrayd], {
+                    dest: 'dest',
+                    match: 'duplicate'
+                }).length).to.equal(1);
             }
-            
+
         }
 
     });
 
-
-    it('checking that matches between JSON #3 and #1 are just new or duplicates entries', function() {
+    it('checking that matches between JSON #3 and #1 are just new or duplicates entries', function () {
         var m2 = match.match(js3, js);
 
         //console.log(JSON.stringify(m2, null, 10));
@@ -183,46 +180,52 @@ describe('Verifying demo R1.0 sample xml files', function() {
             }
 
             if (lookup[section] !== 'demographics') {
-            var mnd = m2.match[lookup[section]];
+                var mnd = m2.match[lookup[section]];
 
-            //console.log(m);
-            //Group arrays by source.
-            var src_array = [];
-            for (var item in mnd) {
-                src_array.push(mnd[item].src_id);
-            }
+                //console.log(m);
+                //Group arrays by source.
+                var src_array = [];
+                for (var item in mnd) {
+                    src_array.push(mnd[item].src_id);
+                }
 
-            src_array = _.uniq(src_array);
-            src_obj_array = [];
+                src_array = _.uniq(src_array);
+                src_obj_array = [];
 
-            for (var i in src_array) {
-                src_obj_array.push([]);
-            }
+                for (var i in src_array) {
+                    src_obj_array.push([]);
+                }
 
-            for (var itemnd in mnd) {
-                for (var iter in src_array) {
-                    if (mnd[itemnd].src_id === src_array[iter]) {
+                for (var itemnd in mnd) {
+                    for (var iter in src_array) {
+                        if (mnd[itemnd].src_id === src_array[iter]) {
 
                             src_obj_array[src_array[iter]].push(mnd[itemnd]);
-                 
+
+                        }
+
                     }
-
                 }
-            }
 
-        }
+            }
 
             for (var objArray in src_obj_array) {
                 //console.log(_.where(src_obj_array[objArray], {dest: 'dest', match: 'duplicate'}));
-                expect(_.where(src_obj_array[objArray], {dest: 'dest', match: 'duplicate'})).to.exist;
-                expect(_.where(src_obj_array[objArray], {dest: 'dest', match: 'new'})).to.exist;
+                expect(_.where(src_obj_array[objArray], {
+                    dest: 'dest',
+                    match: 'duplicate'
+                })).to.exist;
+                expect(_.where(src_obj_array[objArray], {
+                    dest: 'dest',
+                    match: 'new'
+                })).to.exist;
             }
-            
+
         }
 
     });
 
-    it('checking that matches between JSON #4 and #3 has partial or diff entries', function() {
+    it('checking that matches between JSON #4 and #3 has partial or diff entries', function () {
         var m3 = match.match(js4, js3);
 
         var src_obj_array;
@@ -236,45 +239,53 @@ describe('Verifying demo R1.0 sample xml files', function() {
             }
 
             if (lookup[section] !== 'demographics') {
-            var mpar = m3.match[lookup[section]];
+                var mpar = m3.match[lookup[section]];
 
-            //console.log(m);
-            //Group arrays by source.
-            var src_array = [];
-            for (var item in mpar) {
-                src_array.push(mpar[item].src_id);
-            }
+                //console.log(m);
+                //Group arrays by source.
+                var src_array = [];
+                for (var item in mpar) {
+                    src_array.push(mpar[item].src_id);
+                }
 
-            src_array = _.uniq(src_array);
-            src_obj_array = [];
+                src_array = _.uniq(src_array);
+                src_obj_array = [];
 
-            for (var i in src_array) {
-                src_obj_array.push([]);
-            }
+                for (var i in src_array) {
+                    src_obj_array.push([]);
+                }
 
-            for (var itempar in mpar) {
-                for (var iter in src_array) {
-                    if (mpar[itempar].src_id === src_array[iter]) {
+                for (var itempar in mpar) {
+                    for (var iter in src_array) {
+                        if (mpar[itempar].src_id === src_array[iter]) {
 
                             src_obj_array[src_array[iter]].push(mpar[itempar]);
-                 
+
+                        }
+
                     }
-
                 }
-            }
 
-        }
+            }
 
             for (var objArray in src_obj_array) {
                 //console.log(_.where(src_obj_array[objArray], {dest: 'dest', match: 'duplicate'}));
-                expect(_.where(src_obj_array[objArray], {dest: 'dest', match: 'duplicate'})).to.exist;
-                expect(_.where(src_obj_array[objArray], {dest: 'dest', match: 'new'})).to.exist;
-                expect(_.where(src_obj_array[objArray], {dest: 'dest', match: 'partial'})).to.exist;
+                expect(_.where(src_obj_array[objArray], {
+                    dest: 'dest',
+                    match: 'duplicate'
+                })).to.exist;
+                expect(_.where(src_obj_array[objArray], {
+                    dest: 'dest',
+                    match: 'new'
+                })).to.exist;
+                expect(_.where(src_obj_array[objArray], {
+                    dest: 'dest',
+                    match: 'partial'
+                })).to.exist;
             }
-            
+
         }
 
     });
-
 
 });

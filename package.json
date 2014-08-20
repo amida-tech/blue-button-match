@@ -44,10 +44,11 @@
         "grunt-contrib-jshint": "0.8.x",
         "grunt-express-server": "0.4.x",
         "grunt-contrib-watch": "0.6.x",
-        "grunt-coveralls": "*",
-        "grunt-istanbul-coverage": "*",
-        "coveralls": "~2.10.0",
-        "mocha-lcov-reporter": "0.0.1"
+        "grunt-coveralls": "1.0.x",
+        "grunt-jsbeautifier": "0.2.x",
+        "grunt-istanbul-coverage": "0.0.x",
+        "coveralls": "2.11.x",
+        "mocha-lcov-reporter": "0.0.x"
     },
     "repository": {
         "type": "git",

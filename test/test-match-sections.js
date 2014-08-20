@@ -38,7 +38,7 @@ before(function (done) {
     done();
 });
 
-describe('Matching library (match-sections.js) tests', function () {
+xdescribe('Matching library (match-sections.js) tests', function () {
 
     describe('Sections level tests', function () {
 
@@ -168,7 +168,7 @@ describe('Matching library (match-sections.js) tests', function () {
         });
 
         it('testing matchSections method on two insurance sections with some same fields', function () {
-            
+
             var m = matchSections(bbCmsTest1["insurance"], bbCmsTest2["insurance"], "insurance");
             for (var item in m) {
                 expect(m[item]).to.have.property('src_id');
@@ -204,11 +204,11 @@ describe('Matching library (match-sections.js) tests', function () {
         });
 
         it(', testing matchSections method on two claims sections with some same fields', function () {
-        
+
             var m = matchSections(bbCmsTest1["claims"], bbCmsTest2["claims"], "claims");
             for (var item in m) {
                 expect(m[item]).to.have.property('src_id');
-                expect(m[item]).to.have.property('dest_id');   
+                expect(m[item]).to.have.property('dest_id');
             }
         });
 

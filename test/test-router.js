@@ -12,7 +12,7 @@ var lookups = require('../lib/lookups.js');
 var bb;
 var bb2;
 
-before(function(done) {
+before(function (done) {
     var xml = fs.readFileSync('test/records/ccda/CCD_demo1.xml', 'utf-8');
     bb = bbjs.parseString(xml).data;
     var xml2 = fs.readFileSync('test/records/ccda/CCD_demo2.xml', 'utf-8');
@@ -27,12 +27,11 @@ before(function(done) {
     done();
 });
 
+describe('Matching library (compare-partial.js) tests', function () {
 
-describe('Matching library (compare-partial.js) tests', function() {
-
-    describe('Exceptions test', function() {
-        it('testing exceptions', function() {
-            var fn = function() {
+    describe('Exceptions test', function () {
+        it('testing exceptions', function () {
+            var fn = function () {
                 compare({
                     "a": 1
                 }, {
@@ -40,13 +39,13 @@ describe('Matching library (compare-partial.js) tests', function() {
                 });
             };
             expect(fn).to.
-            throw ('one argument is required for compare function');
+            throw('one argument is required for compare function');
         });
     });
 
-    describe('Entries level tests', function() {
+    describe('Entries level tests', function () {
 
-        it('testing compare method with BB.js data', function() {
+        it('testing compare method with BB.js data', function () {
             //expect(true).to.equal(true);
 
             for (var section in lookups.sections) {
@@ -64,7 +63,7 @@ describe('Matching library (compare-partial.js) tests', function() {
             }
 
         });
-        it('testing compare method with BB.js data', function() {
+        it('testing compare method with BB.js data', function () {
             //expect(true).to.equal(true);
 
             for (var section in lookups.sections) {
@@ -82,7 +81,7 @@ describe('Matching library (compare-partial.js) tests', function() {
             }
 
         });
-        it('testing compare method with BB.js data', function() {
+        it('testing compare method with BB.js data', function () {
             //expect(true).to.equal(true);
 
             for (var section in lookups.sections) {
@@ -101,7 +100,7 @@ describe('Matching library (compare-partial.js) tests', function() {
 
         });
 
-        it('testing compare method with BB.js data (Kinsights)', function() {
+        it('testing compare method with BB.js data (Kinsights)', function () {
             //expect(true).to.equal(true);
 
             for (var section in lookups.sections) {
@@ -119,8 +118,6 @@ describe('Matching library (compare-partial.js) tests', function() {
             }
 
         });
-
-
 
     });
 
