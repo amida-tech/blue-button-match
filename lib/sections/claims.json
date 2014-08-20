@@ -1,0 +1,26 @@
+{
+    "primary": [{
+            "path": "payer",
+            "type": "stringArray",
+            "percent": 50 
+        }, {
+            "path": "number",
+            "type": "string",
+            "percent": 25 
+        }, {
+            "path": "type",
+            "type": "stringArray",
+            "percent": 25 
+        }
+    ],
+    "secondary": [],
+    "subArrays": [{
+        "lines": {
+            "primary": [{
+                "path": "charges",
+                "type": "object",
+                "percent": 50
+            }]
+        }
+    }]
+}

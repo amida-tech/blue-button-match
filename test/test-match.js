@@ -7,7 +7,6 @@ var fs = require('fs');
 var bbjs = require('blue-button');
 
 var match = require('../lib/match.js');
-var compare = require('../lib/compare-partial.js').compare;
 var lookups = require('../lib/lookups.js');
 var equal = require('deep-equal');
 
@@ -16,13 +15,16 @@ var matchSections = require("../lib/match-sections.js");
 var bb;
 var bb2, bb3, bb4;
 
-before(function(done) {
+before(function (done) {
     var xml = fs.readFileSync('test/records/ccda/CCD_demo1.xml', 'utf-8');
     bb = bbjs.parseString(xml);
     var xml2 = fs.readFileSync('test/records/ccda/CCD_demo2.xml', 'utf-8');
     bb2 = bbjs.parseString(xml2);
     var xml3 = fs.readFileSync('test/records/ccda/CCD_demo3.xml', 'utf-8');
     bb3 = bbjs.parseString(xml3);
+    //cms
+    var txt1 = fs.readFileSync('test/records/cms/cms_same.txt', 'utf-8');
+    bb4 = bbjs.parseText(txt1);
 
     //var xml4 = fs.readFileSync('test/records/ccda/kinsights-sample-timmy.xml', 'utf-8');
     //bb4 = bbjs.parseString(xml4).data;
@@ -31,20 +33,16 @@ before(function(done) {
     done();
 });
 
+describe('Matching library (match.js) tests', function () {
 
-describe('Matching library (match.js) tests', function() {
+    describe('Header level tests', function () {
 
-
-
-
-    describe('Header level tests', function() {
-
-        xit('some sophisticated header tests will be added there later', function() {});
+        xit('some sophisticated header tests will be added there later', function () {});
     });
 
-    describe('Document level tests', function() {
+    describe('Document level tests', function () {
 
-        it('full record comparison of same document', function() {
+        it('full record comparison of same document', function () {
 
             var m = match.match(bb.data, bb.data);
 
@@ -71,10 +69,31 @@ describe('Matching library (match.js) tests', function() {
 
         });
 
+        it('full record comparison of same cms document', function () {
+            var m = match.match(bb4.data, bb4.data);
+            expect(m).to.be.ok;
+            expect(m).to.have.property("match");
 
-        it('full record comparison of two different documents', function() {
+            for (var section in lookups.sections) {
+                var name = lookups.sections[section];
+                //console.log(">>> "+name);
+
+                if (bb.hasOwnProperty(name)) {
+
+                    expect(m["match"]).to.have.property(name);
+
+                    for (var item in m["match"][name]) {
+                        expect(m["match"][name][item].match).to.equal("duplicate");
+                        expect(m["match"][name][item]).to.have.property('src_id');
+                        expect(m["match"][name][item]).to.have.property('dest_id');
+                    }
+                }
+            }
+
+        });
+
+        it('full record comparison of two different documents', function () {
             var m = match.match(bb.data, bb3.data);
-
 
             //console.log(JSON.stringify(m,null,4));
 
@@ -105,8 +124,6 @@ describe('Matching library (match.js) tests', function() {
             }
         });
 
-
     });
-
 
 });

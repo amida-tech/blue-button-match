@@ -2,120 +2,81 @@
         {
             "identifiers": [
                 {
-                    "identifier": "2.16.840.1.113883.3.441.1.50.300011.51.26562.54",
-                    "identifier_type": "2899"
+                    "identifier": "7d5a02b0-67a4-11db-bd13-0800200c9a66"
                 }
             ],
             "results": [
                 {
                     "identifiers": [
                         {
-                            "identifier": "2.16.840.1.113883.3.441.1.50.300011.51.26562.54",
-                            "identifier_type": "2899"
+                            "identifier": "107c2dc0-67a5-11db-bd13-0800200c9a66"
                         }
                     ],
-                    "date": [
-                        {
-                            "date": "2013-01-24T12:35:21.000Z",
-                            "precision": "second"
+                    "result": {
+                        "name": "HGB",
+                        "code": "30313-1",
+                        "code_system_name": "LOINC"
+                    },
+                    "date_time": {
+                        "point": {
+                            "date": "2000-03-23T14:30:00Z",
+                            "precision": "minute"
                         }
+                    },
+                    "status": "completed",
+                    "interpretations": [
+                        "Normal"
                     ],
-                    "freeTextValue": "Hgb Bld-mCnc 13.50 g/dL",
-                    "name": "Hgb Bld-mCnc",
-                    "code": "718-7",
-                    "code_system_name": "LOINC",
-                    "value": 13.5,
-                    "unit": "g/dL"
-                }
-            ]
-        },
-        {
-            "identifiers": [
-                {
-                    "identifier": "2.16.840.1.113883.3.441.1.50.300011.51.26562.54",
-                    "identifier_type": "2900"
-                }
-            ],
-            "results": [
+                    "value": 13.2,
+                    "unit": "g/dl"
+                },
                 {
                     "identifiers": [
                         {
-                            "identifier": "2.16.840.1.113883.3.441.1.50.300011.51.26562.54",
-                            "identifier_type": "2900"
+                            "identifier": "107c2dc0-67a5-11db-bd13-0800200c9a66"
                         }
                     ],
-                    "date": [
-                        {
-                            "date": "2013-01-24T12:35:21.000Z",
-                            "precision": "second"
+                    "result": {
+                        "name": "WBC",
+                        "code": "33765-9",
+                        "code_system_name": "LOINC"
+                    },
+                    "date_time": {
+                        "point": {
+                            "date": "2000-03-23T14:30:00Z",
+                            "precision": "minute"
                         }
+                    },
+                    "status": "completed",
+                    "interpretations": [
+                        "Normal"
                     ],
-                    "freeTextValue": "Hct Fr Bld Auto 42.0 %",
-                    "name": "Hct Fr Bld Auto",
-                    "code": "4544-3",
-                    "code_system_name": "LOINC",
-                    "value": 42,
-                    "unit": "%"
-                }
-            ]
-        },
-        {
-            "identifiers": [
-                {
-                    "identifier": "2.16.840.1.113883.3.441.1.50.300011.51.26562.54",
-                    "identifier_type": "2901"
-                }
-            ],
-            "results": [
+                    "value": 6.7,
+                    "unit": "10+3/ul"
+                },
                 {
                     "identifiers": [
                         {
-                            "identifier": "2.16.840.1.113883.3.441.1.50.300011.51.26562.54",
-                            "identifier_type": "2901"
+                            "identifier": "107c2dc0-67a5-11db-bd13-0800200c9a66"
                         }
                     ],
-                    "date": [
-                        {
-                            "date": "2013-01-24T12:35:21.000Z",
-                            "precision": "second"
+                    "result": {
+                        "name": "PLT",
+                        "code": "26515-7",
+                        "code_system_name": "LOINC"
+                    },
+                    "date_time": {
+                        "point": {
+                            "date": "2000-03-23T14:30:00Z",
+                            "precision": "minute"
                         }
+                    },
+                    "status": "completed",
+                    "interpretations": [
+                        "Low"
                     ],
-                    "freeTextValue": "WBC # Bld Auto 6.0 x10E3/uL",
-                    "name": "WBC # Bld Auto",
-                    "code": "6690-2",
-                    "code_system_name": "LOINC",
-                    "value": 6,
-                    "unit": "x10E3/uL"
-                }
-            ]
-        },
-        {
-            "identifiers": [
-                {
-                    "identifier": "2.16.840.1.113883.3.441.1.50.300011.51.26562.54",
-                    "identifier_type": "2902"
-                }
-            ],
-            "results": [
-                {
-                    "identifiers": [
-                        {
-                            "identifier": "2.16.840.1.113883.3.441.1.50.300011.51.26562.54",
-                            "identifier_type": "2902"
-                        }
-                    ],
-                    "date": [
-                        {
-                            "date": "2013-01-24T12:35:21.000Z",
-                            "precision": "second"
-                        }
-                    ],
-                    "freeTextValue": "Platelet # Bld Auto 265.0 x10E3/uL",
-                    "name": "Platelet # Bld Auto",
-                    "code": "777-3",
-                    "code_system_name": "LOINC",
-                    "value": 265,
-                    "unit": "x10E3/uL"
+                    "value": 123,
+                    "unit": "10+3/ul"
                 }
             ]
         }

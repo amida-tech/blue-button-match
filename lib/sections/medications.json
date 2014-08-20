@@ -1,0 +1,12 @@
+{
+    "primary": [{
+        "path": "product.product",
+        "type": "codedEntry",
+        "percent": 25
+    }],
+    "secondary": [{
+        "path": "date_time",
+        "type": "dateTime",
+        "percent": 25
+    }]
+}

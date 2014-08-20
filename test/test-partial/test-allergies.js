@@ -4,16 +4,16 @@
 "use strict";
 
 var expect = require('chai').expect;
-
 var fs = require('fs');
+var _ = require('underscore');
 //var bbjs = require('blue-button');
 
-var comparePartial = require('../../lib/sections/subarray/allergies.js').compare;
+var comparePartial = require('../../lib/router.js').compare;
 var matchSections = require("../../lib/match-sections.js").matchSections;
 
 var js, js2, js3, js4;
 
-before(function(done) {
+before(function (done) {
     // 2 sample allergies
     js = JSON.parse(fs.readFileSync('test/test-partial/fixtures/allergies.json', 'utf-8').toString());
 
@@ -23,105 +23,326 @@ before(function(done) {
     // has a bunch of allergies different from all of the above
     js3 = JSON.parse(fs.readFileSync('test/test-partial/fixtures/allergies3.json', 'utf-8').toString());
 
-    //console.log(bb);
+    // 1 of each from file 1.
+    js4 = JSON.parse(fs.readFileSync('test/test-partial/fixtures/allergies4.json', 'utf-8').toString());
+
     done();
 });
 
+//CCDA ONLY
+describe('CCDA: Allergies partial matching library (allergies.js) tests', function () {
 
-describe('Allergies partial matching library (allergies.js) tests', function() {
+    it('compare two completely different allergies sections', function () {
+        var m = matchSections(js, js3, 'allergies');
 
+        //console.log(JSON.stringify(js2, null, 10));
+        //console.log(JSON.stringify(js, null, 10));
+        //console.log(m);
 
+        expect(m.length).to.equal(9);
+        expect(_.where(m, {
+            dest: 'dest'
+        }).length).to.equal(3);
+        expect(_.where(m, {
+            dest: 'src'
+        }).length).to.equal(6);
 
-        it('compare two different allergies sections', function() {
-            var m = matchSections(js, js3, comparePartial);
+        for (var item in m) {
+            expect(m[item].match).to.equal("new");
+            expect(m[item]).to.have.property('src_id');
+            expect(m[item]).to.have.property('dest_id');
+        }
 
-            //console.log(js);
-            //console.log(js2);
+    });
 
-            //console.log(m);
+    it('compare allergies sections with itself', function () {
+        var m = matchSections(js, js, 'allergies');
 
-            for (var item in m) {
-                //console.log(m[item].match);
-                expect(m[item].match).to.equal("new");
-                expect(m[item]).to.have.property('src_id');
-                expect(m[item]).to.not.have.property('dest_id');
+        //console.log(m);
+
+        //Group arrays by source.
+        var src_array = [];
+        for (var item in m) {
+            src_array.push(m[item].src_id);
+        }
+
+        src_array = _.uniq(src_array);
+        var src_obj_array = [];
+
+        for (var i in src_array) {
+            src_obj_array.push([]);
+        }
+
+        for (var item in m) {
+            for (var iter in src_array) {
+                if (m[item].src_id === src_array[iter]) {
+                    src_obj_array[src_array[iter]].push(m[item]);
+                }
+
+            }
+        }
+
+        for (var objArray in src_obj_array) {
+            //console.log(src_obj_array[objArray]);
+            expect(_.where(src_obj_array[objArray], {
+                dest: 'dest'
+            }).length).to.equal(3);
+            expect(_.where(src_obj_array[objArray], {
+                dest: 'src'
+            }).length).to.equal(2);
+            expect(_.where(src_obj_array[objArray], {
+                dest: 'dest',
+                match: 'duplicate'
+            }).length).to.equal(1);
+            expect(_.where(src_obj_array[objArray], {
+                dest: 'dest',
+                match: 'new'
+            }).length).to.equal(2);
+            expect(_.where(src_obj_array[objArray], {
+                dest: 'src',
+                match: 'duplicate'
+            }).length).to.equal(0);
+            expect(_.where(src_obj_array[objArray], {
+                dest: 'src',
+                match: 'new'
+            }).length).to.equal(2);
+        }
+
+    });
+
+    it('compare two different allergies sections that will have all partial match', function () {
+        var m = matchSections(js, js2, 'allergies');
+
+        //console.log(JSON.stringify(m,null,4));
+
+        //Group arrays by source.
+        var src_array = [];
+        for (var item in m) {
+            src_array.push(m[item].src_id);
+        }
+
+        src_array = _.uniq(src_array);
+        var src_obj_array = [];
+
+        for (var i in src_array) {
+            src_obj_array.push([]);
+        }
+
+        for (var item in m) {
+            for (var iter in src_array) {
+                if (m[item].src_id === src_array[iter]) {
+                    src_obj_array[src_array[iter]].push(m[item]);
+                }
+
+            }
+        }
+
+        for (var objArray in src_obj_array) {
+            //console.log(src_obj_array[objArray]);
+            expect(_.where(src_obj_array[objArray], {
+                dest: 'dest'
+            }).length).to.equal(3);
+            expect(_.where(src_obj_array[objArray], {
+                dest: 'src'
+            }).length).to.equal(2);
+            expect(_.where(src_obj_array[objArray], {
+                dest: 'dest',
+                match: 'partial'
+            }).length).to.equal(1);
+            expect(_.where(src_obj_array[objArray], {
+                dest: 'dest',
+                match: 'new'
+            }).length).to.equal(2);
+            expect(_.where(src_obj_array[objArray], {
+                dest: 'src',
+                match: 'partial'
+            }).length).to.equal(0);
+            expect(_.where(src_obj_array[objArray], {
+                dest: 'src',
+                match: 'new'
+            }).length).to.equal(2);
+
+            var partial_array = _.where(src_obj_array[objArray], {
+                dest: 'dest',
+                match: 'partial'
+            });
+
+            for (var i in partial_array) {
+                //console.log(partial_array[i]);
+                expect(partial_array[i].percent).to.equal(50);
+                expect(partial_array[i].diff).to.exist;
+                expect(partial_array[i].subelements).to.exist;
+                expect(partial_array[i].subelements.reaction).to.exist;
             }
 
-        });
+        }
 
+        //and now do the same but backwards
+        var m = matchSections(js, js2.slice().reverse(), 'allergies');
 
-        it('compare allergies sections with itself', function() {
-            var m = matchSections(js, js, comparePartial);
+        //Group arrays by source.
+        var src_array = [];
+        for (var item in m) {
+            src_array.push(m[item].src_id);
+        }
 
-            //console.log(m);
+        src_array = _.uniq(src_array);
+        var src_obj_array = [];
 
-            for (var item in m) {
-                //console.log(m[item].match);
-                expect(m[item].match).to.equal("duplicate");
-                expect(m[item]).to.have.property('src_id');
-                expect(m[item]).to.have.property('dest_id');
+        for (var i in src_array) {
+            src_obj_array.push([]);
+        }
+
+        for (var item in m) {
+            for (var iter in src_array) {
+                if (m[item].src_id === src_array[iter]) {
+                    src_obj_array[src_array[iter]].push(m[item]);
+                }
+
+            }
+        }
+
+        for (var objArray in src_obj_array) {
+            //console.log(src_obj_array[objArray]);
+            expect(_.where(src_obj_array[objArray], {
+                dest: 'dest'
+            }).length).to.equal(3);
+            expect(_.where(src_obj_array[objArray], {
+                dest: 'src'
+            }).length).to.equal(2);
+            expect(_.where(src_obj_array[objArray], {
+                dest: 'dest',
+                match: 'partial'
+            }).length).to.equal(1);
+            expect(_.where(src_obj_array[objArray], {
+                dest: 'dest',
+                match: 'new'
+            }).length).to.equal(2);
+            expect(_.where(src_obj_array[objArray], {
+                dest: 'src',
+                match: 'partial'
+            }).length).to.equal(0);
+            expect(_.where(src_obj_array[objArray], {
+                dest: 'src',
+                match: 'new'
+            }).length).to.equal(2);
+
+            var partial_array = _.where(src_obj_array[objArray], {
+                dest: 'dest',
+                match: 'partial'
+            });
+
+            for (var i in partial_array) {
+                //console.log(partial_array[i]);
+                expect(partial_array[i].percent).to.equal(50);
+                expect(partial_array[i].diff).to.exist;
+                expect(partial_array[i].subelements).to.exist;
+                expect(partial_array[i].subelements.reaction).to.exist;
             }
 
-            var m = matchSections(js3, js3, comparePartial);
+        }
 
-            //console.log(m);
+    });
 
-            for (var item in m) {
-                //console.log(m[item].match);
-                expect(m[item].match).to.equal("duplicate");
-                expect(m[item]).to.have.property('src_id');
-                expect(m[item]).to.have.property('dest_id');
+    it('compare two different allergies sections that will have a partial match, a dupe and a new', function () {
+
+        var m = matchSections(js, js4, 'allergies');
+        //console.log(m);
+
+        //Group arrays by source.
+        var src_array = [];
+        for (var item in m) {
+            src_array.push(m[item].src_id);
+        }
+
+        src_array = _.uniq(src_array);
+        var src_obj_array = [];
+
+        for (var i in src_array) {
+            src_obj_array.push([]);
+        }
+
+        for (var item in m) {
+            for (var iter in src_array) {
+                if (m[item].src_id === src_array[iter]) {
+                    src_obj_array[src_array[iter]].push(m[item]);
+                }
+
             }
+        }
 
-        });
+        //Match One.
+        expect(_.where(src_obj_array[0], {
+            dest: 'dest'
+        }).length).to.equal(3);
+        expect(_.where(src_obj_array[0], {
+            dest: 'src'
+        }).length).to.equal(2);
+        expect(_.where(src_obj_array[0], {
+            dest: 'dest',
+            match: 'new'
+        }).length).to.equal(3);
+        expect(_.where(src_obj_array[0], {
+            dest: 'src',
+            match: 'new'
+        }).length).to.equal(2);
+        expect(_.where(src_obj_array[0], {
+            dest: 'dest',
+            match: 'partial'
+        }).length).to.equal(0);
+        expect(_.where(src_obj_array[0], {
+            dest: 'dest',
+            match: 'duplicate'
+        }).length).to.equal(0);
 
+        //Match Two.
+        expect(_.where(src_obj_array[1], {
+            dest: 'dest'
+        }).length).to.equal(3);
+        expect(_.where(src_obj_array[1], {
+            dest: 'src'
+        }).length).to.equal(2);
+        expect(_.where(src_obj_array[1], {
+            dest: 'dest',
+            match: 'new'
+        }).length).to.equal(2);
+        expect(_.where(src_obj_array[1], {
+            dest: 'src',
+            match: 'new'
+        }).length).to.equal(2);
+        expect(_.where(src_obj_array[1], {
+            dest: 'dest',
+            match: 'partial'
+        }).length).to.equal(0);
+        expect(_.where(src_obj_array[1], {
+            dest: 'dest',
+            match: 'duplicate'
+        }).length).to.equal(1);
 
-        it('compare two different allergies sections that will have all partial match', function() {
-            var m = matchSections(js, js2, comparePartial);
+        //Match Three.
+        expect(_.where(src_obj_array[2], {
+            dest: 'dest'
+        }).length).to.equal(3);
+        expect(_.where(src_obj_array[2], {
+            dest: 'src'
+        }).length).to.equal(2);
+        expect(_.where(src_obj_array[2], {
+            dest: 'dest',
+            match: 'new'
+        }).length).to.equal(2);
+        expect(_.where(src_obj_array[2], {
+            dest: 'src',
+            match: 'new'
+        }).length).to.equal(2);
+        expect(_.where(src_obj_array[2], {
+            dest: 'dest',
+            match: 'partial'
+        }).length).to.equal(1);
+        expect(_.where(src_obj_array[2], {
+            dest: 'dest',
+            match: 'duplicate'
+        }).length).to.equal(0);
 
-            //console.log(JSON.stringify(m,null,4));
-
-            for (var item in m) {
-                //console.log(m[item].match);
-                expect(m[item].match).to.equal("partial");
-                //expect(m[item]).to.have.property('src_id');
-                //expect(m[item]).to.not.have.property('dest_id');
-            }
-
-            //and now do the same but backwards
-            var m = matchSections(js, js2.slice().reverse(), comparePartial);
-
-            //console.log(m);
-
-            for (var item in m) {
-                //console.log(m[item].match);
-                expect(m[item].match).to.equal("partial");
-                //expect(m[item]).to.have.property('src_id');
-                //expect(m[item]).to.not.have.property('dest_id');
-            }
-
-        });
-
-
-        xit('compare two different allergies sections that will have some partial match, some dups and some new', function() {
-            var result = ["partial", "new", "duplicate"].sort();
-
-            var m = matchSections(js4, js4, comparePartial);
-            //console.log(m);
-
-            expect(m.length).to.equal(3);
-            var m_result=[m[0].match,m[1].match,m[2].match].sort();
-
-            expect(m_result).to.deep.equal(result);
-
-            //and now do the same but backwards
-            var m = matchSections(js4, js4.slice().reverse(), comparePartial);
-
-            expect(m.length).to.equal(3);
-            var m_result=[m[0].match,m[1].match,m[2].match].sort();
-
-            expect(m_result).to.deep.equal(result);
-
-        });
+    });
 
 });

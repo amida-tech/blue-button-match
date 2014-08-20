@@ -1,0 +1,20 @@
+{
+    "primary": [{
+        "path": "problem",
+        "type": "codedEntry",
+        "percent": 50
+    }],
+    "secondary": [{
+        "path": "date_time",
+        "type": "dateTime",
+        "percent": 25
+    },{
+        "path": "status",
+        "type": "string",
+        "percent": 10
+    },{
+        "path": "negation_indicator",
+        "type": "boolean",
+        "percent": 10
+    }]
+}

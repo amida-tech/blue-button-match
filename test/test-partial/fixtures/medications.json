@@ -1,17 +1,15 @@
 [
         {
-            "date": [
-                
-                    {
-                        "date": "2007-01-03T00:00:00.000Z",
-                        "precision": "day"
-                    },
-                    {
-                        "date": "2012-05-15T00:00:00.000Z",
-                        "precision": "day"
-                    }
-                
-            ],
+            "date_time": {
+                "low": {
+                    "date": "2007-01-03T00:00:00Z",
+                    "precision": "day"
+                },
+                "high": {
+                    "date": "2012-05-15T00:00:00Z",
+                    "precision": "day"
+                }
+            },
             "identifiers": [
                 {
                     "identifier": "cdbd33f0-6cde-11db-9fe1-0800200c9a66"
@@ -27,15 +25,25 @@
                 "product": {
                     "name": "Proventil HFA",
                     "code": "219483",
-                    "code_system_name": "RXNORM",
                     "translations": [
                         {
                             "name": "Proventil 0.09 MG/ACTUAT inhalant solution",
                             "code": "573621",
                             "code_system_name": "RXNORM"
                         }
-                    ]
+                    ],
+                    "code_system_name": "RXNORM"
                 }
+            },
+            "supply": {
+                "date_time": {
+                    "low": {
+                        "date": "2007-01-03T00:00:00Z",
+                        "precision": "day"
+                    }
+                },
+                "repeatNumber": "1",
+                "quantity": "75"
             },
             "administration": {
                 "route": {
@@ -55,6 +63,13 @@
                 "rate": {
                     "value": 90,
                     "unit": "ml/min"
+                },
+                "interval": {
+                    "period": {
+                        "value": 6,
+                        "unit": "h"
+                    },
+                    "frequency": true
                 }
             },
             "precondition": {

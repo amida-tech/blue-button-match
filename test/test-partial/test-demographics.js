@@ -8,12 +8,11 @@ var expect = require('chai').expect;
 var fs = require('fs');
 //var bbjs = require('blue-button');
 
-var comparePartial = require('../../lib/sections/single/demographics.js').compare;
-var matchSections = require("../../lib/match-sections.js").matchSections;
+var matchSingles = require("../../lib/match-single.js").compare;
 
-var js, js2, js3a, js3b, js4a,js4b;
+var js, js2, js3a, js3b, js4a, js4b;
 
-before(function(done) {
+before(function (done) {
     js = JSON.parse(fs.readFileSync('test/test-partial/fixtures/demographics.json', 'utf-8').toString());
 
     //same demographics with some attributes changed (e.g. name, family status, languages)
@@ -23,81 +22,52 @@ before(function(done) {
     done();
 });
 
+describe('Demographics partial matching library (demographics.js) tests', function () {
 
-describe('Demographics partial matching library (demographics.js) tests', function() {
+    it('compare demographics sections in edge cases', function () {
+        var m = [matchSingles({}, {}, 'demographics')];
 
+        expect(m.length).to.equal(1);
 
-        it('compare demographics sections in edge cases', function() {
-            var m = [comparePartial({}, {})];
+        expect(m[0].match).to.equal("duplicate");
+        //console.log(m);
 
-            expect(m.length).to.equal(1);
+        var m = [matchSingles({}, js, 'demographics')];
 
-            expect(m[0].match).to.equal("duplicate");
+        expect(m.length).to.equal(1);
 
-            //console.log(m);
+        expect(m[0].match).to.equal("diff");
+        //console.log(m);
 
-            var m = [comparePartial({}, js)];
+        var m = [matchSingles(js, {}, 'demographics')];
 
-            expect(m.length).to.equal(1);
+        expect(m.length).to.equal(1);
 
-            expect(m[0].match).to.equal("diff");
+        expect(m[0].match).to.equal("new");
+        //console.log(m);
 
-            //console.log(m);
+    });
 
-            var m = [comparePartial(js, {})];
+    it('compare demographics sections with itself', function () {
+        var m = [matchSingles(js, js, 'demographics')];
 
-            expect(m.length).to.equal(1);
+        //console.log(m);
 
-            expect(m[0].match).to.equal("new");
-            //console.log(m);
+        expect(m.length).to.equal(1);
 
-        });
+        expect(m[0].match).to.equal("duplicate");
 
-        it('compare demographics sections with itself', function() {
-            var m = [comparePartial(js, js)];
+    });
 
-            //console.log(m);
+    it('compare two different demographics sections that will have all partial match', function () {
+        var m = [matchSingles(js, js2, 'demographics')];
 
-            expect(m.length).to.equal(1);
+        //console.log(m);
 
-            expect(m[0].match).to.equal("duplicate");
+        expect(m.length).to.equal(1);
 
-        });
+        expect(m[0].match).to.equal("diff");
 
-
-        it('compare two different vitals sections that will have all partial match', function() {
-            var m = [comparePartial(js, js2)];
-
-            //console.log(m);
-
-            expect(m.length).to.equal(1);
-
-            expect(m[0].match).to.equal("diff");
-
-            //console.log(m);
-
-        });
-
-
-        xit('compare two different vitals sections that will have some partial match, some dups and some new', function() {
-            var result = ["partial", "new", "duplicate"].sort();
-
-            var m = matchSections(js4a, js4b, comparePartial);
-            //console.log(m);
-
-            expect(m.length).to.equal(3);
-            var m_result=[m[0].match,m[1].match,m[2].match].sort();
-
-            expect(m_result).to.deep.equal(result);
-
-            //and now do the same but backwards
-            var m = matchSections(js4a, js4b.slice().reverse(), comparePartial);
-
-            expect(m.length).to.equal(3);
-            var m_result=[m[0].match,m[1].match,m[2].match].sort();
-
-            expect(m_result).to.deep.equal(result);
-
-        });
+    });
 
 });

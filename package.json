@@ -19,19 +19,21 @@
         "name": "Afsin Ustundag",
         "email": "afsin.ustundag@us.pwc.com"
     }],
-    "license": "MIT",
+    "license": "Apache-2.0",
     "engines": {
         "node": ">= 0.10.0"
     },
     "dependencies": {
-        "libxmljs": "*",
-        "deep-equal": "*",
+        "libxmljs": "0.11.x",
+        "deep-equal": "0.2.x",
         "underscore": "1.6.x",
-        "node-uuid": "*",
-        "xdate": "*"
+        "node-uuid": "1.4.x",
+        "winston": "0.7.x",
+        "underscore": "1.6.x",
+        "moment": "2.8.x"
     },
     "devDependencies": {
-        "blue-button": "1.0.2",
+        "blue-button": "git://github.com/amida-tech/blue-button.git",
         "should": "3.1.x",
         "assert": "1.1.x",
         "mocha": "1.17.x",
@@ -42,10 +44,11 @@
         "grunt-contrib-jshint": "0.8.x",
         "grunt-express-server": "0.4.x",
         "grunt-contrib-watch": "0.6.x",
-        "grunt-coveralls": "*",
-        "grunt-istanbul-coverage": "*",
-        "coveralls": "~2.10.0",
-        "mocha-lcov-reporter": "0.0.1"
+        "grunt-coveralls": "1.0.x",
+        "grunt-jsbeautifier": "0.2.x",
+        "grunt-istanbul-coverage": "0.0.x",
+        "coveralls": "2.11.x",
+        "mocha-lcov-reporter": "0.0.x"
     },
     "repository": {
         "type": "git",

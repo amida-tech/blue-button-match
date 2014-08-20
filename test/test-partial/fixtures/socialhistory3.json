@@ -1,15 +1,41 @@
-[
-        {
-            "value": "Current every day smoker",
-            "dateRange": [
-                {
-                    "date": "1900-01-01T00:00:00.000Z",
-                    "precision": "year"
-                },
-                {
-                    "date": "1999-09-25T10:00:51.000Z",
-                    "precision": "second"
-                }
-            ]
+[{
+    "value": "Former smoker",
+    "date_time": {
+        "low": {
+            "date": "2007-05-01T00:00:00Z",
+            "precision": "day"
+        },
+        "high": {
+            "date": "2005-02-27T13:00:00Z",
+            "precision": "subsecond"
         }
-    ]
+    }
+}, {
+    "value": "Tobacco use and exposure",
+    "date_time": {
+        "low": {
+            "date": "2002-05-01T00:00:00Z",
+            "precision": "day"
+        },
+        "high": {
+            "date": "2009-02-27T13:00:00Z",
+            "precision": "subsecond"
+        }
+    }
+}, {
+    "value": "Tobacco exposure",
+    "date_time": {
+        "low": {
+            "date": "2010-02-27T13:00:00Z",
+            "precision": "subsecond"
+        }
+    }
+}, {
+    "value": "Alcohol intake",
+    "date_time": {
+        "low": {
+            "date": "2009-05-01T00:00:00Z",
+            "precision": "day"
+        }
+    }
+}]

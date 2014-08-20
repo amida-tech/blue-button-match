@@ -1,0 +1,21 @@
+{
+    "primary": [{
+            "path": "encounter",
+            "type": "codedEntry",
+            "percent": 50 
+        }, {
+            "path": "date_time",
+            "type": "dateTime",
+            "percent": 25
+        }
+    ],
+    "secondary": [],
+    "subArrays": [{
+        "findings": {
+            "primary": [{
+                "type": "codedEntry",
+                "percent": 50
+            }]
+        }
+    }]
+}
