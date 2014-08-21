@@ -1,6 +1,6 @@
 {
     "name": "blue-button-match",
-    "version": "1.0.1",
+    "version": "1.1.0-beta.1",
     "description": "Automatic matching of Blue Button JSON data (detection of new, duplicate and partial match entries).",
     "main": "/index.js",
     "directories": {
@@ -33,7 +33,7 @@
         "moment": "2.8.x"
     },
     "devDependencies": {
-        "blue-button": "git://github.com/amida-tech/blue-button.git",
+        "blue-button": "^1.1.0",
         "should": "3.1.x",
         "assert": "1.1.x",
         "mocha": "1.17.x",
