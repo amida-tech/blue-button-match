@@ -172,7 +172,7 @@ describe('CCDA: Allergies partial matching library (allergies.js) tests', functi
                 expect(partial_array[i].percent).to.equal(50);
                 expect(partial_array[i].diff).to.exist;
                 expect(partial_array[i].subelements).to.exist;
-                expect(partial_array[i].subelements["observation.reactions"]).to.exist;
+                expect(partial_array[i].subelements["observation"]["reactions"]).to.exist;
             }
 
         }
@@ -237,7 +237,7 @@ describe('CCDA: Allergies partial matching library (allergies.js) tests', functi
                 expect(partial_array[i].percent).to.equal(50);
                 expect(partial_array[i].diff).to.exist;
                 expect(partial_array[i].subelements).to.exist;
-                expect(partial_array[i].subelements["observation.reactions"]).to.exist;
+                expect(partial_array[i].subelements["observation"]["reactions"]).to.exist;
             }
 
         }
