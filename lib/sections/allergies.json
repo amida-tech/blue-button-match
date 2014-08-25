@@ -1,16 +1,16 @@
 {
     "primary": [{
-        "path": "allergen",
+        "path": "observation.allergen",
         "type": "codedEntry",
         "percent": 50
     }],
     "secondary": [{
-        "path": "date",
+        "path": "date_time",
         "type": "dateTime",
         "percent": 25
     }],
     "subArrays": [{
-        "reaction": {
+        "observation.reactions": {
             "primary": [{
                 "path": "reaction",
                 "type": "codedEntry",
@@ -18,7 +18,7 @@
             }],
             "secondary": [{
                 "path": "severity",
-                "type": "string",
+                "type": "codedEntry",
                 "percent": 25
             }]
         }
