@@ -38,7 +38,7 @@ before(function (done) {
     done();
 });
 
-xdescribe('Matching library (match-sections.js) tests', function () {
+describe('Matching library (match-sections.js) tests', function () {
 
     describe('Sections level tests', function () {
 
