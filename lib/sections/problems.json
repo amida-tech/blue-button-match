@@ -1,6 +1,6 @@
 {
     "primary": [{
-        "path": "problem",
+        "path": "problem.code",
         "type": "codedEntry",
         "percent": 50
     }],
@@ -9,7 +9,7 @@
         "type": "dateTime",
         "percent": 25
     },{
-        "path": "status",
+        "path": "status.name",
         "type": "string",
         "percent": 10
     },{

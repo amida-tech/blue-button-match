@@ -79,6 +79,10 @@ describe('Results partial matching library (results.js) tests', function () {
     });
 
     it('compare two different results sections that will have all partial match', function () {
+
+        //console.log(JSON.stringify(js, null, 10));
+        //console.log(JSON.stringify(js2, null, 10));
+
         var m = matchSections(js, js2, 'results');
 
         //console.log(JSON.stringify(m,null,4));
