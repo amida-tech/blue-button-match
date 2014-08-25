@@ -113,7 +113,7 @@ describe('CCDA: Allergies partial matching library (allergies.js) tests', functi
     it('compare two different allergies sections that will have all partial match', function () {
         var m = matchSections(js, js2, 'allergies');
 
-        //console.log(JSON.stringify(m,null,4));
+        //console.log(JSON.stringify(m, null, 4));
 
         //Group arrays by source.
         var src_array = [];
