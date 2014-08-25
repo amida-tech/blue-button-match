@@ -283,11 +283,11 @@ describe('Problems partial matching library (problems.js) tests', function () {
         expect(_.where(src_obj_array[0], {
             dest: 'dest',
             match: 'partial'
-        }).length).to.equal(1);
+        }).length).to.equal(0);
         expect(_.where(src_obj_array[0], {
             dest: 'dest',
             match: 'duplicate'
-        }).length).to.equal(1);
+        }).length).to.equal(2);
 
         //Match Two.
         expect(_.where(src_obj_array[1], {
@@ -307,11 +307,11 @@ describe('Problems partial matching library (problems.js) tests', function () {
         expect(_.where(src_obj_array[1], {
             dest: 'dest',
             match: 'partial'
-        }).length).to.equal(0);
+        }).length).to.equal(1);
         expect(_.where(src_obj_array[1], {
             dest: 'dest',
             match: 'duplicate'
-        }).length).to.equal(1);
+        }).length).to.equal(0);
 
     });
 
