@@ -2,7 +2,7 @@
     "primary": [{
             "path": "payer",
             "type": "stringArray",
-            "percent": 50 
+            "percent": 25 
         }, {
             "path": "number",
             "type": "string",
