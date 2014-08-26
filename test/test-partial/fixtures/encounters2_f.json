@@ -1,5 +1,17 @@
 [
         {
+            "encounter": {
+                "name": "Office outpatient visit 15 minutes",
+                "code": "99213",
+                "code_system_name": "CPT",
+                "translations": [
+                    {
+                        "name": "Ambulatory",
+                        "code": "AMB",
+                        "code_system_name": "HL7ActCode"
+                    }
+                ]
+            },
 
             "identifiers": [
                 {

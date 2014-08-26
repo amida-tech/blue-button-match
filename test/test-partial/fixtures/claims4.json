@@ -152,10 +152,10 @@
     "payer": [
         "medicare"
     ],
-    "number": "123456789000088",
+    "number": "1234567890000",
     "date_time": {
         "low": {
-            "date": "2012-10-18T00:00:00.000Z",
+            "date": "2011-10-18T00:00:00.000Z",
             "precision": "day"
         },
         "high": {
@@ -188,7 +188,7 @@
             "description": "Acute Treatment (This Modifier Should Be Used When Reporting Service 98940, 98941, 98942)"
         }],
         "charges": {
-            "price_billed": "$65.00",
+            "price_billed": "$60.00",
             "insurance_paid": "$34.00",
             "patient_responsibility": "$26.00"
         },

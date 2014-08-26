@@ -169,7 +169,7 @@ describe('Claims partial matching library (Claims.js) tests', function () {
 
             for (var i in partial_array) {
                 //console.log(partial_array[i]);
-                expect(partial_array[i].percent).to.equal(50);
+                expect(partial_array[i].percent).to.equal(75);
                 expect(partial_array[i].diff).to.exist;
             }
 
@@ -232,7 +232,7 @@ describe('Claims partial matching library (Claims.js) tests', function () {
 
             for (var i in partial_array) {
                 //console.log(partial_array[i]);
-                expect(partial_array[i].percent).to.equal(50);
+                expect(partial_array[i].percent).to.equal(75);
                 expect(partial_array[i].diff).to.exist;
             }
 

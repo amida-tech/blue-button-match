@@ -1,10 +1,10 @@
 [{
     "plan_id": {
-        "identifier": "H9999/999999"
+        "identifier": "H9999/9999"
     },
     "payer_name": "HealthCare Payer",
     "type": [
-        "medicare",
+        "medicareaid",
         "A Medicare Plan Plus (HMO)",
         "3 - Coordinated Care Plan (HMO, PPO, PSO, SNP)"
     ],

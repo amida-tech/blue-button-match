@@ -171,7 +171,7 @@ describe('Insurance partial matching library (Insurance.js) tests', function () 
 
             for (var i in partial_array) {
                 //console.log(partial_array[i]);
-                expect(partial_array[i].percent).to.equal(30);
+                expect(partial_array[i].percent).to.equal(60);
                 expect(partial_array[i].diff).to.exist;
             }
 
@@ -234,7 +234,7 @@ describe('Insurance partial matching library (Insurance.js) tests', function () 
 
             for (var i in partial_array) {
                 //console.log(partial_array[i]);
-                expect(partial_array[i].percent).to.equal(30);
+                expect(partial_array[i].percent).to.equal(60);
                 expect(partial_array[i].diff).to.exist;
             }
 

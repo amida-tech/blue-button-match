@@ -172,6 +172,11 @@
                     "identifier": "7d5a02b0-67a4-11db-bd13-0800200c9a66"
                 }
             ],
+            "result_set": {
+                "name": "CBC WO DIFFERENTIAL",
+                "code": "43789009",
+                "code_system_name": "SNOMED CT"
+            },
             "results": [
                 {
                     "identifiers": [
@@ -234,7 +239,7 @@
                     },
                     "date_time": {
                         "point": {
-                            "date": "2006-03-22T14:30:00Z",
+                            "date": "2006-03-23T14:30:00Z",
                             "precision": "minute"
                         }
                     },
