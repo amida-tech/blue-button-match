@@ -36,7 +36,7 @@ describe('Demographics partial matching library (demographics.js) tests', functi
 
         expect(m.length).to.equal(1);
 
-        expect(m[0].match).to.equal("diff");
+        expect(m[0].match).to.equal("partial");
         //console.log(m);
 
         var m = [matchSingles(js, {}, 'demographics')];
@@ -66,7 +66,7 @@ describe('Demographics partial matching library (demographics.js) tests', functi
 
         expect(m.length).to.equal(1);
 
-        expect(m[0].match).to.equal("diff");
+        expect(m[0].match).to.equal("partial");
 
     });
 
