@@ -169,7 +169,7 @@ describe('Immunizations partial matching library (immunizations.js) tests', func
 
             for (var i in partial_array) {
                 //console.log(partial_array[i]);
-                expect(partial_array[i].percent).to.equal(25);
+                expect(partial_array[i].percent).to.equal(50);
                 expect(partial_array[i].diff).to.exist;
             }
 
@@ -232,7 +232,7 @@ describe('Immunizations partial matching library (immunizations.js) tests', func
 
             for (var i in partial_array) {
                 //console.log(partial_array[i]);
-                expect(partial_array[i].percent).to.equal(25);
+                expect(partial_array[i].percent).to.equal(50);
                 expect(partial_array[i].diff).to.exist;
             }
 
