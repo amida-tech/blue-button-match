@@ -282,6 +282,14 @@ Primary:  Product Coded Entry.
 
 Secondary:  Date/time.
 
+###Payers
+
+Primary:  Policy Insurance Object.
+
+###Plan of Care
+
+Primary:  Plan Coded Entry, Date/time.
+
 ###Problems
 
 Primary:  Problem Coded Entry.
