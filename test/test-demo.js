@@ -9,6 +9,7 @@ var bbjs = require('blue-button');
 //var match = require("blue-button-match");
 var match = require('../index.js');
 var _ = require('underscore');
+var lookups = require('../lib/lookups.js');
 
 //var match = require('../lib/match.js');
 //var compare = require('../lib/compare-partial.js').compare;
@@ -17,18 +18,8 @@ var _ = require('underscore');
 
 var js, js2, js3, js4;
 
-var lookup = [
-    'allergies',
-    'encounters',
-    'immunizations',
-    'results',
-    'medications',
-    'problems',
-    'procedures',
-    'vitals',
-    'demographics',
-    'social_history',
-];
+
+var lookup = lookups.sections;
 
 before(function (done) {
     /*
@@ -41,17 +32,20 @@ before(function (done) {
     var xml2 = fs.readFileSync('test/demo-r1.0/bluebutton-02-duplicate.xml').toString();
     var xml3 = fs.readFileSync('test/demo-r1.0/bluebutton-03-updated.xml').toString();
     var xml4 = fs.readFileSync('test/demo-r1.0/bluebutton-04-diff-source-partial-matches.xml').toString();
+    var bb = fs.readFileSync('test/demo-r1.0/bluebutton-05-cms.txt').toString();
 
     js = bbjs.parseString(xml).data;
     js2 = bbjs.parseString(xml2).data;
     js3 = bbjs.parseString(xml3).data;
     js4 = bbjs.parseString(xml4).data;
+    js5 = bbjs.parseText(bb).data;
 
     //save JSON into artifacts folder (just for reference and manual inspection)
     fs.writeFileSync('test/demo-r1.0/json/bluebutton-01-original.json', JSON.stringify(js, null, 4));
     fs.writeFileSync('test/demo-r1.0/json/bluebutton-02-duplicate.json', JSON.stringify(js2, null, 4));
     fs.writeFileSync('test/demo-r1.0/json/bluebutton-03-updated.json', JSON.stringify(js3, null, 4));
     fs.writeFileSync('test/demo-r1.0/json/bluebutton-04-diff-source-partial-matches.json', JSON.stringify(js4, null, 4));
+    fs.writeFileSync('test/demo-r1.0/json/bluebutton-05-cms.json', JSON.stringify(js5, null, 4));
 
     //bb4 = bbjs.parseString(xml4).data;
 
@@ -59,12 +53,20 @@ before(function (done) {
     done();
 });
 
-xdescribe('Verifying demo R1.0 sample xml files', function () {
+describe('Verifying demo R1.0 sample xml files', function () {
 
     it('checking for all sections present in each demo file', function () {
 
-        for (var section in lookup) {
-            //console.log(lookup[section]);
+        //Reduce supported sections to XML elements only.
+        var ccdFilter = _.filter(lookup, function(entry) {
+            if (entry === 'insurance' || entry === 'claims') {
+                return false;
+            } else {
+                return true;
+            }
+        });
+
+        for (var section in ccdFilter) {
             //console.log(" >js");
             expect(js[lookup[section]]).to.exist;
             //console.log(" >js2");
@@ -113,6 +115,7 @@ xdescribe('Verifying demo R1.0 sample xml files', function () {
 
         //Should just result in one duplicate per each entry.
         for (var section in lookup) {
+
             //console.log(lookup[section]);
 
             if (lookup[section] === 'demographics') {
@@ -235,7 +238,7 @@ xdescribe('Verifying demo R1.0 sample xml files', function () {
 
             if (lookup[section] === 'demographics') {
                 var m = m3.match[lookup[section]];
-                expect(m.match).to.equal('diff');
+                expect(m.match).to.equal('partial');
             }
 
             if (lookup[section] !== 'demographics') {

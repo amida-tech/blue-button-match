@@ -107,307 +107,6 @@
                 "dest": "src"
             }
         ],
-        "encounters": [
-            {
-                "match": "duplicate",
-                "percent": "100",
-                "src_id": "0",
-                "dest_id": "0",
-                "dest": "dest"
-            }
-        ],
-        "immunizations": [
-            {
-                "match": "duplicate",
-                "percent": "100",
-                "src_id": "0",
-                "dest_id": "0",
-                "dest": "dest"
-            },
-            {
-                "match": "partial",
-                "percent": 25,
-                "diff": {
-                    "date_time": "new",
-                    "identifiers": "duplicate",
-                    "status": "new",
-                    "product": "duplicate",
-                    "administration": "duplicate",
-                    "performer": "duplicate"
-                },
-                "src_id": "0",
-                "dest_id": "1",
-                "dest": "dest"
-            },
-            {
-                "match": "new",
-                "percent": 0,
-                "src_id": "0",
-                "dest_id": "2",
-                "dest": "dest"
-            },
-            {
-                "match": "new",
-                "percent": 0,
-                "src_id": "0",
-                "dest_id": "3",
-                "dest": "dest"
-            },
-            {
-                "match": "partial",
-                "percent": 25,
-                "diff": {
-                    "date_time": "new",
-                    "identifiers": "duplicate",
-                    "status": "new",
-                    "product": "duplicate",
-                    "administration": "duplicate",
-                    "performer": "duplicate"
-                },
-                "src_id": "1",
-                "dest_id": "0",
-                "dest": "dest"
-            },
-            {
-                "match": "duplicate",
-                "percent": "100",
-                "src_id": "1",
-                "dest_id": "1",
-                "dest": "dest"
-            },
-            {
-                "match": "new",
-                "percent": 0,
-                "src_id": "1",
-                "dest_id": "2",
-                "dest": "dest"
-            },
-            {
-                "match": "new",
-                "percent": 0,
-                "src_id": "1",
-                "dest_id": "3",
-                "dest": "dest"
-            },
-            {
-                "match": "new",
-                "percent": 0,
-                "src_id": "2",
-                "dest_id": "0",
-                "dest": "dest"
-            },
-            {
-                "match": "new",
-                "percent": 0,
-                "src_id": "2",
-                "dest_id": "1",
-                "dest": "dest"
-            },
-            {
-                "match": "duplicate",
-                "percent": "100",
-                "src_id": "2",
-                "dest_id": "2",
-                "dest": "dest"
-            },
-            {
-                "match": "new",
-                "percent": 0,
-                "src_id": "2",
-                "dest_id": "3",
-                "dest": "dest"
-            },
-            {
-                "match": "new",
-                "percent": 0,
-                "src_id": "3",
-                "dest_id": "0",
-                "dest": "dest"
-            },
-            {
-                "match": "new",
-                "percent": 0,
-                "src_id": "3",
-                "dest_id": "1",
-                "dest": "dest"
-            },
-            {
-                "match": "new",
-                "percent": 0,
-                "src_id": "3",
-                "dest_id": "2",
-                "dest": "dest"
-            },
-            {
-                "match": "duplicate",
-                "percent": "100",
-                "src_id": "3",
-                "dest_id": "3",
-                "dest": "dest"
-            },
-            {
-                "match": "partial",
-                "percent": 25,
-                "diff": {
-                    "date_time": "new",
-                    "identifiers": "duplicate",
-                    "status": "new",
-                    "product": "duplicate",
-                    "administration": "duplicate",
-                    "performer": "duplicate"
-                },
-                "src_id": "0",
-                "dest_id": "1",
-                "dest": "src"
-            },
-            {
-                "match": "new",
-                "percent": 0,
-                "src_id": "0",
-                "dest_id": "2",
-                "dest": "src"
-            },
-            {
-                "match": "new",
-                "percent": 0,
-                "src_id": "0",
-                "dest_id": "3",
-                "dest": "src"
-            },
-            {
-                "match": "partial",
-                "percent": 25,
-                "diff": {
-                    "date_time": "new",
-                    "identifiers": "duplicate",
-                    "status": "new",
-                    "product": "duplicate",
-                    "administration": "duplicate",
-                    "performer": "duplicate"
-                },
-                "src_id": "1",
-                "dest_id": "0",
-                "dest": "src"
-            },
-            {
-                "match": "new",
-                "percent": 0,
-                "src_id": "1",
-                "dest_id": "2",
-                "dest": "src"
-            },
-            {
-                "match": "new",
-                "percent": 0,
-                "src_id": "1",
-                "dest_id": "3",
-                "dest": "src"
-            },
-            {
-                "match": "new",
-                "percent": 0,
-                "src_id": "2",
-                "dest_id": "0",
-                "dest": "src"
-            },
-            {
-                "match": "new",
-                "percent": 0,
-                "src_id": "2",
-                "dest_id": "1",
-                "dest": "src"
-            },
-            {
-                "match": "new",
-                "percent": 0,
-                "src_id": "2",
-                "dest_id": "3",
-                "dest": "src"
-            },
-            {
-                "match": "new",
-                "percent": 0,
-                "src_id": "3",
-                "dest_id": "0",
-                "dest": "src"
-            },
-            {
-                "match": "new",
-                "percent": 0,
-                "src_id": "3",
-                "dest_id": "1",
-                "dest": "src"
-            },
-            {
-                "match": "new",
-                "percent": 0,
-                "src_id": "3",
-                "dest_id": "2",
-                "dest": "src"
-            }
-        ],
-        "results": [
-            {
-                "match": "duplicate",
-                "percent": "100",
-                "src_id": "0",
-                "dest_id": "0",
-                "dest": "dest"
-            }
-        ],
-        "medications": [
-            {
-                "match": "duplicate",
-                "percent": "100",
-                "src_id": "0",
-                "dest_id": "0",
-                "dest": "dest"
-            }
-        ],
-        "problems": [
-            {
-                "match": "duplicate",
-                "percent": "100",
-                "src_id": "0",
-                "dest_id": "0",
-                "dest": "dest"
-            },
-            {
-                "match": "new",
-                "percent": 0,
-                "src_id": "0",
-                "dest_id": "1",
-                "dest": "dest"
-            },
-            {
-                "match": "new",
-                "percent": 0,
-                "src_id": "1",
-                "dest_id": "0",
-                "dest": "dest"
-            },
-            {
-                "match": "duplicate",
-                "percent": "100",
-                "src_id": "1",
-                "dest_id": "1",
-                "dest": "dest"
-            },
-            {
-                "match": "new",
-                "percent": 0,
-                "src_id": "0",
-                "dest_id": "1",
-                "dest": "src"
-            },
-            {
-                "match": "new",
-                "percent": 0,
-                "src_id": "1",
-                "dest_id": "0",
-                "dest": "src"
-            }
-        ],
         "procedures": [
             {
                 "match": "duplicate",
@@ -453,6 +152,7 @@
                     "status": "new",
                     "date_time": "duplicate",
                     "body_sites": "new",
+                    "priority": "duplicate",
                     "performer": "new",
                     "locations": "duplicate",
                     "procedure_type": "new"
@@ -476,6 +176,7 @@
                     "identifiers": "new",
                     "status": "new",
                     "date_time": "duplicate",
+                    "priority": "duplicate",
                     "performer": "new",
                     "locations": "duplicate",
                     "procedure_type": "new"
@@ -521,6 +222,7 @@
                     "status": "new",
                     "date_time": "duplicate",
                     "body_sites": "new",
+                    "priority": "duplicate",
                     "performer": "new",
                     "locations": "duplicate",
                     "procedure_type": "new"
@@ -544,6 +246,7 @@
                     "identifiers": "new",
                     "status": "new",
                     "date_time": "duplicate",
+                    "priority": "duplicate",
                     "performer": "new",
                     "locations": "duplicate",
                     "procedure_type": "new"
@@ -551,6 +254,222 @@
                 "src_id": "2",
                 "dest_id": "1",
                 "dest": "src"
+            }
+        ],
+        "immunizations": [
+            {
+                "match": "duplicate",
+                "percent": "100",
+                "src_id": "0",
+                "dest_id": "0",
+                "dest": "dest"
+            },
+            {
+                "match": "new",
+                "percent": 0,
+                "src_id": "0",
+                "dest_id": "1",
+                "dest": "dest"
+            },
+            {
+                "match": "new",
+                "percent": 0,
+                "src_id": "0",
+                "dest_id": "2",
+                "dest": "dest"
+            },
+            {
+                "match": "new",
+                "percent": 0,
+                "src_id": "0",
+                "dest_id": "3",
+                "dest": "dest"
+            },
+            {
+                "match": "new",
+                "percent": 0,
+                "src_id": "1",
+                "dest_id": "0",
+                "dest": "dest"
+            },
+            {
+                "match": "duplicate",
+                "percent": "100",
+                "src_id": "1",
+                "dest_id": "1",
+                "dest": "dest"
+            },
+            {
+                "match": "new",
+                "percent": 0,
+                "src_id": "1",
+                "dest_id": "2",
+                "dest": "dest"
+            },
+            {
+                "match": "new",
+                "percent": 0,
+                "src_id": "1",
+                "dest_id": "3",
+                "dest": "dest"
+            },
+            {
+                "match": "new",
+                "percent": 0,
+                "src_id": "2",
+                "dest_id": "0",
+                "dest": "dest"
+            },
+            {
+                "match": "new",
+                "percent": 0,
+                "src_id": "2",
+                "dest_id": "1",
+                "dest": "dest"
+            },
+            {
+                "match": "duplicate",
+                "percent": "100",
+                "src_id": "2",
+                "dest_id": "2",
+                "dest": "dest"
+            },
+            {
+                "match": "new",
+                "percent": 0,
+                "src_id": "2",
+                "dest_id": "3",
+                "dest": "dest"
+            },
+            {
+                "match": "new",
+                "percent": 0,
+                "src_id": "3",
+                "dest_id": "0",
+                "dest": "dest"
+            },
+            {
+                "match": "new",
+                "percent": 0,
+                "src_id": "3",
+                "dest_id": "1",
+                "dest": "dest"
+            },
+            {
+                "match": "new",
+                "percent": 0,
+                "src_id": "3",
+                "dest_id": "2",
+                "dest": "dest"
+            },
+            {
+                "match": "duplicate",
+                "percent": "100",
+                "src_id": "3",
+                "dest_id": "3",
+                "dest": "dest"
+            },
+            {
+                "match": "new",
+                "percent": 0,
+                "src_id": "0",
+                "dest_id": "1",
+                "dest": "src"
+            },
+            {
+                "match": "new",
+                "percent": 0,
+                "src_id": "0",
+                "dest_id": "2",
+                "dest": "src"
+            },
+            {
+                "match": "new",
+                "percent": 0,
+                "src_id": "0",
+                "dest_id": "3",
+                "dest": "src"
+            },
+            {
+                "match": "new",
+                "percent": 0,
+                "src_id": "1",
+                "dest_id": "0",
+                "dest": "src"
+            },
+            {
+                "match": "new",
+                "percent": 0,
+                "src_id": "1",
+                "dest_id": "2",
+                "dest": "src"
+            },
+            {
+                "match": "new",
+                "percent": 0,
+                "src_id": "1",
+                "dest_id": "3",
+                "dest": "src"
+            },
+            {
+                "match": "new",
+                "percent": 0,
+                "src_id": "2",
+                "dest_id": "0",
+                "dest": "src"
+            },
+            {
+                "match": "new",
+                "percent": 0,
+                "src_id": "2",
+                "dest_id": "1",
+                "dest": "src"
+            },
+            {
+                "match": "new",
+                "percent": 0,
+                "src_id": "2",
+                "dest_id": "3",
+                "dest": "src"
+            },
+            {
+                "match": "new",
+                "percent": 0,
+                "src_id": "3",
+                "dest_id": "0",
+                "dest": "src"
+            },
+            {
+                "match": "new",
+                "percent": 0,
+                "src_id": "3",
+                "dest_id": "1",
+                "dest": "src"
+            },
+            {
+                "match": "new",
+                "percent": 0,
+                "src_id": "3",
+                "dest_id": "2",
+                "dest": "src"
+            }
+        ],
+        "medications": [
+            {
+                "match": "duplicate",
+                "percent": "100",
+                "src_id": "0",
+                "dest_id": "0",
+                "dest": "dest"
+            }
+        ],
+        "encounters": [
+            {
+                "match": "duplicate",
+                "percent": "100",
+                "src_id": "0",
+                "dest_id": "0",
+                "dest": "dest"
             }
         ],
         "vitals": [
@@ -576,17 +495,8 @@
                 "dest": "dest"
             },
             {
-                "match": "partial",
-                "percent": 25,
-                "diff": {
-                    "identifiers": "duplicate",
-                    "vital": "duplicate",
-                    "status": "duplicate",
-                    "date_time": "new",
-                    "interpretations": "duplicate",
-                    "value": "duplicate",
-                    "unit": "duplicate"
-                },
+                "match": "new",
+                "percent": 0,
                 "src_id": "0",
                 "dest_id": "3",
                 "dest": "dest"
@@ -634,17 +544,8 @@
                 "dest": "dest"
             },
             {
-                "match": "partial",
-                "percent": 25,
-                "diff": {
-                    "identifiers": "duplicate",
-                    "vital": "duplicate",
-                    "status": "duplicate",
-                    "date_time": "new",
-                    "interpretations": "duplicate",
-                    "value": "new",
-                    "unit": "duplicate"
-                },
+                "match": "new",
+                "percent": 0,
                 "src_id": "1",
                 "dest_id": "4",
                 "dest": "dest"
@@ -692,33 +593,15 @@
                 "dest": "dest"
             },
             {
-                "match": "partial",
-                "percent": 25,
-                "diff": {
-                    "identifiers": "duplicate",
-                    "vital": "duplicate",
-                    "status": "duplicate",
-                    "date_time": "new",
-                    "interpretations": "duplicate",
-                    "value": "new",
-                    "unit": "duplicate"
-                },
+                "match": "new",
+                "percent": 0,
                 "src_id": "2",
                 "dest_id": "5",
                 "dest": "dest"
             },
             {
-                "match": "partial",
-                "percent": 25,
-                "diff": {
-                    "identifiers": "duplicate",
-                    "vital": "duplicate",
-                    "status": "duplicate",
-                    "date_time": "new",
-                    "interpretations": "duplicate",
-                    "value": "duplicate",
-                    "unit": "duplicate"
-                },
+                "match": "new",
+                "percent": 0,
                 "src_id": "3",
                 "dest_id": "0",
                 "dest": "dest"
@@ -766,17 +649,8 @@
                 "dest": "dest"
             },
             {
-                "match": "partial",
-                "percent": 25,
-                "diff": {
-                    "identifiers": "duplicate",
-                    "vital": "duplicate",
-                    "status": "duplicate",
-                    "date_time": "new",
-                    "interpretations": "duplicate",
-                    "value": "new",
-                    "unit": "duplicate"
-                },
+                "match": "new",
+                "percent": 0,
                 "src_id": "4",
                 "dest_id": "1",
                 "dest": "dest"
@@ -824,17 +698,8 @@
                 "dest": "dest"
             },
             {
-                "match": "partial",
-                "percent": 25,
-                "diff": {
-                    "identifiers": "duplicate",
-                    "vital": "duplicate",
-                    "status": "duplicate",
-                    "date_time": "new",
-                    "interpretations": "duplicate",
-                    "value": "new",
-                    "unit": "duplicate"
-                },
+                "match": "new",
+                "percent": 0,
                 "src_id": "5",
                 "dest_id": "2",
                 "dest": "dest"
@@ -875,17 +740,8 @@
                 "dest": "src"
             },
             {
-                "match": "partial",
-                "percent": 25,
-                "diff": {
-                    "identifiers": "duplicate",
-                    "vital": "duplicate",
-                    "status": "duplicate",
-                    "date_time": "new",
-                    "interpretations": "duplicate",
-                    "value": "duplicate",
-                    "unit": "duplicate"
-                },
+                "match": "new",
+                "percent": 0,
                 "src_id": "0",
                 "dest_id": "3",
                 "dest": "src"
@@ -926,17 +782,8 @@
                 "dest": "src"
             },
             {
-                "match": "partial",
-                "percent": 25,
-                "diff": {
-                    "identifiers": "duplicate",
-                    "vital": "duplicate",
-                    "status": "duplicate",
-                    "date_time": "new",
-                    "interpretations": "duplicate",
-                    "value": "new",
-                    "unit": "duplicate"
-                },
+                "match": "new",
+                "percent": 0,
                 "src_id": "1",
                 "dest_id": "4",
                 "dest": "src"
@@ -977,33 +824,15 @@
                 "dest": "src"
             },
             {
-                "match": "partial",
-                "percent": 25,
-                "diff": {
-                    "identifiers": "duplicate",
-                    "vital": "duplicate",
-                    "status": "duplicate",
-                    "date_time": "new",
-                    "interpretations": "duplicate",
-                    "value": "new",
-                    "unit": "duplicate"
-                },
+                "match": "new",
+                "percent": 0,
                 "src_id": "2",
                 "dest_id": "5",
                 "dest": "src"
             },
             {
-                "match": "partial",
-                "percent": 25,
-                "diff": {
-                    "identifiers": "duplicate",
-                    "vital": "duplicate",
-                    "status": "duplicate",
-                    "date_time": "new",
-                    "interpretations": "duplicate",
-                    "value": "duplicate",
-                    "unit": "duplicate"
-                },
+                "match": "new",
+                "percent": 0,
                 "src_id": "3",
                 "dest_id": "0",
                 "dest": "src"
@@ -1044,17 +873,8 @@
                 "dest": "src"
             },
             {
-                "match": "partial",
-                "percent": 25,
-                "diff": {
-                    "identifiers": "duplicate",
-                    "vital": "duplicate",
-                    "status": "duplicate",
-                    "date_time": "new",
-                    "interpretations": "duplicate",
-                    "value": "new",
-                    "unit": "duplicate"
-                },
+                "match": "new",
+                "percent": 0,
                 "src_id": "4",
                 "dest_id": "1",
                 "dest": "src"
@@ -1095,17 +915,8 @@
                 "dest": "src"
             },
             {
-                "match": "partial",
-                "percent": 25,
-                "diff": {
-                    "identifiers": "duplicate",
-                    "vital": "duplicate",
-                    "status": "duplicate",
-                    "date_time": "new",
-                    "interpretations": "duplicate",
-                    "value": "new",
-                    "unit": "duplicate"
-                },
+                "match": "new",
+                "percent": 0,
                 "src_id": "5",
                 "dest_id": "2",
                 "dest": "src"
@@ -1125,11 +936,15 @@
                 "dest": "src"
             }
         ],
-        "demographics": {
-            "match": "duplicate",
-            "src_id": 0,
-            "dest_id": 0
-        },
+        "results": [
+            {
+                "match": "duplicate",
+                "percent": "100",
+                "src_id": "0",
+                "dest_id": "0",
+                "dest": "dest"
+            }
+        ],
         "social_history": [
             {
                 "match": "duplicate",
@@ -1174,15 +989,8 @@
                 "dest": "dest"
             },
             {
-                "match": "partial",
-                "percent": 30,
-                "diff": {
-                    "value": "duplicate",
-                    "date_time": "new",
-                    "identifiers": "new",
-                    "code": "duplicate",
-                    "observation_value": "new"
-                },
+                "match": "new",
+                "percent": 0,
                 "src_id": "1",
                 "dest_id": "2",
                 "dest": "dest"
@@ -1202,15 +1010,8 @@
                 "dest": "dest"
             },
             {
-                "match": "partial",
-                "percent": 30,
-                "diff": {
-                    "value": "duplicate",
-                    "date_time": "new",
-                    "identifiers": "new",
-                    "code": "duplicate",
-                    "observation_value": "new"
-                },
+                "match": "new",
+                "percent": 0,
                 "src_id": "2",
                 "dest_id": "1",
                 "dest": "dest"
@@ -1223,8 +1024,14 @@
                 "dest": "dest"
             },
             {
-                "match": "new",
-                "percent": 0,
+                "match": "partial",
+                "percent": 25,
+                "diff": {
+                    "date_time": "new",
+                    "identifiers": "new",
+                    "code": "new",
+                    "value": "duplicate"
+                },
                 "src_id": "2",
                 "dest_id": "3",
                 "dest": "dest"
@@ -1244,8 +1051,14 @@
                 "dest": "dest"
             },
             {
-                "match": "new",
-                "percent": 0,
+                "match": "partial",
+                "percent": 25,
+                "diff": {
+                    "date_time": "new",
+                    "identifiers": "new",
+                    "code": "new",
+                    "value": "duplicate"
+                },
                 "src_id": "3",
                 "dest_id": "2",
                 "dest": "dest"
@@ -1286,15 +1099,8 @@
                 "dest": "src"
             },
             {
-                "match": "partial",
-                "percent": 30,
-                "diff": {
-                    "value": "duplicate",
-                    "date_time": "new",
-                    "identifiers": "new",
-                    "code": "duplicate",
-                    "observation_value": "new"
-                },
+                "match": "new",
+                "percent": 0,
                 "src_id": "1",
                 "dest_id": "2",
                 "dest": "src"
@@ -1314,22 +1120,21 @@
                 "dest": "src"
             },
             {
-                "match": "partial",
-                "percent": 30,
-                "diff": {
-                    "value": "duplicate",
-                    "date_time": "new",
-                    "identifiers": "new",
-                    "code": "duplicate",
-                    "observation_value": "new"
-                },
+                "match": "new",
+                "percent": 0,
                 "src_id": "2",
                 "dest_id": "1",
                 "dest": "src"
             },
             {
-                "match": "new",
-                "percent": 0,
+                "match": "partial",
+                "percent": 25,
+                "diff": {
+                    "date_time": "new",
+                    "identifiers": "new",
+                    "code": "new",
+                    "value": "duplicate"
+                },
                 "src_id": "2",
                 "dest_id": "3",
                 "dest": "src"
@@ -1349,16 +1154,72 @@
                 "dest": "src"
             },
             {
-                "match": "new",
-                "percent": 0,
+                "match": "partial",
+                "percent": 25,
+                "diff": {
+                    "date_time": "new",
+                    "identifiers": "new",
+                    "code": "new",
+                    "value": "duplicate"
+                },
                 "src_id": "3",
                 "dest_id": "2",
+                "dest": "src"
+            }
+        ],
+        "demographics": {
+            "match": "duplicate",
+            "percent": 100,
+            "src_id": 0,
+            "dest_id": 0
+        },
+        "problems": [
+            {
+                "match": "duplicate",
+                "percent": "100",
+                "src_id": "0",
+                "dest_id": "0",
+                "dest": "dest"
+            },
+            {
+                "match": "new",
+                "percent": 0,
+                "src_id": "0",
+                "dest_id": "1",
+                "dest": "dest"
+            },
+            {
+                "match": "new",
+                "percent": 0,
+                "src_id": "1",
+                "dest_id": "0",
+                "dest": "dest"
+            },
+            {
+                "match": "duplicate",
+                "percent": "100",
+                "src_id": "1",
+                "dest_id": "1",
+                "dest": "dest"
+            },
+            {
+                "match": "new",
+                "percent": 0,
+                "src_id": "0",
+                "dest_id": "1",
+                "dest": "src"
+            },
+            {
+                "match": "new",
+                "percent": 0,
+                "src_id": "1",
+                "dest_id": "0",
                 "dest": "src"
             }
         ]
     },
     "meta": {
-        "version": "1.0.1"
+        "version": "1.1.0-beta.6"
     },
     "errors": []
 }
