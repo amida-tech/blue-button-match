@@ -16,7 +16,7 @@ describe('lookups.js test', function () {
 
     it('check sections lookup to have appropriate elements', function () {
         //expect(true).to.equal(true);
-        assert.lengthOf(lookups.sections, 13, "sections lookup has 13 elements");
+        assert.lengthOf(lookups.sections, 14, "sections lookup has 14 elements");
     });
 
 });
