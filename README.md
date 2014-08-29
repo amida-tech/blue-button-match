@@ -302,6 +302,12 @@ Primary:  Procedure Coded Entry Match.
 
 Secondary:  Date/time.
 
+###Providers
+
+Primary:  Provider Type String Match.
+
+Secondary:  Person Object, and Name String.
+
 ###Results
 
 Primary:  Result set Coded Entry, and Result set Date/time.

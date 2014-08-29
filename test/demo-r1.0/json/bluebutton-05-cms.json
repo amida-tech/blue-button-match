@@ -150,9 +150,6 @@
     ],
     "medications": [
         {
-            "date_time": {
-                "null_flavor": "UNK"
-            },
             "product": {
                 "product": {
                     "name": "Aspirin"
