@@ -2644,6 +2644,348 @@
                 "dest_id": "1",
                 "dest": "src"
             }
+        ],
+        "plan_of_care": [
+            {
+                "match": "duplicate",
+                "percent": "100",
+                "src_id": "0",
+                "dest_id": "0",
+                "dest": "dest"
+            },
+            {
+                "match": "partial",
+                "percent": 50,
+                "diff": {
+                    "plan": "duplicate",
+                    "identifiers": "new",
+                    "date_time": "duplicate",
+                    "type": "new"
+                },
+                "src_id": "0",
+                "dest_id": "1",
+                "dest": "dest"
+            },
+            {
+                "match": "partial",
+                "percent": 50,
+                "diff": {
+                    "plan": "duplicate",
+                    "identifiers": "new",
+                    "date_time": "duplicate",
+                    "type": "new"
+                },
+                "src_id": "0",
+                "dest_id": "2",
+                "dest": "dest"
+            },
+            {
+                "match": "partial",
+                "percent": 50,
+                "diff": {
+                    "plan": "duplicate",
+                    "identifiers": "new",
+                    "date_time": "duplicate",
+                    "type": "new"
+                },
+                "src_id": "0",
+                "dest_id": "3",
+                "dest": "dest"
+            },
+            {
+                "match": "partial",
+                "percent": 50,
+                "diff": {
+                    "plan": "duplicate",
+                    "identifiers": "new",
+                    "date_time": "duplicate",
+                    "type": "new"
+                },
+                "src_id": "1",
+                "dest_id": "0",
+                "dest": "dest"
+            },
+            {
+                "match": "duplicate",
+                "percent": "100",
+                "src_id": "1",
+                "dest_id": "1",
+                "dest": "dest"
+            },
+            {
+                "match": "partial",
+                "percent": 50,
+                "diff": {
+                    "plan": "duplicate",
+                    "identifiers": "new",
+                    "date_time": "duplicate",
+                    "type": "new"
+                },
+                "src_id": "1",
+                "dest_id": "2",
+                "dest": "dest"
+            },
+            {
+                "match": "partial",
+                "percent": 50,
+                "diff": {
+                    "plan": "duplicate",
+                    "identifiers": "new",
+                    "date_time": "duplicate",
+                    "type": "new"
+                },
+                "src_id": "1",
+                "dest_id": "3",
+                "dest": "dest"
+            },
+            {
+                "match": "partial",
+                "percent": 50,
+                "diff": {
+                    "plan": "duplicate",
+                    "identifiers": "new",
+                    "date_time": "duplicate",
+                    "type": "new"
+                },
+                "src_id": "2",
+                "dest_id": "0",
+                "dest": "dest"
+            },
+            {
+                "match": "partial",
+                "percent": 50,
+                "diff": {
+                    "plan": "duplicate",
+                    "identifiers": "new",
+                    "date_time": "duplicate",
+                    "type": "new"
+                },
+                "src_id": "2",
+                "dest_id": "1",
+                "dest": "dest"
+            },
+            {
+                "match": "duplicate",
+                "percent": "100",
+                "src_id": "2",
+                "dest_id": "2",
+                "dest": "dest"
+            },
+            {
+                "match": "partial",
+                "percent": 50,
+                "diff": {
+                    "plan": "duplicate",
+                    "identifiers": "new",
+                    "date_time": "duplicate",
+                    "type": "new"
+                },
+                "src_id": "2",
+                "dest_id": "3",
+                "dest": "dest"
+            },
+            {
+                "match": "partial",
+                "percent": 50,
+                "diff": {
+                    "plan": "duplicate",
+                    "identifiers": "new",
+                    "date_time": "duplicate",
+                    "type": "new"
+                },
+                "src_id": "3",
+                "dest_id": "0",
+                "dest": "dest"
+            },
+            {
+                "match": "partial",
+                "percent": 50,
+                "diff": {
+                    "plan": "duplicate",
+                    "identifiers": "new",
+                    "date_time": "duplicate",
+                    "type": "new"
+                },
+                "src_id": "3",
+                "dest_id": "1",
+                "dest": "dest"
+            },
+            {
+                "match": "partial",
+                "percent": 50,
+                "diff": {
+                    "plan": "duplicate",
+                    "identifiers": "new",
+                    "date_time": "duplicate",
+                    "type": "new"
+                },
+                "src_id": "3",
+                "dest_id": "2",
+                "dest": "dest"
+            },
+            {
+                "match": "duplicate",
+                "percent": "100",
+                "src_id": "3",
+                "dest_id": "3",
+                "dest": "dest"
+            },
+            {
+                "match": "partial",
+                "percent": 50,
+                "diff": {
+                    "plan": "duplicate",
+                    "identifiers": "new",
+                    "date_time": "duplicate",
+                    "type": "new"
+                },
+                "src_id": "0",
+                "dest_id": "1",
+                "dest": "src"
+            },
+            {
+                "match": "partial",
+                "percent": 50,
+                "diff": {
+                    "plan": "duplicate",
+                    "identifiers": "new",
+                    "date_time": "duplicate",
+                    "type": "new"
+                },
+                "src_id": "0",
+                "dest_id": "2",
+                "dest": "src"
+            },
+            {
+                "match": "partial",
+                "percent": 50,
+                "diff": {
+                    "plan": "duplicate",
+                    "identifiers": "new",
+                    "date_time": "duplicate",
+                    "type": "new"
+                },
+                "src_id": "0",
+                "dest_id": "3",
+                "dest": "src"
+            },
+            {
+                "match": "partial",
+                "percent": 50,
+                "diff": {
+                    "plan": "duplicate",
+                    "identifiers": "new",
+                    "date_time": "duplicate",
+                    "type": "new"
+                },
+                "src_id": "1",
+                "dest_id": "0",
+                "dest": "src"
+            },
+            {
+                "match": "partial",
+                "percent": 50,
+                "diff": {
+                    "plan": "duplicate",
+                    "identifiers": "new",
+                    "date_time": "duplicate",
+                    "type": "new"
+                },
+                "src_id": "1",
+                "dest_id": "2",
+                "dest": "src"
+            },
+            {
+                "match": "partial",
+                "percent": 50,
+                "diff": {
+                    "plan": "duplicate",
+                    "identifiers": "new",
+                    "date_time": "duplicate",
+                    "type": "new"
+                },
+                "src_id": "1",
+                "dest_id": "3",
+                "dest": "src"
+            },
+            {
+                "match": "partial",
+                "percent": 50,
+                "diff": {
+                    "plan": "duplicate",
+                    "identifiers": "new",
+                    "date_time": "duplicate",
+                    "type": "new"
+                },
+                "src_id": "2",
+                "dest_id": "0",
+                "dest": "src"
+            },
+            {
+                "match": "partial",
+                "percent": 50,
+                "diff": {
+                    "plan": "duplicate",
+                    "identifiers": "new",
+                    "date_time": "duplicate",
+                    "type": "new"
+                },
+                "src_id": "2",
+                "dest_id": "1",
+                "dest": "src"
+            },
+            {
+                "match": "partial",
+                "percent": 50,
+                "diff": {
+                    "plan": "duplicate",
+                    "identifiers": "new",
+                    "date_time": "duplicate",
+                    "type": "new"
+                },
+                "src_id": "2",
+                "dest_id": "3",
+                "dest": "src"
+            },
+            {
+                "match": "partial",
+                "percent": 50,
+                "diff": {
+                    "plan": "duplicate",
+                    "identifiers": "new",
+                    "date_time": "duplicate",
+                    "type": "new"
+                },
+                "src_id": "3",
+                "dest_id": "0",
+                "dest": "src"
+            },
+            {
+                "match": "partial",
+                "percent": 50,
+                "diff": {
+                    "plan": "duplicate",
+                    "identifiers": "new",
+                    "date_time": "duplicate",
+                    "type": "new"
+                },
+                "src_id": "3",
+                "dest_id": "1",
+                "dest": "src"
+            },
+            {
+                "match": "partial",
+                "percent": 50,
+                "diff": {
+                    "plan": "duplicate",
+                    "identifiers": "new",
+                    "date_time": "duplicate",
+                    "type": "new"
+                },
+                "src_id": "3",
+                "dest_id": "2",
+                "dest": "src"
+            }
         ]
     },
     "meta": {

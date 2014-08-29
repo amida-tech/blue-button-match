@@ -18,7 +18,6 @@ var lookups = require('../lib/lookups.js');
 
 var js, js2, js3, js4;
 
-
 var lookup = lookups.sections;
 
 before(function (done) {
@@ -58,7 +57,7 @@ describe('Verifying demo R1.0 sample xml files', function () {
     it('checking for all sections present in each demo file', function () {
 
         //Reduce supported sections to XML elements only.
-        var ccdFilter = _.filter(lookup, function(entry) {
+        var ccdFilter = _.filter(lookup, function (entry) {
             if (entry === 'insurance' || entry === 'claims') {
                 return false;
             } else {
@@ -67,14 +66,15 @@ describe('Verifying demo R1.0 sample xml files', function () {
         });
 
         for (var section in ccdFilter) {
+            //console.log(ccdFilter[section]);
             //console.log(" >js");
-            expect(js[lookup[section]]).to.exist;
+            expect(js[ccdFilter[section]]).to.exist;
             //console.log(" >js2");
-            expect(js2[lookup[section]]).to.exist;
+            expect(js2[ccdFilter[section]]).to.exist;
             //console.log(" >js3");
-            expect(js3[lookup[section]]).to.exist;
+            expect(js3[ccdFilter[section]]).to.exist;
             //console.log(" >js4");
-            expect(js4[lookup[section]]).to.exist;
+            expect(js4[ccdFilter[section]]).to.exist;
         }
 
     });
