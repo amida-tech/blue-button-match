@@ -1,0 +1,38 @@
+[{
+    "type": "organization",
+    "name": "ANY CARE",
+    "address": {
+        "use": "primary home",
+        "street_lines": [
+            "123 Any Rd"
+        ],
+        "city": "Anywhere",
+        "state": "MD",
+        "zip": "99999",
+        "country": "United States"
+    },
+    "role": {
+        "name": "NHC"
+    }
+}, {
+    "type": "person",
+    "address": {
+        "use": "primary home",
+        "street_lines": [
+            "123 Road"
+        ],
+        "city": "Anywhere",
+        "state": "VA",
+        "zip": "00001",
+        "country": "United States"
+    },
+    "role": {
+        "name": "PHY"
+    },
+    "person": {
+        "name": {
+            "first": "Jane",
+            "last": "Doe"
+        }
+    }
+}]

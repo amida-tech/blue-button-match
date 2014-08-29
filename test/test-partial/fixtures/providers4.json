@@ -1,0 +1,49 @@
+[{
+    "type": "organization",
+    "name": "ANY CARE",
+    "address": {
+        "use": "primary home",
+        "street_lines": [
+            "123 Any Rd"
+        ],
+        "city": "Anywhere",
+        "state": "MD",
+        "zip": "99999",
+        "country": "United States"
+    },
+    "role": {
+        "name": "NHC"
+    }
+}, {
+    "type": "different",
+    "name": "ANY CARE",
+    "address": {
+        "use": "primary home",
+        "street_lines": [
+            "123 Any Rd"
+        ],
+        "city": "Anywhere",
+        "state": "MD",
+        "zip": "99999",
+        "country": "United States"
+    },
+    "role": {
+        "name": "NHC"
+    }
+}, {
+    "type": "organization",
+    "name": "ANY CARE USA",
+    "address": {
+        "use": "primary home",
+        "street_lines": [
+            "123 Any Rd"
+        ],
+        "city": "Anywhere",
+        "state": "MD",
+        "zip": "99999",
+        "country": "United States"
+    },
+    "role": {
+        "name": "NHC"
+    }
+} ]

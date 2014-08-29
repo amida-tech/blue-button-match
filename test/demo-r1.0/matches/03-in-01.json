@@ -247,12 +247,26 @@
                 "dest": "src"
             }
         ],
-        "encounters": [
+        "procedures": [
             {
                 "match": "new",
                 "percent": 0,
                 "src_id": "0",
                 "dest_id": "0",
+                "dest": "dest"
+            },
+            {
+                "match": "new",
+                "percent": 0,
+                "src_id": "0",
+                "dest_id": "1",
+                "dest": "dest"
+            },
+            {
+                "match": "new",
+                "percent": 0,
+                "src_id": "0",
+                "dest_id": "2",
                 "dest": "dest"
             },
             {
@@ -265,6 +279,83 @@
             {
                 "match": "new",
                 "percent": 0,
+                "src_id": "1",
+                "dest_id": "1",
+                "dest": "dest"
+            },
+            {
+                "match": "new",
+                "percent": 0,
+                "src_id": "1",
+                "dest_id": "2",
+                "dest": "dest"
+            },
+            {
+                "match": "new",
+                "percent": 0,
+                "src_id": "2",
+                "dest_id": "0",
+                "dest": "dest"
+            },
+            {
+                "match": "duplicate",
+                "percent": "100",
+                "src_id": "2",
+                "dest_id": "1",
+                "dest": "dest"
+            },
+            {
+                "match": "partial",
+                "percent": 50,
+                "diff": {
+                    "procedure": "duplicate",
+                    "identifiers": "new",
+                    "status": "new",
+                    "date_time": "duplicate",
+                    "body_sites": "new",
+                    "priority": "duplicate",
+                    "performer": "new",
+                    "locations": "duplicate",
+                    "procedure_type": "new"
+                },
+                "src_id": "2",
+                "dest_id": "2",
+                "dest": "dest"
+            },
+            {
+                "match": "new",
+                "percent": 0,
+                "src_id": "3",
+                "dest_id": "0",
+                "dest": "dest"
+            },
+            {
+                "match": "partial",
+                "percent": 50,
+                "diff": {
+                    "procedure": "duplicate",
+                    "identifiers": "new",
+                    "status": "new",
+                    "date_time": "duplicate",
+                    "priority": "duplicate",
+                    "performer": "new",
+                    "locations": "duplicate",
+                    "procedure_type": "new"
+                },
+                "src_id": "3",
+                "dest_id": "1",
+                "dest": "dest"
+            },
+            {
+                "match": "duplicate",
+                "percent": "100",
+                "src_id": "3",
+                "dest_id": "2",
+                "dest": "dest"
+            },
+            {
+                "match": "new",
+                "percent": 0,
                 "src_id": "0",
                 "dest_id": "1",
                 "dest": "src"
@@ -272,8 +363,99 @@
             {
                 "match": "new",
                 "percent": 0,
+                "src_id": "0",
+                "dest_id": "2",
+                "dest": "src"
+            },
+            {
+                "match": "new",
+                "percent": 0,
+                "src_id": "0",
+                "dest_id": "3",
+                "dest": "src"
+            },
+            {
+                "match": "new",
+                "percent": 0,
                 "src_id": "1",
                 "dest_id": "0",
+                "dest": "src"
+            },
+            {
+                "match": "new",
+                "percent": 0,
+                "src_id": "1",
+                "dest_id": "2",
+                "dest": "src"
+            },
+            {
+                "match": "new",
+                "percent": 0,
+                "src_id": "1",
+                "dest_id": "3",
+                "dest": "src"
+            },
+            {
+                "match": "new",
+                "percent": 0,
+                "src_id": "2",
+                "dest_id": "0",
+                "dest": "src"
+            },
+            {
+                "match": "new",
+                "percent": 0,
+                "src_id": "2",
+                "dest_id": "1",
+                "dest": "src"
+            },
+            {
+                "match": "partial",
+                "percent": 50,
+                "diff": {
+                    "procedure": "duplicate",
+                    "identifiers": "new",
+                    "status": "new",
+                    "date_time": "duplicate",
+                    "body_sites": "new",
+                    "priority": "duplicate",
+                    "performer": "new",
+                    "locations": "duplicate",
+                    "procedure_type": "new"
+                },
+                "src_id": "2",
+                "dest_id": "3",
+                "dest": "src"
+            },
+            {
+                "match": "new",
+                "percent": 0,
+                "src_id": "3",
+                "dest_id": "0",
+                "dest": "src"
+            },
+            {
+                "match": "new",
+                "percent": 0,
+                "src_id": "3",
+                "dest_id": "1",
+                "dest": "src"
+            },
+            {
+                "match": "partial",
+                "percent": 50,
+                "diff": {
+                    "procedure": "duplicate",
+                    "identifiers": "new",
+                    "status": "new",
+                    "date_time": "duplicate",
+                    "priority": "duplicate",
+                    "performer": "new",
+                    "locations": "duplicate",
+                    "procedure_type": "new"
+                },
+                "src_id": "3",
+                "dest_id": "2",
                 "dest": "src"
             }
         ],
@@ -286,16 +468,8 @@
                 "dest": "dest"
             },
             {
-                "match": "partial",
-                "percent": 25,
-                "diff": {
-                    "date_time": "new",
-                    "identifiers": "duplicate",
-                    "status": "new",
-                    "product": "duplicate",
-                    "administration": "duplicate",
-                    "performer": "duplicate"
-                },
+                "match": "new",
+                "percent": 0,
                 "src_id": "0",
                 "dest_id": "1",
                 "dest": "dest"
@@ -315,16 +489,8 @@
                 "dest": "dest"
             },
             {
-                "match": "partial",
-                "percent": 25,
-                "diff": {
-                    "date_time": "new",
-                    "identifiers": "duplicate",
-                    "status": "new",
-                    "product": "duplicate",
-                    "administration": "duplicate",
-                    "performer": "duplicate"
-                },
+                "match": "new",
+                "percent": 0,
                 "src_id": "1",
                 "dest_id": "0",
                 "dest": "dest"
@@ -407,16 +573,8 @@
                 "dest": "dest"
             },
             {
-                "match": "partial",
-                "percent": 25,
-                "diff": {
-                    "date_time": "new",
-                    "identifiers": "duplicate",
-                    "status": "new",
-                    "product": "duplicate",
-                    "administration": "duplicate",
-                    "performer": "duplicate"
-                },
+                "match": "new",
+                "percent": 0,
                 "src_id": "0",
                 "dest_id": "1",
                 "dest": "src"
@@ -436,16 +594,8 @@
                 "dest": "src"
             },
             {
-                "match": "partial",
-                "percent": 25,
-                "diff": {
-                    "date_time": "new",
-                    "identifiers": "duplicate",
-                    "status": "new",
-                    "product": "duplicate",
-                    "administration": "duplicate",
-                    "performer": "duplicate"
-                },
+                "match": "new",
+                "percent": 0,
                 "src_id": "1",
                 "dest_id": "0",
                 "dest": "src"
@@ -504,971 +654,6 @@
                 "percent": 0,
                 "src_id": "3",
                 "dest_id": "2",
-                "dest": "src"
-            }
-        ],
-        "results": [
-            {
-                "match": "new",
-                "percent": 0,
-                "src_id": "0",
-                "dest_id": "0",
-                "dest": "dest"
-            },
-            {
-                "match": "new",
-                "percent": 0,
-                "src_id": "1",
-                "dest_id": "0",
-                "dest": "dest"
-            },
-            {
-                "match": "new",
-                "percent": 0,
-                "src_id": "2",
-                "dest_id": "0",
-                "dest": "dest"
-            },
-            {
-                "match": "new",
-                "percent": 0,
-                "src_id": "3",
-                "dest_id": "0",
-                "dest": "dest"
-            },
-            {
-                "match": "new",
-                "percent": 0,
-                "src_id": "4",
-                "dest_id": "0",
-                "dest": "dest"
-            },
-            {
-                "match": "new",
-                "percent": 0,
-                "src_id": "5",
-                "dest_id": "0",
-                "dest": "dest"
-            },
-            {
-                "match": "duplicate",
-                "percent": "100",
-                "src_id": "6",
-                "dest_id": "0",
-                "dest": "dest"
-            },
-            {
-                "match": "partial",
-                "percent": 25,
-                "subelements": {
-                    "results": [
-                        {
-                            "match": "new",
-                            "percent": 0,
-                            "src_id": "0",
-                            "dest_id": "0",
-                            "dest": "dest"
-                        }
-                    ]
-                },
-                "diff": {
-                    "identifiers": "duplicate",
-                    "result_set": "new",
-                    "results": "new"
-                },
-                "src_id": "0",
-                "dest_id": "1",
-                "dest": "src"
-            },
-            {
-                "match": "partial",
-                "percent": 25,
-                "subelements": {
-                    "results": [
-                        {
-                            "match": "new",
-                            "percent": 0,
-                            "src_id": "0",
-                            "dest_id": "0",
-                            "dest": "dest"
-                        }
-                    ]
-                },
-                "diff": {
-                    "identifiers": "duplicate",
-                    "result_set": "new",
-                    "results": "new"
-                },
-                "src_id": "0",
-                "dest_id": "2",
-                "dest": "src"
-            },
-            {
-                "match": "partial",
-                "percent": 25,
-                "subelements": {
-                    "results": [
-                        {
-                            "match": "new",
-                            "percent": 0,
-                            "src_id": "0",
-                            "dest_id": "0",
-                            "dest": "dest"
-                        }
-                    ]
-                },
-                "diff": {
-                    "identifiers": "duplicate",
-                    "result_set": "new",
-                    "results": "new"
-                },
-                "src_id": "0",
-                "dest_id": "3",
-                "dest": "src"
-            },
-            {
-                "match": "partial",
-                "percent": 25,
-                "subelements": {
-                    "results": [
-                        {
-                            "match": "new",
-                            "percent": 0,
-                            "src_id": "0",
-                            "dest_id": "0",
-                            "dest": "dest"
-                        },
-                        {
-                            "match": "new",
-                            "percent": 0,
-                            "src_id": "0",
-                            "dest_id": "1",
-                            "dest": "dest"
-                        }
-                    ]
-                },
-                "diff": {
-                    "identifiers": "duplicate",
-                    "result_set": "new",
-                    "results": "new"
-                },
-                "src_id": "0",
-                "dest_id": "4",
-                "dest": "src"
-            },
-            {
-                "match": "partial",
-                "percent": 25,
-                "subelements": {
-                    "results": [
-                        {
-                            "match": "new",
-                            "percent": 0,
-                            "src_id": "0",
-                            "dest_id": "0",
-                            "dest": "dest"
-                        }
-                    ]
-                },
-                "diff": {
-                    "identifiers": "duplicate",
-                    "result_set": "new",
-                    "results": "new"
-                },
-                "src_id": "0",
-                "dest_id": "5",
-                "dest": "src"
-            },
-            {
-                "match": "new",
-                "percent": 0,
-                "src_id": "0",
-                "dest_id": "6",
-                "dest": "src"
-            },
-            {
-                "match": "partial",
-                "percent": 25,
-                "subelements": {
-                    "results": [
-                        {
-                            "match": "new",
-                            "percent": 0,
-                            "src_id": "0",
-                            "dest_id": "0",
-                            "dest": "dest"
-                        }
-                    ]
-                },
-                "diff": {
-                    "identifiers": "duplicate",
-                    "result_set": "new",
-                    "results": "new"
-                },
-                "src_id": "1",
-                "dest_id": "0",
-                "dest": "src"
-            },
-            {
-                "match": "partial",
-                "percent": 25,
-                "subelements": {
-                    "results": [
-                        {
-                            "match": "new",
-                            "percent": 0,
-                            "src_id": "0",
-                            "dest_id": "0",
-                            "dest": "dest"
-                        }
-                    ]
-                },
-                "diff": {
-                    "identifiers": "duplicate",
-                    "result_set": "new",
-                    "results": "new"
-                },
-                "src_id": "1",
-                "dest_id": "2",
-                "dest": "src"
-            },
-            {
-                "match": "partial",
-                "percent": 25,
-                "subelements": {
-                    "results": [
-                        {
-                            "match": "new",
-                            "percent": 0,
-                            "src_id": "0",
-                            "dest_id": "0",
-                            "dest": "dest"
-                        }
-                    ]
-                },
-                "diff": {
-                    "identifiers": "duplicate",
-                    "result_set": "new",
-                    "results": "new"
-                },
-                "src_id": "1",
-                "dest_id": "3",
-                "dest": "src"
-            },
-            {
-                "match": "partial",
-                "percent": 25,
-                "subelements": {
-                    "results": [
-                        {
-                            "match": "new",
-                            "percent": 0,
-                            "src_id": "0",
-                            "dest_id": "0",
-                            "dest": "dest"
-                        },
-                        {
-                            "match": "new",
-                            "percent": 0,
-                            "src_id": "0",
-                            "dest_id": "1",
-                            "dest": "dest"
-                        }
-                    ]
-                },
-                "diff": {
-                    "identifiers": "duplicate",
-                    "result_set": "new",
-                    "results": "new"
-                },
-                "src_id": "1",
-                "dest_id": "4",
-                "dest": "src"
-            },
-            {
-                "match": "partial",
-                "percent": 25,
-                "subelements": {
-                    "results": [
-                        {
-                            "match": "new",
-                            "percent": 0,
-                            "src_id": "0",
-                            "dest_id": "0",
-                            "dest": "dest"
-                        }
-                    ]
-                },
-                "diff": {
-                    "identifiers": "duplicate",
-                    "result_set": "new",
-                    "results": "new"
-                },
-                "src_id": "1",
-                "dest_id": "5",
-                "dest": "src"
-            },
-            {
-                "match": "new",
-                "percent": 0,
-                "src_id": "1",
-                "dest_id": "6",
-                "dest": "src"
-            },
-            {
-                "match": "partial",
-                "percent": 25,
-                "subelements": {
-                    "results": [
-                        {
-                            "match": "new",
-                            "percent": 0,
-                            "src_id": "0",
-                            "dest_id": "0",
-                            "dest": "dest"
-                        }
-                    ]
-                },
-                "diff": {
-                    "identifiers": "duplicate",
-                    "result_set": "new",
-                    "results": "new"
-                },
-                "src_id": "2",
-                "dest_id": "0",
-                "dest": "src"
-            },
-            {
-                "match": "partial",
-                "percent": 25,
-                "subelements": {
-                    "results": [
-                        {
-                            "match": "new",
-                            "percent": 0,
-                            "src_id": "0",
-                            "dest_id": "0",
-                            "dest": "dest"
-                        }
-                    ]
-                },
-                "diff": {
-                    "identifiers": "duplicate",
-                    "result_set": "new",
-                    "results": "new"
-                },
-                "src_id": "2",
-                "dest_id": "1",
-                "dest": "src"
-            },
-            {
-                "match": "partial",
-                "percent": 25,
-                "subelements": {
-                    "results": [
-                        {
-                            "match": "new",
-                            "percent": 0,
-                            "src_id": "0",
-                            "dest_id": "0",
-                            "dest": "dest"
-                        }
-                    ]
-                },
-                "diff": {
-                    "identifiers": "duplicate",
-                    "result_set": "new",
-                    "results": "new"
-                },
-                "src_id": "2",
-                "dest_id": "3",
-                "dest": "src"
-            },
-            {
-                "match": "partial",
-                "percent": 25,
-                "subelements": {
-                    "results": [
-                        {
-                            "match": "new",
-                            "percent": 0,
-                            "src_id": "0",
-                            "dest_id": "0",
-                            "dest": "dest"
-                        },
-                        {
-                            "match": "new",
-                            "percent": 0,
-                            "src_id": "0",
-                            "dest_id": "1",
-                            "dest": "dest"
-                        }
-                    ]
-                },
-                "diff": {
-                    "identifiers": "duplicate",
-                    "result_set": "new",
-                    "results": "new"
-                },
-                "src_id": "2",
-                "dest_id": "4",
-                "dest": "src"
-            },
-            {
-                "match": "partial",
-                "percent": 25,
-                "subelements": {
-                    "results": [
-                        {
-                            "match": "new",
-                            "percent": 0,
-                            "src_id": "0",
-                            "dest_id": "0",
-                            "dest": "dest"
-                        }
-                    ]
-                },
-                "diff": {
-                    "identifiers": "duplicate",
-                    "result_set": "new",
-                    "results": "new"
-                },
-                "src_id": "2",
-                "dest_id": "5",
-                "dest": "src"
-            },
-            {
-                "match": "new",
-                "percent": 0,
-                "src_id": "2",
-                "dest_id": "6",
-                "dest": "src"
-            },
-            {
-                "match": "partial",
-                "percent": 25,
-                "subelements": {
-                    "results": [
-                        {
-                            "match": "new",
-                            "percent": 0,
-                            "src_id": "0",
-                            "dest_id": "0",
-                            "dest": "dest"
-                        }
-                    ]
-                },
-                "diff": {
-                    "identifiers": "duplicate",
-                    "result_set": "new",
-                    "results": "new"
-                },
-                "src_id": "3",
-                "dest_id": "0",
-                "dest": "src"
-            },
-            {
-                "match": "partial",
-                "percent": 25,
-                "subelements": {
-                    "results": [
-                        {
-                            "match": "new",
-                            "percent": 0,
-                            "src_id": "0",
-                            "dest_id": "0",
-                            "dest": "dest"
-                        }
-                    ]
-                },
-                "diff": {
-                    "identifiers": "duplicate",
-                    "result_set": "new",
-                    "results": "new"
-                },
-                "src_id": "3",
-                "dest_id": "1",
-                "dest": "src"
-            },
-            {
-                "match": "partial",
-                "percent": 25,
-                "subelements": {
-                    "results": [
-                        {
-                            "match": "new",
-                            "percent": 0,
-                            "src_id": "0",
-                            "dest_id": "0",
-                            "dest": "dest"
-                        }
-                    ]
-                },
-                "diff": {
-                    "identifiers": "duplicate",
-                    "result_set": "new",
-                    "results": "new"
-                },
-                "src_id": "3",
-                "dest_id": "2",
-                "dest": "src"
-            },
-            {
-                "match": "partial",
-                "percent": 25,
-                "subelements": {
-                    "results": [
-                        {
-                            "match": "new",
-                            "percent": 0,
-                            "src_id": "0",
-                            "dest_id": "0",
-                            "dest": "dest"
-                        },
-                        {
-                            "match": "new",
-                            "percent": 0,
-                            "src_id": "0",
-                            "dest_id": "1",
-                            "dest": "dest"
-                        }
-                    ]
-                },
-                "diff": {
-                    "identifiers": "duplicate",
-                    "result_set": "new",
-                    "results": "new"
-                },
-                "src_id": "3",
-                "dest_id": "4",
-                "dest": "src"
-            },
-            {
-                "match": "partial",
-                "percent": 25,
-                "subelements": {
-                    "results": [
-                        {
-                            "match": "new",
-                            "percent": 0,
-                            "src_id": "0",
-                            "dest_id": "0",
-                            "dest": "dest"
-                        }
-                    ]
-                },
-                "diff": {
-                    "identifiers": "duplicate",
-                    "result_set": "new",
-                    "results": "new"
-                },
-                "src_id": "3",
-                "dest_id": "5",
-                "dest": "src"
-            },
-            {
-                "match": "new",
-                "percent": 0,
-                "src_id": "3",
-                "dest_id": "6",
-                "dest": "src"
-            },
-            {
-                "match": "partial",
-                "percent": 25,
-                "subelements": {
-                    "results": [
-                        {
-                            "match": "new",
-                            "percent": 0,
-                            "src_id": "0",
-                            "dest_id": "0",
-                            "dest": "dest"
-                        },
-                        {
-                            "match": "new",
-                            "percent": 0,
-                            "src_id": "0",
-                            "dest_id": "1",
-                            "dest": "src"
-                        },
-                        {
-                            "match": "new",
-                            "percent": 0,
-                            "src_id": "1",
-                            "dest_id": "0",
-                            "dest": "dest"
-                        },
-                        {
-                            "match": "new",
-                            "percent": 0,
-                            "src_id": "1",
-                            "dest_id": "0",
-                            "dest": "src"
-                        }
-                    ]
-                },
-                "diff": {
-                    "identifiers": "duplicate",
-                    "result_set": "new",
-                    "results": "new"
-                },
-                "src_id": "4",
-                "dest_id": "0",
-                "dest": "src"
-            },
-            {
-                "match": "partial",
-                "percent": 25,
-                "subelements": {
-                    "results": [
-                        {
-                            "match": "new",
-                            "percent": 0,
-                            "src_id": "0",
-                            "dest_id": "0",
-                            "dest": "dest"
-                        },
-                        {
-                            "match": "new",
-                            "percent": 0,
-                            "src_id": "0",
-                            "dest_id": "1",
-                            "dest": "src"
-                        },
-                        {
-                            "match": "new",
-                            "percent": 0,
-                            "src_id": "1",
-                            "dest_id": "0",
-                            "dest": "dest"
-                        },
-                        {
-                            "match": "new",
-                            "percent": 0,
-                            "src_id": "1",
-                            "dest_id": "0",
-                            "dest": "src"
-                        }
-                    ]
-                },
-                "diff": {
-                    "identifiers": "duplicate",
-                    "result_set": "new",
-                    "results": "new"
-                },
-                "src_id": "4",
-                "dest_id": "1",
-                "dest": "src"
-            },
-            {
-                "match": "partial",
-                "percent": 25,
-                "subelements": {
-                    "results": [
-                        {
-                            "match": "new",
-                            "percent": 0,
-                            "src_id": "0",
-                            "dest_id": "0",
-                            "dest": "dest"
-                        },
-                        {
-                            "match": "new",
-                            "percent": 0,
-                            "src_id": "0",
-                            "dest_id": "1",
-                            "dest": "src"
-                        },
-                        {
-                            "match": "new",
-                            "percent": 0,
-                            "src_id": "1",
-                            "dest_id": "0",
-                            "dest": "dest"
-                        },
-                        {
-                            "match": "new",
-                            "percent": 0,
-                            "src_id": "1",
-                            "dest_id": "0",
-                            "dest": "src"
-                        }
-                    ]
-                },
-                "diff": {
-                    "identifiers": "duplicate",
-                    "result_set": "new",
-                    "results": "new"
-                },
-                "src_id": "4",
-                "dest_id": "2",
-                "dest": "src"
-            },
-            {
-                "match": "partial",
-                "percent": 25,
-                "subelements": {
-                    "results": [
-                        {
-                            "match": "new",
-                            "percent": 0,
-                            "src_id": "0",
-                            "dest_id": "0",
-                            "dest": "dest"
-                        },
-                        {
-                            "match": "new",
-                            "percent": 0,
-                            "src_id": "0",
-                            "dest_id": "1",
-                            "dest": "src"
-                        },
-                        {
-                            "match": "new",
-                            "percent": 0,
-                            "src_id": "1",
-                            "dest_id": "0",
-                            "dest": "dest"
-                        },
-                        {
-                            "match": "new",
-                            "percent": 0,
-                            "src_id": "1",
-                            "dest_id": "0",
-                            "dest": "src"
-                        }
-                    ]
-                },
-                "diff": {
-                    "identifiers": "duplicate",
-                    "result_set": "new",
-                    "results": "new"
-                },
-                "src_id": "4",
-                "dest_id": "3",
-                "dest": "src"
-            },
-            {
-                "match": "partial",
-                "percent": 25,
-                "subelements": {
-                    "results": [
-                        {
-                            "match": "new",
-                            "percent": 0,
-                            "src_id": "0",
-                            "dest_id": "0",
-                            "dest": "dest"
-                        },
-                        {
-                            "match": "new",
-                            "percent": 0,
-                            "src_id": "0",
-                            "dest_id": "1",
-                            "dest": "src"
-                        },
-                        {
-                            "match": "new",
-                            "percent": 0,
-                            "src_id": "1",
-                            "dest_id": "0",
-                            "dest": "dest"
-                        },
-                        {
-                            "match": "new",
-                            "percent": 0,
-                            "src_id": "1",
-                            "dest_id": "0",
-                            "dest": "src"
-                        }
-                    ]
-                },
-                "diff": {
-                    "identifiers": "duplicate",
-                    "result_set": "new",
-                    "results": "new"
-                },
-                "src_id": "4",
-                "dest_id": "5",
-                "dest": "src"
-            },
-            {
-                "match": "new",
-                "percent": 0,
-                "src_id": "4",
-                "dest_id": "6",
-                "dest": "src"
-            },
-            {
-                "match": "partial",
-                "percent": 25,
-                "subelements": {
-                    "results": [
-                        {
-                            "match": "new",
-                            "percent": 0,
-                            "src_id": "0",
-                            "dest_id": "0",
-                            "dest": "dest"
-                        }
-                    ]
-                },
-                "diff": {
-                    "identifiers": "duplicate",
-                    "result_set": "new",
-                    "results": "new"
-                },
-                "src_id": "5",
-                "dest_id": "0",
-                "dest": "src"
-            },
-            {
-                "match": "partial",
-                "percent": 25,
-                "subelements": {
-                    "results": [
-                        {
-                            "match": "new",
-                            "percent": 0,
-                            "src_id": "0",
-                            "dest_id": "0",
-                            "dest": "dest"
-                        }
-                    ]
-                },
-                "diff": {
-                    "identifiers": "duplicate",
-                    "result_set": "new",
-                    "results": "new"
-                },
-                "src_id": "5",
-                "dest_id": "1",
-                "dest": "src"
-            },
-            {
-                "match": "partial",
-                "percent": 25,
-                "subelements": {
-                    "results": [
-                        {
-                            "match": "new",
-                            "percent": 0,
-                            "src_id": "0",
-                            "dest_id": "0",
-                            "dest": "dest"
-                        }
-                    ]
-                },
-                "diff": {
-                    "identifiers": "duplicate",
-                    "result_set": "new",
-                    "results": "new"
-                },
-                "src_id": "5",
-                "dest_id": "2",
-                "dest": "src"
-            },
-            {
-                "match": "partial",
-                "percent": 25,
-                "subelements": {
-                    "results": [
-                        {
-                            "match": "new",
-                            "percent": 0,
-                            "src_id": "0",
-                            "dest_id": "0",
-                            "dest": "dest"
-                        }
-                    ]
-                },
-                "diff": {
-                    "identifiers": "duplicate",
-                    "result_set": "new",
-                    "results": "new"
-                },
-                "src_id": "5",
-                "dest_id": "3",
-                "dest": "src"
-            },
-            {
-                "match": "partial",
-                "percent": 25,
-                "subelements": {
-                    "results": [
-                        {
-                            "match": "new",
-                            "percent": 0,
-                            "src_id": "0",
-                            "dest_id": "0",
-                            "dest": "dest"
-                        },
-                        {
-                            "match": "new",
-                            "percent": 0,
-                            "src_id": "0",
-                            "dest_id": "1",
-                            "dest": "dest"
-                        }
-                    ]
-                },
-                "diff": {
-                    "identifiers": "duplicate",
-                    "result_set": "new",
-                    "results": "new"
-                },
-                "src_id": "5",
-                "dest_id": "4",
-                "dest": "src"
-            },
-            {
-                "match": "new",
-                "percent": 0,
-                "src_id": "5",
-                "dest_id": "6",
-                "dest": "src"
-            },
-            {
-                "match": "new",
-                "percent": 0,
-                "src_id": "6",
-                "dest_id": "0",
-                "dest": "src"
-            },
-            {
-                "match": "new",
-                "percent": 0,
-                "src_id": "6",
-                "dest_id": "1",
-                "dest": "src"
-            },
-            {
-                "match": "new",
-                "percent": 0,
-                "src_id": "6",
-                "dest_id": "2",
-                "dest": "src"
-            },
-            {
-                "match": "new",
-                "percent": 0,
-                "src_id": "6",
-                "dest_id": "3",
-                "dest": "src"
-            },
-            {
-                "match": "new",
-                "percent": 0,
-                "src_id": "6",
-                "dest_id": "4",
-                "dest": "src"
-            },
-            {
-                "match": "new",
-                "percent": 0,
-                "src_id": "6",
-                "dest_id": "5",
                 "dest": "src"
             }
         ],
@@ -1537,6 +722,1843 @@
                 "dest": "src"
             }
         ],
+        "encounters": [
+            {
+                "match": "new",
+                "percent": 0,
+                "src_id": "0",
+                "dest_id": "0",
+                "dest": "dest"
+            },
+            {
+                "match": "duplicate",
+                "percent": "100",
+                "src_id": "1",
+                "dest_id": "0",
+                "dest": "dest"
+            },
+            {
+                "match": "new",
+                "percent": 0,
+                "src_id": "0",
+                "dest_id": "1",
+                "dest": "src"
+            },
+            {
+                "match": "new",
+                "percent": 0,
+                "src_id": "1",
+                "dest_id": "0",
+                "dest": "src"
+            }
+        ],
+        "vitals": [
+            {
+                "match": "new",
+                "percent": 0,
+                "src_id": "0",
+                "dest_id": "0",
+                "dest": "dest"
+            },
+            {
+                "match": "new",
+                "percent": 0,
+                "src_id": "0",
+                "dest_id": "1",
+                "dest": "dest"
+            },
+            {
+                "match": "new",
+                "percent": 0,
+                "src_id": "0",
+                "dest_id": "2",
+                "dest": "dest"
+            },
+            {
+                "match": "new",
+                "percent": 0,
+                "src_id": "0",
+                "dest_id": "3",
+                "dest": "dest"
+            },
+            {
+                "match": "new",
+                "percent": 0,
+                "src_id": "0",
+                "dest_id": "4",
+                "dest": "dest"
+            },
+            {
+                "match": "new",
+                "percent": 0,
+                "src_id": "0",
+                "dest_id": "5",
+                "dest": "dest"
+            },
+            {
+                "match": "new",
+                "percent": 0,
+                "src_id": "1",
+                "dest_id": "0",
+                "dest": "dest"
+            },
+            {
+                "match": "new",
+                "percent": 0,
+                "src_id": "1",
+                "dest_id": "1",
+                "dest": "dest"
+            },
+            {
+                "match": "new",
+                "percent": 0,
+                "src_id": "1",
+                "dest_id": "2",
+                "dest": "dest"
+            },
+            {
+                "match": "new",
+                "percent": 0,
+                "src_id": "1",
+                "dest_id": "3",
+                "dest": "dest"
+            },
+            {
+                "match": "new",
+                "percent": 0,
+                "src_id": "1",
+                "dest_id": "4",
+                "dest": "dest"
+            },
+            {
+                "match": "new",
+                "percent": 0,
+                "src_id": "1",
+                "dest_id": "5",
+                "dest": "dest"
+            },
+            {
+                "match": "new",
+                "percent": 0,
+                "src_id": "2",
+                "dest_id": "0",
+                "dest": "dest"
+            },
+            {
+                "match": "new",
+                "percent": 0,
+                "src_id": "2",
+                "dest_id": "1",
+                "dest": "dest"
+            },
+            {
+                "match": "new",
+                "percent": 0,
+                "src_id": "2",
+                "dest_id": "2",
+                "dest": "dest"
+            },
+            {
+                "match": "new",
+                "percent": 0,
+                "src_id": "2",
+                "dest_id": "3",
+                "dest": "dest"
+            },
+            {
+                "match": "new",
+                "percent": 0,
+                "src_id": "2",
+                "dest_id": "4",
+                "dest": "dest"
+            },
+            {
+                "match": "new",
+                "percent": 0,
+                "src_id": "2",
+                "dest_id": "5",
+                "dest": "dest"
+            },
+            {
+                "match": "new",
+                "percent": 0,
+                "src_id": "3",
+                "dest_id": "0",
+                "dest": "dest"
+            },
+            {
+                "match": "new",
+                "percent": 0,
+                "src_id": "3",
+                "dest_id": "1",
+                "dest": "dest"
+            },
+            {
+                "match": "new",
+                "percent": 0,
+                "src_id": "3",
+                "dest_id": "2",
+                "dest": "dest"
+            },
+            {
+                "match": "new",
+                "percent": 0,
+                "src_id": "3",
+                "dest_id": "3",
+                "dest": "dest"
+            },
+            {
+                "match": "new",
+                "percent": 0,
+                "src_id": "3",
+                "dest_id": "4",
+                "dest": "dest"
+            },
+            {
+                "match": "new",
+                "percent": 0,
+                "src_id": "3",
+                "dest_id": "5",
+                "dest": "dest"
+            },
+            {
+                "match": "new",
+                "percent": 0,
+                "src_id": "4",
+                "dest_id": "0",
+                "dest": "dest"
+            },
+            {
+                "match": "new",
+                "percent": 0,
+                "src_id": "4",
+                "dest_id": "1",
+                "dest": "dest"
+            },
+            {
+                "match": "new",
+                "percent": 0,
+                "src_id": "4",
+                "dest_id": "2",
+                "dest": "dest"
+            },
+            {
+                "match": "new",
+                "percent": 0,
+                "src_id": "4",
+                "dest_id": "3",
+                "dest": "dest"
+            },
+            {
+                "match": "new",
+                "percent": 0,
+                "src_id": "4",
+                "dest_id": "4",
+                "dest": "dest"
+            },
+            {
+                "match": "new",
+                "percent": 0,
+                "src_id": "4",
+                "dest_id": "5",
+                "dest": "dest"
+            },
+            {
+                "match": "duplicate",
+                "percent": "100",
+                "src_id": "5",
+                "dest_id": "0",
+                "dest": "dest"
+            },
+            {
+                "match": "new",
+                "percent": 0,
+                "src_id": "5",
+                "dest_id": "1",
+                "dest": "dest"
+            },
+            {
+                "match": "new",
+                "percent": 0,
+                "src_id": "5",
+                "dest_id": "2",
+                "dest": "dest"
+            },
+            {
+                "match": "new",
+                "percent": 0,
+                "src_id": "5",
+                "dest_id": "3",
+                "dest": "dest"
+            },
+            {
+                "match": "new",
+                "percent": 0,
+                "src_id": "5",
+                "dest_id": "4",
+                "dest": "dest"
+            },
+            {
+                "match": "new",
+                "percent": 0,
+                "src_id": "5",
+                "dest_id": "5",
+                "dest": "dest"
+            },
+            {
+                "match": "new",
+                "percent": 0,
+                "src_id": "6",
+                "dest_id": "0",
+                "dest": "dest"
+            },
+            {
+                "match": "duplicate",
+                "percent": "100",
+                "src_id": "6",
+                "dest_id": "1",
+                "dest": "dest"
+            },
+            {
+                "match": "new",
+                "percent": 0,
+                "src_id": "6",
+                "dest_id": "2",
+                "dest": "dest"
+            },
+            {
+                "match": "new",
+                "percent": 0,
+                "src_id": "6",
+                "dest_id": "3",
+                "dest": "dest"
+            },
+            {
+                "match": "new",
+                "percent": 0,
+                "src_id": "6",
+                "dest_id": "4",
+                "dest": "dest"
+            },
+            {
+                "match": "new",
+                "percent": 0,
+                "src_id": "6",
+                "dest_id": "5",
+                "dest": "dest"
+            },
+            {
+                "match": "new",
+                "percent": 0,
+                "src_id": "7",
+                "dest_id": "0",
+                "dest": "dest"
+            },
+            {
+                "match": "new",
+                "percent": 0,
+                "src_id": "7",
+                "dest_id": "1",
+                "dest": "dest"
+            },
+            {
+                "match": "duplicate",
+                "percent": "100",
+                "src_id": "7",
+                "dest_id": "2",
+                "dest": "dest"
+            },
+            {
+                "match": "new",
+                "percent": 0,
+                "src_id": "7",
+                "dest_id": "3",
+                "dest": "dest"
+            },
+            {
+                "match": "new",
+                "percent": 0,
+                "src_id": "7",
+                "dest_id": "4",
+                "dest": "dest"
+            },
+            {
+                "match": "new",
+                "percent": 0,
+                "src_id": "7",
+                "dest_id": "5",
+                "dest": "dest"
+            },
+            {
+                "match": "new",
+                "percent": 0,
+                "src_id": "8",
+                "dest_id": "0",
+                "dest": "dest"
+            },
+            {
+                "match": "new",
+                "percent": 0,
+                "src_id": "8",
+                "dest_id": "1",
+                "dest": "dest"
+            },
+            {
+                "match": "new",
+                "percent": 0,
+                "src_id": "8",
+                "dest_id": "2",
+                "dest": "dest"
+            },
+            {
+                "match": "duplicate",
+                "percent": "100",
+                "src_id": "8",
+                "dest_id": "3",
+                "dest": "dest"
+            },
+            {
+                "match": "new",
+                "percent": 0,
+                "src_id": "8",
+                "dest_id": "4",
+                "dest": "dest"
+            },
+            {
+                "match": "new",
+                "percent": 0,
+                "src_id": "8",
+                "dest_id": "5",
+                "dest": "dest"
+            },
+            {
+                "match": "new",
+                "percent": 0,
+                "src_id": "9",
+                "dest_id": "0",
+                "dest": "dest"
+            },
+            {
+                "match": "new",
+                "percent": 0,
+                "src_id": "9",
+                "dest_id": "1",
+                "dest": "dest"
+            },
+            {
+                "match": "new",
+                "percent": 0,
+                "src_id": "9",
+                "dest_id": "2",
+                "dest": "dest"
+            },
+            {
+                "match": "new",
+                "percent": 0,
+                "src_id": "9",
+                "dest_id": "3",
+                "dest": "dest"
+            },
+            {
+                "match": "duplicate",
+                "percent": "100",
+                "src_id": "9",
+                "dest_id": "4",
+                "dest": "dest"
+            },
+            {
+                "match": "new",
+                "percent": 0,
+                "src_id": "9",
+                "dest_id": "5",
+                "dest": "dest"
+            },
+            {
+                "match": "new",
+                "percent": 0,
+                "src_id": "10",
+                "dest_id": "0",
+                "dest": "dest"
+            },
+            {
+                "match": "new",
+                "percent": 0,
+                "src_id": "10",
+                "dest_id": "1",
+                "dest": "dest"
+            },
+            {
+                "match": "new",
+                "percent": 0,
+                "src_id": "10",
+                "dest_id": "2",
+                "dest": "dest"
+            },
+            {
+                "match": "new",
+                "percent": 0,
+                "src_id": "10",
+                "dest_id": "3",
+                "dest": "dest"
+            },
+            {
+                "match": "new",
+                "percent": 0,
+                "src_id": "10",
+                "dest_id": "4",
+                "dest": "dest"
+            },
+            {
+                "match": "duplicate",
+                "percent": "100",
+                "src_id": "10",
+                "dest_id": "5",
+                "dest": "dest"
+            },
+            {
+                "match": "new",
+                "percent": 0,
+                "src_id": "0",
+                "dest_id": "1",
+                "dest": "src"
+            },
+            {
+                "match": "new",
+                "percent": 0,
+                "src_id": "0",
+                "dest_id": "2",
+                "dest": "src"
+            },
+            {
+                "match": "new",
+                "percent": 0,
+                "src_id": "0",
+                "dest_id": "3",
+                "dest": "src"
+            },
+            {
+                "match": "new",
+                "percent": 0,
+                "src_id": "0",
+                "dest_id": "4",
+                "dest": "src"
+            },
+            {
+                "match": "new",
+                "percent": 0,
+                "src_id": "0",
+                "dest_id": "5",
+                "dest": "src"
+            },
+            {
+                "match": "new",
+                "percent": 0,
+                "src_id": "0",
+                "dest_id": "6",
+                "dest": "src"
+            },
+            {
+                "match": "new",
+                "percent": 0,
+                "src_id": "0",
+                "dest_id": "7",
+                "dest": "src"
+            },
+            {
+                "match": "new",
+                "percent": 0,
+                "src_id": "0",
+                "dest_id": "8",
+                "dest": "src"
+            },
+            {
+                "match": "new",
+                "percent": 0,
+                "src_id": "0",
+                "dest_id": "9",
+                "dest": "src"
+            },
+            {
+                "match": "new",
+                "percent": 0,
+                "src_id": "0",
+                "dest_id": "10",
+                "dest": "src"
+            },
+            {
+                "match": "new",
+                "percent": 0,
+                "src_id": "1",
+                "dest_id": "0",
+                "dest": "src"
+            },
+            {
+                "match": "new",
+                "percent": 0,
+                "src_id": "1",
+                "dest_id": "2",
+                "dest": "src"
+            },
+            {
+                "match": "new",
+                "percent": 0,
+                "src_id": "1",
+                "dest_id": "3",
+                "dest": "src"
+            },
+            {
+                "match": "new",
+                "percent": 0,
+                "src_id": "1",
+                "dest_id": "4",
+                "dest": "src"
+            },
+            {
+                "match": "new",
+                "percent": 0,
+                "src_id": "1",
+                "dest_id": "5",
+                "dest": "src"
+            },
+            {
+                "match": "new",
+                "percent": 0,
+                "src_id": "1",
+                "dest_id": "6",
+                "dest": "src"
+            },
+            {
+                "match": "new",
+                "percent": 0,
+                "src_id": "1",
+                "dest_id": "7",
+                "dest": "src"
+            },
+            {
+                "match": "new",
+                "percent": 0,
+                "src_id": "1",
+                "dest_id": "8",
+                "dest": "src"
+            },
+            {
+                "match": "new",
+                "percent": 0,
+                "src_id": "1",
+                "dest_id": "9",
+                "dest": "src"
+            },
+            {
+                "match": "new",
+                "percent": 0,
+                "src_id": "1",
+                "dest_id": "10",
+                "dest": "src"
+            },
+            {
+                "match": "new",
+                "percent": 0,
+                "src_id": "2",
+                "dest_id": "0",
+                "dest": "src"
+            },
+            {
+                "match": "new",
+                "percent": 0,
+                "src_id": "2",
+                "dest_id": "1",
+                "dest": "src"
+            },
+            {
+                "match": "new",
+                "percent": 0,
+                "src_id": "2",
+                "dest_id": "3",
+                "dest": "src"
+            },
+            {
+                "match": "new",
+                "percent": 0,
+                "src_id": "2",
+                "dest_id": "4",
+                "dest": "src"
+            },
+            {
+                "match": "new",
+                "percent": 0,
+                "src_id": "2",
+                "dest_id": "5",
+                "dest": "src"
+            },
+            {
+                "match": "new",
+                "percent": 0,
+                "src_id": "2",
+                "dest_id": "6",
+                "dest": "src"
+            },
+            {
+                "match": "new",
+                "percent": 0,
+                "src_id": "2",
+                "dest_id": "7",
+                "dest": "src"
+            },
+            {
+                "match": "new",
+                "percent": 0,
+                "src_id": "2",
+                "dest_id": "8",
+                "dest": "src"
+            },
+            {
+                "match": "new",
+                "percent": 0,
+                "src_id": "2",
+                "dest_id": "9",
+                "dest": "src"
+            },
+            {
+                "match": "new",
+                "percent": 0,
+                "src_id": "2",
+                "dest_id": "10",
+                "dest": "src"
+            },
+            {
+                "match": "new",
+                "percent": 0,
+                "src_id": "3",
+                "dest_id": "0",
+                "dest": "src"
+            },
+            {
+                "match": "new",
+                "percent": 0,
+                "src_id": "3",
+                "dest_id": "1",
+                "dest": "src"
+            },
+            {
+                "match": "new",
+                "percent": 0,
+                "src_id": "3",
+                "dest_id": "2",
+                "dest": "src"
+            },
+            {
+                "match": "new",
+                "percent": 0,
+                "src_id": "3",
+                "dest_id": "4",
+                "dest": "src"
+            },
+            {
+                "match": "new",
+                "percent": 0,
+                "src_id": "3",
+                "dest_id": "5",
+                "dest": "src"
+            },
+            {
+                "match": "new",
+                "percent": 0,
+                "src_id": "3",
+                "dest_id": "6",
+                "dest": "src"
+            },
+            {
+                "match": "new",
+                "percent": 0,
+                "src_id": "3",
+                "dest_id": "7",
+                "dest": "src"
+            },
+            {
+                "match": "new",
+                "percent": 0,
+                "src_id": "3",
+                "dest_id": "8",
+                "dest": "src"
+            },
+            {
+                "match": "new",
+                "percent": 0,
+                "src_id": "3",
+                "dest_id": "9",
+                "dest": "src"
+            },
+            {
+                "match": "new",
+                "percent": 0,
+                "src_id": "3",
+                "dest_id": "10",
+                "dest": "src"
+            },
+            {
+                "match": "new",
+                "percent": 0,
+                "src_id": "4",
+                "dest_id": "0",
+                "dest": "src"
+            },
+            {
+                "match": "new",
+                "percent": 0,
+                "src_id": "4",
+                "dest_id": "1",
+                "dest": "src"
+            },
+            {
+                "match": "new",
+                "percent": 0,
+                "src_id": "4",
+                "dest_id": "2",
+                "dest": "src"
+            },
+            {
+                "match": "new",
+                "percent": 0,
+                "src_id": "4",
+                "dest_id": "3",
+                "dest": "src"
+            },
+            {
+                "match": "new",
+                "percent": 0,
+                "src_id": "4",
+                "dest_id": "5",
+                "dest": "src"
+            },
+            {
+                "match": "new",
+                "percent": 0,
+                "src_id": "4",
+                "dest_id": "6",
+                "dest": "src"
+            },
+            {
+                "match": "new",
+                "percent": 0,
+                "src_id": "4",
+                "dest_id": "7",
+                "dest": "src"
+            },
+            {
+                "match": "new",
+                "percent": 0,
+                "src_id": "4",
+                "dest_id": "8",
+                "dest": "src"
+            },
+            {
+                "match": "new",
+                "percent": 0,
+                "src_id": "4",
+                "dest_id": "9",
+                "dest": "src"
+            },
+            {
+                "match": "new",
+                "percent": 0,
+                "src_id": "4",
+                "dest_id": "10",
+                "dest": "src"
+            },
+            {
+                "match": "new",
+                "percent": 0,
+                "src_id": "5",
+                "dest_id": "0",
+                "dest": "src"
+            },
+            {
+                "match": "new",
+                "percent": 0,
+                "src_id": "5",
+                "dest_id": "1",
+                "dest": "src"
+            },
+            {
+                "match": "new",
+                "percent": 0,
+                "src_id": "5",
+                "dest_id": "2",
+                "dest": "src"
+            },
+            {
+                "match": "new",
+                "percent": 0,
+                "src_id": "5",
+                "dest_id": "3",
+                "dest": "src"
+            },
+            {
+                "match": "new",
+                "percent": 0,
+                "src_id": "5",
+                "dest_id": "4",
+                "dest": "src"
+            },
+            {
+                "match": "new",
+                "percent": 0,
+                "src_id": "5",
+                "dest_id": "6",
+                "dest": "src"
+            },
+            {
+                "match": "new",
+                "percent": 0,
+                "src_id": "5",
+                "dest_id": "7",
+                "dest": "src"
+            },
+            {
+                "match": "new",
+                "percent": 0,
+                "src_id": "5",
+                "dest_id": "8",
+                "dest": "src"
+            },
+            {
+                "match": "new",
+                "percent": 0,
+                "src_id": "5",
+                "dest_id": "9",
+                "dest": "src"
+            },
+            {
+                "match": "new",
+                "percent": 0,
+                "src_id": "5",
+                "dest_id": "10",
+                "dest": "src"
+            },
+            {
+                "match": "new",
+                "percent": 0,
+                "src_id": "6",
+                "dest_id": "0",
+                "dest": "src"
+            },
+            {
+                "match": "new",
+                "percent": 0,
+                "src_id": "6",
+                "dest_id": "1",
+                "dest": "src"
+            },
+            {
+                "match": "new",
+                "percent": 0,
+                "src_id": "6",
+                "dest_id": "2",
+                "dest": "src"
+            },
+            {
+                "match": "new",
+                "percent": 0,
+                "src_id": "6",
+                "dest_id": "3",
+                "dest": "src"
+            },
+            {
+                "match": "new",
+                "percent": 0,
+                "src_id": "6",
+                "dest_id": "4",
+                "dest": "src"
+            },
+            {
+                "match": "new",
+                "percent": 0,
+                "src_id": "6",
+                "dest_id": "5",
+                "dest": "src"
+            },
+            {
+                "match": "new",
+                "percent": 0,
+                "src_id": "6",
+                "dest_id": "7",
+                "dest": "src"
+            },
+            {
+                "match": "new",
+                "percent": 0,
+                "src_id": "6",
+                "dest_id": "8",
+                "dest": "src"
+            },
+            {
+                "match": "new",
+                "percent": 0,
+                "src_id": "6",
+                "dest_id": "9",
+                "dest": "src"
+            },
+            {
+                "match": "new",
+                "percent": 0,
+                "src_id": "6",
+                "dest_id": "10",
+                "dest": "src"
+            },
+            {
+                "match": "new",
+                "percent": 0,
+                "src_id": "7",
+                "dest_id": "0",
+                "dest": "src"
+            },
+            {
+                "match": "new",
+                "percent": 0,
+                "src_id": "7",
+                "dest_id": "1",
+                "dest": "src"
+            },
+            {
+                "match": "new",
+                "percent": 0,
+                "src_id": "7",
+                "dest_id": "2",
+                "dest": "src"
+            },
+            {
+                "match": "new",
+                "percent": 0,
+                "src_id": "7",
+                "dest_id": "3",
+                "dest": "src"
+            },
+            {
+                "match": "new",
+                "percent": 0,
+                "src_id": "7",
+                "dest_id": "4",
+                "dest": "src"
+            },
+            {
+                "match": "new",
+                "percent": 0,
+                "src_id": "7",
+                "dest_id": "5",
+                "dest": "src"
+            },
+            {
+                "match": "new",
+                "percent": 0,
+                "src_id": "7",
+                "dest_id": "6",
+                "dest": "src"
+            },
+            {
+                "match": "new",
+                "percent": 0,
+                "src_id": "7",
+                "dest_id": "8",
+                "dest": "src"
+            },
+            {
+                "match": "new",
+                "percent": 0,
+                "src_id": "7",
+                "dest_id": "9",
+                "dest": "src"
+            },
+            {
+                "match": "new",
+                "percent": 0,
+                "src_id": "7",
+                "dest_id": "10",
+                "dest": "src"
+            },
+            {
+                "match": "new",
+                "percent": 0,
+                "src_id": "8",
+                "dest_id": "0",
+                "dest": "src"
+            },
+            {
+                "match": "new",
+                "percent": 0,
+                "src_id": "8",
+                "dest_id": "1",
+                "dest": "src"
+            },
+            {
+                "match": "new",
+                "percent": 0,
+                "src_id": "8",
+                "dest_id": "2",
+                "dest": "src"
+            },
+            {
+                "match": "new",
+                "percent": 0,
+                "src_id": "8",
+                "dest_id": "3",
+                "dest": "src"
+            },
+            {
+                "match": "new",
+                "percent": 0,
+                "src_id": "8",
+                "dest_id": "4",
+                "dest": "src"
+            },
+            {
+                "match": "new",
+                "percent": 0,
+                "src_id": "8",
+                "dest_id": "5",
+                "dest": "src"
+            },
+            {
+                "match": "new",
+                "percent": 0,
+                "src_id": "8",
+                "dest_id": "6",
+                "dest": "src"
+            },
+            {
+                "match": "new",
+                "percent": 0,
+                "src_id": "8",
+                "dest_id": "7",
+                "dest": "src"
+            },
+            {
+                "match": "new",
+                "percent": 0,
+                "src_id": "8",
+                "dest_id": "9",
+                "dest": "src"
+            },
+            {
+                "match": "new",
+                "percent": 0,
+                "src_id": "8",
+                "dest_id": "10",
+                "dest": "src"
+            },
+            {
+                "match": "new",
+                "percent": 0,
+                "src_id": "9",
+                "dest_id": "0",
+                "dest": "src"
+            },
+            {
+                "match": "new",
+                "percent": 0,
+                "src_id": "9",
+                "dest_id": "1",
+                "dest": "src"
+            },
+            {
+                "match": "new",
+                "percent": 0,
+                "src_id": "9",
+                "dest_id": "2",
+                "dest": "src"
+            },
+            {
+                "match": "new",
+                "percent": 0,
+                "src_id": "9",
+                "dest_id": "3",
+                "dest": "src"
+            },
+            {
+                "match": "new",
+                "percent": 0,
+                "src_id": "9",
+                "dest_id": "4",
+                "dest": "src"
+            },
+            {
+                "match": "new",
+                "percent": 0,
+                "src_id": "9",
+                "dest_id": "5",
+                "dest": "src"
+            },
+            {
+                "match": "new",
+                "percent": 0,
+                "src_id": "9",
+                "dest_id": "6",
+                "dest": "src"
+            },
+            {
+                "match": "new",
+                "percent": 0,
+                "src_id": "9",
+                "dest_id": "7",
+                "dest": "src"
+            },
+            {
+                "match": "new",
+                "percent": 0,
+                "src_id": "9",
+                "dest_id": "8",
+                "dest": "src"
+            },
+            {
+                "match": "new",
+                "percent": 0,
+                "src_id": "9",
+                "dest_id": "10",
+                "dest": "src"
+            },
+            {
+                "match": "new",
+                "percent": 0,
+                "src_id": "10",
+                "dest_id": "0",
+                "dest": "src"
+            },
+            {
+                "match": "new",
+                "percent": 0,
+                "src_id": "10",
+                "dest_id": "1",
+                "dest": "src"
+            },
+            {
+                "match": "new",
+                "percent": 0,
+                "src_id": "10",
+                "dest_id": "2",
+                "dest": "src"
+            },
+            {
+                "match": "new",
+                "percent": 0,
+                "src_id": "10",
+                "dest_id": "3",
+                "dest": "src"
+            },
+            {
+                "match": "new",
+                "percent": 0,
+                "src_id": "10",
+                "dest_id": "4",
+                "dest": "src"
+            },
+            {
+                "match": "new",
+                "percent": 0,
+                "src_id": "10",
+                "dest_id": "5",
+                "dest": "src"
+            },
+            {
+                "match": "new",
+                "percent": 0,
+                "src_id": "10",
+                "dest_id": "6",
+                "dest": "src"
+            },
+            {
+                "match": "new",
+                "percent": 0,
+                "src_id": "10",
+                "dest_id": "7",
+                "dest": "src"
+            },
+            {
+                "match": "new",
+                "percent": 0,
+                "src_id": "10",
+                "dest_id": "8",
+                "dest": "src"
+            },
+            {
+                "match": "new",
+                "percent": 0,
+                "src_id": "10",
+                "dest_id": "9",
+                "dest": "src"
+            }
+        ],
+        "results": [
+            {
+                "match": "new",
+                "percent": 0,
+                "src_id": "0",
+                "dest_id": "0",
+                "dest": "dest"
+            },
+            {
+                "match": "new",
+                "percent": 0,
+                "src_id": "1",
+                "dest_id": "0",
+                "dest": "dest"
+            },
+            {
+                "match": "new",
+                "percent": 0,
+                "src_id": "2",
+                "dest_id": "0",
+                "dest": "dest"
+            },
+            {
+                "match": "new",
+                "percent": 0,
+                "src_id": "3",
+                "dest_id": "0",
+                "dest": "dest"
+            },
+            {
+                "match": "new",
+                "percent": 0,
+                "src_id": "4",
+                "dest_id": "0",
+                "dest": "dest"
+            },
+            {
+                "match": "new",
+                "percent": 0,
+                "src_id": "5",
+                "dest_id": "0",
+                "dest": "dest"
+            },
+            {
+                "match": "duplicate",
+                "percent": "100",
+                "src_id": "6",
+                "dest_id": "0",
+                "dest": "dest"
+            },
+            {
+                "match": "new",
+                "percent": 0,
+                "src_id": "0",
+                "dest_id": "1",
+                "dest": "src"
+            },
+            {
+                "match": "new",
+                "percent": 0,
+                "src_id": "0",
+                "dest_id": "2",
+                "dest": "src"
+            },
+            {
+                "match": "new",
+                "percent": 0,
+                "src_id": "0",
+                "dest_id": "3",
+                "dest": "src"
+            },
+            {
+                "match": "new",
+                "percent": 0,
+                "src_id": "0",
+                "dest_id": "4",
+                "dest": "src"
+            },
+            {
+                "match": "new",
+                "percent": 0,
+                "src_id": "0",
+                "dest_id": "5",
+                "dest": "src"
+            },
+            {
+                "match": "new",
+                "percent": 0,
+                "src_id": "0",
+                "dest_id": "6",
+                "dest": "src"
+            },
+            {
+                "match": "new",
+                "percent": 0,
+                "src_id": "1",
+                "dest_id": "0",
+                "dest": "src"
+            },
+            {
+                "match": "new",
+                "percent": 0,
+                "src_id": "1",
+                "dest_id": "2",
+                "dest": "src"
+            },
+            {
+                "match": "new",
+                "percent": 0,
+                "src_id": "1",
+                "dest_id": "3",
+                "dest": "src"
+            },
+            {
+                "match": "new",
+                "percent": 0,
+                "src_id": "1",
+                "dest_id": "4",
+                "dest": "src"
+            },
+            {
+                "match": "new",
+                "percent": 0,
+                "src_id": "1",
+                "dest_id": "5",
+                "dest": "src"
+            },
+            {
+                "match": "new",
+                "percent": 0,
+                "src_id": "1",
+                "dest_id": "6",
+                "dest": "src"
+            },
+            {
+                "match": "new",
+                "percent": 0,
+                "src_id": "2",
+                "dest_id": "0",
+                "dest": "src"
+            },
+            {
+                "match": "new",
+                "percent": 0,
+                "src_id": "2",
+                "dest_id": "1",
+                "dest": "src"
+            },
+            {
+                "match": "new",
+                "percent": 0,
+                "src_id": "2",
+                "dest_id": "3",
+                "dest": "src"
+            },
+            {
+                "match": "new",
+                "percent": 0,
+                "src_id": "2",
+                "dest_id": "4",
+                "dest": "src"
+            },
+            {
+                "match": "new",
+                "percent": 0,
+                "src_id": "2",
+                "dest_id": "5",
+                "dest": "src"
+            },
+            {
+                "match": "new",
+                "percent": 0,
+                "src_id": "2",
+                "dest_id": "6",
+                "dest": "src"
+            },
+            {
+                "match": "new",
+                "percent": 0,
+                "src_id": "3",
+                "dest_id": "0",
+                "dest": "src"
+            },
+            {
+                "match": "new",
+                "percent": 0,
+                "src_id": "3",
+                "dest_id": "1",
+                "dest": "src"
+            },
+            {
+                "match": "new",
+                "percent": 0,
+                "src_id": "3",
+                "dest_id": "2",
+                "dest": "src"
+            },
+            {
+                "match": "new",
+                "percent": 0,
+                "src_id": "3",
+                "dest_id": "4",
+                "dest": "src"
+            },
+            {
+                "match": "new",
+                "percent": 0,
+                "src_id": "3",
+                "dest_id": "5",
+                "dest": "src"
+            },
+            {
+                "match": "new",
+                "percent": 0,
+                "src_id": "3",
+                "dest_id": "6",
+                "dest": "src"
+            },
+            {
+                "match": "new",
+                "percent": 0,
+                "src_id": "4",
+                "dest_id": "0",
+                "dest": "src"
+            },
+            {
+                "match": "new",
+                "percent": 0,
+                "src_id": "4",
+                "dest_id": "1",
+                "dest": "src"
+            },
+            {
+                "match": "new",
+                "percent": 0,
+                "src_id": "4",
+                "dest_id": "2",
+                "dest": "src"
+            },
+            {
+                "match": "new",
+                "percent": 0,
+                "src_id": "4",
+                "dest_id": "3",
+                "dest": "src"
+            },
+            {
+                "match": "new",
+                "percent": 0,
+                "src_id": "4",
+                "dest_id": "5",
+                "dest": "src"
+            },
+            {
+                "match": "new",
+                "percent": 0,
+                "src_id": "4",
+                "dest_id": "6",
+                "dest": "src"
+            },
+            {
+                "match": "new",
+                "percent": 0,
+                "src_id": "5",
+                "dest_id": "0",
+                "dest": "src"
+            },
+            {
+                "match": "new",
+                "percent": 0,
+                "src_id": "5",
+                "dest_id": "1",
+                "dest": "src"
+            },
+            {
+                "match": "new",
+                "percent": 0,
+                "src_id": "5",
+                "dest_id": "2",
+                "dest": "src"
+            },
+            {
+                "match": "new",
+                "percent": 0,
+                "src_id": "5",
+                "dest_id": "3",
+                "dest": "src"
+            },
+            {
+                "match": "new",
+                "percent": 0,
+                "src_id": "5",
+                "dest_id": "4",
+                "dest": "src"
+            },
+            {
+                "match": "new",
+                "percent": 0,
+                "src_id": "5",
+                "dest_id": "6",
+                "dest": "src"
+            },
+            {
+                "match": "new",
+                "percent": 0,
+                "src_id": "6",
+                "dest_id": "0",
+                "dest": "src"
+            },
+            {
+                "match": "new",
+                "percent": 0,
+                "src_id": "6",
+                "dest_id": "1",
+                "dest": "src"
+            },
+            {
+                "match": "new",
+                "percent": 0,
+                "src_id": "6",
+                "dest_id": "2",
+                "dest": "src"
+            },
+            {
+                "match": "new",
+                "percent": 0,
+                "src_id": "6",
+                "dest_id": "3",
+                "dest": "src"
+            },
+            {
+                "match": "new",
+                "percent": 0,
+                "src_id": "6",
+                "dest_id": "4",
+                "dest": "src"
+            },
+            {
+                "match": "new",
+                "percent": 0,
+                "src_id": "6",
+                "dest_id": "5",
+                "dest": "src"
+            }
+        ],
+        "social_history": [
+            {
+                "match": "duplicate",
+                "percent": "100",
+                "src_id": "0",
+                "dest_id": "0",
+                "dest": "dest"
+            },
+            {
+                "match": "new",
+                "percent": 0,
+                "src_id": "0",
+                "dest_id": "1",
+                "dest": "dest"
+            },
+            {
+                "match": "new",
+                "percent": 0,
+                "src_id": "0",
+                "dest_id": "2",
+                "dest": "dest"
+            },
+            {
+                "match": "new",
+                "percent": 0,
+                "src_id": "0",
+                "dest_id": "3",
+                "dest": "dest"
+            },
+            {
+                "match": "new",
+                "percent": 0,
+                "src_id": "1",
+                "dest_id": "0",
+                "dest": "dest"
+            },
+            {
+                "match": "duplicate",
+                "percent": "100",
+                "src_id": "1",
+                "dest_id": "1",
+                "dest": "dest"
+            },
+            {
+                "match": "new",
+                "percent": 0,
+                "src_id": "1",
+                "dest_id": "2",
+                "dest": "dest"
+            },
+            {
+                "match": "new",
+                "percent": 0,
+                "src_id": "1",
+                "dest_id": "3",
+                "dest": "dest"
+            },
+            {
+                "match": "new",
+                "percent": 0,
+                "src_id": "2",
+                "dest_id": "0",
+                "dest": "dest"
+            },
+            {
+                "match": "new",
+                "percent": 0,
+                "src_id": "2",
+                "dest_id": "1",
+                "dest": "dest"
+            },
+            {
+                "match": "duplicate",
+                "percent": "100",
+                "src_id": "2",
+                "dest_id": "2",
+                "dest": "dest"
+            },
+            {
+                "match": "partial",
+                "percent": 25,
+                "diff": {
+                    "date_time": "new",
+                    "identifiers": "new",
+                    "code": "new",
+                    "value": "duplicate"
+                },
+                "src_id": "2",
+                "dest_id": "3",
+                "dest": "dest"
+            },
+            {
+                "match": "new",
+                "percent": 0,
+                "src_id": "3",
+                "dest_id": "0",
+                "dest": "dest"
+            },
+            {
+                "match": "new",
+                "percent": 0,
+                "src_id": "3",
+                "dest_id": "1",
+                "dest": "dest"
+            },
+            {
+                "match": "partial",
+                "percent": 25,
+                "diff": {
+                    "date_time": "new",
+                    "identifiers": "new",
+                    "code": "new",
+                    "value": "duplicate"
+                },
+                "src_id": "3",
+                "dest_id": "2",
+                "dest": "dest"
+            },
+            {
+                "match": "duplicate",
+                "percent": "100",
+                "src_id": "3",
+                "dest_id": "3",
+                "dest": "dest"
+            },
+            {
+                "match": "new",
+                "percent": 0,
+                "src_id": "0",
+                "dest_id": "1",
+                "dest": "src"
+            },
+            {
+                "match": "new",
+                "percent": 0,
+                "src_id": "0",
+                "dest_id": "2",
+                "dest": "src"
+            },
+            {
+                "match": "new",
+                "percent": 0,
+                "src_id": "0",
+                "dest_id": "3",
+                "dest": "src"
+            },
+            {
+                "match": "new",
+                "percent": 0,
+                "src_id": "1",
+                "dest_id": "0",
+                "dest": "src"
+            },
+            {
+                "match": "new",
+                "percent": 0,
+                "src_id": "1",
+                "dest_id": "2",
+                "dest": "src"
+            },
+            {
+                "match": "new",
+                "percent": 0,
+                "src_id": "1",
+                "dest_id": "3",
+                "dest": "src"
+            },
+            {
+                "match": "new",
+                "percent": 0,
+                "src_id": "2",
+                "dest_id": "0",
+                "dest": "src"
+            },
+            {
+                "match": "new",
+                "percent": 0,
+                "src_id": "2",
+                "dest_id": "1",
+                "dest": "src"
+            },
+            {
+                "match": "partial",
+                "percent": 25,
+                "diff": {
+                    "date_time": "new",
+                    "identifiers": "new",
+                    "code": "new",
+                    "value": "duplicate"
+                },
+                "src_id": "2",
+                "dest_id": "3",
+                "dest": "src"
+            },
+            {
+                "match": "new",
+                "percent": 0,
+                "src_id": "3",
+                "dest_id": "0",
+                "dest": "src"
+            },
+            {
+                "match": "new",
+                "percent": 0,
+                "src_id": "3",
+                "dest_id": "1",
+                "dest": "src"
+            },
+            {
+                "match": "partial",
+                "percent": 25,
+                "diff": {
+                    "date_time": "new",
+                    "identifiers": "new",
+                    "code": "new",
+                    "value": "duplicate"
+                },
+                "src_id": "3",
+                "dest_id": "2",
+                "dest": "src"
+            }
+        ],
+        "demographics": {
+            "match": "duplicate",
+            "percent": 100,
+            "src_id": 0,
+            "dest_id": 0
+        },
         "problems": [
             {
                 "match": "new",
@@ -1623,83 +2645,154 @@
                 "dest": "src"
             }
         ],
-        "procedures": [
+        "plan_of_care": [
             {
-                "match": "new",
-                "percent": 0,
+                "match": "duplicate",
+                "percent": "100",
                 "src_id": "0",
                 "dest_id": "0",
                 "dest": "dest"
             },
             {
-                "match": "new",
-                "percent": 0,
+                "match": "partial",
+                "percent": 50,
+                "diff": {
+                    "plan": "duplicate",
+                    "identifiers": "new",
+                    "date_time": "duplicate",
+                    "type": "new"
+                },
                 "src_id": "0",
                 "dest_id": "1",
                 "dest": "dest"
             },
             {
-                "match": "new",
-                "percent": 0,
+                "match": "partial",
+                "percent": 50,
+                "diff": {
+                    "plan": "duplicate",
+                    "identifiers": "new",
+                    "date_time": "duplicate",
+                    "type": "new"
+                },
                 "src_id": "0",
                 "dest_id": "2",
+                "dest": "dest"
+            },
+            {
+                "match": "partial",
+                "percent": 50,
+                "diff": {
+                    "plan": "duplicate",
+                    "identifiers": "new",
+                    "date_time": "duplicate",
+                    "type": "new"
+                },
+                "src_id": "0",
+                "dest_id": "3",
+                "dest": "dest"
+            },
+            {
+                "match": "partial",
+                "percent": 50,
+                "diff": {
+                    "plan": "duplicate",
+                    "identifiers": "new",
+                    "date_time": "duplicate",
+                    "type": "new"
+                },
+                "src_id": "1",
+                "dest_id": "0",
                 "dest": "dest"
             },
             {
                 "match": "duplicate",
                 "percent": "100",
                 "src_id": "1",
-                "dest_id": "0",
-                "dest": "dest"
-            },
-            {
-                "match": "new",
-                "percent": 0,
-                "src_id": "1",
                 "dest_id": "1",
                 "dest": "dest"
             },
             {
-                "match": "new",
-                "percent": 0,
+                "match": "partial",
+                "percent": 50,
+                "diff": {
+                    "plan": "duplicate",
+                    "identifiers": "new",
+                    "date_time": "duplicate",
+                    "type": "new"
+                },
                 "src_id": "1",
                 "dest_id": "2",
                 "dest": "dest"
             },
             {
-                "match": "new",
-                "percent": 0,
+                "match": "partial",
+                "percent": 50,
+                "diff": {
+                    "plan": "duplicate",
+                    "identifiers": "new",
+                    "date_time": "duplicate",
+                    "type": "new"
+                },
+                "src_id": "1",
+                "dest_id": "3",
+                "dest": "dest"
+            },
+            {
+                "match": "partial",
+                "percent": 50,
+                "diff": {
+                    "plan": "duplicate",
+                    "identifiers": "new",
+                    "date_time": "duplicate",
+                    "type": "new"
+                },
                 "src_id": "2",
                 "dest_id": "0",
+                "dest": "dest"
+            },
+            {
+                "match": "partial",
+                "percent": 50,
+                "diff": {
+                    "plan": "duplicate",
+                    "identifiers": "new",
+                    "date_time": "duplicate",
+                    "type": "new"
+                },
+                "src_id": "2",
+                "dest_id": "1",
                 "dest": "dest"
             },
             {
                 "match": "duplicate",
                 "percent": "100",
                 "src_id": "2",
-                "dest_id": "1",
+                "dest_id": "2",
                 "dest": "dest"
             },
             {
                 "match": "partial",
                 "percent": 50,
                 "diff": {
-                    "procedure": "duplicate",
+                    "plan": "duplicate",
                     "identifiers": "new",
-                    "status": "new",
                     "date_time": "duplicate",
-                    "body_sites": "new",
-                    "performer": "new",
-                    "locations": "duplicate",
-                    "procedure_type": "new"
+                    "type": "new"
                 },
                 "src_id": "2",
-                "dest_id": "2",
+                "dest_id": "3",
                 "dest": "dest"
             },
             {
-                "match": "new",
-                "percent": 0,
+                "match": "partial",
+                "percent": 50,
+                "diff": {
+                    "plan": "duplicate",
+                    "identifiers": "new",
+                    "date_time": "duplicate",
+                    "type": "new"
+                },
                 "src_id": "3",
                 "dest_id": "0",
                 "dest": "dest"
@@ -1708,77 +2801,135 @@
                 "match": "partial",
                 "percent": 50,
                 "diff": {
-                    "procedure": "duplicate",
+                    "plan": "duplicate",
                     "identifiers": "new",
-                    "status": "new",
                     "date_time": "duplicate",
-                    "performer": "new",
-                    "locations": "duplicate",
-                    "procedure_type": "new"
+                    "type": "new"
                 },
                 "src_id": "3",
                 "dest_id": "1",
+                "dest": "dest"
+            },
+            {
+                "match": "partial",
+                "percent": 50,
+                "diff": {
+                    "plan": "duplicate",
+                    "identifiers": "new",
+                    "date_time": "duplicate",
+                    "type": "new"
+                },
+                "src_id": "3",
+                "dest_id": "2",
                 "dest": "dest"
             },
             {
                 "match": "duplicate",
                 "percent": "100",
                 "src_id": "3",
-                "dest_id": "2",
+                "dest_id": "3",
                 "dest": "dest"
             },
             {
-                "match": "new",
-                "percent": 0,
+                "match": "partial",
+                "percent": 50,
+                "diff": {
+                    "plan": "duplicate",
+                    "identifiers": "new",
+                    "date_time": "duplicate",
+                    "type": "new"
+                },
                 "src_id": "0",
                 "dest_id": "1",
                 "dest": "src"
             },
             {
-                "match": "new",
-                "percent": 0,
+                "match": "partial",
+                "percent": 50,
+                "diff": {
+                    "plan": "duplicate",
+                    "identifiers": "new",
+                    "date_time": "duplicate",
+                    "type": "new"
+                },
                 "src_id": "0",
                 "dest_id": "2",
                 "dest": "src"
             },
             {
-                "match": "new",
-                "percent": 0,
+                "match": "partial",
+                "percent": 50,
+                "diff": {
+                    "plan": "duplicate",
+                    "identifiers": "new",
+                    "date_time": "duplicate",
+                    "type": "new"
+                },
                 "src_id": "0",
                 "dest_id": "3",
                 "dest": "src"
             },
             {
-                "match": "new",
-                "percent": 0,
+                "match": "partial",
+                "percent": 50,
+                "diff": {
+                    "plan": "duplicate",
+                    "identifiers": "new",
+                    "date_time": "duplicate",
+                    "type": "new"
+                },
                 "src_id": "1",
                 "dest_id": "0",
                 "dest": "src"
             },
             {
-                "match": "new",
-                "percent": 0,
+                "match": "partial",
+                "percent": 50,
+                "diff": {
+                    "plan": "duplicate",
+                    "identifiers": "new",
+                    "date_time": "duplicate",
+                    "type": "new"
+                },
                 "src_id": "1",
                 "dest_id": "2",
                 "dest": "src"
             },
             {
-                "match": "new",
-                "percent": 0,
+                "match": "partial",
+                "percent": 50,
+                "diff": {
+                    "plan": "duplicate",
+                    "identifiers": "new",
+                    "date_time": "duplicate",
+                    "type": "new"
+                },
                 "src_id": "1",
                 "dest_id": "3",
                 "dest": "src"
             },
             {
-                "match": "new",
-                "percent": 0,
+                "match": "partial",
+                "percent": 50,
+                "diff": {
+                    "plan": "duplicate",
+                    "identifiers": "new",
+                    "date_time": "duplicate",
+                    "type": "new"
+                },
                 "src_id": "2",
                 "dest_id": "0",
                 "dest": "src"
             },
             {
-                "match": "new",
-                "percent": 0,
+                "match": "partial",
+                "percent": 50,
+                "diff": {
+                    "plan": "duplicate",
+                    "identifiers": "new",
+                    "date_time": "duplicate",
+                    "type": "new"
+                },
                 "src_id": "2",
                 "dest_id": "1",
                 "dest": "src"
@@ -1787,29 +2938,37 @@
                 "match": "partial",
                 "percent": 50,
                 "diff": {
-                    "procedure": "duplicate",
+                    "plan": "duplicate",
                     "identifiers": "new",
-                    "status": "new",
                     "date_time": "duplicate",
-                    "body_sites": "new",
-                    "performer": "new",
-                    "locations": "duplicate",
-                    "procedure_type": "new"
+                    "type": "new"
                 },
                 "src_id": "2",
                 "dest_id": "3",
                 "dest": "src"
             },
             {
-                "match": "new",
-                "percent": 0,
+                "match": "partial",
+                "percent": 50,
+                "diff": {
+                    "plan": "duplicate",
+                    "identifiers": "new",
+                    "date_time": "duplicate",
+                    "type": "new"
+                },
                 "src_id": "3",
                 "dest_id": "0",
                 "dest": "src"
             },
             {
-                "match": "new",
-                "percent": 0,
+                "match": "partial",
+                "percent": 50,
+                "diff": {
+                    "plan": "duplicate",
+                    "identifiers": "new",
+                    "date_time": "duplicate",
+                    "type": "new"
+                },
                 "src_id": "3",
                 "dest_id": "1",
                 "dest": "src"
@@ -1818,1745 +2977,28 @@
                 "match": "partial",
                 "percent": 50,
                 "diff": {
-                    "procedure": "duplicate",
+                    "plan": "duplicate",
                     "identifiers": "new",
-                    "status": "new",
                     "date_time": "duplicate",
-                    "performer": "new",
-                    "locations": "duplicate",
-                    "procedure_type": "new"
+                    "type": "new"
                 },
                 "src_id": "3",
                 "dest_id": "2",
                 "dest": "src"
             }
         ],
-        "vitals": [
-            {
-                "match": "partial",
-                "percent": 25,
-                "diff": {
-                    "identifiers": "new",
-                    "vital": "duplicate",
-                    "status": "duplicate",
-                    "date_time": "new",
-                    "value": "new",
-                    "unit": "new"
-                },
-                "src_id": "0",
-                "dest_id": "0",
-                "dest": "dest"
-            },
-            {
-                "match": "new",
-                "percent": 0,
-                "src_id": "0",
-                "dest_id": "1",
-                "dest": "dest"
-            },
-            {
-                "match": "new",
-                "percent": 0,
-                "src_id": "0",
-                "dest_id": "2",
-                "dest": "dest"
-            },
-            {
-                "match": "partial",
-                "percent": 25,
-                "diff": {
-                    "identifiers": "new",
-                    "vital": "duplicate",
-                    "status": "duplicate",
-                    "date_time": "new",
-                    "value": "new",
-                    "unit": "new"
-                },
-                "src_id": "0",
-                "dest_id": "3",
-                "dest": "dest"
-            },
-            {
-                "match": "new",
-                "percent": 0,
-                "src_id": "0",
-                "dest_id": "4",
-                "dest": "dest"
-            },
-            {
-                "match": "new",
-                "percent": 0,
-                "src_id": "0",
-                "dest_id": "5",
-                "dest": "dest"
-            },
-            {
-                "match": "new",
-                "percent": 0,
-                "src_id": "1",
-                "dest_id": "0",
-                "dest": "dest"
-            },
-            {
-                "match": "partial",
-                "percent": 25,
-                "diff": {
-                    "identifiers": "new",
-                    "vital": "new",
-                    "status": "duplicate",
-                    "date_time": "new",
-                    "value": "new",
-                    "unit": "new"
-                },
-                "src_id": "1",
-                "dest_id": "1",
-                "dest": "dest"
-            },
-            {
-                "match": "new",
-                "percent": 0,
-                "src_id": "1",
-                "dest_id": "2",
-                "dest": "dest"
-            },
-            {
-                "match": "new",
-                "percent": 0,
-                "src_id": "1",
-                "dest_id": "3",
-                "dest": "dest"
-            },
-            {
-                "match": "partial",
-                "percent": 25,
-                "diff": {
-                    "identifiers": "new",
-                    "vital": "new",
-                    "status": "duplicate",
-                    "date_time": "new",
-                    "value": "new",
-                    "unit": "new"
-                },
-                "src_id": "1",
-                "dest_id": "4",
-                "dest": "dest"
-            },
-            {
-                "match": "new",
-                "percent": 0,
-                "src_id": "1",
-                "dest_id": "5",
-                "dest": "dest"
-            },
-            {
-                "match": "new",
-                "percent": 0,
-                "src_id": "2",
-                "dest_id": "0",
-                "dest": "dest"
-            },
-            {
-                "match": "new",
-                "percent": 0,
-                "src_id": "2",
-                "dest_id": "1",
-                "dest": "dest"
-            },
-            {
-                "match": "partial",
-                "percent": 25,
-                "diff": {
-                    "identifiers": "new",
-                    "vital": "new",
-                    "status": "duplicate",
-                    "date_time": "new",
-                    "value": "new",
-                    "unit": "duplicate"
-                },
-                "src_id": "2",
-                "dest_id": "2",
-                "dest": "dest"
-            },
-            {
-                "match": "new",
-                "percent": 0,
-                "src_id": "2",
-                "dest_id": "3",
-                "dest": "dest"
-            },
-            {
-                "match": "new",
-                "percent": 0,
-                "src_id": "2",
-                "dest_id": "4",
-                "dest": "dest"
-            },
-            {
-                "match": "partial",
-                "percent": 25,
-                "diff": {
-                    "identifiers": "new",
-                    "vital": "new",
-                    "status": "duplicate",
-                    "date_time": "new",
-                    "value": "new",
-                    "unit": "duplicate"
-                },
-                "src_id": "2",
-                "dest_id": "5",
-                "dest": "dest"
-            },
-            {
-                "match": "new",
-                "percent": 0,
-                "src_id": "3",
-                "dest_id": "0",
-                "dest": "dest"
-            },
-            {
-                "match": "new",
-                "percent": 0,
-                "src_id": "3",
-                "dest_id": "1",
-                "dest": "dest"
-            },
-            {
-                "match": "new",
-                "percent": 0,
-                "src_id": "3",
-                "dest_id": "2",
-                "dest": "dest"
-            },
-            {
-                "match": "new",
-                "percent": 0,
-                "src_id": "3",
-                "dest_id": "3",
-                "dest": "dest"
-            },
-            {
-                "match": "new",
-                "percent": 0,
-                "src_id": "3",
-                "dest_id": "4",
-                "dest": "dest"
-            },
-            {
-                "match": "new",
-                "percent": 0,
-                "src_id": "3",
-                "dest_id": "5",
-                "dest": "dest"
-            },
-            {
-                "match": "new",
-                "percent": 0,
-                "src_id": "4",
-                "dest_id": "0",
-                "dest": "dest"
-            },
-            {
-                "match": "new",
-                "percent": 0,
-                "src_id": "4",
-                "dest_id": "1",
-                "dest": "dest"
-            },
-            {
-                "match": "new",
-                "percent": 0,
-                "src_id": "4",
-                "dest_id": "2",
-                "dest": "dest"
-            },
-            {
-                "match": "new",
-                "percent": 0,
-                "src_id": "4",
-                "dest_id": "3",
-                "dest": "dest"
-            },
-            {
-                "match": "new",
-                "percent": 0,
-                "src_id": "4",
-                "dest_id": "4",
-                "dest": "dest"
-            },
-            {
-                "match": "new",
-                "percent": 0,
-                "src_id": "4",
-                "dest_id": "5",
-                "dest": "dest"
-            },
+        "payers": [
             {
                 "match": "duplicate",
                 "percent": "100",
-                "src_id": "5",
-                "dest_id": "0",
-                "dest": "dest"
-            },
-            {
-                "match": "new",
-                "percent": 0,
-                "src_id": "5",
-                "dest_id": "1",
-                "dest": "dest"
-            },
-            {
-                "match": "new",
-                "percent": 0,
-                "src_id": "5",
-                "dest_id": "2",
-                "dest": "dest"
-            },
-            {
-                "match": "partial",
-                "percent": 25,
-                "diff": {
-                    "identifiers": "duplicate",
-                    "vital": "duplicate",
-                    "status": "duplicate",
-                    "date_time": "new",
-                    "interpretations": "duplicate",
-                    "value": "duplicate",
-                    "unit": "duplicate"
-                },
-                "src_id": "5",
-                "dest_id": "3",
-                "dest": "dest"
-            },
-            {
-                "match": "new",
-                "percent": 0,
-                "src_id": "5",
-                "dest_id": "4",
-                "dest": "dest"
-            },
-            {
-                "match": "new",
-                "percent": 0,
-                "src_id": "5",
-                "dest_id": "5",
-                "dest": "dest"
-            },
-            {
-                "match": "new",
-                "percent": 0,
-                "src_id": "6",
-                "dest_id": "0",
-                "dest": "dest"
-            },
-            {
-                "match": "duplicate",
-                "percent": "100",
-                "src_id": "6",
-                "dest_id": "1",
-                "dest": "dest"
-            },
-            {
-                "match": "new",
-                "percent": 0,
-                "src_id": "6",
-                "dest_id": "2",
-                "dest": "dest"
-            },
-            {
-                "match": "new",
-                "percent": 0,
-                "src_id": "6",
-                "dest_id": "3",
-                "dest": "dest"
-            },
-            {
-                "match": "partial",
-                "percent": 25,
-                "diff": {
-                    "identifiers": "duplicate",
-                    "vital": "duplicate",
-                    "status": "duplicate",
-                    "date_time": "new",
-                    "interpretations": "duplicate",
-                    "value": "new",
-                    "unit": "duplicate"
-                },
-                "src_id": "6",
-                "dest_id": "4",
-                "dest": "dest"
-            },
-            {
-                "match": "new",
-                "percent": 0,
-                "src_id": "6",
-                "dest_id": "5",
-                "dest": "dest"
-            },
-            {
-                "match": "new",
-                "percent": 0,
-                "src_id": "7",
-                "dest_id": "0",
-                "dest": "dest"
-            },
-            {
-                "match": "new",
-                "percent": 0,
-                "src_id": "7",
-                "dest_id": "1",
-                "dest": "dest"
-            },
-            {
-                "match": "duplicate",
-                "percent": "100",
-                "src_id": "7",
-                "dest_id": "2",
-                "dest": "dest"
-            },
-            {
-                "match": "new",
-                "percent": 0,
-                "src_id": "7",
-                "dest_id": "3",
-                "dest": "dest"
-            },
-            {
-                "match": "new",
-                "percent": 0,
-                "src_id": "7",
-                "dest_id": "4",
-                "dest": "dest"
-            },
-            {
-                "match": "partial",
-                "percent": 25,
-                "diff": {
-                    "identifiers": "duplicate",
-                    "vital": "duplicate",
-                    "status": "duplicate",
-                    "date_time": "new",
-                    "interpretations": "duplicate",
-                    "value": "new",
-                    "unit": "duplicate"
-                },
-                "src_id": "7",
-                "dest_id": "5",
-                "dest": "dest"
-            },
-            {
-                "match": "partial",
-                "percent": 25,
-                "diff": {
-                    "identifiers": "duplicate",
-                    "vital": "duplicate",
-                    "status": "duplicate",
-                    "date_time": "new",
-                    "interpretations": "duplicate",
-                    "value": "duplicate",
-                    "unit": "duplicate"
-                },
-                "src_id": "8",
-                "dest_id": "0",
-                "dest": "dest"
-            },
-            {
-                "match": "new",
-                "percent": 0,
-                "src_id": "8",
-                "dest_id": "1",
-                "dest": "dest"
-            },
-            {
-                "match": "new",
-                "percent": 0,
-                "src_id": "8",
-                "dest_id": "2",
-                "dest": "dest"
-            },
-            {
-                "match": "duplicate",
-                "percent": "100",
-                "src_id": "8",
-                "dest_id": "3",
-                "dest": "dest"
-            },
-            {
-                "match": "new",
-                "percent": 0,
-                "src_id": "8",
-                "dest_id": "4",
-                "dest": "dest"
-            },
-            {
-                "match": "new",
-                "percent": 0,
-                "src_id": "8",
-                "dest_id": "5",
-                "dest": "dest"
-            },
-            {
-                "match": "new",
-                "percent": 0,
-                "src_id": "9",
-                "dest_id": "0",
-                "dest": "dest"
-            },
-            {
-                "match": "partial",
-                "percent": 25,
-                "diff": {
-                    "identifiers": "duplicate",
-                    "vital": "duplicate",
-                    "status": "duplicate",
-                    "date_time": "new",
-                    "interpretations": "duplicate",
-                    "value": "new",
-                    "unit": "duplicate"
-                },
-                "src_id": "9",
-                "dest_id": "1",
-                "dest": "dest"
-            },
-            {
-                "match": "new",
-                "percent": 0,
-                "src_id": "9",
-                "dest_id": "2",
-                "dest": "dest"
-            },
-            {
-                "match": "new",
-                "percent": 0,
-                "src_id": "9",
-                "dest_id": "3",
-                "dest": "dest"
-            },
-            {
-                "match": "duplicate",
-                "percent": "100",
-                "src_id": "9",
-                "dest_id": "4",
-                "dest": "dest"
-            },
-            {
-                "match": "new",
-                "percent": 0,
-                "src_id": "9",
-                "dest_id": "5",
-                "dest": "dest"
-            },
-            {
-                "match": "new",
-                "percent": 0,
-                "src_id": "10",
-                "dest_id": "0",
-                "dest": "dest"
-            },
-            {
-                "match": "new",
-                "percent": 0,
-                "src_id": "10",
-                "dest_id": "1",
-                "dest": "dest"
-            },
-            {
-                "match": "partial",
-                "percent": 25,
-                "diff": {
-                    "identifiers": "duplicate",
-                    "vital": "duplicate",
-                    "status": "duplicate",
-                    "date_time": "new",
-                    "interpretations": "duplicate",
-                    "value": "new",
-                    "unit": "duplicate"
-                },
-                "src_id": "10",
-                "dest_id": "2",
-                "dest": "dest"
-            },
-            {
-                "match": "new",
-                "percent": 0,
-                "src_id": "10",
-                "dest_id": "3",
-                "dest": "dest"
-            },
-            {
-                "match": "new",
-                "percent": 0,
-                "src_id": "10",
-                "dest_id": "4",
-                "dest": "dest"
-            },
-            {
-                "match": "duplicate",
-                "percent": "100",
-                "src_id": "10",
-                "dest_id": "5",
-                "dest": "dest"
-            },
-            {
-                "match": "new",
-                "percent": 0,
-                "src_id": "0",
-                "dest_id": "1",
-                "dest": "src"
-            },
-            {
-                "match": "new",
-                "percent": 0,
-                "src_id": "0",
-                "dest_id": "2",
-                "dest": "src"
-            },
-            {
-                "match": "new",
-                "percent": 0,
-                "src_id": "0",
-                "dest_id": "3",
-                "dest": "src"
-            },
-            {
-                "match": "new",
-                "percent": 0,
-                "src_id": "0",
-                "dest_id": "4",
-                "dest": "src"
-            },
-            {
-                "match": "partial",
-                "percent": 25,
-                "diff": {
-                    "identifiers": "new",
-                    "vital": "duplicate",
-                    "status": "duplicate",
-                    "date_time": "new",
-                    "value": "new",
-                    "unit": "new"
-                },
-                "src_id": "0",
-                "dest_id": "5",
-                "dest": "src"
-            },
-            {
-                "match": "new",
-                "percent": 0,
-                "src_id": "0",
-                "dest_id": "6",
-                "dest": "src"
-            },
-            {
-                "match": "new",
-                "percent": 0,
-                "src_id": "0",
-                "dest_id": "7",
-                "dest": "src"
-            },
-            {
-                "match": "partial",
-                "percent": 25,
-                "diff": {
-                    "identifiers": "new",
-                    "vital": "duplicate",
-                    "status": "duplicate",
-                    "date_time": "new",
-                    "value": "new",
-                    "unit": "new"
-                },
-                "src_id": "0",
-                "dest_id": "8",
-                "dest": "src"
-            },
-            {
-                "match": "new",
-                "percent": 0,
-                "src_id": "0",
-                "dest_id": "9",
-                "dest": "src"
-            },
-            {
-                "match": "new",
-                "percent": 0,
-                "src_id": "0",
-                "dest_id": "10",
-                "dest": "src"
-            },
-            {
-                "match": "new",
-                "percent": 0,
-                "src_id": "1",
-                "dest_id": "0",
-                "dest": "src"
-            },
-            {
-                "match": "new",
-                "percent": 0,
-                "src_id": "1",
-                "dest_id": "2",
-                "dest": "src"
-            },
-            {
-                "match": "new",
-                "percent": 0,
-                "src_id": "1",
-                "dest_id": "3",
-                "dest": "src"
-            },
-            {
-                "match": "new",
-                "percent": 0,
-                "src_id": "1",
-                "dest_id": "4",
-                "dest": "src"
-            },
-            {
-                "match": "new",
-                "percent": 0,
-                "src_id": "1",
-                "dest_id": "5",
-                "dest": "src"
-            },
-            {
-                "match": "partial",
-                "percent": 25,
-                "diff": {
-                    "identifiers": "new",
-                    "vital": "new",
-                    "status": "duplicate",
-                    "date_time": "new",
-                    "value": "new",
-                    "unit": "new"
-                },
-                "src_id": "1",
-                "dest_id": "6",
-                "dest": "src"
-            },
-            {
-                "match": "new",
-                "percent": 0,
-                "src_id": "1",
-                "dest_id": "7",
-                "dest": "src"
-            },
-            {
-                "match": "new",
-                "percent": 0,
-                "src_id": "1",
-                "dest_id": "8",
-                "dest": "src"
-            },
-            {
-                "match": "partial",
-                "percent": 25,
-                "diff": {
-                    "identifiers": "new",
-                    "vital": "new",
-                    "status": "duplicate",
-                    "date_time": "new",
-                    "value": "new",
-                    "unit": "new"
-                },
-                "src_id": "1",
-                "dest_id": "9",
-                "dest": "src"
-            },
-            {
-                "match": "new",
-                "percent": 0,
-                "src_id": "1",
-                "dest_id": "10",
-                "dest": "src"
-            },
-            {
-                "match": "new",
-                "percent": 0,
-                "src_id": "2",
-                "dest_id": "0",
-                "dest": "src"
-            },
-            {
-                "match": "new",
-                "percent": 0,
-                "src_id": "2",
-                "dest_id": "1",
-                "dest": "src"
-            },
-            {
-                "match": "new",
-                "percent": 0,
-                "src_id": "2",
-                "dest_id": "3",
-                "dest": "src"
-            },
-            {
-                "match": "new",
-                "percent": 0,
-                "src_id": "2",
-                "dest_id": "4",
-                "dest": "src"
-            },
-            {
-                "match": "new",
-                "percent": 0,
-                "src_id": "2",
-                "dest_id": "5",
-                "dest": "src"
-            },
-            {
-                "match": "new",
-                "percent": 0,
-                "src_id": "2",
-                "dest_id": "6",
-                "dest": "src"
-            },
-            {
-                "match": "partial",
-                "percent": 25,
-                "diff": {
-                    "identifiers": "new",
-                    "vital": "new",
-                    "status": "duplicate",
-                    "date_time": "new",
-                    "value": "new",
-                    "unit": "duplicate"
-                },
-                "src_id": "2",
-                "dest_id": "7",
-                "dest": "src"
-            },
-            {
-                "match": "new",
-                "percent": 0,
-                "src_id": "2",
-                "dest_id": "8",
-                "dest": "src"
-            },
-            {
-                "match": "new",
-                "percent": 0,
-                "src_id": "2",
-                "dest_id": "9",
-                "dest": "src"
-            },
-            {
-                "match": "partial",
-                "percent": 25,
-                "diff": {
-                    "identifiers": "new",
-                    "vital": "new",
-                    "status": "duplicate",
-                    "date_time": "new",
-                    "value": "new",
-                    "unit": "duplicate"
-                },
-                "src_id": "2",
-                "dest_id": "10",
-                "dest": "src"
-            },
-            {
-                "match": "new",
-                "percent": 0,
-                "src_id": "3",
-                "dest_id": "0",
-                "dest": "src"
-            },
-            {
-                "match": "new",
-                "percent": 0,
-                "src_id": "3",
-                "dest_id": "1",
-                "dest": "src"
-            },
-            {
-                "match": "new",
-                "percent": 0,
-                "src_id": "3",
-                "dest_id": "2",
-                "dest": "src"
-            },
-            {
-                "match": "new",
-                "percent": 0,
-                "src_id": "3",
-                "dest_id": "4",
-                "dest": "src"
-            },
-            {
-                "match": "new",
-                "percent": 0,
-                "src_id": "3",
-                "dest_id": "5",
-                "dest": "src"
-            },
-            {
-                "match": "new",
-                "percent": 0,
-                "src_id": "3",
-                "dest_id": "6",
-                "dest": "src"
-            },
-            {
-                "match": "new",
-                "percent": 0,
-                "src_id": "3",
-                "dest_id": "7",
-                "dest": "src"
-            },
-            {
-                "match": "new",
-                "percent": 0,
-                "src_id": "3",
-                "dest_id": "8",
-                "dest": "src"
-            },
-            {
-                "match": "new",
-                "percent": 0,
-                "src_id": "3",
-                "dest_id": "9",
-                "dest": "src"
-            },
-            {
-                "match": "new",
-                "percent": 0,
-                "src_id": "3",
-                "dest_id": "10",
-                "dest": "src"
-            },
-            {
-                "match": "new",
-                "percent": 0,
-                "src_id": "4",
-                "dest_id": "0",
-                "dest": "src"
-            },
-            {
-                "match": "new",
-                "percent": 0,
-                "src_id": "4",
-                "dest_id": "1",
-                "dest": "src"
-            },
-            {
-                "match": "new",
-                "percent": 0,
-                "src_id": "4",
-                "dest_id": "2",
-                "dest": "src"
-            },
-            {
-                "match": "new",
-                "percent": 0,
-                "src_id": "4",
-                "dest_id": "3",
-                "dest": "src"
-            },
-            {
-                "match": "new",
-                "percent": 0,
-                "src_id": "4",
-                "dest_id": "5",
-                "dest": "src"
-            },
-            {
-                "match": "new",
-                "percent": 0,
-                "src_id": "4",
-                "dest_id": "6",
-                "dest": "src"
-            },
-            {
-                "match": "new",
-                "percent": 0,
-                "src_id": "4",
-                "dest_id": "7",
-                "dest": "src"
-            },
-            {
-                "match": "new",
-                "percent": 0,
-                "src_id": "4",
-                "dest_id": "8",
-                "dest": "src"
-            },
-            {
-                "match": "new",
-                "percent": 0,
-                "src_id": "4",
-                "dest_id": "9",
-                "dest": "src"
-            },
-            {
-                "match": "new",
-                "percent": 0,
-                "src_id": "4",
-                "dest_id": "10",
-                "dest": "src"
-            },
-            {
-                "match": "partial",
-                "percent": 25,
-                "diff": {
-                    "identifiers": "new",
-                    "vital": "duplicate",
-                    "status": "duplicate",
-                    "date_time": "new",
-                    "interpretations": "new",
-                    "value": "new",
-                    "unit": "new"
-                },
-                "src_id": "5",
-                "dest_id": "0",
-                "dest": "src"
-            },
-            {
-                "match": "new",
-                "percent": 0,
-                "src_id": "5",
-                "dest_id": "1",
-                "dest": "src"
-            },
-            {
-                "match": "new",
-                "percent": 0,
-                "src_id": "5",
-                "dest_id": "2",
-                "dest": "src"
-            },
-            {
-                "match": "new",
-                "percent": 0,
-                "src_id": "5",
-                "dest_id": "3",
-                "dest": "src"
-            },
-            {
-                "match": "new",
-                "percent": 0,
-                "src_id": "5",
-                "dest_id": "4",
-                "dest": "src"
-            },
-            {
-                "match": "new",
-                "percent": 0,
-                "src_id": "5",
-                "dest_id": "6",
-                "dest": "src"
-            },
-            {
-                "match": "new",
-                "percent": 0,
-                "src_id": "5",
-                "dest_id": "7",
-                "dest": "src"
-            },
-            {
-                "match": "partial",
-                "percent": 25,
-                "diff": {
-                    "identifiers": "duplicate",
-                    "vital": "duplicate",
-                    "status": "duplicate",
-                    "date_time": "new",
-                    "interpretations": "duplicate",
-                    "value": "duplicate",
-                    "unit": "duplicate"
-                },
-                "src_id": "5",
-                "dest_id": "8",
-                "dest": "src"
-            },
-            {
-                "match": "new",
-                "percent": 0,
-                "src_id": "5",
-                "dest_id": "9",
-                "dest": "src"
-            },
-            {
-                "match": "new",
-                "percent": 0,
-                "src_id": "5",
-                "dest_id": "10",
-                "dest": "src"
-            },
-            {
-                "match": "new",
-                "percent": 0,
-                "src_id": "6",
-                "dest_id": "0",
-                "dest": "src"
-            },
-            {
-                "match": "partial",
-                "percent": 25,
-                "diff": {
-                    "identifiers": "new",
-                    "vital": "new",
-                    "status": "duplicate",
-                    "date_time": "new",
-                    "interpretations": "new",
-                    "value": "new",
-                    "unit": "new"
-                },
-                "src_id": "6",
-                "dest_id": "1",
-                "dest": "src"
-            },
-            {
-                "match": "new",
-                "percent": 0,
-                "src_id": "6",
-                "dest_id": "2",
-                "dest": "src"
-            },
-            {
-                "match": "new",
-                "percent": 0,
-                "src_id": "6",
-                "dest_id": "3",
-                "dest": "src"
-            },
-            {
-                "match": "new",
-                "percent": 0,
-                "src_id": "6",
-                "dest_id": "4",
-                "dest": "src"
-            },
-            {
-                "match": "new",
-                "percent": 0,
-                "src_id": "6",
-                "dest_id": "5",
-                "dest": "src"
-            },
-            {
-                "match": "new",
-                "percent": 0,
-                "src_id": "6",
-                "dest_id": "7",
-                "dest": "src"
-            },
-            {
-                "match": "new",
-                "percent": 0,
-                "src_id": "6",
-                "dest_id": "8",
-                "dest": "src"
-            },
-            {
-                "match": "partial",
-                "percent": 25,
-                "diff": {
-                    "identifiers": "duplicate",
-                    "vital": "duplicate",
-                    "status": "duplicate",
-                    "date_time": "new",
-                    "interpretations": "duplicate",
-                    "value": "new",
-                    "unit": "duplicate"
-                },
-                "src_id": "6",
-                "dest_id": "9",
-                "dest": "src"
-            },
-            {
-                "match": "new",
-                "percent": 0,
-                "src_id": "6",
-                "dest_id": "10",
-                "dest": "src"
-            },
-            {
-                "match": "new",
-                "percent": 0,
-                "src_id": "7",
-                "dest_id": "0",
-                "dest": "src"
-            },
-            {
-                "match": "new",
-                "percent": 0,
-                "src_id": "7",
-                "dest_id": "1",
-                "dest": "src"
-            },
-            {
-                "match": "partial",
-                "percent": 25,
-                "diff": {
-                    "identifiers": "new",
-                    "vital": "new",
-                    "status": "duplicate",
-                    "date_time": "new",
-                    "interpretations": "new",
-                    "value": "new",
-                    "unit": "duplicate"
-                },
-                "src_id": "7",
-                "dest_id": "2",
-                "dest": "src"
-            },
-            {
-                "match": "new",
-                "percent": 0,
-                "src_id": "7",
-                "dest_id": "3",
-                "dest": "src"
-            },
-            {
-                "match": "new",
-                "percent": 0,
-                "src_id": "7",
-                "dest_id": "4",
-                "dest": "src"
-            },
-            {
-                "match": "new",
-                "percent": 0,
-                "src_id": "7",
-                "dest_id": "5",
-                "dest": "src"
-            },
-            {
-                "match": "new",
-                "percent": 0,
-                "src_id": "7",
-                "dest_id": "6",
-                "dest": "src"
-            },
-            {
-                "match": "new",
-                "percent": 0,
-                "src_id": "7",
-                "dest_id": "8",
-                "dest": "src"
-            },
-            {
-                "match": "new",
-                "percent": 0,
-                "src_id": "7",
-                "dest_id": "9",
-                "dest": "src"
-            },
-            {
-                "match": "partial",
-                "percent": 25,
-                "diff": {
-                    "identifiers": "duplicate",
-                    "vital": "duplicate",
-                    "status": "duplicate",
-                    "date_time": "new",
-                    "interpretations": "duplicate",
-                    "value": "new",
-                    "unit": "duplicate"
-                },
-                "src_id": "7",
-                "dest_id": "10",
-                "dest": "src"
-            },
-            {
-                "match": "partial",
-                "percent": 25,
-                "diff": {
-                    "identifiers": "new",
-                    "vital": "duplicate",
-                    "status": "duplicate",
-                    "date_time": "new",
-                    "interpretations": "new",
-                    "value": "new",
-                    "unit": "new"
-                },
-                "src_id": "8",
-                "dest_id": "0",
-                "dest": "src"
-            },
-            {
-                "match": "new",
-                "percent": 0,
-                "src_id": "8",
-                "dest_id": "1",
-                "dest": "src"
-            },
-            {
-                "match": "new",
-                "percent": 0,
-                "src_id": "8",
-                "dest_id": "2",
-                "dest": "src"
-            },
-            {
-                "match": "new",
-                "percent": 0,
-                "src_id": "8",
-                "dest_id": "3",
-                "dest": "src"
-            },
-            {
-                "match": "new",
-                "percent": 0,
-                "src_id": "8",
-                "dest_id": "4",
-                "dest": "src"
-            },
-            {
-                "match": "partial",
-                "percent": 25,
-                "diff": {
-                    "identifiers": "duplicate",
-                    "vital": "duplicate",
-                    "status": "duplicate",
-                    "date_time": "new",
-                    "interpretations": "duplicate",
-                    "value": "duplicate",
-                    "unit": "duplicate"
-                },
-                "src_id": "8",
-                "dest_id": "5",
-                "dest": "src"
-            },
-            {
-                "match": "new",
-                "percent": 0,
-                "src_id": "8",
-                "dest_id": "6",
-                "dest": "src"
-            },
-            {
-                "match": "new",
-                "percent": 0,
-                "src_id": "8",
-                "dest_id": "7",
-                "dest": "src"
-            },
-            {
-                "match": "new",
-                "percent": 0,
-                "src_id": "8",
-                "dest_id": "9",
-                "dest": "src"
-            },
-            {
-                "match": "new",
-                "percent": 0,
-                "src_id": "8",
-                "dest_id": "10",
-                "dest": "src"
-            },
-            {
-                "match": "new",
-                "percent": 0,
-                "src_id": "9",
-                "dest_id": "0",
-                "dest": "src"
-            },
-            {
-                "match": "partial",
-                "percent": 25,
-                "diff": {
-                    "identifiers": "new",
-                    "vital": "new",
-                    "status": "duplicate",
-                    "date_time": "new",
-                    "interpretations": "new",
-                    "value": "new",
-                    "unit": "new"
-                },
-                "src_id": "9",
-                "dest_id": "1",
-                "dest": "src"
-            },
-            {
-                "match": "new",
-                "percent": 0,
-                "src_id": "9",
-                "dest_id": "2",
-                "dest": "src"
-            },
-            {
-                "match": "new",
-                "percent": 0,
-                "src_id": "9",
-                "dest_id": "3",
-                "dest": "src"
-            },
-            {
-                "match": "new",
-                "percent": 0,
-                "src_id": "9",
-                "dest_id": "4",
-                "dest": "src"
-            },
-            {
-                "match": "new",
-                "percent": 0,
-                "src_id": "9",
-                "dest_id": "5",
-                "dest": "src"
-            },
-            {
-                "match": "partial",
-                "percent": 25,
-                "diff": {
-                    "identifiers": "duplicate",
-                    "vital": "duplicate",
-                    "status": "duplicate",
-                    "date_time": "new",
-                    "interpretations": "duplicate",
-                    "value": "new",
-                    "unit": "duplicate"
-                },
-                "src_id": "9",
-                "dest_id": "6",
-                "dest": "src"
-            },
-            {
-                "match": "new",
-                "percent": 0,
-                "src_id": "9",
-                "dest_id": "7",
-                "dest": "src"
-            },
-            {
-                "match": "new",
-                "percent": 0,
-                "src_id": "9",
-                "dest_id": "8",
-                "dest": "src"
-            },
-            {
-                "match": "new",
-                "percent": 0,
-                "src_id": "9",
-                "dest_id": "10",
-                "dest": "src"
-            },
-            {
-                "match": "new",
-                "percent": 0,
-                "src_id": "10",
-                "dest_id": "0",
-                "dest": "src"
-            },
-            {
-                "match": "new",
-                "percent": 0,
-                "src_id": "10",
-                "dest_id": "1",
-                "dest": "src"
-            },
-            {
-                "match": "partial",
-                "percent": 25,
-                "diff": {
-                    "identifiers": "new",
-                    "vital": "new",
-                    "status": "duplicate",
-                    "date_time": "new",
-                    "interpretations": "new",
-                    "value": "new",
-                    "unit": "duplicate"
-                },
-                "src_id": "10",
-                "dest_id": "2",
-                "dest": "src"
-            },
-            {
-                "match": "new",
-                "percent": 0,
-                "src_id": "10",
-                "dest_id": "3",
-                "dest": "src"
-            },
-            {
-                "match": "new",
-                "percent": 0,
-                "src_id": "10",
-                "dest_id": "4",
-                "dest": "src"
-            },
-            {
-                "match": "new",
-                "percent": 0,
-                "src_id": "10",
-                "dest_id": "5",
-                "dest": "src"
-            },
-            {
-                "match": "new",
-                "percent": 0,
-                "src_id": "10",
-                "dest_id": "6",
-                "dest": "src"
-            },
-            {
-                "match": "partial",
-                "percent": 25,
-                "diff": {
-                    "identifiers": "duplicate",
-                    "vital": "duplicate",
-                    "status": "duplicate",
-                    "date_time": "new",
-                    "interpretations": "duplicate",
-                    "value": "new",
-                    "unit": "duplicate"
-                },
-                "src_id": "10",
-                "dest_id": "7",
-                "dest": "src"
-            },
-            {
-                "match": "new",
-                "percent": 0,
-                "src_id": "10",
-                "dest_id": "8",
-                "dest": "src"
-            },
-            {
-                "match": "new",
-                "percent": 0,
-                "src_id": "10",
-                "dest_id": "9",
-                "dest": "src"
-            }
-        ],
-        "demographics": {
-            "match": "duplicate",
-            "src_id": 0,
-            "dest_id": 0
-        },
-        "social_history": [
-            {
-                "match": "duplicate",
-                "percent": "100",
                 "src_id": "0",
                 "dest_id": "0",
                 "dest": "dest"
-            },
-            {
-                "match": "new",
-                "percent": 0,
-                "src_id": "0",
-                "dest_id": "1",
-                "dest": "dest"
-            },
-            {
-                "match": "new",
-                "percent": 0,
-                "src_id": "0",
-                "dest_id": "2",
-                "dest": "dest"
-            },
-            {
-                "match": "new",
-                "percent": 0,
-                "src_id": "0",
-                "dest_id": "3",
-                "dest": "dest"
-            },
-            {
-                "match": "new",
-                "percent": 0,
-                "src_id": "1",
-                "dest_id": "0",
-                "dest": "dest"
-            },
-            {
-                "match": "duplicate",
-                "percent": "100",
-                "src_id": "1",
-                "dest_id": "1",
-                "dest": "dest"
-            },
-            {
-                "match": "partial",
-                "percent": 30,
-                "diff": {
-                    "value": "duplicate",
-                    "date_time": "new",
-                    "identifiers": "new",
-                    "code": "duplicate",
-                    "observation_value": "new"
-                },
-                "src_id": "1",
-                "dest_id": "2",
-                "dest": "dest"
-            },
-            {
-                "match": "new",
-                "percent": 0,
-                "src_id": "1",
-                "dest_id": "3",
-                "dest": "dest"
-            },
-            {
-                "match": "new",
-                "percent": 0,
-                "src_id": "2",
-                "dest_id": "0",
-                "dest": "dest"
-            },
-            {
-                "match": "partial",
-                "percent": 30,
-                "diff": {
-                    "value": "duplicate",
-                    "date_time": "new",
-                    "identifiers": "new",
-                    "code": "duplicate",
-                    "observation_value": "new"
-                },
-                "src_id": "2",
-                "dest_id": "1",
-                "dest": "dest"
-            },
-            {
-                "match": "duplicate",
-                "percent": "100",
-                "src_id": "2",
-                "dest_id": "2",
-                "dest": "dest"
-            },
-            {
-                "match": "new",
-                "percent": 0,
-                "src_id": "2",
-                "dest_id": "3",
-                "dest": "dest"
-            },
-            {
-                "match": "new",
-                "percent": 0,
-                "src_id": "3",
-                "dest_id": "0",
-                "dest": "dest"
-            },
-            {
-                "match": "new",
-                "percent": 0,
-                "src_id": "3",
-                "dest_id": "1",
-                "dest": "dest"
-            },
-            {
-                "match": "new",
-                "percent": 0,
-                "src_id": "3",
-                "dest_id": "2",
-                "dest": "dest"
-            },
-            {
-                "match": "duplicate",
-                "percent": "100",
-                "src_id": "3",
-                "dest_id": "3",
-                "dest": "dest"
-            },
-            {
-                "match": "new",
-                "percent": 0,
-                "src_id": "0",
-                "dest_id": "1",
-                "dest": "src"
-            },
-            {
-                "match": "new",
-                "percent": 0,
-                "src_id": "0",
-                "dest_id": "2",
-                "dest": "src"
-            },
-            {
-                "match": "new",
-                "percent": 0,
-                "src_id": "0",
-                "dest_id": "3",
-                "dest": "src"
-            },
-            {
-                "match": "new",
-                "percent": 0,
-                "src_id": "1",
-                "dest_id": "0",
-                "dest": "src"
-            },
-            {
-                "match": "partial",
-                "percent": 30,
-                "diff": {
-                    "value": "duplicate",
-                    "date_time": "new",
-                    "identifiers": "new",
-                    "code": "duplicate",
-                    "observation_value": "new"
-                },
-                "src_id": "1",
-                "dest_id": "2",
-                "dest": "src"
-            },
-            {
-                "match": "new",
-                "percent": 0,
-                "src_id": "1",
-                "dest_id": "3",
-                "dest": "src"
-            },
-            {
-                "match": "new",
-                "percent": 0,
-                "src_id": "2",
-                "dest_id": "0",
-                "dest": "src"
-            },
-            {
-                "match": "partial",
-                "percent": 30,
-                "diff": {
-                    "value": "duplicate",
-                    "date_time": "new",
-                    "identifiers": "new",
-                    "code": "duplicate",
-                    "observation_value": "new"
-                },
-                "src_id": "2",
-                "dest_id": "1",
-                "dest": "src"
-            },
-            {
-                "match": "new",
-                "percent": 0,
-                "src_id": "2",
-                "dest_id": "3",
-                "dest": "src"
-            },
-            {
-                "match": "new",
-                "percent": 0,
-                "src_id": "3",
-                "dest_id": "0",
-                "dest": "src"
-            },
-            {
-                "match": "new",
-                "percent": 0,
-                "src_id": "3",
-                "dest_id": "1",
-                "dest": "src"
-            },
-            {
-                "match": "new",
-                "percent": 0,
-                "src_id": "3",
-                "dest_id": "2",
-                "dest": "src"
             }
         ]
     },
     "meta": {
-        "version": "1.0.1"
+        "version": "1.1.0-beta.7"
     },
     "errors": []
 }

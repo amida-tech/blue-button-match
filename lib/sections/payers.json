@@ -1,0 +1,9 @@
+{
+    "primary": [{
+            "path": "policy.insurance",
+            "type": "object",
+            "percent": 50 
+        }
+    ],
+    "secondary": []
+}

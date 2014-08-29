@@ -282,6 +282,14 @@ Primary:  Product Coded Entry.
 
 Secondary:  Date/time.
 
+###Payers
+
+Primary:  Policy Insurance Object.
+
+###Plan of Care
+
+Primary:  Plan Coded Entry, Date/time.
+
 ###Problems
 
 Primary:  Problem Coded Entry.
@@ -293,6 +301,12 @@ Secondary:  Date/time, Status string match, Negation Indicator boolean match.
 Primary:  Procedure Coded Entry Match.
 
 Secondary:  Date/time.
+
+###Providers
+
+Primary:  Provider Type String Match.
+
+Secondary:  Person Object, and Name String.
 
 ###Results
 

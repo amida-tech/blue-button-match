@@ -1,0 +1,12 @@
+{
+    "primary": [{
+        "path": "plan",
+        "type": "codedEntry",
+        "percent": 25
+    },{
+        "path": "date_time",
+        "type": "dateTime",
+        "percent": 25
+    }],
+    "secondary": []
+}
