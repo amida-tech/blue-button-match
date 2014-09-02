@@ -2,9 +2,11 @@
 
 # v1.1.0 - September 2, 2014
 - Uses blue-button.js v1.1.0 JSON data model
-	- with added CMS support
-- Improved partial match detection
-	- "many-to-many"
+- Improved match detection
+	- Now returns all source and destination matches.
+	- Uses JSON schemas for easy match tuning/expansion.
+	- Percentages on every match return.
+	- Depricated 'diff' return.
 
 # v1.0.1 - June 25,2014
 - Uses blue-button.js v1.0.2 JSON data model
