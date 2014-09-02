@@ -1,5 +1,11 @@
 # blue-button-match.js Release Notes
 
+# v1.1.0 - September 2, 2014
+- Uses blue-button.js v1.1.0 JSON data model
+	- with added CMS support
+- Improved partial match detection
+	- "many-to-many"
+
 # v1.0.1 - June 25,2014
 - Uses blue-button.js v1.0.2 JSON data model
 
@@ -8,7 +14,7 @@
 This is the initial release of blue-button-match.js library.
 
 - Uses blue-button.js v1.0.0 JSON data model
-- Detects new/duplicate entires
+- Detects new/duplicate entries
 	- Based on deep equal comparison of JSON objects
 - Detects partial matches
 	- See matching rules explanation in documentation
