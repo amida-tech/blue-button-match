@@ -12,7 +12,7 @@ Automatic matching of Blue Button JSON data (detection of new, duplicate and par
 
 This library exposes methods for matching entire health records as well as lower level methods for matching sections of health records.
 
-This library provides following functionality
+This library provides the following functionality
 
 - Match two health records in blue-button JSON format
 - Match individual sections of above
@@ -34,7 +34,7 @@ console.log(result);
 
 ````
 
-This will produce match object looking like this:
+This will produce a match object looking like this:
 
 ```
 {
@@ -88,10 +88,10 @@ This will produce match object looking like this:
 
 Match element can be `{"match" : "duplicate", "percent": 100}`, `{"match" : "new", "percent: 0"}` or `{"match" : "partial", "percent": 50}`.
 
-Partial match is expressed in percents and can range from `1` to `99`.  Percent is included in the duplicate and new objects as well for range based calculations, but will always equal `100` or `0` respectively.
+Partial match is expressed in percent and can range from `1` to `99`.  Percent is included in the duplicate and new objects as well for range based calculations, but will always equal `100` or `0` respectively.
 
 
-Element attribute `dest_id` refers to element position (index) in related section's array of master health record. Element attribute `src_id` refers to element position (index) in related array of document being merged (new record).  This is modulated by the 'dest' field. when `{dest:'dest'}` is present the `dest_id` references the index of the record matched against.  When `{dest: 'src'}` is present, the `dest_id` references the index of the record contained within the same record as the `src_id`.
+Element attribute `dest_id` refers to the element position (index) in the related section's array of the Master Health Record. Element attribute `src_id` refers to the element position (index) in the related array of the new document being merged (new record).  This is modulated by the 'dest' field. When `{dest:'dest'}` is present the `dest_id` references the index of the record matched against a new entry.  When `{dest: 'src'}` is present, the `dest_id` references the index of the record contained within the same record as the `src_id`.
 
 ```
 {
