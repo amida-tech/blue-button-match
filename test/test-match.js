@@ -73,8 +73,6 @@ describe('Matching library (match.js) tests', function () {
         it('full record comparison of same cms document', function () {
             var m = match.match(bb4.data, bb4.data);
 
-            console.log(m);
-
             expect(m).to.be.ok;
             expect(m).to.have.property("match");
 
