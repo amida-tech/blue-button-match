@@ -6,32 +6,32 @@
 var expect = require('chai').expect;
 
 var fs = require('fs');
-//var bbjs = require('blue-button');
+var path = require('path');
 
 var _ = require('underscore');
 
-var matchSections = require("../../lib/match-sections.js").matchSections;
+var matchSections = require(path.join(__dirname, "../../lib/match-sections.js")).matchSections;
 
 var js, js2, js3, js4;
 var js_f, js2_f;
 
 before(function (done) {
     // 1 sample encounter
-    js = JSON.parse(fs.readFileSync('test/test-partial/fixtures/encounters.json', 'utf-8').toString());
+    js = JSON.parse(fs.readFileSync(path.join(__dirname, 'fixtures/encounters.json'), 'utf-8').toString());
 
     //same as above but rearranged to be partial match
-    js2 = JSON.parse(fs.readFileSync('test/test-partial/fixtures/encounters2.json', 'utf-8').toString());
+    js2 = JSON.parse(fs.readFileSync(path.join(__dirname, 'fixtures/encounters2.json'), 'utf-8').toString());
 
     // has another encounter different from all of the above
-    js3 = JSON.parse(fs.readFileSync('test/test-partial/fixtures/encounters3.json', 'utf-8').toString());
+    js3 = JSON.parse(fs.readFileSync(path.join(__dirname, 'fixtures/encounters3.json'), 'utf-8').toString());
 
-    js4 = JSON.parse(fs.readFileSync('test/test-partial/fixtures/encounters4.json', 'utf-8').toString());
+    js4 = JSON.parse(fs.readFileSync(path.join(__dirname, 'fixtures/encounters4.json'), 'utf-8').toString());
 
     // 1 sample encounter but no findings
-    js_f = JSON.parse(fs.readFileSync('test/test-partial/fixtures/encounters_f.json', 'utf-8').toString());
+    js_f = JSON.parse(fs.readFileSync(path.join(__dirname, 'fixtures/encounters_f.json'), 'utf-8').toString());
 
     //same as above but rearranged to be partial match and no findings
-    js2_f = JSON.parse(fs.readFileSync('test/test-partial/fixtures/encounters2_f.json', 'utf-8').toString());
+    js2_f = JSON.parse(fs.readFileSync(path.join(__dirname, 'fixtures/encounters2_f.json'), 'utf-8').toString());
 
     //console.log(bb);
     done();

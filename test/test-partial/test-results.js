@@ -6,25 +6,25 @@
 var expect = require('chai').expect;
 
 var fs = require('fs');
-//var bbjs = require('blue-button');
+var path = require('path');
 
 var _ = require('underscore');
 
-var matchSections = require("../../lib/match-sections.js").matchSections;
+var matchSections = require(path.join(__dirname, "../../lib/match-sections.js")).matchSections;
 
 var js, js2, js3, js4;
 
 before(function (done) {
     // 1 panel with 3 subresults
-    js = JSON.parse(fs.readFileSync('test/test-partial/fixtures/results.json', 'utf-8').toString());
+    js = JSON.parse(fs.readFileSync(path.join(__dirname, 'fixtures/results.json'), 'utf-8').toString());
 
     //same as above but rearranged to be partial match
-    js2 = JSON.parse(fs.readFileSync('test/test-partial/fixtures/results2.json', 'utf-8').toString());
+    js2 = JSON.parse(fs.readFileSync(path.join(__dirname, 'fixtures/results2.json'), 'utf-8').toString());
 
     // another panel with bunch of subresults different from all of the above
-    js3 = JSON.parse(fs.readFileSync('test/test-partial/fixtures/results3.json', 'utf-8').toString());
+    js3 = JSON.parse(fs.readFileSync(path.join(__dirname, 'fixtures/results3.json'), 'utf-8').toString());
 
-    js4 = JSON.parse(fs.readFileSync('test/test-partial/fixtures/results4.json', 'utf-8').toString());
+    js4 = JSON.parse(fs.readFileSync(path.join(__dirname, 'fixtures/results4.json'), 'utf-8').toString());
 
     //console.log(bb);
     done();

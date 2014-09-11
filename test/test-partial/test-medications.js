@@ -6,27 +6,27 @@
 var expect = require('chai').expect;
 
 var fs = require('fs');
-//var bbjs = require('blue-button');
 var _ = require('underscore');
+var path = require('path');
 
-var matchSections = require("../../lib/match-sections.js").matchSections;
+var matchSections = require(path.join(__dirname, "../../lib/match-sections.js")).matchSections;
 
 var js, js2, js3, js4;
 
 before(function (done) {
     // medications and medications have same 1 med with rearranged translation
     // each has 1 med
-    js = JSON.parse(fs.readFileSync('test/test-partial/fixtures/medications.json', 'utf-8').toString());
-    js2 = JSON.parse(fs.readFileSync('test/test-partial/fixtures/medications2.json', 'utf-8').toString());
+    js = JSON.parse(fs.readFileSync(path.join(__dirname, 'fixtures/medications.json'), 'utf-8').toString());
+    js2 = JSON.parse(fs.readFileSync(path.join(__dirname, 'fixtures/medications2.json'), 'utf-8').toString());
 
     // medications3 has same med as medication but with same date range with different precision
     // has 1 med
-    js3 = JSON.parse(fs.readFileSync('test/test-partial/fixtures/medications3.json', 'utf-8').toString());
+    js3 = JSON.parse(fs.readFileSync(path.join(__dirname, 'fixtures/medications3.json'), 'utf-8').toString());
 
     // has a bunch of meds different from all of the above
     // has 17 meds (all status=prescribed)
     // NOTE: actually really bad sample, since meds have UNKNOWN codes
-    js4 = JSON.parse(fs.readFileSync('test/test-partial/fixtures/medications4.json', 'utf-8').toString());
+    js4 = JSON.parse(fs.readFileSync(path.join(__dirname, 'fixtures/medications4.json'), 'utf-8').toString());
 
     //console.log(bb);
     done();

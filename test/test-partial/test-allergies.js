@@ -6,25 +6,24 @@
 var expect = require('chai').expect;
 var fs = require('fs');
 var _ = require('underscore');
-//var bbjs = require('blue-button');
+var path = require('path');
 
-var comparePartial = require('../../lib/router.js').compare;
-var matchSections = require("../../lib/match-sections.js").matchSections;
+var matchSections = require(path.join(__dirname, "../../lib/match-sections.js")).matchSections;
 
 var js, js2, js3, js4;
 
 before(function (done) {
     // 2 sample allergies
-    js = JSON.parse(fs.readFileSync('test/test-partial/fixtures/allergies.json', 'utf-8').toString());
+    js = JSON.parse(fs.readFileSync(path.join(__dirname, 'fixtures/allergies.json'), 'utf-8').toString());
 
     //same as above but rearranged to be partial match
-    js2 = JSON.parse(fs.readFileSync('test/test-partial/fixtures/allergies2.json', 'utf-8').toString());
+    js2 = JSON.parse(fs.readFileSync(path.join(__dirname, 'fixtures/allergies2.json'), 'utf-8').toString());
 
     // has a bunch of allergies different from all of the above
-    js3 = JSON.parse(fs.readFileSync('test/test-partial/fixtures/allergies3.json', 'utf-8').toString());
+    js3 = JSON.parse(fs.readFileSync(path.join(__dirname, 'fixtures/allergies3.json'), 'utf-8').toString());
 
     // 1 of each from file 1.
-    js4 = JSON.parse(fs.readFileSync('test/test-partial/fixtures/allergies4.json', 'utf-8').toString());
+    js4 = JSON.parse(fs.readFileSync(path.join(__dirname, 'fixtures/allergies4.json'), 'utf-8').toString());
 
     done();
 });

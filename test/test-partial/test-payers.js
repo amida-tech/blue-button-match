@@ -10,7 +10,7 @@ var path = require('path');
 var fs = require('fs');
 //var bbjs = require('blue-button');
 
-var matchSections = require("../../lib/match-sections.js").matchSections;
+var matchSections = require(path.join(__dirname, "../../lib/match-sections.js")).matchSections;
 
 var js, js2, js3, js4;
 
