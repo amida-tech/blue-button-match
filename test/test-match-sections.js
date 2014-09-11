@@ -154,7 +154,6 @@ describe('Matching library (match-sections.js) tests', function () {
 
             //console.log(bbCmsTest1);
 
-
             var m = matchSections(bbCmsTest1["payers"], bbCmsTest2["payers"], "payers");
             for (var item in m) {
                 expect(m[item]).to.have.property('src_id');

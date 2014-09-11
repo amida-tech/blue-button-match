@@ -5,31 +5,31 @@
 
 var expect = require('chai').expect;
 var _ = require('underscore');
-
+var path = require("path");
 var fs = require('fs');
 //var bbjs = require('blue-button');
 
-var matchSections = require("../../lib/match-sections.js").matchSections;
+var matchSections = require(path.join(__dirname, "../../lib/match-sections.js")).matchSections;
 
 var js, js2, js3, js4;
 
 before(function (done) {
     // 2 sample poc
-    js = JSON.parse(fs.readFileSync('test/test-partial/fixtures/providers.json', 'utf-8').toString());
+    js = JSON.parse(fs.readFileSync(path.join(__dirname, 'fixtures/providers.json'), 'utf-8').toString());
 
     //same as above but rearranged to be partial match
-    js2 = JSON.parse(fs.readFileSync('test/test-partial/fixtures/providers2.json', 'utf-8').toString());
+    js2 = JSON.parse(fs.readFileSync(path.join(__dirname, 'fixtures/providers2.json'), 'utf-8').toString());
 
     // has a bunch of plans different from all of the above
-    js3 = JSON.parse(fs.readFileSync('test/test-partial/fixtures/providers3.json', 'utf-8').toString());
+    js3 = JSON.parse(fs.readFileSync(path.join(__dirname, 'fixtures/providers3.json'), 'utf-8').toString());
 
-    js4 = JSON.parse(fs.readFileSync('test/test-partial/fixtures/providers4.json', 'utf-8').toString());
+    js4 = JSON.parse(fs.readFileSync(path.join(__dirname, 'fixtures/providers4.json'), 'utf-8').toString());
 
     //console.log(bb);
     done();
 });
 
-describe('Provider partial matching library (planofcare.js) tests', function () {
+describe('Provider partial matching library tests', function () {
 
     it('compare two different provider sections', function () {
         var m = matchSections(js, js3, 'providers');
@@ -112,7 +112,7 @@ describe('Provider partial matching library (planofcare.js) tests', function () 
     it('compare two different provider sections that will have all partial match', function () {
         var m = matchSections(js, js2, 'providers');
 
-        //console.log(JSON.stringify(m,null,4));
+        //console.log(JSON.stringify(m, null, 4));
 
         //Group arrays by source.
         var src_array = [];
@@ -137,29 +137,34 @@ describe('Provider partial matching library (planofcare.js) tests', function () 
         }
 
         for (var objArray in src_obj_array) {
-            //console.log(src_obj_array[objArray]);
-            expect(_.where(src_obj_array[objArray], {
-                dest: 'dest'
-            }).length).to.equal(2);
-            expect(_.where(src_obj_array[objArray], {
-                dest: 'src'
-            }).length).to.equal(1);
-            expect(_.where(src_obj_array[objArray], {
-                dest: 'dest',
-                match: 'partial'
-            }).length).to.equal(1);
-            expect(_.where(src_obj_array[objArray], {
-                dest: 'dest',
-                match: 'new'
-            }).length).to.equal(1);
-            expect(_.where(src_obj_array[objArray], {
-                dest: 'src',
-                match: 'partial'
-            }).length).to.equal(0);
-            expect(_.where(src_obj_array[objArray], {
-                dest: 'src',
-                match: 'new'
-            }).length).to.equal(1);
+
+            //Partials only valid on one of the objects.
+            if (src_obj_array[objArray][0].src_id === "1") {
+
+                expect(_.where(src_obj_array[objArray], {
+                    dest: 'dest'
+                }).length).to.equal(2);
+                expect(_.where(src_obj_array[objArray], {
+                    dest: 'src'
+                }).length).to.equal(1);
+                expect(_.where(src_obj_array[objArray], {
+                    dest: 'dest',
+                    match: 'partial'
+                }).length).to.equal(2);
+                expect(_.where(src_obj_array[objArray], {
+                    dest: 'dest',
+                    match: 'new'
+                }).length).to.equal(0);
+                expect(_.where(src_obj_array[objArray], {
+                    dest: 'src',
+                    match: 'partial'
+                }).length).to.equal(0);
+                expect(_.where(src_obj_array[objArray], {
+                    dest: 'src',
+                    match: 'new'
+                }).length).to.equal(1);
+
+            }
 
             var partial_array = _.where(src_obj_array[objArray], {
                 dest: 'dest',
@@ -200,29 +205,34 @@ describe('Provider partial matching library (planofcare.js) tests', function () 
         }
 
         for (var objArray in src_obj_array) {
-            //console.log(src_obj_array[objArray]);
-            expect(_.where(src_obj_array[objArray], {
-                dest: 'dest'
-            }).length).to.equal(2);
-            expect(_.where(src_obj_array[objArray], {
-                dest: 'src'
-            }).length).to.equal(1);
-            expect(_.where(src_obj_array[objArray], {
-                dest: 'dest',
-                match: 'partial'
-            }).length).to.equal(1);
-            expect(_.where(src_obj_array[objArray], {
-                dest: 'dest',
-                match: 'new'
-            }).length).to.equal(1);
-            expect(_.where(src_obj_array[objArray], {
-                dest: 'src',
-                match: 'partial'
-            }).length).to.equal(0);
-            expect(_.where(src_obj_array[objArray], {
-                dest: 'src',
-                match: 'new'
-            }).length).to.equal(1);
+
+            //Partials only valid on one of the objects.
+            if (src_obj_array[objArray][0].src_id === "1") {
+
+                expect(_.where(src_obj_array[objArray], {
+                    dest: 'dest'
+                }).length).to.equal(2);
+                expect(_.where(src_obj_array[objArray], {
+                    dest: 'src'
+                }).length).to.equal(1);
+                expect(_.where(src_obj_array[objArray], {
+                    dest: 'dest',
+                    match: 'partial'
+                }).length).to.equal(2);
+                expect(_.where(src_obj_array[objArray], {
+                    dest: 'dest',
+                    match: 'new'
+                }).length).to.equal(0);
+                expect(_.where(src_obj_array[objArray], {
+                    dest: 'src',
+                    match: 'partial'
+                }).length).to.equal(0);
+                expect(_.where(src_obj_array[objArray], {
+                    dest: 'src',
+                    match: 'new'
+                }).length).to.equal(1);
+
+            }
 
             var partial_array = _.where(src_obj_array[objArray], {
                 dest: 'dest',
@@ -275,7 +285,7 @@ describe('Provider partial matching library (planofcare.js) tests', function () 
         expect(_.where(src_obj_array[0], {
             dest: 'dest',
             match: 'new'
-        }).length).to.equal(1);
+        }).length).to.equal(2);
         expect(_.where(src_obj_array[0], {
             dest: 'src',
             match: 'new'
@@ -283,7 +293,7 @@ describe('Provider partial matching library (planofcare.js) tests', function () 
         expect(_.where(src_obj_array[0], {
             dest: 'dest',
             match: 'partial'
-        }).length).to.equal(1);
+        }).length).to.equal(0);
         expect(_.where(src_obj_array[0], {
             dest: 'dest',
             match: 'duplicate'
@@ -299,7 +309,7 @@ describe('Provider partial matching library (planofcare.js) tests', function () 
         expect(_.where(src_obj_array[1], {
             dest: 'dest',
             match: 'new'
-        }).length).to.equal(3);
+        }).length).to.equal(1);
         expect(_.where(src_obj_array[1], {
             dest: 'src',
             match: 'new'
@@ -307,11 +317,11 @@ describe('Provider partial matching library (planofcare.js) tests', function () 
         expect(_.where(src_obj_array[1], {
             dest: 'dest',
             match: 'partial'
-        }).length).to.equal(0);
+        }).length).to.equal(1);
         expect(_.where(src_obj_array[1], {
             dest: 'dest',
             match: 'duplicate'
-        }).length).to.equal(0);
+        }).length).to.equal(1);
 
     });
 

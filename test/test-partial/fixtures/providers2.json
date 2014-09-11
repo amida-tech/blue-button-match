@@ -1,21 +1,26 @@
 [{
-    "type": "organization",
-    "name": "ANY CARE USA",
+    "name": {
+        "first": "Jane",
+        "last": "Doe"
+    },
     "address": {
         "use": "primary home",
         "street_lines": [
-            "123 Any Rd"
+            "123 Road Street"
         ],
         "city": "Anywhere",
-        "state": "MD",
-        "zip": "99999",
+        "state": "VA",
+        "zip": "00001",
         "country": "United States"
     },
-    "role": {
-        "name": "NHCaa"
+    "type": {
+        "name": "PHY"
     }
 }, {
-    "type": "person",
+    "name": {
+        "first": "Jane",
+        "last": "Doe"
+    },
     "address": {
         "use": "primary home",
         "street_lines": [
@@ -26,13 +31,7 @@
         "zip": "00001",
         "country": "United States"
     },
-    "role": {
-        "name": "PHYSICIAN"
-    },
-    "person": {
-        "name": {
-            "first": "Jane",
-            "last": "Doe"
-        }
+    "type": {
+        "name": "DOC"
     }
 }]
