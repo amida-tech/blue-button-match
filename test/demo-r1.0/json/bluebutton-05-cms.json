@@ -6,7 +6,7 @@
         },
         "dob": {
             "point": {
-                "date": "1910-01-01T00:00:00.000Z",
+                "date": "1910-01-01T00:00:00Z",
                 "precision": "day"
             }
         },
@@ -31,7 +31,7 @@
                 "city": "ANYTOWN",
                 "state": "VA",
                 "zip": "00001",
-                "country": "United States"
+                "country": "US"
             }
         ]
     },
@@ -44,7 +44,7 @@
             },
             "date_time": {
                 "point": {
-                    "date": "2011-07-22T15:00:00.000Z",
+                    "date": "2011-07-22T15:00:00Z",
                     "precision": "hour"
                 }
             },
@@ -60,7 +60,7 @@
             },
             "date_time": {
                 "point": {
-                    "date": "2011-07-22T15:00:00.000Z",
+                    "date": "2011-07-22T15:00:00Z",
                     "precision": "hour"
                 }
             },
@@ -74,7 +74,7 @@
             },
             "date_time": {
                 "point": {
-                    "date": "2012-03-20T12:00:00.000Z",
+                    "date": "2012-03-20T12:00:00Z",
                     "precision": "hour"
                 }
             },
@@ -92,7 +92,7 @@
                 {
                     "date_time": {
                         "point": {
-                            "date": "2008-03-21T00:00:00.000Z",
+                            "date": "2008-03-21T00:00:00Z",
                             "precision": "day"
                         }
                     },
@@ -106,7 +106,7 @@
                 {
                     "date_time": {
                         "point": {
-                            "date": "2008-03-21T00:00:00.000Z",
+                            "date": "2008-03-21T00:00:00Z",
                             "precision": "day"
                         }
                     },
@@ -120,7 +120,7 @@
                 {
                     "date_time": {
                         "point": {
-                            "date": "2008-03-21T00:00:00.000Z",
+                            "date": "2008-03-21T00:00:00Z",
                             "precision": "day"
                         }
                     },
@@ -134,7 +134,7 @@
                 {
                     "date_time": {
                         "point": {
-                            "date": "2008-03-21T00:00:00.000Z",
+                            "date": "2008-03-21T00:00:00Z",
                             "precision": "day"
                         }
                     },
@@ -162,7 +162,7 @@
         {
             "date_time": {
                 "point": {
-                    "date": "1949-09-28T00:00:00.000Z",
+                    "date": "1949-09-28T00:00:00Z",
                     "precision": "day"
                 }
             },
@@ -184,11 +184,11 @@
                 },
                 "date_time": {
                     "low": {
-                        "date": "1926-01-08T00:00:00.000Z",
+                        "date": "1926-01-08T00:00:00Z",
                         "precision": "day"
                     },
                     "high": {
-                        "date": "1955-03-13T00:00:00.000Z",
+                        "date": "1955-03-13T00:00:00Z",
                         "precision": "day"
                     }
                 },
@@ -220,11 +220,11 @@
                 },
                 "date_time": {
                     "low": {
-                        "date": "1973-05-13T00:00:00.000Z",
+                        "date": "1973-05-13T00:00:00Z",
                         "precision": "day"
                     },
                     "high": {
-                        "date": "1996-07-20T00:00:00.000Z",
+                        "date": "1996-07-20T00:00:00Z",
                         "precision": "day"
                     }
                 },
@@ -265,7 +265,7 @@
             },
             "date_time": {
                 "point": {
-                    "date": "2002-04-21T00:00:00.000Z",
+                    "date": "2002-04-21T00:00:00Z",
                     "precision": "day"
                 }
             }
@@ -284,7 +284,7 @@
             },
             "date_time": {
                 "point": {
-                    "date": "1990-02-02T00:00:00.000Z",
+                    "date": "1990-02-02T00:00:00Z",
                     "precision": "day"
                 }
             }
@@ -303,7 +303,7 @@
             },
             "date_time": {
                 "point": {
-                    "date": "2009-01-02T00:00:00.000Z",
+                    "date": "2009-01-02T00:00:00Z",
                     "precision": "day"
                 }
             }
@@ -318,11 +318,11 @@
             },
             "date_time": {
                 "low": {
-                    "date": "2005-08-09T00:00:00.000Z",
+                    "date": "2005-08-09T00:00:00Z",
                     "precision": "day"
                 },
                 "high": {
-                    "date": "2011-02-28T00:00:00.000Z",
+                    "date": "2011-02-28T00:00:00Z",
                     "precision": "day"
                 }
             }
@@ -335,174 +335,317 @@
             },
             "date_time": {
                 "low": {
-                    "date": "2008-01-25T00:00:00.000Z",
+                    "date": "2008-01-25T00:00:00Z",
                     "precision": "day"
                 },
                 "high": {
-                    "date": "2010-01-25T00:00:00.000Z",
+                    "date": "2010-01-25T00:00:00Z",
                     "precision": "day"
                 }
             }
         }
     ],
-    "insurance": [
+    "payers": [
         {
-            "plan_id": {
-                "identifier": "H9999/9999"
-            },
-            "payer_name": "HealthCare Payer",
-            "type": [
-                "medicare",
-                "A Medicare Plan Plus (HMO)",
-                "3 - Coordinated Care Plan (HMO, PPO, PSO, SNP)"
-            ],
-            "addresses": [
-                {
-                    "use": "primary home",
-                    "street_lines": [
-                        "123 Any Road"
-                    ],
-                    "city": "Anytown",
-                    "state": "PA",
-                    "zip": "00003",
-                    "country": "United States"
+            "participant": {
+                "performer": {
+                    "identifiers": [
+                        {
+                            "identifier": "H9999/9999"
+                        }
+                    ]
+                },
+                "date_time": {
+                    "low": {
+                        "date": "2011-09-01T00:00:00Z",
+                        "precision": "day"
+                    }
                 }
-            ],
-            "date_time": {
-                "low": {
-                    "date": "2011-09-01T00:00:00.000Z",
-                    "precision": "day"
+            },
+            "policy_holder": {
+                "performer": {
+                    "identifiers": [
+                        {
+                            "identifier": "H9999/9999"
+                        }
+                    ]
+                }
+            },
+            "policy": {
+                "insurance": {
+                    "performer": {
+                        "organization": [
+                            {
+                                "name": [
+                                    "A Medicare Plan Plus (HMO)",
+                                    "HealthCare Payer",
+                                    "3 - Coordinated Care Plan (HMO, PPO, PSO, SNP)"
+                                ],
+                                "address": [
+                                    {
+                                        "use": "primary home",
+                                        "street_lines": [
+                                            "123 Any Road"
+                                        ],
+                                        "city": "Anytown",
+                                        "state": "PA",
+                                        "zip": "00003",
+                                        "country": "United States"
+                                    }
+                                ]
+                            }
+                        ]
+                    }
                 }
             }
         },
         {
-            "plan_id": {
-                "identifier": "S9999/000"
-            },
-            "payer_name": "Another HealthCare Payer",
-            "type": [
-                "medicare",
-                "A Medicare Rx Plan (PDP)",
-                "11 - Medicare Prescription Drug Plan"
-            ],
-            "addresses": [
-                {
-                    "use": "primary home",
-                    "street_lines": [
-                        "123 Any Road"
-                    ],
-                    "city": "Anytown",
-                    "state": "PA",
-                    "zip": "00003",
-                    "country": "United States"
+            "participant": {
+                "performer": {
+                    "identifiers": [
+                        {
+                            "identifier": "S9999/000"
+                        }
+                    ]
+                },
+                "date_time": {
+                    "low": {
+                        "date": "2010-01-01T00:00:00Z",
+                        "precision": "day"
+                    }
                 }
-            ],
-            "date_time": {
-                "low": {
-                    "date": "2010-01-01T00:00:00.000Z",
-                    "precision": "day"
+            },
+            "policy_holder": {
+                "performer": {
+                    "identifiers": [
+                        {
+                            "identifier": "S9999/000"
+                        }
+                    ]
+                }
+            },
+            "policy": {
+                "insurance": {
+                    "performer": {
+                        "organization": [
+                            {
+                                "name": [
+                                    "A Medicare Rx Plan (PDP)",
+                                    "Another HealthCare Payer",
+                                    "11 - Medicare Prescription Drug Plan"
+                                ],
+                                "address": [
+                                    {
+                                        "use": "primary home",
+                                        "street_lines": [
+                                            "123 Any Road"
+                                        ],
+                                        "city": "Anytown",
+                                        "state": "PA",
+                                        "zip": "00003",
+                                        "country": "United States"
+                                    }
+                                ]
+                            }
+                        ]
+                    }
                 }
             }
         },
         {
-            "plan_name": "STATE HEALTH BENEFITS PROGRAM",
-            "type": [
-                "employer subsidy"
-            ],
-            "date_time": {
-                "low": {
-                    "date": "2011-01-01T00:00:00.000Z",
-                    "precision": "day"
-                },
-                "high": {
-                    "date": "2011-12-31T00:00:00.000Z",
-                    "precision": "day"
+            "policy": {
+                "insurance": {
+                    "performer": {
+                        "organization": [
+                            {
+                                "name": [
+                                    "STATE HEALTH BENEFITS PROGRAM",
+                                    "EMPLOYER SUBSIDY"
+                                ]
+                            }
+                        ]
+                    }
+                }
+            },
+            "participant": {
+                "date_time": {
+                    "low": {
+                        "date": "2011-01-01T00:00:00Z",
+                        "precision": "day"
+                    },
+                    "high": {
+                        "date": "2011-12-31T00:00:00Z",
+                        "precision": "day"
+                    }
                 }
             }
         },
         {
-            "policy_number": "1234567890",
-            "payer_name": "Insurer1",
-            "date_time": {
-                "low": {
-                    "date": "2011-01-01T00:00:00.000Z",
-                    "precision": "day"
+            "participant": {
+                "performer": {
+                    "identifiers": [
+                        {
+                            "identifier": "1234567890"
+                        }
+                    ]
                 },
-                "high": {
-                    "date": "2011-09-30T00:00:00.000Z",
-                    "precision": "day"
+                "date_time": {
+                    "low": {
+                        "date": "2011-01-01T00:00:00Z",
+                        "precision": "day"
+                    },
+                    "high": {
+                        "date": "2011-09-30T00:00:00Z",
+                        "precision": "day"
+                    }
                 }
             },
-            "type": [
-                "medicare msp:End stage Renal Disease (ESRD)"
-            ],
-            "addresses": [
-                {
-                    "use": "primary home",
-                    "street_lines": [
-                        "PO BOX 0000"
-                    ],
-                    "city": "Anytown",
-                    "state": "CO",
-                    "zip": "00002-0000",
-                    "country": "United States"
+            "policy_holder": {
+                "performer": {
+                    "identifiers": [
+                        {
+                            "identifier": "1234567890"
+                        }
+                    ]
                 }
-            ]
+            },
+            "policy": {
+                "insurance": {
+                    "performer": {
+                        "organization": [
+                            {
+                                "name": [
+                                    "Insurer1",
+                                    "Medicare MSP: End stage Renal Disease (ESRD)"
+                                ],
+                                "address": [
+                                    {
+                                        "use": "primary home",
+                                        "street_lines": [
+                                            "PO BOX 0000"
+                                        ],
+                                        "city": "Anytown",
+                                        "state": "CO",
+                                        "zip": "00002-0000",
+                                        "country": "United States"
+                                    }
+                                ]
+                            }
+                        ]
+                    }
+                }
+            }
         },
         {
-            "policy_number": "12345678901",
-            "payer_name": "Insurer2",
-            "date_time": {
-                "low": {
-                    "date": "2010-01-01T00:00:00.000Z",
-                    "precision": "day"
+            "participant": {
+                "performer": {
+                    "identifiers": [
+                        {
+                            "identifier": "12345678901"
+                        }
+                    ]
                 },
-                "high": {
-                    "date": "2010-12-31T00:00:00.000Z",
-                    "precision": "day"
+                "date_time": {
+                    "low": {
+                        "date": "2010-01-01T00:00:00Z",
+                        "precision": "day"
+                    },
+                    "high": {
+                        "date": "2010-12-31T00:00:00Z",
+                        "precision": "day"
+                    }
                 }
             },
-            "type": [
-                "medicare msp:End stage Renal Disease (ESRD)"
-            ],
-            "addresses": [
-                {
-                    "use": "primary home",
-                    "street_lines": [
-                        "0000 Any ROAD"
-                    ],
-                    "city": "ANYWHERE",
-                    "state": "VA",
-                    "zip": "00000-0000",
-                    "country": "United States"
+            "policy_holder": {
+                "performer": {
+                    "identifiers": [
+                        {
+                            "identifier": "12345678901"
+                        }
+                    ]
                 }
-            ]
+            },
+            "policy": {
+                "insurance": {
+                    "performer": {
+                        "organization": [
+                            {
+                                "name": [
+                                    "Insurer2",
+                                    "Medicare MSP: End stage Renal Disease (ESRD)"
+                                ],
+                                "address": [
+                                    {
+                                        "use": "primary home",
+                                        "street_lines": [
+                                            "0000 Any ROAD"
+                                        ],
+                                        "city": "ANYWHERE",
+                                        "state": "VA",
+                                        "zip": "00000-0000",
+                                        "country": "United States"
+                                    }
+                                ]
+                            }
+                        ]
+                    }
+                }
+            }
         },
         {
-            "policy_number": "00001",
-            "payer_name": "Insurer",
-            "date_time": {
-                "low": {
-                    "date": "1984-10-01T00:00:00.000Z",
-                    "precision": "day"
+            "participant": {
+                "performer": {
+                    "identifiers": [
+                        {
+                            "identifier": "00001"
+                        }
+                    ]
                 },
-                "high": {
-                    "date": "2008-11-30T00:00:00.000Z",
-                    "precision": "day"
+                "date_time": {
+                    "low": {
+                        "date": "1984-10-01T00:00:00Z",
+                        "precision": "day"
+                    },
+                    "high": {
+                        "date": "2008-11-30T00:00:00Z",
+                        "precision": "day"
+                    }
                 }
             },
-            "addresses": [
-                {
-                    "use": "primary home",
-                    "street_lines": [
-                        "00 Address STREET"
-                    ],
-                    "city": "ANYWHERE",
-                    "state": "PA",
-                    "zip": "00000",
-                    "country": "United States"
+            "policy_holder": {
+                "performer": {
+                    "identifiers": [
+                        {
+                            "identifier": "00001"
+                        }
+                    ]
                 }
-            ]
+            },
+            "policy": {
+                "insurance": {
+                    "performer": {
+                        "organization": [
+                            {
+                                "name": [
+                                    "Insurer"
+                                ],
+                                "address": [
+                                    {
+                                        "use": "primary home",
+                                        "street_lines": [
+                                            "00 Address STREET"
+                                        ],
+                                        "city": "ANYWHERE",
+                                        "state": "PA",
+                                        "zip": "00000",
+                                        "country": "United States"
+                                    }
+                                ]
+                            }
+                        ]
+                    }
+                }
+            }
         }
     ],
     "claims": [
@@ -513,11 +656,11 @@
             "number": "1234567890000",
             "date_time": {
                 "low": {
-                    "date": "2012-10-18T00:00:00.000Z",
+                    "date": "2012-10-18T00:00:00Z",
                     "precision": "day"
                 },
                 "high": {
-                    "date": "2012-10-18T00:00:00.000Z",
+                    "date": "2012-10-18T00:00:00Z",
                     "precision": "day"
                 }
             },
@@ -526,11 +669,11 @@
                     "line": "1",
                     "date_time": {
                         "low": {
-                            "date": "2012-10-18T00:00:00.000Z",
+                            "date": "2012-10-18T00:00:00Z",
                             "precision": "day"
                         },
                         "high": {
-                            "date": "2012-10-18T00:00:00.000Z",
+                            "date": "2012-10-18T00:00:00Z",
                             "precision": "day"
                         }
                     },
@@ -605,7 +748,7 @@
             "number": "12345678900000VAA",
             "date_time": {
                 "low": {
-                    "date": "2012-09-22T00:00:00.000Z",
+                    "date": "2012-09-22T00:00:00Z",
                     "precision": "day"
                 }
             },
@@ -614,7 +757,7 @@
                     "line": "1",
                     "date_time": {
                         "low": {
-                            "date": "2012-09-22T00:00:00.000Z",
+                            "date": "2012-09-22T00:00:00Z",
                             "precision": "day"
                         }
                     },
@@ -636,7 +779,7 @@
                     "line": "2",
                     "date_time": {
                         "low": {
-                            "date": "2012-09-22T00:00:00.000Z",
+                            "date": "2012-09-22T00:00:00Z",
                             "precision": "day"
                         }
                     },
@@ -662,7 +805,7 @@
                     "line": "3",
                     "date_time": {
                         "low": {
-                            "date": "2012-09-22T00:00:00.000Z",
+                            "date": "2012-09-22T00:00:00Z",
                             "precision": "day"
                         }
                     },
@@ -738,11 +881,11 @@
                     "line": "1",
                     "date_time": {
                         "low": {
-                            "date": "2012-12-01T00:00:00.000Z",
+                            "date": "2012-12-01T00:00:00Z",
                             "precision": "day"
                         },
                         "high": {
-                            "date": "2012-12-01T00:00:00.000Z",
+                            "date": "2012-12-01T00:00:00Z",
                             "precision": "day"
                         }
                     },
@@ -784,11 +927,11 @@
                     "line": "2",
                     "date_time": {
                         "low": {
-                            "date": "2012-12-01T00:00:00.000Z",
+                            "date": "2012-12-01T00:00:00Z",
                             "precision": "day"
                         },
                         "high": {
-                            "date": "2012-12-01T00:00:00.000Z",
+                            "date": "2012-12-01T00:00:00Z",
                             "precision": "day"
                         }
                     },
@@ -829,11 +972,11 @@
             ],
             "date_time": {
                 "low": {
-                    "date": "2012-12-01T00:00:00.000Z",
+                    "date": "2012-12-01T00:00:00Z",
                     "precision": "day"
                 },
                 "high": {
-                    "date": "2012-12-01T00:00:00.000Z",
+                    "date": "2012-12-01T00:00:00Z",
                     "precision": "day"
                 }
             }
@@ -845,7 +988,7 @@
             "number": "123456789012",
             "date_time": {
                 "point": {
-                    "date": "2011-11-17T00:00:00.000Z",
+                    "date": "2011-11-17T00:00:00Z",
                     "precision": "day"
                 }
             },
@@ -856,7 +999,7 @@
                 {
                     "date_time": {
                         "point": {
-                            "date": "2011-11-17T00:00:00.000Z",
+                            "date": "2011-11-17T00:00:00Z",
                             "precision": "day"
                         }
                     },
@@ -932,7 +1075,7 @@
             "number": "123456789011",
             "date_time": {
                 "point": {
-                    "date": "2011-11-23T00:00:00.000Z",
+                    "date": "2011-11-23T00:00:00Z",
                     "precision": "day"
                 }
             },
@@ -943,7 +1086,7 @@
                 {
                     "date_time": {
                         "point": {
-                            "date": "2011-11-23T00:00:00.000Z",
+                            "date": "2011-11-23T00:00:00Z",
                             "precision": "day"
                         }
                     },
@@ -1021,7 +1164,7 @@
             "type": "medicare",
             "date_time": {
                 "low": {
-                    "date": "2011-10-01T00:00:00.000Z",
+                    "date": "2011-10-01T00:00:00Z",
                     "precision": "day"
                 }
             }
@@ -1033,7 +1176,7 @@
             "type": "medicare",
             "date_time": {
                 "low": {
-                    "date": "2011-10-01T00:00:00.000Z",
+                    "date": "2011-10-01T00:00:00Z",
                     "precision": "day"
                 }
             }
@@ -1045,7 +1188,7 @@
             "type": "medicare",
             "date_time": {
                 "low": {
-                    "date": "2012-07-01T00:00:00.000Z",
+                    "date": "2012-07-01T00:00:00Z",
                     "precision": "day"
                 }
             }
@@ -1057,7 +1200,7 @@
             "type": "medicare",
             "date_time": {
                 "low": {
-                    "date": "2013-01-01T00:00:00.000Z",
+                    "date": "2013-01-01T00:00:00Z",
                     "precision": "day"
                 }
             }
@@ -1069,7 +1212,7 @@
             "type": "medicare",
             "date_time": {
                 "low": {
-                    "date": "2012-10-14T00:00:00.000Z",
+                    "date": "2012-10-14T00:00:00Z",
                     "precision": "day"
                 }
             }
@@ -1077,8 +1220,6 @@
     ],
     "providers": [
         {
-            "type": "organization",
-            "name": "ANY CARE",
             "address": {
                 "use": "primary home",
                 "street_lines": [
@@ -1089,12 +1230,20 @@
                 "zip": "99999",
                 "country": "United States"
             },
-            "role": {
+            "type": {
                 "name": "NHC"
+            },
+            "organization": {
+                "name": [
+                    "ANY CARE"
+                ]
             }
         },
         {
-            "type": "person",
+            "name": {
+                "first": "Jane",
+                "last": "Doe"
+            },
             "address": {
                 "use": "primary home",
                 "street_lines": [
@@ -1105,14 +1254,8 @@
                 "zip": "00001",
                 "country": "United States"
             },
-            "role": {
+            "type": {
                 "name": "PHY"
-            },
-            "person": {
-                "name": {
-                    "first": "Jane",
-                    "last": "Doe"
-                }
             }
         }
     ]
