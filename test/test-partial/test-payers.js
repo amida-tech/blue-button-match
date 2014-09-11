@@ -5,25 +5,26 @@
 
 var expect = require('chai').expect;
 var _ = require('underscore');
+var path = require('path');
 
 var fs = require('fs');
 //var bbjs = require('blue-button');
 
-var matchSections = require("../../lib/match-sections.js").matchSections;
+var matchSections = require(path.join(__dirname, "../../lib/match-sections.js")).matchSections;
 
 var js, js2, js3, js4;
 
 before(function (done) {
     // 2 sample payers
-    js = JSON.parse(fs.readFileSync('test/test-partial/fixtures/payers.json', 'utf-8').toString());
+    js = JSON.parse(fs.readFileSync(path.join(__dirname, '/fixtures/payers.json'), 'utf-8').toString());
 
     //same as above but rearranged to be partial match
-    js2 = JSON.parse(fs.readFileSync('test/test-partial/fixtures/payers2.json', 'utf-8').toString());
+    js2 = JSON.parse(fs.readFileSync(path.join(__dirname, '/fixtures/payers2.json'), 'utf-8').toString());
 
     // has a bunch of plans different from all of the above
-    js3 = JSON.parse(fs.readFileSync('test/test-partial/fixtures/payers3.json', 'utf-8').toString());
+    js3 = JSON.parse(fs.readFileSync(path.join(__dirname, '/fixtures/payers3.json'), 'utf-8').toString());
 
-    js4 = JSON.parse(fs.readFileSync('test/test-partial/fixtures/payers4.json', 'utf-8').toString());
+    js4 = JSON.parse(fs.readFileSync(path.join(__dirname, '/fixtures/payers4.json'), 'utf-8').toString());
 
     //console.log(bb);
     done();

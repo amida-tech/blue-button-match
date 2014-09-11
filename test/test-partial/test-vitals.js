@@ -7,26 +7,26 @@ var expect = require('chai').expect;
 
 var fs = require('fs');
 var _ = require('underscore');
-//var bbjs = require('blue-button');
+var path = require('path');
 
-var matchSections = require("../../lib/match-sections.js").matchSections;
+var matchSections = require(path.join(__dirname, "../../lib/match-sections.js")).matchSections;
 
 var js, js2, js3, js4;
 
 before(function (done) {
     // vitals and vitals2 have non-intersecting set of values (e.g. all should be new)
     // each has 6 results
-    js = JSON.parse(fs.readFileSync('test/test-partial/fixtures/vitals.json', 'utf-8').toString());
-    js2 = JSON.parse(fs.readFileSync('test/test-partial/fixtures/vitals2.json', 'utf-8').toString());
+    js = JSON.parse(fs.readFileSync(path.join(__dirname, 'fixtures/vitals.json'), 'utf-8').toString());
+    js2 = JSON.parse(fs.readFileSync(path.join(__dirname, 'fixtures/vitals2.json'), 'utf-8').toString());
 
     // vitals3a and vitals3b are the same, except 3b has hours added to date
     // (so it's partial match on fuzzy date)
     // each has 3 results
-    js3 = JSON.parse(fs.readFileSync('test/test-partial/fixtures/vitals3.json', 'utf-8').toString());
+    js3 = JSON.parse(fs.readFileSync(path.join(__dirname, 'fixtures/vitals3.json'), 'utf-8').toString());
 
     // has 1 dup element, 1 partial match (hours added to date) and 1 new element
     // 4a has 3 elements, 4b has 2 elements
-    js4 = JSON.parse(fs.readFileSync('test/test-partial/fixtures/vitals4.json', 'utf-8').toString());
+    js4 = JSON.parse(fs.readFileSync(path.join(__dirname, 'fixtures/vitals4.json'), 'utf-8').toString());
 
     //console.log(bb);
     done();

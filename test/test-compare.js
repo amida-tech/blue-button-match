@@ -5,6 +5,7 @@ var expect = require('chai').expect;
 
 var fs = require('fs');
 var bbjs = require('blue-button');
+var path = require('path');
 
 var compare = require('../lib/compare.js').compare;
 var lookups = require('../lib/lookups.js');
@@ -13,7 +14,7 @@ var bb;
 var bb2, bb3, bb4;
 
 before(function (done) {
-    var xml = fs.readFileSync('test/records/ccda/CCD_demo1.xml', 'utf-8');
+    var xml = fs.readFileSync(path.join(__dirname, 'records/ccda/CCD_demo1.xml'), 'utf-8');
     bb = bbjs.parseString(xml);
 
     //var xml2 = fs.readFileSync('test/records/ccda/CCD_demo2.xml', 'utf-8');
@@ -21,7 +22,7 @@ before(function (done) {
     //var xml3 = fs.readFileSync('test/records/ccda/CCD_demo3.xml', 'utf-8');
     //bb3 = bbjs.parseString(xml3);
 
-    var xml4 = fs.readFileSync('test/records/ccda/kinsights-sample-timmy.xml', 'utf-8');
+    var xml4 = fs.readFileSync(path.join(__dirname, 'records/ccda/kinsights-sample-timmy.xml'), 'utf-8');
     bb4 = bbjs.parseString(xml4).data;
 
     //console.log(bb);

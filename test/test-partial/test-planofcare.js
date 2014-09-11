@@ -7,23 +7,23 @@ var expect = require('chai').expect;
 var _ = require('underscore');
 
 var fs = require('fs');
-//var bbjs = require('blue-button');
+var path = require('path');
 
-var matchSections = require("../../lib/match-sections.js").matchSections;
+var matchSections = require(path.join(__dirname, "../../lib/match-sections.js")).matchSections;
 
 var js, js2, js3, js4;
 
 before(function (done) {
     // 2 sample poc
-    js = JSON.parse(fs.readFileSync('test/test-partial/fixtures/planofcare.json', 'utf-8').toString());
+    js = JSON.parse(fs.readFileSync(path.join(__dirname, 'fixtures/planofcare.json'), 'utf-8').toString());
 
     //same as above but rearranged to be partial match
-    js2 = JSON.parse(fs.readFileSync('test/test-partial/fixtures/planofcare2.json', 'utf-8').toString());
+    js2 = JSON.parse(fs.readFileSync(path.join(__dirname, 'fixtures/planofcare2.json'), 'utf-8').toString());
 
     // has a bunch of plans different from all of the above
-    js3 = JSON.parse(fs.readFileSync('test/test-partial/fixtures/planofcare3.json', 'utf-8').toString());
+    js3 = JSON.parse(fs.readFileSync(path.join(__dirname, 'fixtures/planofcare3.json'), 'utf-8').toString());
 
-    js4 = JSON.parse(fs.readFileSync('test/test-partial/fixtures/planofcare4.json', 'utf-8').toString());
+    js4 = JSON.parse(fs.readFileSync(path.join(__dirname, 'fixtures/planofcare4.json'), 'utf-8').toString());
 
     //console.log(bb);
     done();

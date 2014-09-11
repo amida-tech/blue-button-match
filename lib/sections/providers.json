@@ -1,16 +1,16 @@
 {
     "primary": [{
-        "path": "type",
-        "type": "string",
+        "path": "name",
+        "type": "object",
         "percent": 25
     }],
     "secondary": [{
-        "path": "person",
+        "path": "type",
         "type": "object",
         "percent": 25
     },{
-        "path": "name",
-        "type": "string",
+        "path": "address",
+        "type": "object",
         "percent": 25
     }]
 }

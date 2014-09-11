@@ -7,24 +7,23 @@ var expect = require('chai').expect;
 var _ = require('underscore');
 
 var fs = require('fs');
-//var bbjs = require('blue-button');
+var path = require('path');
 
-//var comparePartial = require('../../lib/sections/flat/immunizations.js').compare;
-var matchSections = require("../../lib/match-sections.js").matchSections;
+var matchSections = require(path.join(__dirname, "../../lib/match-sections.js")).matchSections;
 
 var js, js2, js3, js4;
 
 before(function (done) {
     // X sample immunizations
-    js = JSON.parse(fs.readFileSync('test/test-partial/fixtures/claims.json', 'utf-8').toString());
+    js = JSON.parse(fs.readFileSync(path.join(__dirname, 'fixtures/claims.json'), 'utf-8').toString());
 
     //same as above but rearranged to be partial match
-    js2 = JSON.parse(fs.readFileSync('test/test-partial/fixtures/claims2.json', 'utf-8').toString());
+    js2 = JSON.parse(fs.readFileSync(path.join(__dirname, 'fixtures/claims2.json'), 'utf-8').toString());
 
     // has a bunch of immunizations different from all of the above
-    js3 = JSON.parse(fs.readFileSync('test/test-partial/fixtures/claims3.json', 'utf-8').toString());
+    js3 = JSON.parse(fs.readFileSync(path.join(__dirname, 'fixtures/claims3.json'), 'utf-8').toString());
 
-    js4 = JSON.parse(fs.readFileSync('test/test-partial/fixtures/claims4.json', 'utf-8').toString());
+    js4 = JSON.parse(fs.readFileSync(path.join(__dirname, 'fixtures/claims4.json'), 'utf-8').toString());
 
     //console.log(bb);
     done();

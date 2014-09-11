@@ -11,19 +11,20 @@ var lookups = require('../lib/lookups.js');
 var equal = require('deep-equal');
 
 var matchSections = require("../lib/match-sections.js");
+var path = require("path");
 
 var bb;
 var bb2, bb3, bb4;
 
 before(function (done) {
-    var xml = fs.readFileSync('test/records/ccda/CCD_demo1.xml', 'utf-8');
+    var xml = fs.readFileSync(path.join(__dirname, 'records/ccda/CCD_demo1.xml'), 'utf-8');
     bb = bbjs.parseString(xml);
-    var xml2 = fs.readFileSync('test/records/ccda/CCD_demo2.xml', 'utf-8');
+    var xml2 = fs.readFileSync(path.join(__dirname, 'records/ccda/CCD_demo2.xml'), 'utf-8');
     bb2 = bbjs.parseString(xml2);
-    var xml3 = fs.readFileSync('test/records/ccda/CCD_demo3.xml', 'utf-8');
+    var xml3 = fs.readFileSync(path.join(__dirname, 'records/ccda/CCD_demo3.xml'), 'utf-8');
     bb3 = bbjs.parseString(xml3);
     //cms
-    var txt1 = fs.readFileSync('test/records/cms/cms_same.txt', 'utf-8');
+    var txt1 = fs.readFileSync(path.join(__dirname, 'records/cms/cms_same.txt'), 'utf-8');
     bb4 = bbjs.parseText(txt1);
 
     //var xml4 = fs.readFileSync('test/records/ccda/kinsights-sample-timmy.xml', 'utf-8');
@@ -71,6 +72,7 @@ describe('Matching library (match.js) tests', function () {
 
         it('full record comparison of same cms document', function () {
             var m = match.match(bb4.data, bb4.data);
+
             expect(m).to.be.ok;
             expect(m).to.have.property("match");
 

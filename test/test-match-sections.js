@@ -7,6 +7,7 @@ var expect = require('chai').expect;
 
 var fs = require('fs');
 var bbjs = require('blue-button');
+var path = require('path');
 
 var match = require('../lib/match.js');
 var lookups = require('../lib/lookups.js');
@@ -21,18 +22,18 @@ var bbCms1;
 var bbCms2;
 
 before(function (done) {
-    var xml = fs.readFileSync('test/records/ccda/CCD_demo1.xml', 'utf-8');
+    var xml = fs.readFileSync(path.join(__dirname, '/records/ccda/CCD_demo1.xml'), 'utf-8');
     bb = bbjs.parseString(xml).data;
-    var xml2 = fs.readFileSync('test/records/ccda/CCD_demo2.xml', 'utf-8');
+    var xml2 = fs.readFileSync(path.join(__dirname, '/records/ccda/CCD_demo2.xml'), 'utf-8');
     bb2 = bbjs.parseString(xml2).data;
-    var xml3 = fs.readFileSync('test/records/ccda/CCD_demo3.xml', 'utf-8');
+    var xml3 = fs.readFileSync(path.join(__dirname, '/records/ccda/CCD_demo3.xml'), 'utf-8');
     bb3 = bbjs.parseString(xml3).data;
-    var xml4 = fs.readFileSync('test/records/ccda/CCD_demo4.xml', 'utf-8');
+    var xml4 = fs.readFileSync(path.join(__dirname, '/records/ccda/CCD_demo4.xml'), 'utf-8');
     bb4 = bbjs.parseString(xml4).data;
 
-    var txt1 = fs.readFileSync('test/records/cms/cms_same.txt', 'utf-8');
+    var txt1 = fs.readFileSync(path.join(__dirname, '/records/cms/cms_same.txt'), 'utf-8');
     bbCms1 = bbjs.parseText(txt1).data;
-    var txt2 = fs.readFileSync('test/records/cms/cms_same.txt', 'utf-8');
+    var txt2 = fs.readFileSync(path.join(__dirname, '/records/cms/cms_same.txt'), 'utf-8');
     bbCms2 = bbjs.parseText(txt2).data;
     //console.log(bb);
     done();
@@ -149,17 +150,20 @@ describe('Matching library (match-sections.js) tests', function () {
             bbCmsTest2 = JSON.parse(JSON.stringify(bbCms2));
         });
 
-        it('testing matchSections method on two equal insurance sections', function () {
-            var m = matchSections(bbCmsTest1["insurance"], bbCmsTest2["insurance"], "insurance");
+        it('testing matchSections method on two equal payers sections', function () {
+
+            //console.log(bbCmsTest1);
+
+            var m = matchSections(bbCmsTest1["payers"], bbCmsTest2["payers"], "payers");
             for (var item in m) {
                 expect(m[item]).to.have.property('src_id');
                 expect(m[item]).to.have.property('dest_id');
             }
         });
 
-        it('testing matchSections method on two different insurance sections', function () {
+        it('testing matchSections method on two different payer sections', function () {
 
-            var m = matchSections(bbCmsTest1["insurance"], bbCmsTest2["insurance"], "insurance");
+            var m = matchSections(bbCmsTest1["payers"], bbCmsTest2["payers"], "payers");
 
             for (var item in m) {
                 expect(m[item]).to.have.property('src_id');
@@ -167,9 +171,9 @@ describe('Matching library (match-sections.js) tests', function () {
             }
         });
 
-        it('testing matchSections method on two insurance sections with some same fields', function () {
+        it('testing matchSections method on two payers sections with some same fields', function () {
 
-            var m = matchSections(bbCmsTest1["insurance"], bbCmsTest2["insurance"], "insurance");
+            var m = matchSections(bbCmsTest1["payers"], bbCmsTest2["payers"], "payers");
             for (var item in m) {
                 expect(m[item]).to.have.property('src_id');
                 expect(m[item]).to.have.property('dest_id');

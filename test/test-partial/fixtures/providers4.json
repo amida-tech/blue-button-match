@@ -1,6 +1,4 @@
 [{
-    "type": "organization",
-    "name": "ANY CARE",
     "address": {
         "use": "primary home",
         "street_lines": [
@@ -11,39 +9,48 @@
         "zip": "99999",
         "country": "United States"
     },
-    "role": {
+    "type": {
         "name": "NHC"
+    },
+    "organization": {
+        "name": [
+            "ANY CARE"
+        ]
     }
 }, {
-    "type": "different",
-    "name": "ANY CARE",
+    "name": {
+        "first": "Jane",
+        "last": "Doe"
+    },
     "address": {
         "use": "primary home",
         "street_lines": [
-            "123 Any Rd"
+            "123 Road"
         ],
         "city": "Anywhere",
-        "state": "MD",
-        "zip": "99999",
+        "state": "VA",
+        "zip": "00001",
         "country": "United States"
     },
-    "role": {
-        "name": "NHC"
+    "type": {
+        "name": "PHY"
     }
 }, {
-    "type": "organization",
-    "name": "ANY CARE USA",
+    "name": {
+        "first": "Jane",
+        "last": "Doe"
+    },
     "address": {
-        "use": "primary home",
+        "use": "primary homestead",
         "street_lines": [
-            "123 Any Rd"
+            "123 Road"
         ],
         "city": "Anywhere",
-        "state": "MD",
-        "zip": "99999",
+        "state": "VA",
+        "zip": "00001",
         "country": "United States"
     },
-    "role": {
-        "name": "NHC"
+    "type": {
+        "name": "PHY"
     }
-} ]
+}]

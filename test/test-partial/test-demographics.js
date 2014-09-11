@@ -6,17 +6,17 @@
 var expect = require('chai').expect;
 
 var fs = require('fs');
-//var bbjs = require('blue-button');
+var path = require('path');
 
-var matchSingles = require("../../lib/match-single.js").compare;
+var matchSingles = require(path.join(__dirname, "../../lib/match-single.js")).compare;
 
 var js, js2, js3a, js3b, js4a, js4b;
 
 before(function (done) {
-    js = JSON.parse(fs.readFileSync('test/test-partial/fixtures/demographics.json', 'utf-8').toString());
+    js = JSON.parse(fs.readFileSync(path.join(__dirname, 'fixtures/demographics.json'), 'utf-8').toString());
 
     //same demographics with some attributes changed (e.g. name, family status, languages)
-    js2 = JSON.parse(fs.readFileSync('test/test-partial/fixtures/demographics2.json', 'utf-8').toString());
+    js2 = JSON.parse(fs.readFileSync(path.join(__dirname, 'fixtures/demographics2.json'), 'utf-8').toString());
 
     //console.log(js);
     done();
