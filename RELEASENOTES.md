@@ -1,5 +1,9 @@
 # blue-button-match.js Release Notes
 
+# v1.2.0 - September 15, 2014
+- Fixed support for new payers section.
+- Minor bug fixes.
+
 # v1.1.0 - September 2, 2014
 - Uses blue-button.js v1.1.0 JSON data model
 - Improved match detection
