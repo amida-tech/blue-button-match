@@ -1,6 +1,6 @@
 {
     "name": "blue-button-match",
-    "version": "1.2.0-beta.1",
+    "version": "1.5.0-beta.1",
     "description": "Automatic matching of Blue Button JSON data (detection of new, duplicate and partial match entries).",
     "main": "/index.js",
     "directories": {
