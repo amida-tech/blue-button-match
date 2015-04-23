@@ -1,6 +1,6 @@
 {
     "name": "blue-button-match",
-    "version": "1.2.0",
+    "version": "1.2.0-beta.1",
     "description": "Automatic matching of Blue Button JSON data (detection of new, duplicate and partial match entries).",
     "main": "/index.js",
     "directories": {
@@ -18,6 +18,9 @@
     }, {
         "name": "Afsin Ustundag",
         "email": "afsin.ustundag@us.pwc.com"
+    }, {
+        "name": "Matt Martz",
+        "email": "matt.martz@amida-tech.com"
     }],
     "license": "Apache-2.0",
     "engines": {
