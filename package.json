@@ -34,10 +34,10 @@
         "winston": "0.7.x",
         "underscore": "1.6.x",
         "moment": "2.8.x",
-        "blue-button-meta": "^1.1.0"
+        "blue-button-meta": "1.5.0-beta.4"
     },
     "devDependencies": {
-        "blue-button": "^1.2.0",
+        "blue-button": "1.5.0-beta.5",
         "should": "3.1.x",
         "assert": "1.1.x",
         "mocha": "1.17.x",
