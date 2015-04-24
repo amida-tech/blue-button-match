@@ -34,10 +34,10 @@
         "winston": "0.7.x",
         "underscore": "1.6.x",
         "moment": "2.8.x",
-        "blue-button-meta": "1.5.0-beta.4"
+        "blue-button-meta": "amida-tech/blue-button-meta#martz-npi"
     },
     "devDependencies": {
-        "blue-button": "1.5.0-beta.5",
+        "blue-button": "amida-tech/blue-button#martz-npi",
         "should": "3.1.x",
         "assert": "1.1.x",
         "mocha": "1.17.x",
