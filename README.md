@@ -7,6 +7,7 @@ Automatic matching of Blue Button JSON data (detection of new, duplicate and par
 
 [![Build Status](https://travis-ci.org/amida-tech/blue-button-match.svg)](https://travis-ci.org/amida-tech/blue-button-match)
 [![Coverage Status](https://coveralls.io/repos/amida-tech/blue-button-match/badge.png)](https://coveralls.io/r/amida-tech/blue-button-match)
+[![Dependency Status](https://david-dm.org/amida-tech/blue-button-match.svg)](https://david-dm.org/amida-tech/blue-button-match)
 
 ## Library interfaces/APIs
 
