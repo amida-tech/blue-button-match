@@ -1,0 +1,12 @@
+{
+    "primary": [{
+        "path": "identifiers",
+        "type": "array",
+        "percent": 25
+    }],
+    "secondary": [{
+        "path": "name",
+        "type": "array",
+        "percent": 25
+    }]
+}

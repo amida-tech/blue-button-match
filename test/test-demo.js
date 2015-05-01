@@ -58,7 +58,7 @@ describe('Verifying demo R1.0 sample xml files', function () {
 
         //Reduce supported sections to XML elements only.
         var ccdFilter = _.filter(lookup, function (entry) {
-            if (entry === 'insurance' || entry === 'claims' || entry === 'providers') {
+            if (entry === 'insurance' || entry === 'claims' || entry === 'providers' || entry === 'organizations') {
                 return false;
             } else {
                 return true;

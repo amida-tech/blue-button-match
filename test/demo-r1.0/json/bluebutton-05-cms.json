@@ -6,14 +6,13 @@
         },
         "dob": {
             "point": {
-                "date": "1910-01-01T00:00:00Z",
+                "date": "1910-01-01T00:00:00.000Z",
                 "precision": "day"
             }
         },
         "email": [
             {
-                "address": "JOHNDOE@example.com",
-                "type": ""
+                "address": "JOHNDOE@example.com"
             }
         ],
         "phone": [
@@ -44,8 +43,8 @@
             },
             "date_time": {
                 "point": {
-                    "date": "2011-07-22T15:00:00Z",
-                    "precision": "hour"
+                    "date": "2011-07-22T00:00:00.000Z",
+                    "precision": "day"
                 }
             },
             "value": 120,
@@ -60,8 +59,8 @@
             },
             "date_time": {
                 "point": {
-                    "date": "2011-07-22T15:00:00Z",
-                    "precision": "hour"
+                    "date": "2011-07-22T00:00:00.000Z",
+                    "precision": "day"
                 }
             },
             "value": 80,
@@ -74,8 +73,8 @@
             },
             "date_time": {
                 "point": {
-                    "date": "2012-03-20T12:00:00Z",
-                    "precision": "hour"
+                    "date": "2012-03-20T00:00:00.000Z",
+                    "precision": "day"
                 }
             },
             "value": 110,
@@ -92,7 +91,7 @@
                 {
                     "date_time": {
                         "point": {
-                            "date": "2008-03-21T00:00:00Z",
+                            "date": "2008-03-21T00:00:00.000Z",
                             "precision": "day"
                         }
                     },
@@ -106,7 +105,7 @@
                 {
                     "date_time": {
                         "point": {
-                            "date": "2008-03-21T00:00:00Z",
+                            "date": "2008-03-21T00:00:00.000Z",
                             "precision": "day"
                         }
                     },
@@ -120,7 +119,7 @@
                 {
                     "date_time": {
                         "point": {
-                            "date": "2008-03-21T00:00:00Z",
+                            "date": "2008-03-21T00:00:00.000Z",
                             "precision": "day"
                         }
                     },
@@ -134,7 +133,7 @@
                 {
                     "date_time": {
                         "point": {
-                            "date": "2008-03-21T00:00:00Z",
+                            "date": "2008-03-21T00:00:00.000Z",
                             "precision": "day"
                         }
                     },
@@ -158,22 +157,6 @@
             },
             "sig": "Aspirin",
             "status": "Completed"
-        },
-        {
-            "date_time": {
-                "point": {
-                    "date": "1949-09-28T00:00:00Z",
-                    "precision": "day"
-                }
-            },
-            "product": {
-                "product": {
-                    "name": "Erythromycin"
-                },
-                "unencoded_name": "Erythromycin"
-            },
-            "sig": "Erythromycin",
-            "status": "Completed"
         }
     ],
     "allergies": [
@@ -184,11 +167,11 @@
                 },
                 "date_time": {
                     "low": {
-                        "date": "1926-01-08T00:00:00Z",
+                        "date": "1926-01-08T00:00:00.000Z",
                         "precision": "day"
                     },
                     "high": {
-                        "date": "1955-03-13T00:00:00Z",
+                        "date": "1955-03-13T00:00:00.000Z",
                         "precision": "day"
                     }
                 },
@@ -220,11 +203,11 @@
                 },
                 "date_time": {
                     "low": {
-                        "date": "1973-05-13T00:00:00Z",
+                        "date": "1973-05-13T00:00:00.000Z",
                         "precision": "day"
                     },
                     "high": {
-                        "date": "1996-07-20T00:00:00Z",
+                        "date": "1996-07-20T00:00:00.000Z",
                         "precision": "day"
                     }
                 },
@@ -265,7 +248,7 @@
             },
             "date_time": {
                 "point": {
-                    "date": "2002-04-21T00:00:00Z",
+                    "date": "2002-04-21T00:00:00.000Z",
                     "precision": "day"
                 }
             }
@@ -284,7 +267,7 @@
             },
             "date_time": {
                 "point": {
-                    "date": "1990-02-02T00:00:00Z",
+                    "date": "1990-02-02T00:00:00.000Z",
                     "precision": "day"
                 }
             }
@@ -303,7 +286,7 @@
             },
             "date_time": {
                 "point": {
-                    "date": "2009-01-02T00:00:00Z",
+                    "date": "2009-01-02T00:00:00.000Z",
                     "precision": "day"
                 }
             }
@@ -318,11 +301,11 @@
             },
             "date_time": {
                 "low": {
-                    "date": "2005-08-09T00:00:00Z",
+                    "date": "2005-08-09T00:00:00.000Z",
                     "precision": "day"
                 },
                 "high": {
-                    "date": "2011-02-28T00:00:00Z",
+                    "date": "2011-02-28T00:00:00.000Z",
                     "precision": "day"
                 }
             }
@@ -335,11 +318,11 @@
             },
             "date_time": {
                 "low": {
-                    "date": "2008-01-25T00:00:00Z",
+                    "date": "2008-01-25T00:00:00.000Z",
                     "precision": "day"
                 },
                 "high": {
-                    "date": "2010-01-25T00:00:00Z",
+                    "date": "2010-01-25T00:00:00.000Z",
                     "precision": "day"
                 }
             }
@@ -357,7 +340,7 @@
                 },
                 "date_time": {
                     "low": {
-                        "date": "2011-09-01T00:00:00Z",
+                        "date": "2011-09-01T00:00:00.000Z",
                         "precision": "day"
                     }
                 }
@@ -410,7 +393,7 @@
                 },
                 "date_time": {
                     "low": {
-                        "date": "2010-01-01T00:00:00Z",
+                        "date": "2010-01-01T00:00:00.000Z",
                         "precision": "day"
                     }
                 }
@@ -470,11 +453,11 @@
             "participant": {
                 "date_time": {
                     "low": {
-                        "date": "2011-01-01T00:00:00Z",
+                        "date": "2011-01-01T00:00:00.000Z",
                         "precision": "day"
                     },
                     "high": {
-                        "date": "2011-12-31T00:00:00Z",
+                        "date": "2011-12-31T00:00:00.000Z",
                         "precision": "day"
                     }
                 }
@@ -491,11 +474,11 @@
                 },
                 "date_time": {
                     "low": {
-                        "date": "2011-01-01T00:00:00Z",
+                        "date": "2011-01-01T00:00:00.000Z",
                         "precision": "day"
                     },
                     "high": {
-                        "date": "2011-09-30T00:00:00Z",
+                        "date": "2011-09-30T00:00:00.000Z",
                         "precision": "day"
                     }
                 }
@@ -547,11 +530,11 @@
                 },
                 "date_time": {
                     "low": {
-                        "date": "2010-01-01T00:00:00Z",
+                        "date": "2010-01-01T00:00:00.000Z",
                         "precision": "day"
                     },
                     "high": {
-                        "date": "2010-12-31T00:00:00Z",
+                        "date": "2010-12-31T00:00:00.000Z",
                         "precision": "day"
                     }
                 }
@@ -603,11 +586,11 @@
                 },
                 "date_time": {
                     "low": {
-                        "date": "1984-10-01T00:00:00Z",
+                        "date": "1984-10-01T00:00:00.000Z",
                         "precision": "day"
                     },
                     "high": {
-                        "date": "2008-11-30T00:00:00Z",
+                        "date": "2008-11-30T00:00:00.000Z",
                         "precision": "day"
                     }
                 }
@@ -656,11 +639,11 @@
             "number": "1234567890000",
             "date_time": {
                 "low": {
-                    "date": "2012-10-18T00:00:00Z",
+                    "date": "2012-10-18T00:00:00.000Z",
                     "precision": "day"
                 },
                 "high": {
-                    "date": "2012-10-18T00:00:00Z",
+                    "date": "2012-10-18T00:00:00.000Z",
                     "precision": "day"
                 }
             },
@@ -669,11 +652,11 @@
                     "line": "1",
                     "date_time": {
                         "low": {
-                            "date": "2012-10-18T00:00:00Z",
+                            "date": "2012-10-18T00:00:00.000Z",
                             "precision": "day"
                         },
                         "high": {
-                            "date": "2012-10-18T00:00:00Z",
+                            "date": "2012-10-18T00:00:00.000Z",
                             "precision": "day"
                         }
                     },
@@ -704,7 +687,7 @@
                         "code": "1",
                         "name": "Medical Care"
                     },
-                    "performer": [
+                    "performers": [
                         {
                             "type": "rendering provider",
                             "identifiers": [
@@ -748,7 +731,7 @@
             "number": "12345678900000VAA",
             "date_time": {
                 "low": {
-                    "date": "2012-09-22T00:00:00Z",
+                    "date": "2012-09-22T00:00:00.000Z",
                     "precision": "day"
                 }
             },
@@ -757,7 +740,7 @@
                     "line": "1",
                     "date_time": {
                         "low": {
-                            "date": "2012-09-22T00:00:00Z",
+                            "date": "2012-09-22T00:00:00.000Z",
                             "precision": "day"
                         }
                     },
@@ -779,7 +762,7 @@
                     "line": "2",
                     "date_time": {
                         "low": {
-                            "date": "2012-09-22T00:00:00Z",
+                            "date": "2012-09-22T00:00:00.000Z",
                             "precision": "day"
                         }
                     },
@@ -805,7 +788,7 @@
                     "line": "3",
                     "date_time": {
                         "low": {
-                            "date": "2012-09-22T00:00:00Z",
+                            "date": "2012-09-22T00:00:00.000Z",
                             "precision": "day"
                         }
                     },
@@ -881,11 +864,11 @@
                     "line": "1",
                     "date_time": {
                         "low": {
-                            "date": "2012-12-01T00:00:00Z",
+                            "date": "2012-12-01T00:00:00.000Z",
                             "precision": "day"
                         },
                         "high": {
-                            "date": "2012-12-01T00:00:00Z",
+                            "date": "2012-12-01T00:00:00.000Z",
                             "precision": "day"
                         }
                     },
@@ -911,7 +894,7 @@
                         "code": "1",
                         "name": "Medical Care"
                     },
-                    "performer": [
+                    "performers": [
                         {
                             "type": "rendering provider",
                             "identifiers": [
@@ -927,11 +910,11 @@
                     "line": "2",
                     "date_time": {
                         "low": {
-                            "date": "2012-12-01T00:00:00Z",
+                            "date": "2012-12-01T00:00:00.000Z",
                             "precision": "day"
                         },
                         "high": {
-                            "date": "2012-12-01T00:00:00Z",
+                            "date": "2012-12-01T00:00:00.000Z",
                             "precision": "day"
                         }
                     },
@@ -957,7 +940,7 @@
                         "code": "1",
                         "name": "Medical Care"
                     },
-                    "performer": [
+                    "performers": [
                         {
                             "type": "rendering provider",
                             "identifiers": [
@@ -972,11 +955,11 @@
             ],
             "date_time": {
                 "low": {
-                    "date": "2012-12-01T00:00:00Z",
+                    "date": "2012-12-01T00:00:00.000Z",
                     "precision": "day"
                 },
                 "high": {
-                    "date": "2012-12-01T00:00:00Z",
+                    "date": "2012-12-01T00:00:00.000Z",
                     "precision": "day"
                 }
             }
@@ -988,7 +971,7 @@
             "number": "123456789012",
             "date_time": {
                 "point": {
-                    "date": "2011-11-17T00:00:00Z",
+                    "date": "2011-11-17T00:00:00.000Z",
                     "precision": "day"
                 }
             },
@@ -999,7 +982,7 @@
                 {
                     "date_time": {
                         "point": {
-                            "date": "2011-11-17T00:00:00Z",
+                            "date": "2011-11-17T00:00:00.000Z",
                             "precision": "day"
                         }
                     },
@@ -1007,7 +990,7 @@
                         "code": "00093013505",
                         "name": "CARVEDILOL"
                     },
-                    "performer": [
+                    "performers": [
                         {
                             "identifiers": [
                                 {
@@ -1038,7 +1021,7 @@
                     ]
                 }
             ],
-            "performer": [
+            "performers": [
                 {
                     "identifiers": [
                         {
@@ -1075,7 +1058,7 @@
             "number": "123456789011",
             "date_time": {
                 "point": {
-                    "date": "2011-11-23T00:00:00Z",
+                    "date": "2011-11-23T00:00:00.000Z",
                     "precision": "day"
                 }
             },
@@ -1086,7 +1069,7 @@
                 {
                     "date_time": {
                         "point": {
-                            "date": "2011-11-23T00:00:00Z",
+                            "date": "2011-11-23T00:00:00.000Z",
                             "precision": "day"
                         }
                     },
@@ -1094,7 +1077,7 @@
                         "code": "00781223310",
                         "name": "OMEPRAZOLE"
                     },
-                    "performer": [
+                    "performers": [
                         {
                             "identifiers": [
                                 {
@@ -1125,7 +1108,7 @@
                     ]
                 }
             ],
-            "performer": [
+            "performers": [
                 {
                     "identifiers": [
                         {
@@ -1164,7 +1147,7 @@
             "type": "medicare",
             "date_time": {
                 "low": {
-                    "date": "2011-10-01T00:00:00Z",
+                    "date": "2011-10-01T00:00:00.000Z",
                     "precision": "day"
                 }
             }
@@ -1176,7 +1159,7 @@
             "type": "medicare",
             "date_time": {
                 "low": {
-                    "date": "2011-10-01T00:00:00Z",
+                    "date": "2011-10-01T00:00:00.000Z",
                     "precision": "day"
                 }
             }
@@ -1188,7 +1171,7 @@
             "type": "medicare",
             "date_time": {
                 "low": {
-                    "date": "2012-07-01T00:00:00Z",
+                    "date": "2012-07-01T00:00:00.000Z",
                     "precision": "day"
                 }
             }
@@ -1200,7 +1183,7 @@
             "type": "medicare",
             "date_time": {
                 "low": {
-                    "date": "2013-01-01T00:00:00Z",
+                    "date": "2013-01-01T00:00:00.000Z",
                     "precision": "day"
                 }
             }
@@ -1212,7 +1195,7 @@
             "type": "medicare",
             "date_time": {
                 "low": {
-                    "date": "2012-10-14T00:00:00Z",
+                    "date": "2012-10-14T00:00:00.000Z",
                     "precision": "day"
                 }
             }
