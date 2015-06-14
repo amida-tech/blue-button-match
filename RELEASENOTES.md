@@ -1,5 +1,8 @@
 # blue-button-match.js Release Notes
 
+# v1.5.0 - June 14, 2015
+- Monor bug fixes
+
 # v1.2.0 - September 15, 2014
 - Fixed support for new payers section.
 - Minor bug fixes.
