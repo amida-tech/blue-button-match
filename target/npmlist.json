@@ -1,0 +1,1 @@
+{"version":"1.5.0","name":"blue-button-match","dependencies":{"@amida-tech/blue-button-meta":{"version":"1.7.2"},"deep-equal":{"version":"2.0.5"},"libxmljs":{"version":"0.19.7"},"moment":{"version":"2.29.3"},"underscore":{"version":"1.13.3"},"uuid":{"version":"8.3.2"},"winston":{"version":"3.7.2"}}}

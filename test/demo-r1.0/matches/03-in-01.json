@@ -2660,7 +2660,9 @@
                     "plan": "duplicate",
                     "identifiers": "new",
                     "date_time": "duplicate",
-                    "type": "new"
+                    "type": "new",
+                    "status": "duplicate",
+                    "subType": "duplicate"
                 },
                 "src_id": "0",
                 "dest_id": "1",
@@ -2673,7 +2675,9 @@
                     "plan": "duplicate",
                     "identifiers": "new",
                     "date_time": "duplicate",
-                    "type": "new"
+                    "type": "new",
+                    "status": "duplicate",
+                    "subType": "new"
                 },
                 "src_id": "0",
                 "dest_id": "2",
@@ -2686,7 +2690,9 @@
                     "plan": "duplicate",
                     "identifiers": "new",
                     "date_time": "duplicate",
-                    "type": "new"
+                    "type": "new",
+                    "status": "duplicate",
+                    "subType": "duplicate"
                 },
                 "src_id": "0",
                 "dest_id": "3",
@@ -2699,7 +2705,9 @@
                     "plan": "duplicate",
                     "identifiers": "new",
                     "date_time": "duplicate",
-                    "type": "new"
+                    "type": "new",
+                    "status": "duplicate",
+                    "subType": "duplicate"
                 },
                 "src_id": "1",
                 "dest_id": "0",
@@ -2719,7 +2727,9 @@
                     "plan": "duplicate",
                     "identifiers": "new",
                     "date_time": "duplicate",
-                    "type": "new"
+                    "type": "new",
+                    "status": "duplicate",
+                    "subType": "new"
                 },
                 "src_id": "1",
                 "dest_id": "2",
@@ -2732,7 +2742,9 @@
                     "plan": "duplicate",
                     "identifiers": "new",
                     "date_time": "duplicate",
-                    "type": "new"
+                    "type": "new",
+                    "status": "duplicate",
+                    "subType": "duplicate"
                 },
                 "src_id": "1",
                 "dest_id": "3",
@@ -2745,7 +2757,9 @@
                     "plan": "duplicate",
                     "identifiers": "new",
                     "date_time": "duplicate",
-                    "type": "new"
+                    "type": "new",
+                    "status": "duplicate",
+                    "subType": "new"
                 },
                 "src_id": "2",
                 "dest_id": "0",
@@ -2758,7 +2772,9 @@
                     "plan": "duplicate",
                     "identifiers": "new",
                     "date_time": "duplicate",
-                    "type": "new"
+                    "type": "new",
+                    "status": "duplicate",
+                    "subType": "new"
                 },
                 "src_id": "2",
                 "dest_id": "1",
@@ -2778,7 +2794,9 @@
                     "plan": "duplicate",
                     "identifiers": "new",
                     "date_time": "duplicate",
-                    "type": "new"
+                    "type": "new",
+                    "status": "duplicate",
+                    "subType": "new"
                 },
                 "src_id": "2",
                 "dest_id": "3",
@@ -2791,7 +2809,9 @@
                     "plan": "duplicate",
                     "identifiers": "new",
                     "date_time": "duplicate",
-                    "type": "new"
+                    "type": "new",
+                    "status": "duplicate",
+                    "subType": "duplicate"
                 },
                 "src_id": "3",
                 "dest_id": "0",
@@ -2804,7 +2824,9 @@
                     "plan": "duplicate",
                     "identifiers": "new",
                     "date_time": "duplicate",
-                    "type": "new"
+                    "type": "new",
+                    "status": "duplicate",
+                    "subType": "duplicate"
                 },
                 "src_id": "3",
                 "dest_id": "1",
@@ -2817,7 +2839,9 @@
                     "plan": "duplicate",
                     "identifiers": "new",
                     "date_time": "duplicate",
-                    "type": "new"
+                    "type": "new",
+                    "status": "duplicate",
+                    "subType": "new"
                 },
                 "src_id": "3",
                 "dest_id": "2",
@@ -2837,7 +2861,9 @@
                     "plan": "duplicate",
                     "identifiers": "new",
                     "date_time": "duplicate",
-                    "type": "new"
+                    "type": "new",
+                    "status": "duplicate",
+                    "subType": "duplicate"
                 },
                 "src_id": "0",
                 "dest_id": "1",
@@ -2850,7 +2876,9 @@
                     "plan": "duplicate",
                     "identifiers": "new",
                     "date_time": "duplicate",
-                    "type": "new"
+                    "type": "new",
+                    "status": "duplicate",
+                    "subType": "new"
                 },
                 "src_id": "0",
                 "dest_id": "2",
@@ -2863,7 +2891,9 @@
                     "plan": "duplicate",
                     "identifiers": "new",
                     "date_time": "duplicate",
-                    "type": "new"
+                    "type": "new",
+                    "status": "duplicate",
+                    "subType": "duplicate"
                 },
                 "src_id": "0",
                 "dest_id": "3",
@@ -2876,7 +2906,9 @@
                     "plan": "duplicate",
                     "identifiers": "new",
                     "date_time": "duplicate",
-                    "type": "new"
+                    "type": "new",
+                    "status": "duplicate",
+                    "subType": "duplicate"
                 },
                 "src_id": "1",
                 "dest_id": "0",
@@ -2889,7 +2921,9 @@
                     "plan": "duplicate",
                     "identifiers": "new",
                     "date_time": "duplicate",
-                    "type": "new"
+                    "type": "new",
+                    "status": "duplicate",
+                    "subType": "new"
                 },
                 "src_id": "1",
                 "dest_id": "2",
@@ -2902,7 +2936,9 @@
                     "plan": "duplicate",
                     "identifiers": "new",
                     "date_time": "duplicate",
-                    "type": "new"
+                    "type": "new",
+                    "status": "duplicate",
+                    "subType": "duplicate"
                 },
                 "src_id": "1",
                 "dest_id": "3",
@@ -2915,7 +2951,9 @@
                     "plan": "duplicate",
                     "identifiers": "new",
                     "date_time": "duplicate",
-                    "type": "new"
+                    "type": "new",
+                    "status": "duplicate",
+                    "subType": "new"
                 },
                 "src_id": "2",
                 "dest_id": "0",
@@ -2928,7 +2966,9 @@
                     "plan": "duplicate",
                     "identifiers": "new",
                     "date_time": "duplicate",
-                    "type": "new"
+                    "type": "new",
+                    "status": "duplicate",
+                    "subType": "new"
                 },
                 "src_id": "2",
                 "dest_id": "1",
@@ -2941,7 +2981,9 @@
                     "plan": "duplicate",
                     "identifiers": "new",
                     "date_time": "duplicate",
-                    "type": "new"
+                    "type": "new",
+                    "status": "duplicate",
+                    "subType": "new"
                 },
                 "src_id": "2",
                 "dest_id": "3",
@@ -2954,7 +2996,9 @@
                     "plan": "duplicate",
                     "identifiers": "new",
                     "date_time": "duplicate",
-                    "type": "new"
+                    "type": "new",
+                    "status": "duplicate",
+                    "subType": "duplicate"
                 },
                 "src_id": "3",
                 "dest_id": "0",
@@ -2967,7 +3011,9 @@
                     "plan": "duplicate",
                     "identifiers": "new",
                     "date_time": "duplicate",
-                    "type": "new"
+                    "type": "new",
+                    "status": "duplicate",
+                    "subType": "duplicate"
                 },
                 "src_id": "3",
                 "dest_id": "1",
@@ -2980,7 +3026,9 @@
                     "plan": "duplicate",
                     "identifiers": "new",
                     "date_time": "duplicate",
-                    "type": "new"
+                    "type": "new",
+                    "status": "duplicate",
+                    "subType": "new"
                 },
                 "src_id": "3",
                 "dest_id": "2",
@@ -2998,7 +3046,7 @@
         ]
     },
     "meta": {
-        "version": "1.5.0"
+        "version": "1.5.1"
     },
     "errors": []
 }

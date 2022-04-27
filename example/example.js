@@ -1,7 +1,7 @@
 "use strict";
 
 var match = require("../index.js");
-var bb = require("blue-button");
+var bb = require("@amida-tech/blue-button");
 var fs = require("fs");
 
 var dataA = fs.readFileSync("CCD_1.sample.xml").toString();

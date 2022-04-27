@@ -1,4 +1,267 @@
 {
+    "header": {
+        "identifiers": [
+            {
+                "identifier": "2.16.840.1.113883.19.5.99999.1",
+                "extension": "TT988"
+            }
+        ],
+        "confidentiality_code": {
+            "code": "N",
+            "name": "Normal",
+            "code_system_name": "Confidentiality Code"
+        },
+        "code": {
+            "name": "Summarization of Episode Note",
+            "code": "34133-9",
+            "code_system_name": "LOINC"
+        },
+        "template": [
+            "2.16.840.1.113883.10.20.22.1.1",
+            "2.16.840.1.113883.10.20.22.1.2"
+        ],
+        "title": "Community Health and Hospitals: Health Summary",
+        "date_time": {
+            "point": {
+                "date": "2012-09-15T04:00:00.000Z",
+                "precision": "minute"
+            }
+        },
+        "author": {
+            "author": [
+                {
+                    "identifiers": [
+                        {
+                            "identifier": "2.16.840.1.113883.4.6",
+                            "extension": "99999999"
+                        }
+                    ],
+                    "name": [
+                        {
+                            "last": "Seven",
+                            "first": "Henry"
+                        }
+                    ],
+                    "address": [
+                        {
+                            "street_lines": [
+                                "1002 Healthcare Drive"
+                            ],
+                            "city": "Portland",
+                            "state": "OR",
+                            "zip": "99123",
+                            "country": "US"
+                        }
+                    ],
+                    "phone": [
+                        {
+                            "number": "555-555-1002",
+                            "type": "work place"
+                        }
+                    ],
+                    "code": [
+                        {
+                            "name": "Allopathic & Osteopathic Physicians",
+                            "code": "200000000X"
+                        }
+                    ]
+                }
+            ],
+            "date_time": {
+                "point": {
+                    "date": "2005-03-29T17:44:11.000Z",
+                    "precision": "second"
+                }
+            }
+        },
+        "data_enterer": {
+            "identifiers": [
+                {
+                    "identifier": "2.16.840.1.113883.4.6",
+                    "extension": "999999943252"
+                }
+            ],
+            "name": [
+                {
+                    "last": "Seven",
+                    "first": "Henry"
+                }
+            ],
+            "address": [
+                {
+                    "street_lines": [
+                        "1001 Village Avenue"
+                    ],
+                    "city": "Portland",
+                    "state": "OR",
+                    "zip": "99123",
+                    "country": "US"
+                }
+            ],
+            "phone": [
+                {
+                    "number": "555-555-1002",
+                    "type": "work place"
+                }
+            ]
+        },
+        "informant": {
+            "identifiers": [
+                {
+                    "identifier": "2.16.840.1.113883.19.5",
+                    "extension": "KP00017"
+                }
+            ],
+            "name": [
+                {
+                    "last": "Seven",
+                    "first": "Henry"
+                }
+            ],
+            "address": [
+                {
+                    "street_lines": [
+                        "1001 Village Avenue"
+                    ],
+                    "city": "Portland",
+                    "state": "OR",
+                    "zip": "99123",
+                    "country": "US"
+                }
+            ],
+            "phone": [
+                {
+                    "number": "555-555-1002",
+                    "type": "work place"
+                }
+            ]
+        },
+        "custodian": {
+            "identifiers": [
+                {
+                    "identifier": "2.16.840.1.113883.4.6",
+                    "extension": "99999999"
+                }
+            ],
+            "name": [
+                "Community Health and Hospitals"
+            ],
+            "address": [
+                {
+                    "street_lines": [
+                        "1002 Healthcare Drive"
+                    ],
+                    "city": "Portland",
+                    "state": "OR",
+                    "zip": "99123",
+                    "country": "US",
+                    "use": "work place"
+                }
+            ],
+            "phone": [
+                {
+                    "number": " 555-555-1002",
+                    "type": "work place"
+                }
+            ]
+        },
+        "service_event": {
+            "code": {
+                "name": "Colonoscopy",
+                "code": "73761001",
+                "code_system_name": "SNOMED CT"
+            },
+            "date_time": {
+                "low": {
+                    "date": "2012-09-08T04:00:00.000Z",
+                    "precision": "minute"
+                },
+                "high": {
+                    "date": "2012-09-15T04:00:00.000Z",
+                    "precision": "minute"
+                }
+            },
+            "performer": [
+                {
+                    "performer": [
+                        {
+                            "identifiers": [
+                                {
+                                    "identifier": "2.16.840.1.113883.4.6",
+                                    "extension": "PseudoMD-1"
+                                }
+                            ],
+                            "name": [
+                                {
+                                    "prefix": "Dr.",
+                                    "last": "Seven",
+                                    "first": "Henry"
+                                }
+                            ],
+                            "address": [
+                                {
+                                    "street_lines": [
+                                        "1001 Village Avenue"
+                                    ],
+                                    "city": "Portland",
+                                    "state": "OR",
+                                    "zip": "99123",
+                                    "country": "US"
+                                }
+                            ],
+                            "phone": [
+                                {
+                                    "number": "+1-555-555-5000",
+                                    "type": "primary home"
+                                }
+                            ],
+                            "organization": [
+                                {
+                                    "identifiers": [
+                                        {
+                                            "identifier": "2.16.840.1.113883.19.5.9999.1393"
+                                        }
+                                    ],
+                                    "name": [
+                                        "Community Health and Hospitals"
+                                    ],
+                                    "address": [
+                                        {
+                                            "street_lines": [
+                                                "1001 Village Avenue"
+                                            ],
+                                            "city": "Portland",
+                                            "state": "OR",
+                                            "zip": "99123",
+                                            "country": "US"
+                                        }
+                                    ],
+                                    "phone": [
+                                        {
+                                            "number": "+1-555-555-5000",
+                                            "type": "primary home"
+                                        }
+                                    ]
+                                }
+                            ],
+                            "code": [
+                                {
+                                    "name": "Gastroenterologist",
+                                    "code": "207RG0100X",
+                                    "code_system_name": "Provider Codes"
+                                }
+                            ]
+                        }
+                    ],
+                    "code": {
+                        "name": "Primary Performer",
+                        "code": "PP",
+                        "code_system_name": "Provider Role"
+                    }
+                }
+            ]
+        }
+    },
     "demographics": {
         "name": {
             "middle": [
@@ -13,7 +276,11 @@
                 "precision": "day"
             }
         },
-        "gender": "Female",
+        "gender": {
+            "name": "Female",
+            "code": "F",
+            "code_system_name": "HL7 AdministrativeGender"
+        },
         "identifiers": [
             {
                 "identifier": "2.16.840.1.113883.19.5.99999.2",
@@ -24,7 +291,11 @@
                 "extension": "111-00-2330"
             }
         ],
-        "marital_status": "Married",
+        "marital_status": {
+            "name": "Married",
+            "code": "M",
+            "code_system_name": "HL7 Marital Status"
+        },
         "addresses": [
             {
                 "street_lines": [
@@ -43,17 +314,39 @@
                 "type": "primary home"
             }
         ],
-        "race": "White",
-        "ethnicity": "Not Hispanic or Latino",
+        "race": {
+            "name": "White",
+            "code": "2106-3",
+            "code_system_name": "Race and Ethnicity - CDC"
+        },
+        "ethnicity": {
+            "name": "Not Hispanic or Latino",
+            "code": "2186-5",
+            "code_system_name": "Race and Ethnicity - CDC"
+        },
         "languages": [
             {
-                "language": "en",
+                "language": {
+                    "code": "en"
+                },
                 "preferred": true,
-                "mode": "Expressed spoken",
-                "proficiency": "Good"
+                "mode": {
+                    "name": "Expressed spoken",
+                    "code": "ESP",
+                    "code_system_name": "LanguageAbilityMode"
+                },
+                "proficiency": {
+                    "name": "Good",
+                    "code": "G",
+                    "code_system_name": "LanguageAbilityProficiency"
+                }
             }
         ],
-        "religion": "Christian (non-Catholic, non-specific)",
+        "religion": {
+            "name": "Christian (non-Catholic, non-specific)",
+            "code": "1013",
+            "code_system_name": "HL7 Religious Affiliation"
+        },
         "birthplace": {
             "city": "Beaverton",
             "state": "OR",
@@ -62,7 +355,11 @@
         },
         "guardians": [
             {
-                "relation": "Parent",
+                "relation": {
+                    "name": "Parent",
+                    "code": "PRN",
+                    "code_system_name": "HL7 Role"
+                },
                 "addresses": [
                     {
                         "street_lines": [
@@ -271,7 +568,11 @@
                         "range": "M 13-18 g/dl; F 12-16 g/dl"
                     },
                     "interpretations": [
-                        "Normal"
+                        {
+                            "code": "N",
+                            "name": "Normal",
+                            "code_system_name": "HL7 Result Interpretation"
+                        }
                     ],
                     "value": 13.2,
                     "unit": "g/dl"
@@ -300,7 +601,11 @@
                         "unit": "10+3/ul"
                     },
                     "interpretations": [
-                        "Normal"
+                        {
+                            "code": "N",
+                            "name": "Normal",
+                            "code_system_name": "HL7 Result Interpretation"
+                        }
                     ],
                     "value": 6.7,
                     "unit": "10+3/ul"
@@ -329,7 +634,11 @@
                         "unit": "10+3/ul"
                     },
                     "interpretations": [
-                        "Low"
+                        {
+                            "code": "L",
+                            "name": "Low",
+                            "code_system_name": "HL7 Result Interpretation"
+                        }
                     ],
                     "value": 123,
                     "unit": "10+3/ul"
@@ -397,6 +706,35 @@
                         "last": "Seven",
                         "first": "Henry"
                     }
+                },
+                "instructions": {
+                    "code": {
+                        "name": "instruction",
+                        "code": "409073007",
+                        "code_system_name": "SNOMED CT"
+                    },
+                    "free_text": "label in spanish"
+                },
+                "product": {
+                    "identifiers": [
+                        {
+                            "identifier": "2a620155-9d11-439e-92b3-5d9815ff4ee8"
+                        }
+                    ],
+                    "unencoded_name": "Proventil HFA",
+                    "product": {
+                        "name": "Proventil 0.09 MG/ACTUAT inhalant solution",
+                        "code": "573621",
+                        "translations": [
+                            {
+                                "name": "Proventil 0.09 MG/ACTUAT inhalant solution",
+                                "code": "573621",
+                                "code_system_name": "RXNORM"
+                            }
+                        ],
+                        "code_system_name": "RXNORM"
+                    },
+                    "manufacturer": "Medication Factory Inc."
                 }
             },
             "administration": {
@@ -517,6 +855,27 @@
                             ]
                         }
                     ]
+                },
+                "product": {
+                    "identifiers": [
+                        {
+                            "identifier": "2a620155-9d11-439e-92b3-5d9815ff4ee8"
+                        }
+                    ],
+                    "unencoded_name": "Proventil HFA",
+                    "product": {
+                        "name": "Proventil 0.09 MG/ACTUAT inhalant solution",
+                        "code": "573621",
+                        "translations": [
+                            {
+                                "name": "Proventil 0.09 MG/ACTUAT inhalant solution",
+                                "code": "573621",
+                                "code_system_name": "RXNORM"
+                            }
+                        ],
+                        "code_system_name": "RXNORM"
+                    },
+                    "manufacturer": "Medication Factory Inc."
                 }
             }
         }
@@ -1697,7 +2056,11 @@
                     "precision": "day"
                 }
             },
-            "type": "observation"
+            "type": "observation",
+            "status": {
+                "code": "new"
+            },
+            "subType": "Request"
         },
         {
             "plan": {
@@ -1716,7 +2079,11 @@
                     "precision": "day"
                 }
             },
-            "type": "act"
+            "type": "act",
+            "status": {
+                "code": "new"
+            },
+            "subType": "Request"
         },
         {
             "plan": {
@@ -1735,7 +2102,11 @@
                     "precision": "day"
                 }
             },
-            "type": "encounter"
+            "type": "encounter",
+            "status": {
+                "code": "new"
+            },
+            "subType": "Intent"
         },
         {
             "plan": {
@@ -1754,7 +2125,11 @@
                     "precision": "day"
                 }
             },
-            "type": "procedure"
+            "type": "procedure",
+            "status": {
+                "code": "new"
+            },
+            "subType": "Request"
         }
     ],
     "payers": [
@@ -1956,6 +2331,64 @@
                     }
                 }
             }
+        }
+    ],
+    "functional_statuses": [
+        {
+            "identifiers": [
+                {
+                    "identifier": "08edb7c0-2111-43f2-a784-9a5fdfaa67f0"
+                }
+            ],
+            "type": {
+                "name": "Finding of Functional Performance and Activity",
+                "code": "248536006",
+                "code_system_name": "SNOMED CT"
+            },
+            "date_time": {
+                "low": {
+                    "date": "2007-02-01T00:00:00.000Z",
+                    "precision": "month"
+                },
+                "high": {
+                    "date": "2007-04-01T00:00:00.000Z",
+                    "precision": "month"
+                }
+            },
+            "code": {
+                "name": "dyspnea",
+                "code": "162891007",
+                "code_system_name": "SNOMED CT"
+            },
+            "status": "completed"
+        },
+        {
+            "identifiers": [
+                {
+                    "identifier": "08edb7c0-2111-43f2-a784-9a5fdfaa67f0"
+                }
+            ],
+            "type": {
+                "name": "Cognitive Function Finding",
+                "code": "373930000",
+                "code_system_name": "SNOMED CT"
+            },
+            "date_time": {
+                "low": {
+                    "date": "2007-04-01T00:00:00.000Z",
+                    "precision": "month"
+                },
+                "high": {
+                    "date": "2007-06-01T00:00:00.000Z",
+                    "precision": "month"
+                }
+            },
+            "code": {
+                "name": "Memory impairment",
+                "code": "386807006",
+                "code_system_name": "SNOMED CT"
+            },
+            "status": "completed"
         }
     ]
 }

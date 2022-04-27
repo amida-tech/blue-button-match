@@ -3,7 +3,7 @@ blue-button-match
 
 Automatic matching of Blue Button JSON data (detection of new, duplicate and partial match entries)
 
-[![NPM](https://nodei.co/npm/blue-button-match.png)](https://nodei.co/npm/blue-button-match/)
+[![NPM](https://nodei.co/npm/@amida-tech/blue-button-match.png)](https://nodei.co/npm/@amida-tech/blue-button-match/)
 
 [![Build Status](https://travis-ci.org/amida-tech/blue-button-match.svg)](https://travis-ci.org/amida-tech/blue-button-match)
 [![Coverage Status](https://coveralls.io/repos/amida-tech/blue-button-match/badge.png)](https://coveralls.io/r/amida-tech/blue-button-match)
@@ -18,13 +18,31 @@ This library provides the following functionality
 - Match two health records in blue-button JSON format
 - Match individual sections of above
 
+## Quick up and running guide
+
+### Prerequisites
+
+- Node.js (v14.19+) and NPM
+- Grunt.js
+
+```sh
+# Install dependencies
+npm i
+
+# Install grunt
+npm i -g grunt
+
+# Test
+grunt
+```
+
 ### Usage example
 
 Require blue-button-match module
 
-```
+```javascript
 var match = require("./index.js") 
-var bb = require("blue-button");
+var bb = require("@amida-tech/blue-button");
 
 var recordA = bb.parseString("record A");
 var recordB = bb.parseString("record B");
@@ -37,55 +55,53 @@ console.log(result);
 
 This will produce a match object looking like this:
 
-```
+```json
 {
-    "match":
-    {
-        "allergies" : [
-          {
-                    "match": "new",
-                    "percent": 0,
-                    "src_id": "0",
-                    "dest_id": "0",
-                    "dest": "dest"
-          },
-          {
-                    "match": "new",
-                    "percent": 0,
-                    "src_id": "1",
-                    "dest_id": "0",
-                    "dest": "dest"
-          },
-          {
-                    "match": "new",
-                    "percent": 0,
-                    "src_id": "2",
-                    "dest_id": "0",
-                    "dest": "dest"
-          },
-          {
-                    "match": "new",
-                    "percent": 0,
-                    "src_id": "0",
-                    "dest_id": "1",
-                    "dest": "src"
-          },
-            ...
-          }
-        ],
-        "medications" : [...],
-        "demographics" : [...]
+  "match": {
+    "allergies" : [
+      {
+        "match": "new",
+        "percent": 0,
+        "src_id": "0",
+        "dest_id": "0",
+        "dest": "dest"
+      },
+      {
+        "match": "new",
+        "percent": 0,
+        "src_id": "1",
+        "dest_id": "0",
+        "dest": "dest"
+      },
+      {
+        "match": "new",
+        "percent": 0,
+        "src_id": "2",
+        "dest_id": "0",
+        "dest": "dest"
+      },
+      {
+        "match": "new",
+        "percent": 0,
+        "src_id": "0",
+        "dest_id": "1",
+        "dest": "src"
+      },
         ...
-    },
-    "meta":
-    {
-    	"version" : "0.0.1"
+      }
+    ],
+    "medications" : [...],
+    "demographics" : [...]
+    ...
+  },
+  "meta": {
+    "version" : "0.0.1"
 	},
 	"errors": []
 }
 ```
 
-#### Matching record explanation
+### Matching record explanation
 
 Match element can be `{"match" : "duplicate", "percent": 100}`, `{"match" : "new", "percent: 0"}` or `{"match" : "partial", "percent": 50}`.
 
@@ -94,21 +110,20 @@ Partial match is expressed in percent and can range from `1` to `99`.  Percent i
 
 Element attribute `dest_id` refers to the element position (index) in the related section's array of the Master Health Record. Element attribute `src_id` refers to the element position (index) in the related array of the new document being merged (new record).  This is modulated by the 'dest' field. When `{dest:'dest'}` is present the `dest_id` references the index of the record matched against a new entry.  When `{dest: 'src'}` is present, the `dest_id` references the index of the record contained within the same record as the `src_id`.
 
-```
+```json
 {
-    "match":
-    {
-        "allergies" : [
-            { "match" : "duplicate", "src_id" : 0, "dest_id": 2 },
-            { "match" : "new", "src_id" :1 },
-            { "match" : "partial", "percent" : 50, "src_id" : 2, "dest_id" : 5},
-            ...
-            }
-        ],
-        "medications" : [...],
-        "demographics" : [...]
-        ...
-    }
+  "match":
+  {
+    "allergies" : [
+      { "match" : "duplicate", "src_id" : 0, "dest_id": 2 },
+      { "match" : "new", "src_id" :1 },
+      { "match" : "partial", "percent" : 50, "src_id" : 2, "dest_id" : 5},
+      ...
+    ],
+    "medications" : [...],
+    "demographics" : [...]
+    ...
+  }
 }
 ```
 
@@ -123,55 +138,53 @@ _Applied to: All sections excluding Demographics_
 
 New match entry (dest):
 
-```
+```json
 {
-   "match": "new",
-   "percent": 0,
-   "src_id": "1",
-   "dest_id": "2",
-   "dest": "dest"
+  "match": "new",
+  "percent": 0,
+  "src_id": "1",
+  "dest_id": "2",
+  "dest": "dest"
 }
-
-
 ````
 Duplicate match entry (dest):
 
-```
+```json
  {
-     "match": "duplicate",
-     "percent": "100",
-     "src_id": "1",
-     "dest_id": "1",
-     "dest": "dest"
+    "match": "duplicate",
+    "percent": "100",
+    "src_id": "1",
+    "dest_id": "1",
+    "dest": "dest"
  }
 ````
 
 Partial match entry (dest):
 
-```
+```json
 {
-    "match": "partial",
-    "percent": 50,
-    "subelements": {
-        "reaction": [{
-            "match": "new",
-            "percent": 0,
-            "src_id": "0",
-            "dest_id": "0",
-            "dest": "dest"
-        }]
-    },
-    "diff": {
-        "date_time": "duplicate",
-        "identifiers": "duplicate",
-        "allergen": "duplicate",
-        "severity": "duplicate",
-        "status": "duplicate",
-        "reaction": "new"
-    },
-    "src_id": "2",
-    "dest_id": "2",
-    "dest": "dest"
+  "match": "partial",
+  "percent": 50,
+  "subelements": {
+    "reaction": [{
+      "match": "new",
+      "percent": 0,
+      "src_id": "0",
+      "dest_id": "0",
+      "dest": "dest"
+    }]
+  },
+  "diff": {
+    "date_time": "duplicate",
+    "identifiers": "duplicate",
+    "allergen": "duplicate",
+    "severity": "duplicate",
+    "status": "duplicate",
+    "reaction": "new"
+  },
+  "src_id": "2",
+  "dest_id": "2",
+  "dest": "dest"
 }
 ````
 
@@ -183,16 +196,19 @@ _Applied to: Demographics_
 
 Record is a duplicate:
 
-```
+```javascript
 [ { match: 'duplicate', src_id: 0, dest_id: 0 } ]
-````
+```
 
 Record is a partial match:
 
-```
-[ { match: 'diff',
+```javascript
+[ 
+  { 
+    match: 'diff',
     diff: 
-     { name: 'duplicate',
+    { 
+       name: 'duplicate',
        dob: 'new',
        gender: 'duplicate',
        identifiers: 'duplicate',
@@ -203,33 +219,36 @@ Record is a partial match:
        languages: 'duplicate',
        religion: 'duplicate',
        birthplace: 'duplicate',
-       guardians: 'new' },
+       guardians: 'new' 
+    },
     src_id: 0,
-    dest_id: 0 } ]
+    dest_id: 0 
+  } 
+]
 ````
 
 Edge cases for single facts:
 
 Both objects are empty e.g. comparePartial({}, {})
 
-```
+```javascript
 [ { match: 'duplicate' } ]
 ```
 
 Comparing empty object e.g. {} with non-empty (master record)
 
-```
+```javascript
 [ { match: 'diff', diff: {} } ]
 ```
 
 Comparing non empty object with empty master record {}
-```
+```javascript
 [ { match: 'new' } ]
 ```
 
 ## Matching Rules
 
-#### Common matching rules
+### Common matching rules
 
 _Date/time match_ - Hard match on dates, After initial date mismatch, fuzzy date match performed.  Will check for overlap of dates if they don't hard match.
 
@@ -249,79 +268,79 @@ Additionally, elements may have 'subarrays', which is used to populate sub-array
 
 Note:  Currently, the logic is designed so a match over 50% is considered actionable.
 
-###Allergies
+### Allergies
 
 Primary:  Allergen Coded Match.
 
 Secondary:  Date/time.
 
-###Claims
+### Claims
 
 Primary:  Payer String Match, Number String Match, and type String Array match.
 
-###Demographics
+### Demographics
 
 All subelements are compared.
 
-###Encounters
+### Encounters
 
 Primary:  Encounter Coded Match, Date/time.
 
-###Immunizations
+### Immunizations
 
 Primary:  Product Coded Match, Date/time.
 
-###Insurance
+### Insurance
 
 Primary:  Plan Identifier String Match, Policy Number String Match, and Payer Name String match.
 
 Note:  Any combination of two matches will be over 50%.
 
-###Medications
+### Medications
 
 Primary:  Product Coded Entry.
 
 Secondary:  Date/time.
 
-###Payers
+### Payers
 
 Primary:  Policy Insurance Object.
 
-###Plan of Care
+### Plan of Care
 
 Primary:  Plan Coded Entry, Date/time.
 
-###Problems
+### Problems
 
 Primary:  Problem Coded Entry.
 
 Secondary:  Date/time, Status string match, Negation Indicator boolean match.
 
-###Procedures
+### Procedures
 
 Primary:  Procedure Coded Entry Match.
 
 Secondary:  Date/time.
 
-###Providers
+### Providers
 
 Primary:  Provider Type String Match.
 
 Secondary:  Person Object, and Name String.
 
-###Results
+### Results
 
 Primary:  Result set Coded Entry, and Result set Date/time.
 
 Note:  Date/time calculated as most recent value from results array.
 
-###Social History
+### Social History
 
 Primary:  Value String entry.
 
 Secondary:  Date/time.
 
-###Vitals model
+### Vitals model
 
 Primary:  Vital Coded entry.
 
@@ -330,11 +349,11 @@ Secondary:  Date/time.
 
 ## Contributing
 
-Contributors are welcome. See issues https://github.com/amida-tech/blue-button-match/issues
+Contributors are welcome. See [issues](https://github.com/amida-tech/blue-button-match/issues)
 
 ## Release Notes
 
-See release notes [here] (./RELEASENOTES.md)
+See release notes [here](./RELEASENOTES.md)
 
 ## License
 

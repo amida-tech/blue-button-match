@@ -3,8 +3,6 @@
 
 "use strict";
 
-var expect = require('chai').expect;
-
 var fs = require('fs');
 var path = require('path');
 
@@ -14,7 +12,7 @@ var matchSections = require(path.join(__dirname, "../../lib/match-sections.js"))
 
 var js, js2, js3, js4;
 
-before(function (done) {
+beforeAll(function (done) {
     // 1 panel with 3 subresults
     js = JSON.parse(fs.readFileSync(path.join(__dirname, 'fixtures/results.json'), 'utf-8').toString());
 
@@ -35,20 +33,20 @@ describe('Results partial matching library (results.js) tests', function () {
     it('compare two different results sections', function () {
         var m = matchSections(js, js3, 'results');
 
-        expect(m.length).to.equal(1);
+        expect(m.length).toBe(1);
         expect(_.where(m, {
             dest: 'dest'
-        }).length).to.equal(1);
+        }).length).toBe(1);
         expect(_.where(m, {
             dest: 'src'
-        }).length).to.equal(0);
+        }).length).toBe(0);
 
         //console.log(JSON.stringify(m, null, 10));
 
         for (var item in m) {
-            expect(m[item].match).to.equal("new");
-            expect(m[item]).to.have.property('src_id');
-            expect(m[item]).to.have.property('dest_id');
+            expect(m[item].match).toBe("new");
+            expect(m[item]).toHaveProperty('src_id');
+            expect(m[item]).toHaveProperty('dest_id');
         }
 
     });
@@ -60,9 +58,9 @@ describe('Results partial matching library (results.js) tests', function () {
 
         for (var item in m) {
             //console.log(m[item].match);
-            expect(m[item].match).to.equal("duplicate");
-            expect(m[item]).to.have.property('src_id');
-            expect(m[item]).to.have.property('dest_id');
+            expect(m[item].match).toBe("duplicate");
+            expect(m[item]).toHaveProperty('src_id');
+            expect(m[item]).toHaveProperty('dest_id');
         }
 
         var m = matchSections(js3, js3, 'results');
@@ -71,9 +69,9 @@ describe('Results partial matching library (results.js) tests', function () {
 
         for (var item in m) {
             //console.log(m[item].match);
-            expect(m[item].match).to.equal("duplicate");
-            expect(m[item]).to.have.property('src_id');
-            expect(m[item]).to.have.property('dest_id');
+            expect(m[item].match).toBe("duplicate");
+            expect(m[item]).toHaveProperty('src_id');
+            expect(m[item]).toHaveProperty('dest_id');
         }
 
     });
@@ -113,26 +111,26 @@ describe('Results partial matching library (results.js) tests', function () {
             //console.log(src_obj_array[objArray]);
             expect(_.where(src_obj_array[objArray], {
                 dest: 'dest'
-            }).length).to.equal(1);
+            }).length).toBe(1);
             expect(_.where(src_obj_array[objArray], {
                 dest: 'src'
-            }).length).to.equal(0);
+            }).length).toBe(0);
             expect(_.where(src_obj_array[objArray], {
                 dest: 'dest',
                 match: 'partial'
-            }).length).to.equal(1);
+            }).length).toBe(1);
             expect(_.where(src_obj_array[objArray], {
                 dest: 'dest',
                 match: 'new'
-            }).length).to.equal(0);
+            }).length).toBe(0);
             expect(_.where(src_obj_array[objArray], {
                 dest: 'src',
                 match: 'partial'
-            }).length).to.equal(0);
+            }).length).toBe(0);
             expect(_.where(src_obj_array[objArray], {
                 dest: 'src',
                 match: 'new'
-            }).length).to.equal(0);
+            }).length).toBe(0);
 
             var partial_array = _.where(src_obj_array[objArray], {
                 dest: 'dest',
@@ -141,11 +139,11 @@ describe('Results partial matching library (results.js) tests', function () {
 
             for (var i in partial_array) {
                 //console.log(partial_array[i]);
-                expect(partial_array[i].percent).to.equal(75);
-                expect(partial_array[i].diff).to.exist;
-                expect(partial_array[i].subelements).to.exist;
-                expect(partial_array[i].subelements.results).to.exist;
-                expect(partial_array[i].subelements.results.length).to.equal(15);
+                expect(partial_array[i].percent).toBe(75);
+                expect(partial_array[i].diff).toBeDefined();
+                expect(partial_array[i].subelements).toBeDefined();
+                expect(partial_array[i].subelements.results).toBeDefined();
+                expect(partial_array[i].subelements.results.length).toBe(15);
             }
 
         }
@@ -179,26 +177,26 @@ describe('Results partial matching library (results.js) tests', function () {
             //console.log(src_obj_array[objArray]);
             expect(_.where(src_obj_array[objArray], {
                 dest: 'dest'
-            }).length).to.equal(1);
+            }).length).toBe(1);
             expect(_.where(src_obj_array[objArray], {
                 dest: 'src'
-            }).length).to.equal(0);
+            }).length).toBe(0);
             expect(_.where(src_obj_array[objArray], {
                 dest: 'dest',
                 match: 'partial'
-            }).length).to.equal(1);
+            }).length).toBe(1);
             expect(_.where(src_obj_array[objArray], {
                 dest: 'dest',
                 match: 'new'
-            }).length).to.equal(0);
+            }).length).toBe(0);
             expect(_.where(src_obj_array[objArray], {
                 dest: 'src',
                 match: 'partial'
-            }).length).to.equal(0);
+            }).length).toBe(0);
             expect(_.where(src_obj_array[objArray], {
                 dest: 'src',
                 match: 'new'
-            }).length).to.equal(0);
+            }).length).toBe(0);
 
             var partial_array = _.where(src_obj_array[objArray], {
                 dest: 'dest',
@@ -207,11 +205,11 @@ describe('Results partial matching library (results.js) tests', function () {
 
             for (var i in partial_array) {
                 //console.log(partial_array[i]);
-                expect(partial_array[i].percent).to.equal(75);
-                expect(partial_array[i].diff).to.exist;
-                expect(partial_array[i].subelements).to.exist;
-                expect(partial_array[i].subelements.results).to.exist;
-                expect(partial_array[i].subelements.results.length).to.equal(15);
+                expect(partial_array[i].percent).toBe(75);
+                expect(partial_array[i].diff).toBeDefined();
+                expect(partial_array[i].subelements).toBeDefined();
+                expect(partial_array[i].subelements.results).toBeDefined();
+                expect(partial_array[i].subelements.results.length).toBe(15);
             }
 
         }
@@ -248,26 +246,26 @@ describe('Results partial matching library (results.js) tests', function () {
         //Match One.
         expect(_.where(src_obj_array[0], {
             dest: 'dest'
-        }).length).to.equal(3);
+        }).length).toBe(3);
         expect(_.where(src_obj_array[0], {
             dest: 'src'
-        }).length).to.equal(0);
+        }).length).toBe(0);
         expect(_.where(src_obj_array[0], {
             dest: 'dest',
             match: 'new'
-        }).length).to.equal(1);
+        }).length).toBe(1);
         expect(_.where(src_obj_array[0], {
             dest: 'src',
             match: 'new'
-        }).length).to.equal(0);
+        }).length).toBe(0);
         expect(_.where(src_obj_array[0], {
             dest: 'dest',
             match: 'partial'
-        }).length).to.equal(1);
+        }).length).toBe(1);
         expect(_.where(src_obj_array[0], {
             dest: 'dest',
             match: 'duplicate'
-        }).length).to.equal(1);
+        }).length).toBe(1);
 
     });
 

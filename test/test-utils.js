@@ -1,6 +1,3 @@
-var expect = require('chai').expect;
-var assert = require('chai').assert;
-
 var utils = require('../lib/utils.js');
 
 //--------Test Data -----------//
@@ -131,37 +128,37 @@ var date_two_fuzzy_high_low = {
 describe('utils.js test', function () {
 
     it('test dateMatch', function () {
-        expect(utils.dateMatch(date_one, date_one)).to.equal(true);
-        expect(utils.dateMatch(date_one, date_one_diff)).to.equal(false);
-        expect(utils.dateMatch(date_two, date_two)).to.equal(true);
-        expect(utils.dateMatch(date_two, date_two_diff_low)).to.equal(false);
+        expect(utils.dateMatch(date_one, date_one)).toBe(true);
+        expect(utils.dateMatch(date_one, date_one_diff)).toBe(false);
+        expect(utils.dateMatch(date_two, date_two)).toBe(true);
+        expect(utils.dateMatch(date_two, date_two_diff_low)).toBe(false);
     });
 
     it('test dateFuzzyMatch 1-1', function () {
-        expect(utils.dateFuzzyMatch(date_one, date_one)).to.equal(true);
-        expect(utils.dateFuzzyMatch(date_one, date_one_fuzzy)).to.equal(true);
-        expect(utils.dateFuzzyMatch(date_one, date_one_fuzzy_negative)).to.equal(true);
-        expect(utils.dateFuzzyMatch(date_one, date_one_diff_negative)).to.equal(false);
-        expect(utils.dateFuzzyMatch(date_one, date_one_diff)).to.equal(false);
+        expect(utils.dateFuzzyMatch(date_one, date_one)).toBe(true);
+        expect(utils.dateFuzzyMatch(date_one, date_one_fuzzy)).toBe(true);
+        expect(utils.dateFuzzyMatch(date_one, date_one_fuzzy_negative)).toBe(true);
+        expect(utils.dateFuzzyMatch(date_one, date_one_diff_negative)).toBe(false);
+        expect(utils.dateFuzzyMatch(date_one, date_one_diff)).toBe(false);
     });
 
     it('test dateFuzzyMatch 2-2', function () {
-        expect(utils.dateFuzzyMatch(date_two, date_two)).to.equal(true);
-        expect(utils.dateFuzzyMatch(date_two, date_two_diff_low)).to.equal(false);
-        expect(utils.dateFuzzyMatch(date_two, date_two_diff_high)).to.equal(false);
-        expect(utils.dateFuzzyMatch(date_two, date_two_fuzzy_low)).to.equal(true);
-        expect(utils.dateFuzzyMatch(date_two, date_two_fuzzy_high)).to.equal(true);
-        expect(utils.dateFuzzyMatch(date_two, date_two_fuzzy_high_low)).to.equal(true);
+        expect(utils.dateFuzzyMatch(date_two, date_two)).toBe(true);
+        expect(utils.dateFuzzyMatch(date_two, date_two_diff_low)).toBe(false);
+        expect(utils.dateFuzzyMatch(date_two, date_two_diff_high)).toBe(false);
+        expect(utils.dateFuzzyMatch(date_two, date_two_fuzzy_low)).toBe(true);
+        expect(utils.dateFuzzyMatch(date_two, date_two_fuzzy_high)).toBe(true);
+        expect(utils.dateFuzzyMatch(date_two, date_two_fuzzy_high_low)).toBe(true);
     });
 
     it('test dateFuzzyMatch 1-2 and 2-1', function () {
-        expect(utils.dateFuzzyMatch(date_one, date_two)).to.equal(true);
-        expect(utils.dateFuzzyMatch(date_two, date_one)).to.equal(true);
-        expect(utils.dateFuzzyMatch(date_one_fuzzy, date_two)).to.equal(true);
-        expect(utils.dateFuzzyMatch(date_one, date_two_fuzzy_low)).to.equal(true);
-        expect(utils.dateFuzzyMatch(date_one, date_two_fuzzy_high)).to.equal(true);
-        expect(utils.dateFuzzyMatch(date_one, date_two_diff_high_low)).to.equal(false);
-        expect(utils.dateFuzzyMatch(date_one_diff, date_two)).to.equal(false);
+        expect(utils.dateFuzzyMatch(date_one, date_two)).toBe(true);
+        expect(utils.dateFuzzyMatch(date_two, date_one)).toBe(true);
+        expect(utils.dateFuzzyMatch(date_one_fuzzy, date_two)).toBe(true);
+        expect(utils.dateFuzzyMatch(date_one, date_two_fuzzy_low)).toBe(true);
+        expect(utils.dateFuzzyMatch(date_one, date_two_fuzzy_high)).toBe(true);
+        expect(utils.dateFuzzyMatch(date_one, date_two_diff_high_low)).toBe(false);
+        expect(utils.dateFuzzyMatch(date_one_diff, date_two)).toBe(false);
     });
 
     it('test diff', function () {
@@ -188,22 +185,22 @@ describe('utils.js test', function () {
 
         diff = utils.diff(a, a);
         for (el in diff) {
-            expect(diff[el]).to.equal("duplicate");
+            expect(diff[el]).toBe("duplicate");
         }
 
         diff = utils.diff(a, b);
         for (el in diff) {
-            expect(diff[el]).to.equal("new");
+            expect(diff[el]).toBe("new");
         }
 
         diff = utils.diff(a, c);
         for (el in diff) {
-            expect(diff[el]).to.equal("new");
+            expect(diff[el]).toBe("new");
         }
 
         diff = utils.diff(a, d);
-        expect(diff["a"]).to.equal("new");
-        expect(diff["b"]).to.equal("duplicate");
+        expect(diff["a"]).toBe("new");
+        expect(diff["b"]).toBe("duplicate");
 
     });
 

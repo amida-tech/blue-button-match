@@ -3,8 +3,6 @@
 
 "use strict";
 
-var expect = require('chai').expect;
-
 var fs = require('fs');
 var path = require('path');
 
@@ -12,7 +10,7 @@ var matchSingles = require(path.join(__dirname, "../../lib/match-single.js")).co
 
 var js, js2, js3a, js3b, js4a, js4b;
 
-before(function (done) {
+beforeAll(function (done) {
     js = JSON.parse(fs.readFileSync(path.join(__dirname, 'fixtures/demographics.json'), 'utf-8').toString());
 
     //same demographics with some attributes changed (e.g. name, family status, languages)
@@ -27,23 +25,23 @@ describe('Demographics partial matching library (demographics.js) tests', functi
     it('compare demographics sections in edge cases', function () {
         var m = [matchSingles({}, {}, 'demographics')];
 
-        expect(m.length).to.equal(1);
+        expect(m.length).toBe(1);
 
-        expect(m[0].match).to.equal("duplicate");
+        expect(m[0].match).toBe("duplicate");
         //console.log(m);
 
         var m = [matchSingles({}, js, 'demographics')];
 
-        expect(m.length).to.equal(1);
+        expect(m.length).toBe(1);
 
-        expect(m[0].match).to.equal("partial");
+        expect(m[0].match).toBe("partial");
         //console.log(m);
 
         var m = [matchSingles(js, {}, 'demographics')];
 
-        expect(m.length).to.equal(1);
+        expect(m.length).toBe(1);
 
-        expect(m[0].match).to.equal("new");
+        expect(m[0].match).toBe("new");
         //console.log(m);
 
     });
@@ -53,9 +51,9 @@ describe('Demographics partial matching library (demographics.js) tests', functi
 
         //console.log(m);
 
-        expect(m.length).to.equal(1);
+        expect(m.length).toBe(1);
 
-        expect(m[0].match).to.equal("duplicate");
+        expect(m[0].match).toBe("duplicate");
 
     });
 
@@ -64,9 +62,9 @@ describe('Demographics partial matching library (demographics.js) tests', functi
 
         //console.log(m);
 
-        expect(m.length).to.equal(1);
+        expect(m.length).toBe(1);
 
-        expect(m[0].match).to.equal("partial");
+        expect(m[0].match).toBe("partial");
 
     });
 
