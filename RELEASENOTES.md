@@ -1,5 +1,9 @@
 # blue-button-match Release Notes
 
+## v1.5.2 - May 31, 2022
+
+- Patch Update: GHSA-rm36-94g8-835r - Race Condition in Grunt
+
 ## v1.5.1 - April 26, 2022
 
 - Patch Update: Upgraded all dependencies

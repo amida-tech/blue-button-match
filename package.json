@@ -1,6 +1,6 @@
 {
   "name": "@amida-tech/blue-button-match",
-  "version": "1.5.1",
+  "version": "1.5.2",
   "description": "Automatic matching of Blue Button JSON data (detection of new, duplicate and partial match entries).",
   "main": "/index.js",
   "directories": {
@@ -28,20 +28,20 @@
   ],
   "license": "Apache-2.0",
   "engines": {
-    "node": ">= 14.19.1"
+    "node": ">= 14.19.3"
   },
   "dependencies": {
-    "@amida-tech/blue-button-meta": "^1.7.2",
+    "@amida-tech/blue-button-meta": "^1.7.3",
     "deep-equal": "^2.0.5",
-    "libxmljs": "^0.19.7",
+    "libxmljs": "^0.19.10",
     "moment": "^2.29.3",
     "underscore": "^1.13.3",
     "uuid": "^8.3.2",
     "winston": "^3.7.2"
   },
   "devDependencies": {
-    "@amida-tech/blue-button": "^1.10.4",
-    "grunt": "^1.5.2",
+    "@amida-tech/blue-button": "^1.10.6",
+    "grunt": "^1.5.3",
     "grunt-contrib-jshint": "^3.2.0",
     "grunt-contrib-watch": "^1.1.0",
     "grunt-express-server": "0.5.4",
