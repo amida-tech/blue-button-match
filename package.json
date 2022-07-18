@@ -37,7 +37,7 @@
     "moment": "^2.29.3",
     "underscore": "^1.13.4",
     "uuid": "^8.3.2",
-    "winston": "^3.7.2"
+    "winston": "^3.8.0"
   },
   "devDependencies": {
     "@amida-tech/blue-button": "^1.10.6",
