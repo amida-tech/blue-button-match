@@ -35,7 +35,7 @@
     "deep-equal": "^2.0.5",
     "libxmljs": "^0.19.10",
     "moment": "^2.29.4",
-    "underscore": "^1.13.4",
+    "underscore": "^1.13.6",
     "uuid": "^8.3.2",
     "winston": "^3.8.1"
   },
