@@ -31,7 +31,7 @@
     "node": ">= 14.19.3"
   },
   "dependencies": {
-    "@amida-tech/blue-button-meta": "^1.7.3",
+    "@amida-tech/blue-button-meta": "^1.7.4",
     "deep-equal": "^2.1.0",
     "@manhydra/libxmljs": "^0.19.12",
     "moment": "^2.29.4",
